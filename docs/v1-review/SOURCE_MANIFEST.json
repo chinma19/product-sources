@@ -1,0 +1,18 @@
+[
+  {
+    "file": "sources/v1/1-PERSONAL-STYLE-BLUEPRINT-Product-Build-Specification-v1.0-.pdf",
+    "sha256": "261293cab0266706920d25e05ff7bd877913bf3de87d5746c8fab0551ae42122"
+  },
+  {
+    "file": "sources/v1/2-CODEX-ENGINEERING-BUILD-SPECIFICATION-Personal-Style-Blueprint-v1.0.pdf",
+    "sha256": "51d5f0bb9aaa72033de68346ae61a8fa741b5a6aa89ac418433bb9e9e6bedc97"
+  },
+  {
+    "file": "sources/1-InHerFashion_Personal_Style_Blueprint_Clean_Master_Manuscript_Draft3.docx",
+    "sha256": "f50b70eb527b559adbe4fb86c03c5e66512c00a50bd9346b0577bd25fa0108f0"
+  },
+  {
+    "file": "sources/2-InHerFashion_Personal_Style_Blueprint_Final_PDF_Build_Specification.docx",
+    "sha256": "9f80c48f62297b878edf34abe3140f5b92eff1f0ecf72a930eb8207277723bad"
+  }
+]
