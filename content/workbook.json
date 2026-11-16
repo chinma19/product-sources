@@ -1,0 +1,5461 @@
+{
+  "version": "draft3-web-1",
+  "brand": "In Her Fashion",
+  "title": "Personal Style Blueprint",
+  "parts": [
+    "Preparation",
+    "Your Body",
+    "Your Personality",
+    "Your Lifestyle",
+    "Connect the Dots",
+    "Your Personal Style Blueprint"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "Cover",
+      "lines": [
+        "PERSONAL STYLE BLUEPRINT",
+        "A guided workbook for understanding your style, your clothes, and the way you want to get dressed.",
+        "IN HER FASHION"
+      ],
+      "controls": [],
+      "references": [],
+      "part": 0,
+      "subtitle": "",
+      "art": "fit"
+    },
+    {
+      "page": 2,
+      "title": "Opening Note",
+      "lines": [
+        "Getting dressed is something we do almost every day, yet many women reach adulthood without ever being taught how to understand their own preferences.",
+        "They know what looks good on someone else.",
+        "They know what is fashionable.",
+        "They know what they are “supposed” to own.",
+        "But they may not know:",
+        "what actually works for them;",
+        "what they genuinely enjoy wearing;",
+        "why certain outfits feel like them;",
+        "what their life actually requires from their clothes.",
+        "This Blueprint begins there.",
+        "You are not here to find the “right” style.",
+        "You are here to understand your own.",
+        "Personal style grows through repeated observation, preference, experience, and real life. This workbook gives you a way to look at those things more deliberately."
+      ],
+      "controls": [],
+      "references": [],
+      "part": 0,
+      "subtitle": "",
+      "art": null
+    },
+    {
+      "page": 3,
+      "title": "What This Blueprint Is",
+      "lines": [
+        "THIS IS NOT A STYLE QUIZ.",
+        "The Blueprint does not assign you a body type, an aesthetic, a fashion personality, a fixed colour season, or a list of clothes you “should” wear.",
+        "Instead, it helps you examine evidence from your own life.",
+        "What works for me physically?",
+        "What do I naturally respond to visually?",
+        "What does my actual life require?",
+        "BODY + PERSONALITY + LIFESTYLE",
+        "Then you connect the three.",
+        "There are no perfect answers here. There are only patterns worth noticing."
+      ],
+      "controls": [],
+      "references": [],
+      "part": 0,
+      "subtitle": "THIS IS NOT A STYLE QUIZ.",
+      "art": null
+    },
+    {
+      "page": 4,
+      "title": "How to Use It",
+      "lines": [
+        "LOOK",
+        "Pay attention to what you already wear, save, notice, avoid, and enjoy.",
+        "CHOOSE",
+        "Make specific selections instead of answering vaguely.",
+        "REFLECT",
+        "Look for what your choices might be telling you.",
+        "RECORD",
+        "Turn those observations into something you can actually use.",
+        "Don't rush to label yourself.",
+        "Don't answer according to what you think you should like.",
+        "Don't choose what sounds fashionable.",
+        "Use real evidence whenever possible.",
+        "Mixed answers are allowed.",
+        "Preferences can change.",
+        "Move through the workbook in order. Each part builds on the discoveries you made in the part before it. When a page asks you to interpret your answers, use the prompts as guidance—not as a verdict. Your answers may point to a clear preference, a combination of preferences, or something you are still figuring out.",
+        "The goal is not to force yourself into one category. It is to build a clearer understanding of your personal style."
+      ],
+      "controls": [],
+      "references": [],
+      "part": 0,
+      "subtitle": "LOOK",
+      "art": null
+    },
+    {
+      "page": 5,
+      "title": "Your Evidence Sets",
+      "lines": [
+        "YOUR EVIDENCE SETS",
+        "01 — RECENT OUTFITS",
+        "Collect 8–12 outfits you have actually worn.",
+        "They can include photos of yourself, mirror selfies, screenshots, or outfits you remember clearly.",
+        "Include a mixture if possible: outfits you loved, outfits you liked, ordinary outfits, outfits you felt uncomfortable in, and outfits you would not repeat.",
+        "Don't choose only outfits you think look good. We're not building a highlight reel. We're trying to discover your patterns.",
+        "02 — INSPIRATION",
+        "Collect 10–15 outfits or images that genuinely made you stop and look.",
+        "They do not need to be outfits you would wear. You will interpret what caught your attention later.",
+        "03 — REAL LIFE",
+        "Think about where you actually go, what you do, what your days look like, and what your clothing needs to help you accomplish.",
+        "IMPORTANT",
+        "Collect first. Interpret later.",
+        "Do not create a new evidence set every time a page asks you to reflect. Reuse these same sets throughout the workbook."
+      ],
+      "controls": [
+        {
+          "id": "evidence",
+          "label": "Your evidence sets",
+          "type": "evidence"
+        }
+      ],
+      "references": [],
+      "part": 0,
+      "subtitle": "YOUR EVIDENCE SETS",
+      "art": null
+    },
+    {
+      "page": 6,
+      "title": "Before You Begin",
+      "lines": [
+        "BEFORE YOU BEGIN",
+        "Your body is not a rulebook.",
+        "Your inspiration is not automatically your style.",
+        "Your lifestyle is not the life you think you should have.",
+        "Your answers do not need to fit neatly into one category.",
+        "PREPARATION CHECKLIST",
+        "☐ Recent outfit photos ready",
+        "☐ Inspiration set ready",
+        "☐ Enough time to think without rushing",
+        "☐ Willingness to answer honestly",
+        "☐ No need to get every answer “right”",
+        "The goal is not to create a perfect description of yourself. The goal is to become better at seeing yourself."
+      ],
+      "controls": [
+        {
+          "id": "p6.choices1",
+          "label": "PREPARATION CHECKLIST",
+          "type": "checks",
+          "options": [
+            "Recent outfit photos ready",
+            "Inspiration set ready",
+            "Enough time to think without rushing",
+            "Willingness to answer honestly",
+            "No need to get every answer “right”"
+          ]
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "BEFORE YOU BEGIN",
+      "art": null
+    },
+    {
+      "page": 7,
+      "title": "Your Body",
+      "lines": [
+        "This section isn't about finding your “body type” or learning which clothes you're supposed to wear.",
+        "It's about noticing what actually works for you.",
+        "Your body affects how clothes fit, sit, move, and create shape. But there isn't one correct way for clothes to look on your body.",
+        "The goal is to understand your own patterns:",
+        "What feels good.",
+        "What looks right to you.",
+        "What you naturally reach for.",
+        "What you consistently avoid.",
+        "By the end of this section, you'll have a clearer understanding of your preferred fit, silhouettes, proportions, lengths, necklines, skin exposure, and physical comfort."
+      ],
+      "controls": [],
+      "references": [],
+      "part": 1,
+      "subtitle": "This section isn't about finding your “body type” or learning which clothes you're supposed to wear.",
+      "art": null
+    },
+    {
+      "page": 8,
+      "title": "Fit",
+      "lines": [
+        "What Does “Good Fit” Actually Mean to You?",
+        "Fit isn't simply about whether something technically fits your measurements.",
+        "It's also about how close you enjoy clothing sitting against your body.",
+        "Two people can wear the same size and prefer completely different levels of closeness.",
+        "LOOK",
+        "Look through your recent outfits.",
+        "For each outfit, identify the dominant fit.",
+        "CHOOSE",
+        "VERY FITTED",
+        "Closely follows the body.",
+        "BODY-SKIMMING",
+        "Follows the body without feeling tight.",
+        "RELAXED",
+        "Has noticeable room without looking oversized.",
+        "LOOSE",
+        "Falls away from the body with plenty of room.",
+        "OVERSIZED",
+        "Intentionally large and generous in proportion.",
+        "Now mark how you feel about each fit:",
+        "♥ Love it",
+        "✓ Like it",
+        "~ Neutral",
+        "× Don't like it",
+        "×× Actively avoid it",
+        "REFLECT",
+        "Look at your choices.",
+        "Which fits appear most often in outfits you enjoy wearing?",
+        "Which ones do you repeatedly avoid?",
+        "And is there a difference between:",
+        "what looks good on you",
+        "and",
+        "what you actually enjoy wearing?",
+        "RECORD",
+        "The fits I naturally gravitate towards:",
+        "The fits I tend to avoid:",
+        "Something I noticed:"
+      ],
+      "controls": [
+        {
+          "id": "fit.ratings",
+          "label": "Now mark how you feel about each fit:",
+          "type": "matrix",
+          "rows": [
+            "Very fitted",
+            "Body-skimming",
+            "Relaxed",
+            "Loose",
+            "Oversized"
+          ],
+          "options": [
+            "Love it",
+            "Like it",
+            "Neutral",
+            "Don’t like it",
+            "Actively avoid it"
+          ]
+        },
+        {
+          "id": "fit.notes.1",
+          "label": "The fits I naturally gravitate towards:",
+          "type": "text"
+        },
+        {
+          "id": "fit.notes.2",
+          "label": "The fits I tend to avoid:",
+          "type": "text"
+        },
+        {
+          "id": "fit.notes.3",
+          "label": "Something I noticed:",
+          "type": "text"
+        },
+        {
+          "id": "p8.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "What Does “Good Fit” Actually Mean to You?",
+      "art": "fit"
+    },
+    {
+      "page": 9,
+      "title": "Fit Observation",
+      "lines": [
+        "Look for the Pattern",
+        "Now step back from individual outfits.",
+        "Complete these statements based on what you just observed.",
+        "I feel most comfortable when my clothes are:",
+        "☐ Close to my body",
+        "☐ Gently following my body",
+        "☐ Relaxed with some room",
+        "☐ Loose and easy",
+        "☐ Oversized",
+        "☐ Different depending on the garment",
+        "I tend to dislike clothes that:",
+        "☐ Feel too tight",
+        "☐ Feel too loose",
+        "☐ Emphasise my body more than I want",
+        "☐ Hide too much of my shape",
+        "☐ Require constant adjusting",
+        "☐ Feel restrictive",
+        "☐ Make me feel swallowed by the fabric",
+        "☐ Other: __________",
+        "My personal fit preference",
+        "Complete:",
+        "I feel most like myself when my clothes ________.",
+        "I don't enjoy clothes that ________.",
+        "YOUR TAKEAWAY",
+        "Your goal isn't to choose one correct fit.",
+        "Your goal is to understand the range of fit that feels natural to you."
+      ],
+      "controls": [
+        {
+          "id": "p9.choices1",
+          "label": "I feel most comfortable when my clothes are:",
+          "type": "checks",
+          "options": [
+            "Close to my body",
+            "Gently following my body",
+            "Relaxed with some room",
+            "Loose and easy",
+            "Oversized",
+            "Different depending on the garment"
+          ]
+        },
+        {
+          "id": "p9.choices2",
+          "label": "I tend to dislike clothes that:",
+          "type": "checks",
+          "options": [
+            "Feel too tight",
+            "Feel too loose",
+            "Emphasise my body more than I want",
+            "Hide too much of my shape",
+            "Require constant adjusting",
+            "Feel restrictive",
+            "Make me feel swallowed by the fabric",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "fit.observe.1",
+          "label": "I feel most like myself when my clothes ________.",
+          "type": "text"
+        },
+        {
+          "id": "fit.observe.2",
+          "label": "I don’t enjoy clothes that ________.",
+          "type": "text"
+        },
+        {
+          "id": "p9.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "Look for the Pattern",
+      "art": null
+    },
+    {
+      "page": 10,
+      "title": "Fit Interpretation",
+      "lines": [
+        "WHAT YOUR FIT PATTERN MAY TELL YOU",
+        "Look across your choices.",
+        "Which fit appeared most often among the outfits you loved?",
+        "Which fit did you repeatedly avoid?",
+        "Did you prefer one fit everywhere, or did you prefer different fits for different garments?",
+        "Did a particular combination keep appearing?",
+        "You don't need to choose one “correct” fit. You're looking for the fit patterns that repeatedly make you feel comfortable and like yourself.",
+        "MY FIT PATTERN:"
+      ],
+      "controls": [
+        {
+          "id": "fit.pattern",
+          "label": "My Fit Pattern",
+          "type": "text"
+        },
+        {
+          "id": "p10.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        8,
+        9
+      ],
+      "part": 1,
+      "subtitle": "WHAT YOUR FIT PATTERN MAY TELL YOU",
+      "art": null
+    },
+    {
+      "page": 11,
+      "title": "Silhouette",
+      "lines": [
+        "What Shape Do Your Clothes Create?",
+        "Fit tells us how closely clothes sit on your body.",
+        "Silhouette looks at the bigger picture.",
+        "It's the overall shape created by your clothes when you look at the outfit as a whole.",
+        "You might love a relaxed top with a defined bottom.",
+        "You might prefer a streamlined outfit from head to toe.",
+        "You might enjoy oversized pieces — but only when something else creates balance.",
+        "There isn't one correct silhouette.",
+        "We're looking for your repeated preferences.",
+        "LOOK",
+        "Consider these silhouette directions:",
+        "STRAIGHT",
+        "A relatively consistent width through the outfit.",
+        "DEFINED",
+        "The shape of the body is intentionally visible.",
+        "RELAXED",
+        "Soft, easy shapes with room to move.",
+        "OVERSIZED",
+        "Generous volume creates the dominant shape.",
+        "FITTED + RELAXED",
+        "One part follows the body while another is more relaxed.",
+        "CROPPED + LONG",
+        "A shorter piece is paired with a longer piece to create contrast.",
+        "LONG + STREAMLINED",
+        "Longer pieces create an elongated, relatively clean shape.",
+        "CHOOSE",
+        "For each silhouette, mark:",
+        "♥ YES — I love this",
+        "~ MAYBE — I like something about it",
+        "× NO — Not for me",
+        "Don't ask:",
+        "“Does this look fashionable?”",
+        "Ask:",
+        "“Would I actually want to wear this?”"
+      ],
+      "controls": [
+        {
+          "id": "silhouette.ratings",
+          "label": "For each silhouette, mark:",
+          "type": "matrix",
+          "rows": [
+            "Straight",
+            "Defined",
+            "Relaxed",
+            "Oversized",
+            "Fitted + relaxed",
+            "Cropped + long",
+            "Long + streamlined"
+          ],
+          "options": [
+            "Yes — I love this",
+            "Maybe — I like something about it",
+            "No — not for me"
+          ]
+        },
+        {
+          "id": "p11.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "What Shape Do Your Clothes Create?",
+      "art": "fit"
+    },
+    {
+      "page": 12,
+      "title": "Silhouette Comparison",
+      "lines": [
+        "What Keeps Showing Up?",
+        "Look at the silhouettes you marked YES.",
+        "Which descriptions appear most often?",
+        "☐ Defined",
+        "☐ Relaxed",
+        "☐ Oversized",
+        "☐ Straight",
+        "☐ Fitted + relaxed",
+        "☐ Cropped + long",
+        "☐ Long + streamlined",
+        "☐ A mixture",
+        "Now look at your MAYBES.",
+        "What makes you hesitate?",
+        "And your NOs.",
+        "What do they have in common?",
+        "LOOK FOR",
+        "Do you repeatedly prefer:",
+        "☐ More structure",
+        "☐ More softness",
+        "☐ More room",
+        "☐ More visible shape",
+        "☐ A combination of fitted and relaxed",
+        "☐ Shorter + longer contrasts",
+        "☐ Clean, streamlined shapes",
+        "☐ Something else: __________",
+        "RECORD",
+        "The silhouette direction I naturally gravitate towards:",
+        "A silhouette combination I repeatedly enjoy:",
+        "A silhouette direction I tend to avoid:"
+      ],
+      "controls": [
+        {
+          "id": "p12.choices1",
+          "label": "Which descriptions appear most often?",
+          "type": "checks",
+          "options": [
+            "Defined",
+            "Relaxed",
+            "Oversized",
+            "Straight",
+            "Fitted + relaxed",
+            "Cropped + long",
+            "Long + streamlined",
+            "A mixture"
+          ]
+        },
+        {
+          "id": "p12.choices2",
+          "label": "Do you repeatedly prefer:",
+          "type": "checks",
+          "options": [
+            "More structure",
+            "More softness",
+            "More room",
+            "More visible shape",
+            "A combination of fitted and relaxed",
+            "Shorter + longer contrasts",
+            "Clean, streamlined shapes",
+            "Something else: …"
+          ]
+        },
+        {
+          "id": "silhouette.notes.1",
+          "label": "What makes you hesitate?",
+          "type": "text"
+        },
+        {
+          "id": "silhouette.notes.2",
+          "label": "What do your NOs have in common?",
+          "type": "text"
+        },
+        {
+          "id": "silhouette.notes.3",
+          "label": "The silhouette direction I naturally gravitate towards:",
+          "type": "text"
+        },
+        {
+          "id": "silhouette.notes.4",
+          "label": "A silhouette combination I repeatedly enjoy:",
+          "type": "text"
+        },
+        {
+          "id": "silhouette.notes.5",
+          "label": "A silhouette direction I tend to avoid:",
+          "type": "text"
+        },
+        {
+          "id": "p12.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        11
+      ],
+      "part": 1,
+      "subtitle": "What Keeps Showing Up?",
+      "art": null
+    },
+    {
+      "page": 13,
+      "title": "Lengths and Proportions",
+      "lines": [
+        "It's Not Just the Pieces. It's the Relationship Between Them.",
+        "An outfit can contain pieces you individually love and still feel wrong when they're combined.",
+        "Sometimes the difference is proportion.",
+        "Proportion is about how the lengths and volumes of different pieces relate to one another.",
+        "For example:",
+        "cropped top + high-rise trousers",
+        "hip-length top + trousers",
+        "long top + slimmer bottoms",
+        "oversized top + mini skirt",
+        "short jacket + long skirt",
+        "long cardigan + short dress",
+        "None of these combinations is automatically better.",
+        "We're simply going to see which relationships you repeatedly enjoy.",
+        "LOOK + CHOOSE",
+        "For each combination, mark:",
+        "♥ Love it",
+        "✓ Like it",
+        "~ Unsure",
+        "× Don't like it",
+        "REFLECT",
+        "Which combinations make your outfits feel most natural?",
+        "Which combinations consistently feel “off” to you?"
+      ],
+      "controls": [
+        {
+          "id": "proportion.ratings",
+          "label": "For each combination, mark:",
+          "type": "matrix",
+          "rows": [
+            "cropped top + high-rise trousers",
+            "hip-length top + trousers",
+            "long top + slimmer bottoms",
+            "oversized top + mini skirt",
+            "short jacket + long skirt",
+            "long cardigan + short dress"
+          ],
+          "options": [
+            "Love it",
+            "Like it",
+            "Unsure",
+            "Don’t like it"
+          ]
+        },
+        {
+          "id": "proportion.notes.1",
+          "label": "Which combinations make your outfits feel most natural?",
+          "type": "text"
+        },
+        {
+          "id": "proportion.notes.2",
+          "label": "Which combinations consistently feel “off” to you?",
+          "type": "text"
+        },
+        {
+          "id": "p13.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "It's Not Just the Pieces. It's the Relationship Between Them.",
+      "art": "fit"
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "lines": [
+        "Where Do You Naturally Like Your Clothes to End?",
+        "Look through your recent outfits and identify the lengths you repeatedly choose.",
+        "TOPS",
+        "☐ Cropped / waist",
+        "☐ At the hip",
+        "☐ Below the hip",
+        "☐ Very long",
+        "BOTTOMS",
+        "☐ Mini",
+        "☐ Above the knee",
+        "☐ Knee",
+        "☐ Midi",
+        "☐ Ankle",
+        "☐ Full length",
+        "SLEEVES",
+        "☐ Sleeveless",
+        "☐ Short",
+        "☐ Elbow",
+        "☐ Three-quarter",
+        "☐ Long",
+        "DRESSES / SKIRTS",
+        "☐ Maxi",
+        "REFLECT",
+        "You may notice that your preferences aren't consistent across every garment.",
+        "That's completely fine.",
+        "The useful question is:",
+        "“Where do I repeatedly feel most like myself?”",
+        "RECORD",
+        "Lengths I naturally gravitate towards:",
+        "Lengths I rarely choose:",
+        "A length I thought I liked but rarely actually wear:"
+      ],
+      "controls": [
+        {
+          "id": "p14.choices1",
+          "label": "TOPS",
+          "type": "checks",
+          "options": [
+            "Cropped / waist",
+            "At the hip",
+            "Below the hip",
+            "Very long"
+          ]
+        },
+        {
+          "id": "p14.choices2",
+          "label": "BOTTOMS",
+          "type": "checks",
+          "options": [
+            "Mini",
+            "Above the knee",
+            "Knee",
+            "Midi",
+            "Ankle",
+            "Full length"
+          ]
+        },
+        {
+          "id": "p14.choices3",
+          "label": "SLEEVES",
+          "type": "checks",
+          "options": [
+            "Sleeveless",
+            "Short",
+            "Elbow",
+            "Three-quarter",
+            "Long"
+          ]
+        },
+        {
+          "id": "p14.choices4",
+          "label": "DRESSES / SKIRTS",
+          "type": "checks",
+          "options": [
+            "Maxi"
+          ]
+        },
+        {
+          "id": "length.notes.1",
+          "label": "Lengths I naturally gravitate towards:",
+          "type": "text"
+        },
+        {
+          "id": "length.notes.2",
+          "label": "Lengths I rarely choose:",
+          "type": "text"
+        },
+        {
+          "id": "length.notes.3",
+          "label": "A length I thought I liked but rarely actually wear:",
+          "type": "text"
+        },
+        {
+          "id": "p14.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "Where Do You Naturally Like Your Clothes to End?",
+      "art": null
+    },
+    {
+      "page": 15,
+      "title": "Necklines and Openings",
+      "lines": [
+        "How Do You Like Your Upper Body Framed?",
+        "Necklines can change the entire feeling of an outfit.",
+        "But again, there isn't a universally “best” neckline.",
+        "We're interested in what you actually enjoy seeing and wearing.",
+        "LOOK",
+        "Compare:",
+        "Crew neck",
+        "High neck",
+        "Turtleneck",
+        "V-neck",
+        "Scoop",
+        "Sweetheart",
+        "Square",
+        "Boat",
+        "Halter",
+        "Off-shoulder",
+        "Strapless",
+        "Open button-down",
+        "SORT",
+        "Put each into one of four groups:",
+        "I repeatedly choose this",
+        "I happily wear this",
+        "I admire this on other people",
+        "I generally avoid this"
+      ],
+      "controls": [
+        {
+          "id": "neckline.sort",
+          "label": "Put each into one of four groups:",
+          "type": "matrix",
+          "rows": [
+            "Crew neck",
+            "High neck",
+            "Turtleneck",
+            "V-neck",
+            "Scoop",
+            "Sweetheart",
+            "Square",
+            "Boat",
+            "Halter",
+            "Off-shoulder",
+            "Strapless",
+            "Open button-down"
+          ],
+          "options": [
+            "I repeatedly choose this",
+            "I happily wear this",
+            "I admire this on other people",
+            "I generally avoid this"
+          ]
+        },
+        {
+          "id": "p15.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "How Do You Like Your Upper Body Framed?",
+      "art": "necklines"
+    },
+    {
+      "page": 16,
+      "title": "Neckline Preferences",
+      "lines": [
+        "REFLECT",
+        "Look at your choices.",
+        "Do you tend to prefer:",
+        "☐ More open necklines",
+        "☐ Higher / more covered necklines",
+        "☐ Showing shoulders",
+        "☐ Framing the collarbone",
+        "☐ Showing more chest",
+        "☐ Minimal neckline detail",
+        "☐ Structured/angular openings",
+        "☐ Soft/curved openings",
+        "☐ A mixture",
+        "RECORD",
+        "Necklines I repeatedly enjoy:",
+        "Necklines I tend to avoid:",
+        "Something I noticed about how I like my upper body framed:"
+      ],
+      "controls": [
+        {
+          "id": "p16.choices1",
+          "label": "Do you tend to prefer:",
+          "type": "checks",
+          "options": [
+            "More open necklines",
+            "Higher / more covered necklines",
+            "Showing shoulders",
+            "Framing the collarbone",
+            "Showing more chest",
+            "Minimal neckline detail",
+            "Structured/angular openings",
+            "Soft/curved openings",
+            "A mixture"
+          ]
+        },
+        {
+          "id": "neckline.notes.1",
+          "label": "Necklines I repeatedly enjoy:",
+          "type": "text"
+        },
+        {
+          "id": "neckline.notes.2",
+          "label": "Necklines I tend to avoid:",
+          "type": "text"
+        },
+        {
+          "id": "neckline.notes.3",
+          "label": "Something I noticed about how I like my upper body framed:",
+          "type": "text"
+        },
+        {
+          "id": "p16.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "REFLECT",
+      "art": "necklines"
+    },
+    {
+      "page": 17,
+      "title": "Skin Exposure",
+      "lines": [
+        "How Much Do You Actually Like to Show?",
+        "Skin exposure is personal.",
+        "Some people feel best when they're mostly covered.",
+        "Some enjoy showing their legs but not their chest.",
+        "Someone else might be comfortable showing shoulders but not their stomach.",
+        "There is no correct balance.",
+        "The goal is to identify your own boundary.",
+        "LOOK AT THESE AREAS",
+        "ARMS",
+        "Covered → Slightly visible → Moderate → Noticeable",
+        "SHOULDERS",
+        "LEGS",
+        "CLEAVAGE",
+        "BACK",
+        "MIDRIFF",
+        "THIGHS"
+      ],
+      "controls": [
+        {
+          "id": "exposure.scale",
+          "label": "Look at these areas",
+          "type": "matrix",
+          "rows": [
+            "Arms",
+            "Shoulders",
+            "Legs",
+            "Cleavage",
+            "Back",
+            "Midriff",
+            "Thighs"
+          ],
+          "options": [
+            "Covered",
+            "Slightly visible",
+            "Moderate",
+            "Noticeable"
+          ]
+        },
+        {
+          "id": "p17.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "How Much Do You Actually Like to Show?",
+      "art": null
+    },
+    {
+      "page": 18,
+      "title": "Skin Exposure: Choose",
+      "lines": [
+        "CHOOSE",
+        "For each area:",
+        "♥ I like showing it",
+        "✓ I'm comfortable showing it",
+        "~ Sometimes",
+        "× I generally keep it covered",
+        "REFLECT",
+        "Look across your answers.",
+        "What kind of exposure feels most natural to you?",
+        "What crosses your personal boundary?",
+        "RECORD",
+        "I feel most comfortable with clothing that shows ______ while keeping ______ relatively covered."
+      ],
+      "controls": [
+        {
+          "id": "exposure.preferences",
+          "label": "For each area:",
+          "type": "matrix",
+          "rows": [
+            "Arms",
+            "Shoulders",
+            "Legs",
+            "Cleavage",
+            "Back",
+            "Midriff",
+            "Thighs"
+          ],
+          "options": [
+            "I like showing it",
+            "I’m comfortable showing it",
+            "Sometimes",
+            "I generally keep it covered"
+          ]
+        },
+        {
+          "id": "exposure.notes",
+          "label": "I feel most comfortable with clothing that shows ______ while keeping ______ relatively covered.",
+          "type": "text"
+        },
+        {
+          "id": "p18.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "CHOOSE",
+      "art": null
+    },
+    {
+      "page": 19,
+      "title": "Comfort and Movement",
+      "lines": [
+        "What Does Your Body Need From Your Clothes?",
+        "Style isn't useful if you're uncomfortable all day.",
+        "Think about what makes you physically aware of your clothes in a negative way.",
+        "CHECK ANY THAT APPLY",
+        "I dislike clothes that:",
+        "☐ Feel too tight",
+        "☐ Feel too loose",
+        "☐ Ride up",
+        "☐ Fall down",
+        "☐ Restrict my arms",
+        "☐ Restrict my legs",
+        "☐ Dig into my waist",
+        "☐ Feel uncomfortable around my chest",
+        "☐ Require constant adjusting",
+        "☐ Scratch or irritate my skin",
+        "☐ Feel too hot",
+        "☐ Feel too heavy",
+        "☐ Make sitting uncomfortable",
+        "☐ Make walking uncomfortable",
+        "☐ Make movement difficult",
+        "☐ Make me worry about wardrobe malfunctions",
+        "☐ Other: __________",
+        "SHOES",
+        "I prefer shoes that are:",
+        "☐ Very comfortable",
+        "☐ Comfortable enough for a few hours",
+        "☐ Worth some discomfort for the right outfit",
+        "☐ Mostly practical",
+        "☐ Mostly aesthetic",
+        "☐ Depends on the occasion",
+        "REFLECT",
+        "Which discomforts are automatic no's for you?",
+        "Which ones are acceptable occasionally?",
+        "RECORD",
+        "My clothing comfort non-negotiables:",
+        "Something I'm willing to compromise on occasionally:"
+      ],
+      "controls": [
+        {
+          "id": "p19.choices1",
+          "label": "I dislike clothes that:",
+          "type": "checks",
+          "options": [
+            "Feel too tight",
+            "Feel too loose",
+            "Ride up",
+            "Fall down",
+            "Restrict my arms",
+            "Restrict my legs",
+            "Dig into my waist",
+            "Feel uncomfortable around my chest",
+            "Require constant adjusting",
+            "Scratch or irritate my skin",
+            "Feel too hot",
+            "Feel too heavy",
+            "Make sitting uncomfortable",
+            "Make walking uncomfortable",
+            "Make movement difficult",
+            "Make me worry about wardrobe malfunctions",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "p19.choices2",
+          "label": "I prefer shoes that are:",
+          "type": "checks",
+          "options": [
+            "Very comfortable",
+            "Comfortable enough for a few hours",
+            "Worth some discomfort for the right outfit",
+            "Mostly practical",
+            "Mostly aesthetic",
+            "Depends on the occasion"
+          ]
+        },
+        {
+          "id": "comfort.notes.1",
+          "label": "My clothing comfort non-negotiables:",
+          "type": "text"
+        },
+        {
+          "id": "comfort.notes.2",
+          "label": "Something I’m willing to compromise on occasionally:",
+          "type": "text"
+        },
+        {
+          "id": "p19.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 1,
+      "subtitle": "What Does Your Body Need From Your Clothes?",
+      "art": null
+    },
+    {
+      "page": 20,
+      "title": "Body Style Profile",
+      "lines": [
+        "What Have You Learned?",
+        "You've now looked at how clothing behaves on you and how you respond to it. Use the evidence you recorded; this is a summary of your observations, not a set of rules.",
+        "MY BODY STYLE PROFILE",
+        "MY FIT — I naturally prefer:",
+        "MY SILHOUETTE — The shapes I gravitate towards:",
+        "MY PROPORTIONS — The combinations I especially enjoy:",
+        "MY LENGTHS — The lengths I repeatedly choose:",
+        "MY NECKLINES / OPENINGS — I feel best in:",
+        "MY SKIN EXPOSURE — I am most comfortable showing:",
+        "MY COMFORT NON-NEGOTIABLES — My clothes need to:",
+        "MY OVERALL PHYSICAL STYLE DIRECTION",
+        "The physical qualities I repeatedly choose are:",
+        "The physical qualities I tend to avoid are:",
+        "My clothes work best for me physically when:",
+        "One thing I understand about myself and clothes now that I did not notice before is:",
+        "Remember: these are your observations, not universal styling rules. Your preferences can vary by garment, setting, mood, and occasion.",
+        "PART 1 COMPLETE",
+        "You are not leaving this section with a list of rules telling you what your body should wear. You're leaving with evidence about the physical qualities that make clothing feel natural, comfortable, and right to you.",
+        "Next, we'll look beyond how clothes work on your body and explore what you want your clothes to look and feel like."
+      ],
+      "controls": [
+        {
+          "id": "body.fit",
+          "label": "MY FIT — I naturally prefer:",
+          "type": "text",
+          "source": "fit.pattern"
+        },
+        {
+          "id": "body.silhouette",
+          "label": "MY SILHOUETTE — The shapes I gravitate towards:",
+          "type": "text",
+          "source": "silhouette.notes.3"
+        },
+        {
+          "id": "body.proportion",
+          "label": "MY PROPORTIONS — The combinations I especially enjoy:",
+          "type": "text",
+          "source": "proportion.notes.1"
+        },
+        {
+          "id": "body.length",
+          "label": "MY LENGTHS — The lengths I repeatedly choose:",
+          "type": "text",
+          "source": "length.notes.1"
+        },
+        {
+          "id": "body.neckline",
+          "label": "MY NECKLINES / OPENINGS — I feel best in:",
+          "type": "text",
+          "source": "neckline.notes.1"
+        },
+        {
+          "id": "body.exposure",
+          "label": "MY SKIN EXPOSURE — I am most comfortable showing:",
+          "type": "text",
+          "source": "exposure.notes"
+        },
+        {
+          "id": "body.comfort",
+          "label": "MY COMFORT NON-NEGOTIABLES — My clothes need to:",
+          "type": "text",
+          "source": "comfort.notes.1"
+        },
+        {
+          "id": "body.synthesis.1",
+          "label": "The physical qualities I repeatedly choose are:",
+          "type": "text"
+        },
+        {
+          "id": "body.synthesis.2",
+          "label": "The physical qualities I tend to avoid are:",
+          "type": "text"
+        },
+        {
+          "id": "body.synthesis.3",
+          "label": "My clothes work best for me physically when:",
+          "type": "text"
+        },
+        {
+          "id": "body.synthesis.4",
+          "label": "One thing I understand about myself and clothes now that I did not notice before is:",
+          "type": "text"
+        },
+        {
+          "id": "p20.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        19
+      ],
+      "part": 1,
+      "subtitle": "What Have You Learned?",
+      "art": null
+    },
+    {
+      "page": 21,
+      "title": "Your Personality",
+      "lines": [
+        "YOUR PERSONALITY",
+        "Who You Are Visually",
+        "For this section, we're going to use visual evidence.",
+        "You don't need to know the name of your style.",
+        "You don't need to decide whether you're “classic,” “romantic,” “minimalist,” “edgy,” or any other style category.",
+        "In fact, try not to.",
+        "Instead, we're going to look at what repeatedly catches your attention.",
+        "Because sometimes your style is easier to discover by noticing:",
+        "«“Why did I stop scrolling when I saw this?”»",
+        "than by asking:",
+        "«“What is my aesthetic?”»",
+        "What you'll need",
+        "Create a collection of 10–15 outfits that caught your attention.",
+        "They can come from:",
+        "- Pinterest",
+        "- Instagram",
+        "- TikTok",
+        "- people you see in real life",
+        "- celebrities",
+        "- fashion campaigns",
+        "- old photos",
+        "- outfits you've worn",
+        "- saved posts",
+        "- anywhere else you naturally find style inspiration",
+        "They don't all need to look alike.",
+        "Choose them because something about them made you stop and look.",
+        "---"
+      ],
+      "controls": [],
+      "references": [],
+      "part": 2,
+      "subtitle": "YOUR PERSONALITY",
+      "art": null
+    },
+    {
+      "page": 22,
+      "title": "Inspiration Set",
+      "lines": [
+        "YOUR INSPIRATION SET",
+        "Collect 10–15 outfits that made you stop and look.",
+        "They can come from: Pinterest; Instagram; people you know; celebrities; old photos of yourself; outfits you've worn; outfits you've saved; real life.",
+        "IMPORTANT",
+        "Don't choose outfits because you think they are “your style.” Choose them because something about them caught your attention.",
+        "Maybe it was the silhouette, the proportions, the colour, the neckline, the texture, the styling, the shoes, the accessories, the level of detail, or the overall feeling.",
+        "You don't need to know why yet. That's what we're going to discover.",
+        "Your job: Collect first. Interpret later."
+      ],
+      "controls": [
+        {
+          "id": "evidence",
+          "label": "Your evidence sets",
+          "type": "evidence"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "YOUR INSPIRATION SET",
+      "art": null
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "lines": [
+        "Look Closer",
+        "Now go through your 10–15 outfits again.",
+        "For each one, ask:",
+        "What made me stop?",
+        "It might be the overall outfit.",
+        "Or it might be one tiny detail.",
+        "LOOK FOR",
+        "SILHOUETTE",
+        "☐ Fitted",
+        "☐ Relaxed",
+        "☐ Oversized",
+        "☐ Structured",
+        "☐ Flowing",
+        "☐ Simple",
+        "COLOUR",
+        "☐ Monochrome",
+        "☐ Neutrals",
+        "☐ Bright colour",
+        "☐ Muted colour",
+        "☐ Strong contrast",
+        "☐ Unexpected colour combination",
+        "TEXTURE",
+        "☐ Denim",
+        "☐ Leather",
+        "☐ Knit",
+        "☐ Satin",
+        "☐ Linen",
+        "☐ Lace",
+        "☐ Crisp cotton",
+        "☐ Soft texture",
+        "☐ Other: __________",
+        "DETAILS",
+        "☐ Jewellery",
+        "☐ Buttons",
+        "☐ Belts",
+        "☐ Shoes",
+        "☐ Bags",
+        "☐ Layering",
+        "☐ Sleeves",
+        "☐ Prints",
+        "☐ Interesting neckline",
+        "☐ Styling detail",
+        "OVERALL FEELING",
+        "☐ Feminine",
+        "☐ Polished",
+        "☐ Sexy",
+        "☐ Playful",
+        "☐ Sophisticated",
+        "☐ Cool",
+        "☐ Understated",
+        "☐ Dramatic",
+        "☐ Effortless",
+        "☐ Edgy",
+        "NOW LOOK FOR REPETITION",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "4. ---",
+        "5. ---",
+        "These repetitions are clues.",
+        "They aren't rules yet.",
+        "---",
+        "What Keeps Pulling You In?",
+        "Look at the five qualities you identified.",
+        "Now ask yourself:",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐",
+        "REFLECT",
+        "Are there any qualities that appear frequently in your inspiration but rarely appear in your actual clothes?",
+        "Why do you think that might be?",
+        "Are there qualities you already wear without consciously realizing they're part of your style?",
+        "RECORD",
+        "«The visual qualities I naturally want more of are:»",
+        "«The visual qualities I enjoy admiring but don't necessarily need to wear are:»"
+      ],
+      "controls": [
+        {
+          "id": "p23.choices1",
+          "label": "SILHOUETTE",
+          "type": "checks",
+          "options": [
+            "Fitted",
+            "Relaxed",
+            "Oversized",
+            "Structured",
+            "Flowing",
+            "Simple"
+          ]
+        },
+        {
+          "id": "p23.choices2",
+          "label": "COLOUR",
+          "type": "checks",
+          "options": [
+            "Monochrome",
+            "Neutrals",
+            "Bright colour",
+            "Muted colour",
+            "Strong contrast",
+            "Unexpected colour combination"
+          ]
+        },
+        {
+          "id": "p23.choices3",
+          "label": "TEXTURE",
+          "type": "checks",
+          "options": [
+            "Denim",
+            "Leather",
+            "Knit",
+            "Satin",
+            "Linen",
+            "Lace",
+            "Crisp cotton",
+            "Soft texture",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "p23.choices4",
+          "label": "DETAILS",
+          "type": "checks",
+          "options": [
+            "Jewellery",
+            "Buttons",
+            "Belts",
+            "Shoes",
+            "Bags",
+            "Layering",
+            "Sleeves",
+            "Prints",
+            "Interesting neckline",
+            "Styling detail"
+          ]
+        },
+        {
+          "id": "p23.choices5",
+          "label": "OVERALL FEELING",
+          "type": "checks",
+          "options": [
+            "Feminine",
+            "Polished",
+            "Sexy",
+            "Playful",
+            "Sophisticated",
+            "Cool",
+            "Understated",
+            "Dramatic",
+            "Effortless",
+            "Edgy"
+          ]
+        },
+        {
+          "id": "p23.choices6",
+          "label": "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+          "type": "checks",
+          "options": [
+            "|",
+            "|",
+            ""
+          ]
+        },
+        {
+          "id": "inspiration.top",
+          "label": "Which five visual qualities appear repeatedly across your inspiration?",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "inspiration.want",
+          "label": "Which of these do I actually want in my own wardrobe?",
+          "type": "matrix",
+          "rows": [
+            "Visual quality 1",
+            "Visual quality 2",
+            "Visual quality 3",
+            "Visual quality 4",
+            "Visual quality 5"
+          ],
+          "options": [
+            "I want this often",
+            "I want this sometimes",
+            "I like seeing it, but not wearing it"
+          ]
+        },
+        {
+          "id": "inspiration.notes.1",
+          "label": "Are there any qualities that appear frequently in your inspiration but rarely appear in your actual clothes?",
+          "type": "text"
+        },
+        {
+          "id": "inspiration.notes.2",
+          "label": "Why do you think that might be?",
+          "type": "text"
+        },
+        {
+          "id": "inspiration.notes.3",
+          "label": "Are there qualities you already wear without consciously realizing they’re part of your style?",
+          "type": "text"
+        },
+        {
+          "id": "inspiration.notes.4",
+          "label": "The visual qualities I naturally want more of are:",
+          "type": "text"
+        },
+        {
+          "id": "inspiration.notes.5",
+          "label": "The visual qualities I enjoy admiring but don’t necessarily need to wear are:",
+          "type": "text"
+        },
+        {
+          "id": "p23.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        22
+      ],
+      "part": 2,
+      "subtitle": "Look Closer",
+      "art": null
+    },
+    {
+      "page": 24,
+      "title": "Admiration Is Not Personal Style",
+      "lines": [
+        "Something Can Be Beautiful Without Being You",
+        "This is one of the most important exercises in the Blueprint.",
+        "You can look at someone else's outfit and think:",
+        "“That is gorgeous.”",
+        "And still never want to wear it.",
+        "You can admire a dramatic outfit without wanting a dramatic wardrobe.",
+        "You can love a minimalist outfit without wanting to dress minimally every day.",
+        "You can appreciate a style that looks incredible on someone else and still know:",
+        "“That isn't me.”",
+        "So let's separate the two.",
+        "SORT YOUR INSPIRATION",
+        "Go through your 10–15 saved outfits and place each one into one of these categories:",
+        "01 — BEAUTIFUL + ME",
+        "I love it, and I can genuinely imagine myself wearing it.",
+        "02 — BEAUTIFUL + NOT ME",
+        "I think it's beautiful, but I don't actually want to dress this way.",
+        "03 — INTERESTING + MAYBE ME",
+        "Something about it appeals to me, but I'm not sure yet.",
+        "04 — NOT FOR ME",
+        "I don't particularly want this direction.",
+        "REFLECT",
+        "Look at your BEAUTIFUL + NOT ME group.",
+        "What makes these outfits appealing even though you don't want to wear them?",
+        "---",
+        "Now look at your BEAUTIFUL + ME group.",
+        "What do you want to take from them?",
+        "COMPLETE",
+        "«Something I admire but don't actually want for myself is:»",
+        "«Something I repeatedly see and think “that's me” is:»",
+        "«A style direction I might have confused with my personal style is:»"
+      ],
+      "controls": [
+        {
+          "id": "inspiration.sort",
+          "label": "Sort your inspiration",
+          "type": "image-sort",
+          "options": [
+            "Beautiful + Me",
+            "Beautiful + Not Me",
+            "Interesting + Maybe Me",
+            "Not For Me"
+          ]
+        },
+        {
+          "id": "admiration.1",
+          "label": "What makes these outfits appealing even though you don’t want to wear them?",
+          "type": "text"
+        },
+        {
+          "id": "admiration.2",
+          "label": "What do you want to take from your BEAUTIFUL + ME group?",
+          "type": "text"
+        },
+        {
+          "id": "admiration.3",
+          "label": "Something I admire but don’t actually want for myself is:",
+          "type": "text"
+        },
+        {
+          "id": "admiration.4",
+          "label": "Something I repeatedly see and think “that’s me” is:",
+          "type": "text"
+        },
+        {
+          "id": "admiration.5",
+          "label": "A style direction I might have confused with my personal style is:",
+          "type": "text"
+        },
+        {
+          "id": "p24.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        22
+      ],
+      "part": 2,
+      "subtitle": "Something Can Be Beautiful Without Being You",
+      "art": null
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "lines": [
+        "Where Do You Naturally Sit?",
+        "Style isn't always one thing or the other.",
+        "You might be minimalist but still want visual interest.",
+        "You might like feminine clothes without wanting to look overly romantic.",
+        "You might like polished outfits but still want them to feel relaxed.",
+        "Instead of forcing yourself into a label, use these visual dials to describe your preferences.",
+        "PLACE YOURSELF",
+        "SIMPLE ───────────── DETAILED",
+        "Where do you naturally prefer to be?",
+        "---",
+        "UNDERSTATED ───────────── NOTICEABLE",
+        "SOFT ───────────── STRUCTURED",
+        "FEMININE ───────────── ANDROGYNOUS",
+        "CLASSIC ───────────── TREND-FORWARD",
+        "RELAXED ───────────── POLISHED",
+        "MINIMAL ───────────── EXPRESSIVE",
+        "SUBTLE ───────────── DRAMATIC",
+        "ROMANTIC ───────────── EDGY",
+        "IMPORTANT",
+        "You don't have to choose an extreme.",
+        "You might be:",
+        "mostly simple + occasionally detailed",
+        "or:",
+        "relaxed in everyday life + polished when you want to dress up.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "controls": [
+        {
+          "id": "dials.1",
+          "label": "Simple — Detailed",
+          "type": "scale",
+          "ends": [
+            "Simple",
+            "Detailed"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.2",
+          "label": "Understated — Noticeable",
+          "type": "scale",
+          "ends": [
+            "Understated",
+            "Noticeable"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.3",
+          "label": "Soft — Structured",
+          "type": "scale",
+          "ends": [
+            "Soft",
+            "Structured"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.4",
+          "label": "Feminine — Androgynous",
+          "type": "scale",
+          "ends": [
+            "Feminine",
+            "Androgynous"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.5",
+          "label": "Classic — Trend-forward",
+          "type": "scale",
+          "ends": [
+            "Classic",
+            "Trend-forward"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.6",
+          "label": "Relaxed — Polished",
+          "type": "scale",
+          "ends": [
+            "Relaxed",
+            "Polished"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.7",
+          "label": "Minimal — Expressive",
+          "type": "scale",
+          "ends": [
+            "Minimal",
+            "Expressive"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.8",
+          "label": "Subtle — Dramatic",
+          "type": "scale",
+          "ends": [
+            "Subtle",
+            "Dramatic"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "dials.9",
+          "label": "Romantic — Edgy",
+          "type": "scale",
+          "ends": [
+            "Romantic",
+            "Edgy"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "p25.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Where Do You Naturally Sit?",
+      "art": null
+    },
+    {
+      "page": 26,
+      "title": "Visual Intensity",
+      "lines": [
+        "Your Visual Intensity",
+        "Some outfits need very little to feel complete.",
+        "Others need colour, texture, jewellery, layering, contrast, or another point of interest.",
+        "Think about your ideal everyday outfit.",
+        "WHICH FEELS CLOSEST?",
+        "1 — VERY SIMPLE",
+        "Few elements. Very little visual information.",
+        "2 — SIMPLE + ONE INTEREST",
+        "Mostly simple, with one noticeable element.",
+        "3 — MULTIPLE DETAILS",
+        "Several things create visual interest, but the outfit still feels controlled.",
+        "4 — HIGHLY EXPRESSIVE",
+        "Colour, texture, contrast, accessories, layering, or statement pieces are all welcome.",
+        "MY NATURAL LEVEL",
+        "☐ 1",
+        "☐ 2",
+        "☐ 3",
+        "☐ 4",
+        "☐ It changes depending on the occasion",
+        "REFLECT",
+        "How much visual interest feels like enough?",
+        "---",
+        "When does an outfit start feeling too plain?",
+        "When does an outfit start feeling like too much?",
+        "What is usually the easiest way for you to add interest?",
+        "☐ Colour",
+        "☐ Jewellery",
+        "☐ Texture",
+        "☐ Shoes",
+        "☐ Bags",
+        "☐ Layering",
+        "☐ Prints",
+        "☐ Silhouette",
+        "☐ Skin exposure",
+        "☐ Other: __________",
+        "RECORD",
+        "«My ideal amount of visual interest is:»"
+      ],
+      "controls": [
+        {
+          "id": "p26.choices1",
+          "label": "MY NATURAL LEVEL",
+          "type": "checks",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "It changes depending on the occasion"
+          ]
+        },
+        {
+          "id": "p26.choices2",
+          "label": "What is usually the easiest way for you to add interest?",
+          "type": "checks",
+          "options": [
+            "Colour",
+            "Jewellery",
+            "Texture",
+            "Shoes",
+            "Bags",
+            "Layering",
+            "Prints",
+            "Silhouette",
+            "Skin exposure",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "intensity.1",
+          "label": "How much visual interest feels like enough?",
+          "type": "text"
+        },
+        {
+          "id": "intensity.2",
+          "label": "When does an outfit start feeling too plain?",
+          "type": "text"
+        },
+        {
+          "id": "intensity.3",
+          "label": "When does an outfit start feeling like too much?",
+          "type": "text"
+        },
+        {
+          "id": "intensity.4",
+          "label": "My ideal amount of visual interest is:",
+          "type": "text"
+        },
+        {
+          "id": "p26.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Your Visual Intensity",
+      "art": null
+    },
+    {
+      "page": 27,
+      "title": "Femininity, Polish, and Edge",
+      "lines": [
+        "Three Qualities That Can Change the Feeling of an Outfit",
+        "You don't have to choose whether your style is “feminine” or “edgy.”",
+        "You can want:",
+        "feminine + slightly edgy",
+        "relaxed + polished",
+        "simple + noticeable",
+        "Your style can hold combinations that seem contradictory.",
+        "Let's see where you naturally sit.",
+        "FEMININITY",
+        "Soft / Feminine ───── Neutral ───── Strong / Structured",
+        "Where do you naturally prefer to be?",
+        "---",
+        "POLISH",
+        "Effortless / Relaxed ───── Put-Together ───── Highly Polished",
+        "EDGE",
+        "Classic / Subtle ───── Slightly Unexpected ───── Strongly Edgy",
+        "REFLECT",
+        "Complete:",
+        "«I like femininity when it feels ______ rather than ______.»",
+        "«I like looking polished, but I don't want my style to feel ______.»",
+        "«I enjoy a little edge through ______.»",
+        "RECORD",
+        "My balance of femininity, polish and edge:"
+      ],
+      "controls": [
+        {
+          "id": "balance.femininity",
+          "label": "Femininity",
+          "type": "scale",
+          "ends": [
+            "Soft / Feminine",
+            "Strong / Structured"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "balance.polish",
+          "label": "Polish",
+          "type": "scale",
+          "ends": [
+            "Effortless / Relaxed",
+            "Highly Polished"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "balance.edge",
+          "label": "Edge",
+          "type": "scale",
+          "ends": [
+            "Classic / Subtle",
+            "Strongly Edgy"
+          ],
+          "min": 1,
+          "max": 7
+        },
+        {
+          "id": "balance.notes.1",
+          "label": "I like femininity when it feels ______ rather than ______.",
+          "type": "text"
+        },
+        {
+          "id": "balance.notes.2",
+          "label": "I like looking polished, but I don’t want my style to feel ______.",
+          "type": "text"
+        },
+        {
+          "id": "balance.notes.3",
+          "label": "I enjoy a little edge through ______.",
+          "type": "text"
+        },
+        {
+          "id": "balance.notes.4",
+          "label": "My balance of femininity, polish and edge:",
+          "type": "text"
+        },
+        {
+          "id": "p27.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Three Qualities That Can Change the Feeling of an Outfit",
+      "art": null
+    },
+    {
+      "page": 28,
+      "title": "Colour: Natural Direction",
+      "lines": [
+        "What Colours Do You Actually Want to Wear?",
+        "Liking a colour doesn't automatically mean you need it in your wardrobe.",
+        "You might love bright pink but rarely reach for it.",
+        "You might admire orange but discover that it works best as a small accent.",
+        "You might own lots of black because it's easy, even though you actually want more colour.",
+        "So we're going to look at your relationship with colour, not simply your favourite colours.",
+        "SORT YOUR COLOURS",
+        "Think about colours you've:",
+        "WORN OFTEN",
+        "---",
+        "ENJOYED WEARING",
+        "RECEIVED COMPLIMENTS IN",
+        "OWNED BUT RARELY WORN",
+        "LIKED ON OTHER PEOPLE",
+        "ACTIVELY DISLIKED",
+        "REFLECT",
+        "What colours do you naturally repeat?",
+        "Are there colours you love in theory but don't enjoy wearing?",
+        "Are there colours you wear because they're easy rather than because they feel like you?"
+      ],
+      "controls": [
+        {
+          "id": "colour.observe.1",
+          "label": "WORN OFTEN",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.2",
+          "label": "ENJOYED WEARING",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.3",
+          "label": "RECEIVED COMPLIMENTS IN",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.4",
+          "label": "OWNED BUT RARELY WORN",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.5",
+          "label": "LIKED ON OTHER PEOPLE",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.6",
+          "label": "ACTIVELY DISLIKED",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.7",
+          "label": "What colours do you naturally repeat?",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.8",
+          "label": "Are there colours you love in theory but don’t enjoy wearing?",
+          "type": "text"
+        },
+        {
+          "id": "colour.observe.9",
+          "label": "Are there colours you wear because they’re easy rather than because they feel like you?",
+          "type": "text"
+        },
+        {
+          "id": "p28.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "What Colours Do You Actually Want to Wear?",
+      "art": "colour"
+    },
+    {
+      "page": 29,
+      "title": "Six-Colour Formula",
+      "lines": [
+        "Build Your Personal Colour System",
+        "You don't need a wardrobe full of every colour you like.",
+        "You need a colour system that helps your wardrobe feel cohesive while still allowing personality.",
+        "Your Six-Colour Formula gives each colour a role.",
+        "01 — ANCHOR COLOUR",
+        "Your most dependable foundation.",
+        "Examples:",
+        "Black, navy, cream, brown, charcoal, denim, or another colour that naturally anchors your wardrobe.",
+        "Mine:",
+        "---",
+        "02 — SUPPORT COLOUR",
+        "A second colour that works easily with your anchor.",
+        "03 — SOFT NEUTRAL",
+        "A lighter or softer neutral that gives your wardrobe another easy option.",
+        "04 — STRONG NEUTRAL",
+        "A deeper or stronger neutral that adds contrast.",
+        "05 — WILDCARD COLOUR",
+        "A less predictable colour that adds personality.",
+        "06 — SIGNATURE ACCENT",
+        "A colour that can become recognisably yours through smaller details, accessories, shoes, beauty, or occasional clothing.",
+        "Your Six-Colour Formula is not a six-colour wardrobe restriction.",
+        "These six roles simply help you understand which colours feel foundational, supportive, flexible or distinctive in your personal style.",
+        "You can wear colours outside your formula. The point is to understand your colour direction—not to create a rule you are afraid to break."
+      ],
+      "controls": [
+        {
+          "id": "colours",
+          "label": "My Six-Colour Formula",
+          "type": "colours",
+          "rows": [
+            "Anchor",
+            "Support",
+            "Soft Neutral",
+            "Strong Neutral",
+            "Wildcard",
+            "Signature Accent"
+          ]
+        },
+        {
+          "id": "colour.reason",
+          "label": "Why these colours work for me:",
+          "type": "text"
+        },
+        {
+          "id": "p29.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Build Your Personal Colour System",
+      "art": "colour"
+    },
+    {
+      "page": 30,
+      "title": "Build Your Six-Colour Formula",
+      "lines": [
+        "Will This Colour Actually Work in Your Wardrobe?",
+        "A colour can be beautiful and still be difficult to use.",
+        "Before making it part of your wardrobe, apply the Rule of Three.",
+        "Ask:",
+        "«Can this colour work with at least three things I already own?»",
+        "If yes, it has real wardrobe potential.",
+        "If no, it doesn't automatically mean you can't buy it.",
+        "It simply means you should understand that it may function as a special piece rather than an easy wardrobe colour.",
+        "TRY IT",
+        "Choose a colour you're considering.",
+        "The colour:",
+        "---",
+        "It works with:",
+        "1. __________________",
+        "2. __________________",
+        "3. __________________",
+        "REFLECT",
+        "Is this colour:",
+        "☐ Easy to integrate",
+        "☐ Usable with some effort",
+        "☐ Mostly an accent",
+        "☐ Beautiful but unnecessary for my wardrobe",
+        "RECORD",
+        "«The overall colour direction I want my wardrobe to have is:»",
+        "«A colour I love but don't necessarily need is:»",
+        "The Rule of Three is a practicality check, not a permission slip."
+      ],
+      "controls": [
+        {
+          "id": "colours",
+          "label": "My Six-Colour Formula",
+          "type": "colours",
+          "rows": [
+            "Anchor",
+            "Support",
+            "Soft Neutral",
+            "Strong Neutral",
+            "Wildcard",
+            "Signature Accent"
+          ]
+        },
+        {
+          "id": "colour.new",
+          "label": "The colour:",
+          "type": "text"
+        },
+        {
+          "id": "colour.three",
+          "label": "It works with:",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "colour.practical",
+          "label": "Is this colour:",
+          "type": "checks",
+          "options": [
+            "Easy to integrate",
+            "Usable with some effort",
+            "Mostly an accent",
+            "Beautiful but unnecessary for my wardrobe"
+          ]
+        },
+        {
+          "id": "colour.direction.1",
+          "label": "The overall colour direction I want my wardrobe to have is:",
+          "type": "text"
+        },
+        {
+          "id": "colour.direction.2",
+          "label": "A colour I love but don’t necessarily need is:",
+          "type": "text"
+        },
+        {
+          "id": "p30.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Will This Colour Actually Work in Your Wardrobe?",
+      "art": "colour"
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "lines": [
+        "What Do You Keep Doing Without Thinking?",
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Sometimes they're intentional.",
+        "Sometimes you do them automatically.",
+        "Think about your recent outfits.",
+        "LOOK FOR",
+        "JEWELLERY",
+        "☐ Earrings",
+        "☐ Rings",
+        "☐ Bracelet",
+        "☐ Watch",
+        "☐ Necklace",
+        "☐ Other: ________",
+        "ACCESSORIES",
+        "☐ Belt",
+        "☐ Bag",
+        "☐ Sunglasses",
+        "☐ Hair accessory",
+        "SHOES",
+        "☐ Sneakers",
+        "☐ Flats",
+        "☐ Boots",
+        "☐ Heels",
+        "☐ Sandals",
+        "STYLING DETAILS",
+        "☐ Rolled sleeves",
+        "☐ Tucked tops",
+        "☐ Exposed ankles",
+        "☐ Layering",
+        "☐ Open shirt",
+        "☐ Sleeves pushed up",
+        "CLOTHING DETAILS",
+        "☐ Particular necklines",
+        "☐ Certain colours",
+        "☐ Particular proportions",
+        "☐ Certain fabrics",
+        "☐ Prints",
+        "☐ Short skirts/shorts",
+        "☐ Long dresses",
+        "REFLECT",
+        "Which things appear again and again?",
+        "---",
+        "Which are so automatic that you barely think about them?",
+        "Which ones make an outfit feel more like you?"
+      ],
+      "controls": [
+        {
+          "id": "p31.choices1",
+          "label": "JEWELLERY",
+          "type": "checks",
+          "options": [
+            "Earrings",
+            "Rings",
+            "Bracelet",
+            "Watch",
+            "Necklace",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "p31.choices2",
+          "label": "ACCESSORIES",
+          "type": "checks",
+          "options": [
+            "Belt",
+            "Bag",
+            "Sunglasses",
+            "Hair accessory"
+          ]
+        },
+        {
+          "id": "p31.choices3",
+          "label": "SHOES",
+          "type": "checks",
+          "options": [
+            "Sneakers",
+            "Flats",
+            "Boots",
+            "Heels",
+            "Sandals"
+          ]
+        },
+        {
+          "id": "p31.choices4",
+          "label": "STYLING DETAILS",
+          "type": "checks",
+          "options": [
+            "Rolled sleeves",
+            "Tucked tops",
+            "Exposed ankles",
+            "Layering",
+            "Open shirt",
+            "Sleeves pushed up"
+          ]
+        },
+        {
+          "id": "p31.choices5",
+          "label": "CLOTHING DETAILS",
+          "type": "checks",
+          "options": [
+            "Particular necklines",
+            "Certain colours",
+            "Particular proportions",
+            "Certain fabrics",
+            "Prints",
+            "Short skirts/shorts",
+            "Long dresses"
+          ]
+        },
+        {
+          "id": "signatures.notes.1",
+          "label": "Which things appear again and again?",
+          "type": "text"
+        },
+        {
+          "id": "signatures.notes.2",
+          "label": "Which are so automatic that you barely think about them?",
+          "type": "text"
+        },
+        {
+          "id": "signatures.notes.3",
+          "label": "Which ones make an outfit feel more like you?",
+          "type": "text"
+        },
+        {
+          "id": "p31.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "What Do You Keep Doing Without Thinking?",
+      "art": null
+    },
+    {
+      "page": 32,
+      "title": "Automatic and Deliberate Signatures",
+      "lines": [
+        "Notice Your Style Habits",
+        "Separate your signatures into two groups.",
+        "I DO THIS AUTOMATICALLY",
+        "Things you repeatedly choose without consciously planning them.",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "4. ---",
+        "5. ---",
+        "I DO THIS DELIBERATELY",
+        "Things you consciously add when you want the outfit to feel a certain way.",
+        "YOUR TOP THREE",
+        "If you could keep only three recurring style signatures, which would you choose?",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "COMPLETE",
+        "«My outfits often feel more like me when I add ______.»",
+        "---"
+      ],
+      "controls": [
+        {
+          "id": "signatures.automatic",
+          "label": "I DO THIS AUTOMATICALLY",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "signatures.deliberate",
+          "label": "I DO THIS DELIBERATELY",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "signatures.top",
+          "label": "Your top three",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "signatures.finish",
+          "label": "My outfits often feel more like me when I add ______.",
+          "type": "text"
+        },
+        {
+          "id": "p32.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 2,
+      "subtitle": "Notice Your Style Habits",
+      "art": null
+    },
+    {
+      "page": 33,
+      "title": "Personality Style Profile",
+      "lines": [
+        "Bring Your Visual Discoveries Together",
+        "You've explored what catches your eye, what you admire, what you actually want to wear, your visual preferences, visual intensity, colour direction, and style signatures. Use this page to collect the discoveries—not to decide on a permanent aesthetic label.",
+        "MY PERSONALITY STYLE PROFILE",
+        "WHAT I'M DRAWN TO:",
+        "WHAT I ACTUALLY WANT TO WEAR:",
+        "MY VISUAL DIRECTION:",
+        "MY IDEAL VISUAL INTENSITY:",
+        "MY FEMININITY / POLISH / EDGE BALANCE:",
+        "MY COLOUR DIRECTION:",
+        "MY STYLE SIGNATURES:",
+        "MY STYLE IN ONE SENTENCE",
+        "I want my clothes to feel __________________ while looking __________________.",
+        "PART 2 COMPLETE",
+        "Part 1 showed you how clothes work on your body. Part 2 showed you what you want your style to look and feel like. The next part brings in another essential piece: the life your clothes need to support."
+      ],
+      "controls": [
+        {
+          "id": "personality.1",
+          "label": "WHAT I’M DRAWN TO:",
+          "type": "text",
+          "source": "inspiration.top"
+        },
+        {
+          "id": "personality.2",
+          "label": "WHAT I ACTUALLY WANT TO WEAR:",
+          "type": "text",
+          "source": "inspiration.notes.4"
+        },
+        {
+          "id": "personality.3",
+          "label": "MY VISUAL DIRECTION:",
+          "type": "text"
+        },
+        {
+          "id": "personality.4",
+          "label": "MY IDEAL VISUAL INTENSITY:",
+          "type": "text",
+          "source": "intensity.4"
+        },
+        {
+          "id": "personality.5",
+          "label": "MY FEMININITY / POLISH / EDGE BALANCE:",
+          "type": "text",
+          "source": "balance.notes.4"
+        },
+        {
+          "id": "personality.6",
+          "label": "MY COLOUR DIRECTION:",
+          "type": "text",
+          "source": "colour.direction.1"
+        },
+        {
+          "id": "personality.7",
+          "label": "MY STYLE SIGNATURES:",
+          "type": "text",
+          "source": "signatures.top"
+        },
+        {
+          "id": "personality.sentence",
+          "label": "I want my clothes to feel ______ while looking ______.",
+          "type": "text"
+        },
+        {
+          "id": "p33.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        23,
+        24,
+        25,
+        27,
+        28,
+        32
+      ],
+      "part": 2,
+      "subtitle": "Bring Your Visual Discoveries Together",
+      "art": null
+    },
+    {
+      "page": 34,
+      "title": "What Keeps Showing Up?",
+      "lines": [
+        "What Keeps Showing Up?",
+        "Look back at your Inspiration Set, your visual-dial choices, your colour notes, and your style-signature observations. You do not need to find identical words. Look for details or ideas that seem related.",
+        "NOTICE THE REPEATS",
+        "I naturally notice __________________ in clothes.",
+        "I feel most visually satisfied when an outfit has __________________.",
+        "My style becomes more recognisably mine when I add __________________.",
+        "I admire __________________, but I do not necessarily want to wear it.",
+        "Related preferences that may be pointing to the same thing:",
+        "PATTERN I NOTICE:",
+        "EVIDENCE BEHIND IT:",
+        "WHAT I THINK THIS MEANS:",
+        "MY CORE VISUAL QUALITIES",
+        "Choose 3–5 qualities you genuinely want your clothes to express—not simply words that sound stylish.",
+        "01 __________________   02 __________________   03 __________________   04 __________________   05 __________________",
+        "Now combine the qualities in your own words.",
+        "The combination of qualities that feels most like me is __________________.",
+        "For example: feminine + relaxed + slightly edgy; or polished + simple + expressive. Your combination does not need to fit an existing style category. It only needs to make sense to you.",
+        "WHAT KEEPS SHOWING UP?",
+        "The visual direction I seem to be building is __________________.",
+        "A repeated detail or idea I want to remember is __________________.",
+        "These are working observations, not a final verdict. You will test them against your real life in the next part."
+      ],
+      "controls": [
+        {
+          "id": "repeats.1",
+          "label": "I naturally notice ______ in clothes.",
+          "type": "text"
+        },
+        {
+          "id": "repeats.2",
+          "label": "I feel most visually satisfied when an outfit has ______.",
+          "type": "text"
+        },
+        {
+          "id": "repeats.3",
+          "label": "My style becomes more recognisably mine when I add ______.",
+          "type": "text"
+        },
+        {
+          "id": "repeats.4",
+          "label": "I admire ______, but I do not necessarily want to wear it.",
+          "type": "text"
+        },
+        {
+          "id": "repeats.5",
+          "label": "Related preferences that may be pointing to the same thing:",
+          "type": "text"
+        },
+        {
+          "id": "visual.pattern",
+          "label": "Pattern I notice / Evidence behind it / What I think this means",
+          "type": "patterns",
+          "count": 1
+        },
+        {
+          "id": "visual.qualities",
+          "label": "My core visual qualities",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "visual.combination",
+          "label": "The combination of qualities that feels most like me is ______.",
+          "type": "text"
+        },
+        {
+          "id": "visual.direction.1",
+          "label": "The visual direction I seem to be building is ______.",
+          "type": "text"
+        },
+        {
+          "id": "visual.direction.2",
+          "label": "A repeated detail or idea I want to remember is ______.",
+          "type": "text"
+        },
+        {
+          "id": "p34.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        23,
+        24,
+        25,
+        27,
+        28,
+        32
+      ],
+      "part": 2,
+      "subtitle": "What Keeps Showing Up?",
+      "art": null
+    },
+    {
+      "page": 35,
+      "title": "Your Lifestyle",
+      "lines": [
+        "YOUR LIFESTYLE",
+        "How You Actually Live",
+        "For this section, think about your real life, not your ideal life.",
+        "Think about the last few weeks or months.",
+        "Where did you actually go?",
+        "What did you actually do?",
+        "What did you repeatedly need to wear?",
+        "What situations kept coming up?",
+        "You don't need to judge your lifestyle.",
+        "If you spend most of your time at home, that's useful information.",
+        "If your life is mostly casual, that's useful information.",
+        "If you regularly move between work, church, errands and social events, that's useful information too.",
+        "Remember",
+        "We're not asking:",
+        "«“What kind of life would I like my wardrobe to represent?”»",
+        "We're asking:",
+        "«“What kind of life does my wardrobe actually need to support?”»",
+        "---"
+      ],
+      "controls": [],
+      "references": [],
+      "part": 3,
+      "subtitle": "YOUR LIFESTYLE",
+      "art": null
+    },
+    {
+      "page": 36,
+      "title": "Where Do You Actually Go?",
+      "lines": [
+        "Your Real-Life Dressing Contexts",
+        "Look at a typical month.",
+        "Which of these situations do you actually dress for?",
+        "SELECT ALL THAT APPLY",
+        "☐ Home",
+        "☐ Errands",
+        "☐ Casual outings",
+        "☐ Work",
+        "☐ School",
+        "☐ Business meetings",
+        "☐ Social outings",
+        "☐ Dates",
+        "☐ Church / religious activities",
+        "☐ Family gatherings",
+        "☐ Dinners",
+        "☐ Parties",
+        "☐ Weddings / formal occasions",
+        "☐ Travel",
+        "☐ Exercise",
+        "☐ Other: __________",
+        "Now mark how often each one actually occurs.",
+        "FREQUENCY",
+        "Very frequent — part of normal life",
+        "Frequent — happens regularly",
+        "Occasional — happens sometimes",
+        "Rare — happens infrequently",
+        "Almost never — hardly ever happens",
+        "REFLECT",
+        "Look at the categories you marked Very frequent and Frequent.",
+        "These are some of the most important contexts your wardrobe needs to serve.",
+        "RECORD",
+        "My three most common dressing situations are:",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "A situation I dress for much less often than I thought:",
+        "---",
+        "A situation I may own too many clothes for:"
+      ],
+      "controls": [
+        {
+          "id": "p36.choices1",
+          "label": "SELECT ALL THAT APPLY",
+          "type": "checks",
+          "options": [
+            "Home",
+            "Errands",
+            "Casual outings",
+            "Work",
+            "School",
+            "Business meetings",
+            "Social outings",
+            "Dates",
+            "Church / religious activities",
+            "Family gatherings",
+            "Dinners",
+            "Parties",
+            "Weddings / formal occasions",
+            "Travel",
+            "Exercise",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "life.frequency",
+          "label": "Now mark how often each one actually occurs.",
+          "type": "matrix",
+          "rows": [
+            "Home",
+            "Errands",
+            "Casual outings",
+            "Work",
+            "School",
+            "Business meetings",
+            "Social outings",
+            "Dates",
+            "Church / religious activities",
+            "Family gatherings",
+            "Dinners",
+            "Parties",
+            "Weddings / formal occasions",
+            "Travel",
+            "Exercise",
+            "Other"
+          ],
+          "options": [
+            "Very frequent",
+            "Frequent",
+            "Occasional",
+            "Rare",
+            "Almost never"
+          ]
+        },
+        {
+          "id": "life.top",
+          "label": "My three most common dressing situations are:",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "life.less.1",
+          "label": "A situation I dress for much less often than I thought:",
+          "type": "text"
+        },
+        {
+          "id": "life.less.2",
+          "label": "A situation I may own too many clothes for:",
+          "type": "text"
+        },
+        {
+          "id": "p36.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "Your Real-Life Dressing Contexts",
+      "art": null
+    },
+    {
+      "page": 37,
+      "title": "Real-Life Time Map",
+      "lines": [
+        "Where Does Your Time Actually Go?",
+        "Sometimes our wardrobes reflect the life we imagine rather than the life we spend most of our time living.",
+        "Let's make that visible.",
+        "Imagine you have 100 points representing your typical week or month.",
+        "Divide the 100 points across the activities that actually make up your life.",
+        "MY 100-POINT TIME MAP",
+        "Home / everyday life: ______",
+        "Errands / practical activities: ______",
+        "Work / business: ______",
+        "Social life: ______",
+        "Church / religious activities: ______",
+        "Family: ______",
+        "Dates / romantic occasions: ______",
+        "Formal events: ______",
+        "Travel: ______",
+        "Exercise: ______",
+        "Other: ______",
+        "TOTAL",
+        "100 points",
+        "☐ My total is exactly 100."
+      ],
+      "controls": [
+        {
+          "id": "life.time",
+          "label": "My 100-point time map",
+          "type": "time",
+          "rows": [
+            "Home / everyday life",
+            "Errands / practical activities",
+            "Work / business",
+            "Social life",
+            "Church / religious activities",
+            "Family",
+            "Dates / romantic occasions",
+            "Formal events",
+            "Travel",
+            "Exercise",
+            "Other"
+          ]
+        },
+        {
+          "id": "p37.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "Where Does Your Time Actually Go?",
+      "art": null
+    },
+    {
+      "page": 38,
+      "title": "Read Your Time Map",
+      "lines": [
+        "NOW LOOK AT IT",
+        "Which categories take up the largest share of your life?",
+        "---",
+        "Which categories take up very little of your life?",
+        "REFLECT",
+        "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+        "☐ Yes",
+        "☐ Mostly",
+        "☐ Not really",
+        "Why?",
+        "NOW READ YOUR MAP",
+        "Look at your three largest categories.",
+        "Ask: Are these also the areas my wardrobe needs to support most?",
+        "Then look at your smallest categories.",
+        "Am I giving a lot of wardrobe attention to situations that barely happen in my real life?",
+        "You are not being asked to change your wardrobe yet. You're simply noticing the relationship between how you actually spend your time and what your clothes need to support.",
+        "RECORD",
+        "My three biggest real-life dressing contexts are:",
+        "The biggest mismatch I noticed is:"
+      ],
+      "controls": [
+        {
+          "id": "p38.choices1",
+          "label": "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+          "type": "checks",
+          "options": [
+            "Yes",
+            "Mostly",
+            "Not really"
+          ]
+        },
+        {
+          "id": "life.map.1",
+          "label": "Which categories take up the largest share of your life?",
+          "type": "text"
+        },
+        {
+          "id": "life.map.2",
+          "label": "Which categories take up very little of your life?",
+          "type": "text"
+        },
+        {
+          "id": "life.map.3",
+          "label": "Why?",
+          "type": "text"
+        },
+        {
+          "id": "life.map.4",
+          "label": "My three biggest real-life dressing contexts are:",
+          "type": "text"
+        },
+        {
+          "id": "life.map.5",
+          "label": "The biggest mismatch I noticed is:",
+          "type": "text"
+        },
+        {
+          "id": "p38.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        36,
+        37
+      ],
+      "part": 3,
+      "subtitle": "NOW LOOK AT IT",
+      "art": null
+    },
+    {
+      "page": 39,
+      "title": "What Do You Actually Need to Get Dressed For?",
+      "lines": [
+        "Beyond Categories",
+        "Knowing that you go to “work” or “errands” doesn't tell us everything your clothes need to do.",
+        "Think about the actual tasks and transitions involved.",
+        "For example:",
+        "- leaving home and returning several hours later",
+        "- moving between indoor and outdoor spaces",
+        "- sitting for long periods",
+        "- walking",
+        "- carrying things",
+        "- meeting people unexpectedly",
+        "- going somewhere casual that could become social",
+        "- moving from work into an evening activity",
+        "- dressing appropriately without wanting to feel overdressed",
+        "LOOK AT YOUR THREE MOST COMMON SITUATIONS",
+        "SITUATION 01",
+        "---",
+        "What do your clothes need to help you do?",
+        "SITUATION 02",
+        "SITUATION 03",
+        "NOW SORT YOUR NEEDS",
+        "For each quality, decide whether it is:",
+        "MUST HAVE",
+        "NICE TO HAVE",
+        "DOESN'T MATTER MUCH",
+        "☐ Comfort",
+        "☐ Easy movement",
+        "☐ Looking appropriate",
+        "☐ Easy transitions",
+        "☐ Easy styling",
+        "☐ Weather suitability",
+        "☐ Looking polished",
+        "☐ Feeling relaxed",
+        "☐ Being able to sit/walk comfortably",
+        "☐ Other: __________",
+        "RECORD",
+        "The three things my clothes most need to help me do are:",
+        "1. ---",
+        "2. ---",
+        "3. ---"
+      ],
+      "controls": [
+        {
+          "id": "life.situations",
+          "label": "Look at your three most common situations",
+          "type": "table",
+          "rows": [
+            "Situation 01",
+            "Situation 02",
+            "Situation 03"
+          ],
+          "columns": [
+            "Situation",
+            "What do your clothes need to help you do?"
+          ]
+        },
+        {
+          "id": "life.needs",
+          "label": "Now sort your needs",
+          "type": "matrix",
+          "rows": [
+            "Comfort",
+            "Easy movement",
+            "Looking appropriate",
+            "Easy transitions",
+            "Easy styling",
+            "Weather suitability",
+            "Looking polished",
+            "Feeling relaxed",
+            "Being able to sit/walk comfortably",
+            "Other"
+          ],
+          "options": [
+            "Must have",
+            "Nice to have",
+            "Doesn’t matter much"
+          ]
+        },
+        {
+          "id": "life.help",
+          "label": "The three things my clothes most need to help me do are:",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "p39.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "Beyond Categories",
+      "art": null
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "lines": [
+        "What Does Your Environment Actually Demand?",
+        "Your environment affects what makes clothing practical.",
+        "But not every environmental factor deserves equal weight.",
+        "Think about what genuinely affects your daily dressing.",
+        "WEATHER",
+        "☐ Heat",
+        "☐ Cold",
+        "☐ Rain",
+        "☐ Humidity",
+        "☐ Changing temperatures",
+        "☐ Strong sun",
+        "☐ Other: __________",
+        "MOVEMENT",
+        "☐ Mostly sitting",
+        "☐ Walking",
+        "☐ Standing",
+        "☐ Frequent movement",
+        "☐ Driving",
+        "☐ Public transportation",
+        "ENVIRONMENT",
+        "☐ Mostly indoors",
+        "☐ Mostly outdoors",
+        "☐ Mixed indoor/outdoor",
+        "☐ Air-conditioned spaces",
+        "☐ Dust / messy environments",
+        "☐ Formal environments",
+        "☐ Casual environments",
+        "DRESS EXPECTATIONS",
+        "☐ Mostly casual",
+        "☐ Smart casual",
+        "☐ Professional",
+        "☐ Modest / conservative",
+        "☐ Highly variable",
+        "☐ Formal",
+        "REFLECT",
+        "Which environmental factors strongly affect what you can realistically wear?",
+        "---",
+        "Which affect you somewhat?",
+        "Which ones barely matter?",
+        "IMPORTANT",
+        "You don't need to design your entire wardrobe around every possible condition.",
+        "Focus on the things that actually affect your everyday life."
+      ],
+      "controls": [
+        {
+          "id": "p40.choices1",
+          "label": "WEATHER",
+          "type": "checks",
+          "options": [
+            "Heat",
+            "Cold",
+            "Rain",
+            "Humidity",
+            "Changing temperatures",
+            "Strong sun",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "p40.choices2",
+          "label": "MOVEMENT",
+          "type": "checks",
+          "options": [
+            "Mostly sitting",
+            "Walking",
+            "Standing",
+            "Frequent movement",
+            "Driving",
+            "Public transportation"
+          ]
+        },
+        {
+          "id": "p40.choices3",
+          "label": "ENVIRONMENT",
+          "type": "checks",
+          "options": [
+            "Mostly indoors",
+            "Mostly outdoors",
+            "Mixed indoor/outdoor",
+            "Air-conditioned spaces",
+            "Dust / messy environments",
+            "Formal environments",
+            "Casual environments"
+          ]
+        },
+        {
+          "id": "p40.choices4",
+          "label": "DRESS EXPECTATIONS",
+          "type": "checks",
+          "options": [
+            "Mostly casual",
+            "Smart casual",
+            "Professional",
+            "Modest / conservative",
+            "Highly variable",
+            "Formal"
+          ]
+        },
+        {
+          "id": "environment.1",
+          "label": "Which environmental factors strongly affect what you can realistically wear?",
+          "type": "text"
+        },
+        {
+          "id": "environment.2",
+          "label": "Which affect you somewhat?",
+          "type": "text"
+        },
+        {
+          "id": "environment.3",
+          "label": "Which ones barely matter?",
+          "type": "text"
+        },
+        {
+          "id": "p40.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "What Does Your Environment Actually Demand?",
+      "art": null
+    },
+    {
+      "page": 41,
+      "title": "What Does Practical Mean to You?",
+      "lines": [
+        "Practical Doesn't Mean the Same Thing to Everyone",
+        "One person considers a garment practical because it's comfortable. Another cares about whether it survives frequent washing. Someone else values pieces that work with many outfits or are easy to put on and style.",
+        "Don't assume you need someone else's definition of practicality. Build your own.",
+        "SORT THESE QUALITIES",
+        "Place each quality into one of four groups: NON-NEGOTIABLE / IMPORTANT / NICE TO HAVE / I DON'T REALLY CARE.",
+        "PRACTICAL QUALITIES",
+        "☐ Easy care   ☐ Comfortable   ☐ Versatile   ☐ Durable   ☐ Breathable",
+        "☐ Weather-appropriate   ☐ Easy movement   ☐ Easy to style / match",
+        "☐ Modest   ☐ Secure / doesn't require constant adjusting",
+        "☐ Affordable to replace   ☐ High quality   ☐ Low maintenance",
+        "☐ Functional details   ☐ Other: __________________",
+        "REFLECT",
+        "Which qualities did you place under NON-NEGOTIABLE?",
+        "Which qualities are nice to have but not worth compromising your style for?",
+        "RECORD",
+        "To me, practical clothing means __________________.",
+        "WHAT ARE YOU WILLING TO TRADE?",
+        "No wardrobe gives you everything in every garment. Sometimes you may choose style over convenience, comfort over appearance, versatility over uniqueness, or quality over quantity. The point is to understand your own priorities—not to audit what you own.",
+        "I'm willing to sacrifice __________________ in order to have more __________________.",
+        "I don't mind __________________ if it means I get __________________.",
+        "I am not willing to compromise on __________________.",
+        "EXAMPLE",
+        "I'm willing to spend a little more time styling an outfit if it makes me feel much more like myself.",
+        "I'm willing to own fewer pieces if the ones I own are comfortable and versatile.",
+        "Your answer doesn't need to sound sophisticated. It just needs to be true for you."
+      ],
+      "controls": [
+        {
+          "id": "practical.sort",
+          "label": "Sort these qualities",
+          "type": "matrix",
+          "rows": [
+            "Easy care",
+            "Comfortable",
+            "Versatile",
+            "Durable",
+            "Breathable",
+            "Weather-appropriate",
+            "Easy movement",
+            "Easy to style / match",
+            "Modest",
+            "Secure / doesn’t require constant adjusting",
+            "Affordable to replace",
+            "High quality",
+            "Low maintenance",
+            "Functional details",
+            "Other"
+          ],
+          "options": [
+            "Non-negotiable",
+            "Important",
+            "Nice to have",
+            "I don’t really care"
+          ]
+        },
+        {
+          "id": "practical.notes.1",
+          "label": "Which qualities did you place under NON-NEGOTIABLE?",
+          "type": "text"
+        },
+        {
+          "id": "practical.notes.2",
+          "label": "Which qualities are nice to have but not worth compromising your style for?",
+          "type": "text"
+        },
+        {
+          "id": "practical.notes.3",
+          "label": "To me, practical clothing means ______.",
+          "type": "text"
+        },
+        {
+          "id": "practical.notes.4",
+          "label": "I’m willing to sacrifice ______ in order to have more ______.",
+          "type": "text"
+        },
+        {
+          "id": "practical.notes.5",
+          "label": "I don’t mind ______ if it means I get ______.",
+          "type": "text"
+        },
+        {
+          "id": "practical.notes.6",
+          "label": "I am not willing to compromise on ______.",
+          "type": "text"
+        },
+        {
+          "id": "p41.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "Practical Doesn't Mean the Same Thing to Everyone",
+      "art": null
+    },
+    {
+      "page": 42,
+      "title": "Fantasy Life vs Real Life",
+      "lines": [
+        "The Wardrobe You Imagined You'd Need",
+        "This is where things can get interesting.",
+        "Look at the clothes you own — or the clothes you repeatedly save, shop for, or wish you could wear.",
+        "Are some of them designed for a life you don't actually live?",
+        "Maybe you have:",
+        "- corporate clothes for a job you don't have",
+        "- party clothes for events you rarely attend",
+        "- vacation clothes for trips that happen once a year",
+        "- heels you almost never wear",
+        "- “someday” clothes",
+        "- pieces for an aspirational lifestyle",
+        "- clothes for a version of yourself you thought you were supposed to become",
+        "This doesn't mean those clothes are bad.",
+        "It means we should notice the story behind them.",
+        "SORT YOUR FANTASY CATEGORIES",
+        "Which of these feel familiar?",
+        "☐ Corporate / office wardrobe",
+        "☐ Party wardrobe",
+        "☐ Vacation wardrobe",
+        "☐ Heels / dress shoes",
+        "☐ Formal dresses",
+        "☐ “Someday” clothes",
+        "☐ Clothes for an imagined social life",
+        "☐ Clothes for an imagined body",
+        "☐ Clothes for an imagined version of myself",
+        "☐ Trend pieces I imagined I'd wear",
+        "☐ Other: __________",
+        "REFLECT",
+        "The biggest “fantasy life” category in my wardrobe is:",
+        "---",
+        "Why do I think I bought or wanted these clothes?",
+        "How often does this situation actually occur?",
+        "What Does Your Wardrobe Need More Of?",
+        "Now compare the two.",
+        "MY ACTUAL LIFE",
+        "I spend most of my time:",
+        "I most often need clothes for:",
+        "My clothes need to help me:",
+        "MY IMAGINED LIFE",
+        "I have accumulated / saved clothes for:",
+        "I thought I would spend more time:",
+        "I imagined myself dressing like:",
+        "Where is the biggest mismatch?",
+        "«My wardrobe seems prepared for ______, but my actual life requires more ______.»",
+        "IMPORTANT",
+        "This isn't about getting rid of everything connected to your dreams.",
+        "It's about recognizing the difference between:",
+        "what your wardrobe needs to support regularly",
+        "and",
+        "what you might occasionally want it to support.",
+        "Both can exist.",
+        "They just don't need equal weight.",
+        "The biggest lifestyle mismatch I notice is…",
+        "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______."
+      ],
+      "controls": [
+        {
+          "id": "p42.choices1",
+          "label": "Which of these feel familiar?",
+          "type": "checks",
+          "options": [
+            "Corporate / office wardrobe",
+            "Party wardrobe",
+            "Vacation wardrobe",
+            "Heels / dress shoes",
+            "Formal dresses",
+            "“Someday” clothes",
+            "Clothes for an imagined social life",
+            "Clothes for an imagined body",
+            "Clothes for an imagined version of myself",
+            "Trend pieces I imagined I'd wear",
+            "Other: …"
+          ]
+        },
+        {
+          "id": "fantasy.1",
+          "label": "The biggest “fantasy life” category in my wardrobe is:",
+          "type": "text"
+        },
+        {
+          "id": "fantasy.2",
+          "label": "Why do I think I bought or wanted these clothes?",
+          "type": "text"
+        },
+        {
+          "id": "fantasy.3",
+          "label": "How often does this situation actually occur?",
+          "type": "text"
+        },
+        {
+          "id": "life.compare",
+          "label": "My actual life / My imagined life",
+          "type": "table",
+          "rows": [
+            "I spend most of my time / I have accumulated or saved clothes for",
+            "I most often need clothes for / I thought I would spend more time",
+            "My clothes need to help me / I imagined myself dressing like"
+          ],
+          "columns": [
+            "My actual life",
+            "My imagined life"
+          ]
+        },
+        {
+          "id": "life.mismatch.1",
+          "label": "My wardrobe seems prepared for ______, but my actual life requires more ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.mismatch.2",
+          "label": "The biggest lifestyle mismatch I notice is…",
+          "type": "text"
+        },
+        {
+          "id": "life.mismatch.3",
+          "label": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______.",
+          "type": "text"
+        },
+        {
+          "id": "p42.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 3,
+      "subtitle": "The Wardrobe You Imagined You'd Need",
+      "art": null
+    },
+    {
+      "page": 43,
+      "title": "Lifestyle Wardrobe Profile",
+      "lines": [
+        "Most of my life is spent…",
+        "The situations I need my wardrobe to support most are…",
+        "My clothes need to help me…",
+        "The practical qualities I value most are…",
+        "The biggest lifestyle mismatch I notice is…",
+        "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______."
+      ],
+      "controls": [
+        {
+          "id": "lifestyle.time",
+          "label": "Most of my life is spent…",
+          "type": "text",
+          "source": "life.map.4"
+        },
+        {
+          "id": "lifestyle.contexts",
+          "label": "The situations I need my wardrobe to support most are…",
+          "type": "text",
+          "source": "life.top"
+        },
+        {
+          "id": "lifestyle.help",
+          "label": "My clothes need to help me…",
+          "type": "text",
+          "source": "life.help"
+        },
+        {
+          "id": "lifestyle.practical",
+          "label": "The practical qualities I value most are…",
+          "type": "text",
+          "source": "practical.notes.3"
+        },
+        {
+          "id": "lifestyle.mismatch",
+          "label": "The biggest lifestyle mismatch I notice is…",
+          "type": "text",
+          "source": "life.mismatch.2"
+        },
+        {
+          "id": "lifestyle.priority",
+          "label": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______.",
+          "type": "text",
+          "source": "life.mismatch.3"
+        },
+        {
+          "id": "p43.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        36,
+        37,
+        39,
+        40,
+        41,
+        42
+      ],
+      "part": 3,
+      "subtitle": "Most of my life is spent…",
+      "art": null
+    },
+    {
+      "page": 44,
+      "title": "What Does My Life Actually Ask of My Style?",
+      "lines": [
+        "Design Around the Life You Actually Live",
+        "Look back at everything you've recorded.",
+        "Complete these statements:",
+        "«Most days, I need clothes that are ______.»",
+        "---",
+        "«I spend more time ______ than ______.»",
+        "«My wardrobe needs to support ______ most often.»",
+        "«For me, practicality means ______.»",
+        "«I don't need my wardrobe to be dominated by ______.»",
+        "«I would benefit from having more clothes that ______.»",
+        "THE BIGGEST REALIZATION",
+        "«Something I learned about my lifestyle and the way I dress is:»"
+      ],
+      "controls": [
+        {
+          "id": "life.implications.1",
+          "label": "Most days, I need clothes that are ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.2",
+          "label": "I spend more time ______ than ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.3",
+          "label": "My wardrobe needs to support ______ most often.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.4",
+          "label": "For me, practicality means ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.5",
+          "label": "I don’t need my wardrobe to be dominated by ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.6",
+          "label": "I would benefit from having more clothes that ______.",
+          "type": "text"
+        },
+        {
+          "id": "life.implications.7",
+          "label": "Something I learned about my lifestyle and the way I dress is:",
+          "type": "text"
+        },
+        {
+          "id": "p44.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        36,
+        37,
+        39,
+        40,
+        41,
+        42
+      ],
+      "part": 3,
+      "subtitle": "Design Around the Life You Actually Live",
+      "art": null
+    },
+    {
+      "page": 45,
+      "title": "Connect the Dots",
+      "lines": [
+        "You're Starting to See the Whole Thing",
+        "So far, you've looked at three different things.",
+        "YOUR BODY",
+        "How clothes work on you",
+        "You discovered:",
+        "---",
+        "YOUR PERSONALITY",
+        "What you want your style to look and feel like",
+        "YOUR LIFESTYLE",
+        "How your clothes need to work in your actual life",
+        "NOW PAUSE",
+        "Do these three things seem to agree?",
+        "☐ Mostly yes",
+        "☐ Somewhat",
+        "☐ Not really",
+        "If there are contradictions, don't try to fix them yet.",
+        "That's what the next section is for.",
+        "Sometimes the most interesting part of personal style is not finding three perfectly matching answers.",
+        "It's figuring out how they can coexist.",
+        "PART 3 COMPLETE",
+        "You now have a clearer picture of the life your personal style needs to exist inside.",
+        "You've identified:",
+        "where you actually go",
+        "how your time is divided",
+        "what you repeatedly need to dress for",
+        "what your environment demands",
+        "what practicality means to you",
+        "and",
+        "where your real life differs from the life your wardrobe may have been preparing for.",
+        "Now we have all three pieces.",
+        "Your Body.",
+        "Your Personality.",
+        "Your Lifestyle.",
+        "The next step is where we bring them together."
+      ],
+      "controls": [
+        {
+          "id": "p45.choices1",
+          "label": "Do these three things seem to agree?",
+          "type": "checks",
+          "options": [
+            "Mostly yes",
+            "Somewhat",
+            "Not really"
+          ]
+        },
+        {
+          "id": "dots.body",
+          "label": "Your Body",
+          "type": "text",
+          "source": "body.synthesis.3"
+        },
+        {
+          "id": "dots.personality",
+          "label": "Your Personality",
+          "type": "text",
+          "source": "personality.sentence"
+        },
+        {
+          "id": "dots.life",
+          "label": "Your Lifestyle",
+          "type": "text",
+          "source": "lifestyle.priority"
+        },
+        {
+          "id": "p45.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "You're Starting to See the Whole Thing",
+      "art": "connections"
+    },
+    {
+      "page": 46,
+      "title": "Repeated Yeses",
+      "lines": [
+        "What Keeps Showing Up?",
+        "Review your notes from:",
+        "PART 1 — YOUR BODY",
+        "PART 2 — YOUR PERSONALITY",
+        "PART 3 — YOUR LIFESTYLE",
+        "Look for qualities that appear in at least two places.",
+        "LOOK FOR",
+        "You might notice patterns around:",
+        "Fit",
+        "- fitted",
+        "- body-skimming",
+        "- relaxed",
+        "- oversized",
+        "- a mix",
+        "Shape",
+        "- straight",
+        "- flowing",
+        "- structured",
+        "- soft",
+        "- fitted + relaxed combinations",
+        "Proportion",
+        "- cropped + high-rise",
+        "- long + streamlined",
+        "- oversized + short",
+        "- fitted + relaxed",
+        "Visual qualities",
+        "- simple",
+        "- feminine",
+        "- polished",
+        "- edgy",
+        "- understated",
+        "- expressive",
+        "- classic",
+        "- playful",
+        "- dramatic",
+        "Practical qualities",
+        "- comfortable",
+        "- easy",
+        "- versatile",
+        "- breathable",
+        "- low-maintenance",
+        "- movement-friendly",
+        "CHOOSE",
+        "Highlight or write down 5–8 qualities that appear repeatedly.",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "4. ---",
+        "5. ---",
+        "6. ---",
+        "7. ---",
+        "8. ---",
+        "REFLECT",
+        "Which three feel strongest?",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "---"
+      ],
+      "controls": [
+        {
+          "id": "repeated.qualities",
+          "label": "Highlight or write down 5–8 qualities that appear repeatedly.",
+          "type": "list",
+          "count": 8
+        },
+        {
+          "id": "repeated.top",
+          "label": "Which three feel strongest?",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "p46.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "What Keeps Showing Up?",
+      "art": null
+    },
+    {
+      "page": 47,
+      "title": "Strongest Patterns",
+      "lines": [
+        "Turn Repetition Into Meaning",
+        "A repeated preference is useful. Now go one step further: ask what that preference may tell you about how you want to dress.",
+        "EXAMPLE",
+        "You might repeatedly choose relaxed fit + simple outfits + comfortable fabrics. The deeper pattern might be: “I want my clothes to feel effortless rather than restrictive or overly constructed.”",
+        "Or feminine shapes + subtle edge + noticeable jewellery might become: “I like femininity, but I want something slightly unexpected to keep it from feeling too sweet.”",
+        "The wording is yours. These are examples of how related observations can point to a larger idea, not conclusions you have to adopt.",
+        "HOW TO FIND A PATTERN",
+        "Don't look only for identical words. Look for similar ideas. Relaxed fit, comfortable fabrics, effortless outfits, and a casual lifestyle may point toward ease. Feminine silhouettes, sweetheart necklines, jewellery, and dresses may point toward femininity. Simple outfits, neutral colours, minimal details, and clean proportions may point toward understated simplicity.",
+        "PATTERN RECORD 01",
+        "Pattern I notice: __________________________________________________",
+        "Evidence behind it: ________________________________________________",
+        "What I think this means: ____________________________________________",
+        "PATTERN RECORD 02",
+        "Pattern I notice: __________________________________________________",
+        "Evidence behind it: ________________________________________________",
+        "What I think this means: ____________________________________________",
+        "PATTERN RECORD 03",
+        "Pattern I notice: __________________________________________________",
+        "Evidence behind it: ________________________________________________",
+        "What I think this means: ____________________________________________",
+        "Across my body, personality, and lifestyle discoveries, a possible connecting pattern is:",
+        "____________________________________________________________________",
+        "Treat these as working interpretations. You can refine them as you learn more."
+      ],
+      "controls": [
+        {
+          "id": "patterns",
+          "label": "Your strongest patterns",
+          "type": "patterns",
+          "count": 3
+        },
+        {
+          "id": "patterns.connection",
+          "label": "Across my body, personality, and lifestyle discoveries, a possible connecting pattern is:",
+          "type": "text"
+        },
+        {
+          "id": "p47.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "Turn Repetition Into Meaning",
+      "art": "connections"
+    },
+    {
+      "page": 48,
+      "title": "Style Tensions",
+      "lines": [
+        "Your Preferences Don't Have to Agree Perfectly",
+        "This is one of the most useful parts of the process.",
+        "Sometimes two things you want seem to contradict each other.",
+        "For example:",
+        "«“I like oversized clothes, but I don't want to look swallowed.”»",
+        "«“I like minimal outfits, but I don't want them to feel boring.”»",
+        "«“I like feminine clothing, but I don't want to look overly girly.”»",
+        "«“I want to look polished, but I don't want to look overdressed.”»",
+        "«“I like revealing pieces, but I still want the overall outfit to feel balanced.”»",
+        "These aren't problems to eliminate.",
+        "They can actually tell you something important about your style.",
+        "YOUR TENSIONS",
+        "Think about two preferences that don't always fit together easily.",
+        "I like:",
+        "---",
+        "But I don't want too much:",
+        "I want my clothes to feel:",
+        "without becoming:",
+        "I enjoy:",
+        "but I still need:",
+        "I want to look:",
+        "while feeling:",
+        "NOW CHOOSE YOUR MOST IMPORTANT TENSION",
+        "«I want ______ without becoming ______.»",
+        "This may become one of the most useful sentences in your Blueprint."
+      ],
+      "controls": [
+        {
+          "id": "tensions.1",
+          "label": "I like:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.2",
+          "label": "But I don’t want too much:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.3",
+          "label": "I want my clothes to feel:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.4",
+          "label": "without becoming:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.5",
+          "label": "I enjoy:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.6",
+          "label": "but I still need:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.7",
+          "label": "I want to look:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.8",
+          "label": "while feeling:",
+          "type": "text"
+        },
+        {
+          "id": "tensions.9",
+          "label": "I want ______ without becoming ______.",
+          "type": "text"
+        },
+        {
+          "id": "p48.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "Your Preferences Don't Have to Agree Perfectly",
+      "art": null
+    },
+    {
+      "page": 49,
+      "title": "Style Balance",
+      "lines": [
+        "Not Everything Needs Equal Weight",
+        "You may have many qualities you like.",
+        "But your style becomes clearer when you know which qualities are central, which support them, and which are occasional.",
+        "Think of your style as having three levels.",
+        "CORE",
+        "The qualities that should appear often.",
+        "These make an outfit feel recognizably like you.",
+        "Examples:",
+        "- relaxed",
+        "- feminine",
+        "- understated",
+        "- polished",
+        "- effortless",
+        "- classic",
+        "- edgy",
+        "SUPPORTING",
+        "Qualities that help create the overall look.",
+        "They may not appear in every outfit, but they help shape your style.",
+        "- structured",
+        "- playful",
+        "- sophisticated",
+        "- soft",
+        "- minimal",
+        "- expressive",
+        "ACCENT",
+        "Qualities you enjoy in smaller doses.",
+        "These can add personality without taking over everything.",
+        "- dramatic",
+        "- trendy",
+        "- bold colour",
+        "- sexy",
+        "- unusual details",
+        "- statement accessories",
+        "CHOOSE",
+        "MY CORE QUALITIES",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "MY SUPPORTING QUALITIES",
+        "MY ACCENT QUALITIES",
+        "REFLECT",
+        "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+        "☐ Yes",
+        "☐ No",
+        "☐ Sometimes",
+        "Why?",
+        "---"
+      ],
+      "controls": [
+        {
+          "id": "p49.choices1",
+          "label": "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+          "type": "checks",
+          "options": [
+            "Yes",
+            "No",
+            "Sometimes"
+          ]
+        },
+        {
+          "id": "qualities.core",
+          "label": "My core qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "qualities.supporting",
+          "label": "My supporting qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "qualities.accent",
+          "label": "My accent qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "balance.why",
+          "label": "Why?",
+          "type": "text"
+        },
+        {
+          "id": "p49.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "Not Everything Needs Equal Weight",
+      "art": null
+    },
+    {
+      "page": 50,
+      "title": "Translate Style Into Clothing",
+      "lines": [
+        "What Do Your Words Actually Look Like?",
+        "Words such as “feminine,” “relaxed,” “polished,” or “edgy” can mean completely different things to different people. Translate your own words into clothing choices; this is about creating your own style language, not following a prescribed aesthetic.",
+        "MY STYLE TRANSLATION",
+        "STYLE QUALITY | WHAT IT MEANS TO ME | HOW IT MAY SHOW UP IN CLOTHING",
+        "__________________ | __________________ | ______________________________",
+        "__________________ | __________________ | ______________________________",
+        "__________________ | __________________ | ______________________________",
+        "Think about silhouettes, fit, proportions, lengths, necklines, fabrics / textures, shoes, accessories, and details.",
+        "EXAMPLES — NOT PRESCRIPTIONS",
+        "RELAXED",
+        "Possible meaning: not overly constructed or restrictive.",
+        "Possible clothing expressions: relaxed trousers, softer fabrics, uncomplicated combinations, or comfortable shoes.",
+        "FEMININE",
+        "Possible meaning: softness or traditional feminine details, without everything needing to feel sweet.",
+        "Possible clothing expressions: a neckline, dress shape, jewellery, colour, or proportion that creates the feeling you want.",
+        "Your meaning may be different. Your version of “feminine” might be a sweetheart neckline and a mini skirt; someone else's might be a long, flowing dress. Your version of “polished” might be clean proportions and simple jewellery; someone else's might be structured tailoring.",
+        "There is no universally correct translation. The meaning comes from you."
+      ],
+      "controls": [
+        {
+          "id": "translation",
+          "label": "My style translation",
+          "type": "table",
+          "rows": [
+            "01",
+            "02",
+            "03"
+          ],
+          "columns": [
+            "Style quality",
+            "What it means to me",
+            "How it may show up in clothing"
+          ]
+        },
+        {
+          "id": "p50.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 4,
+      "subtitle": "What Do Your Words Actually Look Like?",
+      "art": null
+    },
+    {
+      "page": 51,
+      "title": "Style Language Dictionary",
+      "lines": [
+        "When I Say ___, I Mean ___",
+        "This page turns vague style words into language that is actually useful to you.",
+        "Complete the sentences.",
+        "«When I say “feminine,” I mean…»",
+        "---",
+        "«When I say “polished,” I mean…»",
+        "«When I say “casual,” I mean…»",
+        "«When I say “sexy,” I mean…»",
+        "«When I say “simple,” I mean…»",
+        "«When I say “stylish,” I mean…»",
+        "ADD YOUR OWN",
+        "«When I say “__________,” I mean…»",
+        "WHY THIS MATTERS",
+        "You are not trying to adopt someone else's definition of style.",
+        "You're creating a vocabulary that helps you make decisions for yourself."
+      ],
+      "controls": [
+        {
+          "id": "dictionary.1",
+          "label": "When I say “feminine,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.2",
+          "label": "When I say “polished,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.3",
+          "label": "When I say “casual,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.4",
+          "label": "When I say “sexy,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.5",
+          "label": "When I say “simple,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.6",
+          "label": "When I say “stylish,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "dictionary.7",
+          "label": "When I say “__________,” I mean…",
+          "type": "text"
+        },
+        {
+          "id": "p51.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 4,
+      "subtitle": "When I Say ___, I Mean ___",
+      "art": null
+    },
+    {
+      "page": 52,
+      "title": "Looking Like Me",
+      "lines": [
+        "When Does an Outfit Actually Feel Like You?",
+        "An outfit can look objectively beautiful.",
+        "It can fit well.",
+        "It can be flattering.",
+        "It can even get compliments.",
+        "And still not feel like you.",
+        "Why?",
+        "Because personal style sits at the intersection of several things.",
+        "LOOK AT AN OUTFIT YOU LOVE",
+        "Choose one outfit from your inspiration set or your own wardrobe.",
+        "Ask:",
+        "BODY",
+        "Does it work with the physical qualities I discovered?",
+        "☐ Yes",
+        "☐ Somewhat",
+        "☐ No",
+        "What works or doesn't?",
+        "---",
+        "PERSONALITY",
+        "Does it reflect the visual qualities I actually want?",
+        "LIFESTYLE",
+        "Would this make sense for my actual life?",
+        "☐ Sometimes",
+        "☐ Not really",
+        "NOW COMPLETE",
+        "An outfit feels like me when it has:",
+        "One physical quality:",
+        "One visual/personality quality:",
+        "One lifestyle quality:"
+      ],
+      "controls": [
+        {
+          "id": "p52.choices1",
+          "label": "Does it work with the physical qualities I discovered?",
+          "type": "checks",
+          "options": [
+            "Yes",
+            "Somewhat",
+            "No"
+          ]
+        },
+        {
+          "id": "p52.choices2",
+          "label": "Would this make sense for my actual life?",
+          "type": "checks",
+          "options": [
+            "Sometimes",
+            "Not really"
+          ]
+        },
+        {
+          "id": "like.me.1",
+          "label": "What works or doesn’t?",
+          "type": "text"
+        },
+        {
+          "id": "like.me.2",
+          "label": "Does it reflect the visual qualities I actually want?",
+          "type": "text"
+        },
+        {
+          "id": "like.me.3",
+          "label": "Would this make sense for my actual life?",
+          "type": "text"
+        },
+        {
+          "id": "like.me.4",
+          "label": "One physical quality:",
+          "type": "text"
+        },
+        {
+          "id": "like.me.5",
+          "label": "One visual/personality quality:",
+          "type": "text"
+        },
+        {
+          "id": "like.me.6",
+          "label": "One lifestyle quality:",
+          "type": "text"
+        },
+        {
+          "id": "p52.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 4,
+      "subtitle": "When Does an Outfit Actually Feel Like You?",
+      "art": null
+    },
+    {
+      "page": 53,
+      "title": "Good on Me Is Not the Same as My Style",
+      "lines": [
+        "Separate the Two",
+        "This distinction can save you from buying a lot of clothes you don't actually want.",
+        "Complete these statements.",
+        "«Something can look good on me and still not be my style when…»",
+        "---",
+        "«I can admire an outfit without wanting to wear it because…»",
+        "«A flattering outfit isn't automatically a good outfit for me because…»",
+        "THINK ABOUT YOUR OWN EXAMPLES",
+        "An outfit that looked good on me but didn't feel like me:",
+        "Why?",
+        "An outfit that may not fit a traditional style rule but felt very much like me:",
+        "REMEMBER",
+        "You are not trying to prove that every outfit you wear is universally flattering.",
+        "You're learning what makes an outfit right for you."
+      ],
+      "controls": [
+        {
+          "id": "good.on.me.1",
+          "label": "Something can look good on me and still not be my style when…",
+          "type": "text"
+        },
+        {
+          "id": "good.on.me.2",
+          "label": "I can admire an outfit without wanting to wear it because…",
+          "type": "text"
+        },
+        {
+          "id": "good.on.me.3",
+          "label": "A flattering outfit isn’t automatically a good outfit for me because…",
+          "type": "text"
+        },
+        {
+          "id": "good.on.me.4",
+          "label": "An outfit that looked good on me but didn’t feel like me:",
+          "type": "text"
+        },
+        {
+          "id": "good.on.me.5",
+          "label": "Why?",
+          "type": "text"
+        },
+        {
+          "id": "good.on.me.6",
+          "label": "An outfit that may not fit a traditional style rule but felt very much like me:",
+          "type": "text"
+        },
+        {
+          "id": "p53.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 4,
+      "subtitle": "Separate the Two",
+      "art": null
+    },
+    {
+      "page": 54,
+      "title": "My Style Direction",
+      "lines": [
+        "From Preferences to a Point of View",
+        "You've gathered enough information now to describe the direction your style is naturally moving toward.",
+        "Don't worry about finding the perfect aesthetic label.",
+        "Instead, describe the combination of qualities.",
+        "COMPLETE",
+        "I want my clothes to feel:",
+        "---",
+        "I want them to look:",
+        "I prefer:",
+        "I don't want my style to feel:",
+        "My clothes need to work for:",
+        "I want to balance:",
+        "NOW WRITE YOUR STYLE BRIEF",
+        "Use this structure:",
+        "«I want to dress in a way that feels [CORE QUALITIES], combining [QUALITY] with [QUALITY], while keeping my clothes practical for [LIFESTYLE].»",
+        "My version:",
+        "«---»"
+      ],
+      "controls": [
+        {
+          "id": "direction.1",
+          "label": "I want my clothes to feel:",
+          "type": "text"
+        },
+        {
+          "id": "direction.2",
+          "label": "I want them to look:",
+          "type": "text"
+        },
+        {
+          "id": "direction.3",
+          "label": "I prefer:",
+          "type": "text"
+        },
+        {
+          "id": "direction.4",
+          "label": "I don’t want my style to feel:",
+          "type": "text"
+        },
+        {
+          "id": "direction.5",
+          "label": "My clothes need to work for:",
+          "type": "text"
+        },
+        {
+          "id": "direction.6",
+          "label": "I want to balance:",
+          "type": "text"
+        },
+        {
+          "id": "style.brief",
+          "label": "My version: I want to dress in a way that feels [CORE QUALITIES], combining [QUALITY] with [QUALITY], while keeping my clothes practical for [LIFESTYLE].",
+          "type": "text"
+        },
+        {
+          "id": "p54.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "From Preferences to a Point of View",
+      "art": null
+    },
+    {
+      "page": 55,
+      "title": "Make It More Specific",
+      "lines": [
+        "Your Style Direction in Plain Language",
+        "Read your Style Brief again.",
+        "Now make it sound like you, not a fashion textbook.",
+        "COMPLETE",
+        "«I want my style to feel…»",
+        "---",
+        "«I want people to see…»",
+        "«I want to feel… when I get dressed.»",
+        "«I don't want my style to become…»",
+        "«The combination that feels most like me is…»",
+        "NOW TRY THIS:",
+        "If you had to explain your style direction to a friend without using an aesthetic label, what would you say?",
+        "«“I like clothes that…”»",
+        "«“I usually feel best when…”»",
+        "«“I don't really enjoy…”»"
+      ],
+      "controls": [
+        {
+          "id": "specific.1",
+          "label": "I want my style to feel…",
+          "type": "text"
+        },
+        {
+          "id": "specific.2",
+          "label": "I want people to see…",
+          "type": "text"
+        },
+        {
+          "id": "specific.3",
+          "label": "I want to feel… when I get dressed.",
+          "type": "text"
+        },
+        {
+          "id": "specific.4",
+          "label": "I don’t want my style to become…",
+          "type": "text"
+        },
+        {
+          "id": "specific.5",
+          "label": "The combination that feels most like me is…",
+          "type": "text"
+        },
+        {
+          "id": "specific.6",
+          "label": "I like clothes that…",
+          "type": "text"
+        },
+        {
+          "id": "specific.7",
+          "label": "I usually feel best when…",
+          "type": "text"
+        },
+        {
+          "id": "specific.8",
+          "label": "I don’t really enjoy…",
+          "type": "text"
+        },
+        {
+          "id": "p55.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [],
+      "part": 4,
+      "subtitle": "Your Style Direction in Plain Language",
+      "art": null
+    },
+    {
+      "page": 56,
+      "title": "Style Synthesis",
+      "lines": [
+        "Bring Everything Together",
+        "This is your final synthesis before we build your Blueprint.",
+        "BODY",
+        "The physical qualities I repeatedly prefer are:",
+        "---",
+        "PERSONALITY",
+        "The visual qualities I repeatedly want are:",
+        "LIFESTYLE",
+        "The practical qualities my life requires are:",
+        "MY CORE STYLE QUALITIES",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "MY MOST IMPORTANT STYLE TENSION",
+        "«I want ______ without becoming ______.»",
+        "MY STYLE BALANCE",
+        "Core: __________________",
+        "Supporting: __________________",
+        "Accent: __________________",
+        "MY STYLE LANGUAGE",
+        "Silhouettes: __________________",
+        "Fit: __________________",
+        "Proportions: __________________",
+        "Details: __________________",
+        "Textures: __________________",
+        "Accessories: __________________"
+      ],
+      "controls": [
+        {
+          "id": "synthesis.body",
+          "label": "The physical qualities I repeatedly prefer are:",
+          "type": "text",
+          "source": "body.synthesis.1"
+        },
+        {
+          "id": "synthesis.personality",
+          "label": "The visual qualities I repeatedly want are:",
+          "type": "text",
+          "source": "visual.combination"
+        },
+        {
+          "id": "synthesis.lifestyle",
+          "label": "The practical qualities my life requires are:",
+          "type": "text",
+          "source": "lifestyle.practical"
+        },
+        {
+          "id": "synthesis.tension",
+          "label": "I want ______ without becoming ______.",
+          "type": "text",
+          "source": "tensions.9"
+        },
+        {
+          "id": "qualities.core",
+          "label": "My core style qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "qualities.supporting",
+          "label": "My supporting style qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "qualities.accent",
+          "label": "My accent style qualities",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "synthesis.language.1",
+          "label": "Silhouettes:",
+          "type": "text"
+        },
+        {
+          "id": "synthesis.language.2",
+          "label": "Fit:",
+          "type": "text"
+        },
+        {
+          "id": "synthesis.language.3",
+          "label": "Proportions:",
+          "type": "text"
+        },
+        {
+          "id": "synthesis.language.4",
+          "label": "Details:",
+          "type": "text"
+        },
+        {
+          "id": "synthesis.language.5",
+          "label": "Textures:",
+          "type": "text"
+        },
+        {
+          "id": "synthesis.language.6",
+          "label": "Accessories:",
+          "type": "text"
+        },
+        {
+          "id": "p56.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "Bring Everything Together",
+      "art": null
+    },
+    {
+      "page": 57,
+      "title": "My Style Brief",
+      "lines": [
+        "Your Style, in One Place",
+        "Now write the clearest version you can.",
+        "MY STYLE BRIEF",
+        "I want my clothes to feel:",
+        "---",
+        "I want them to look:",
+        "The qualities I want most are:",
+        "I prefer:",
+        "I don't want my style to become:",
+        "My clothes need to work for:",
+        "The balance I want to create is:",
+        "MY ONE-SENTENCE STYLE DIRECTION",
+        "«I want to dress in a way that ________________________________.»",
+        "You Have a Style Direction",
+        "You started this workbook by examining individual preferences.",
+        "Now you can see the connections between them.",
+        "Your style isn't just:",
+        "what looks good on your body.",
+        "It isn't just:",
+        "what you like on Pinterest.",
+        "And it isn't just:",
+        "what is practical for your lifestyle.",
+        "It's the combination.",
+        "COMPLETE",
+        "«My style works best when my clothes respect my body by…»",
+        "«My style feels like me when my clothes express…»",
+        "«My wardrobe works for my life when it supports…»",
+        "«The balance I am trying to create is…»",
+        "«The three qualities I want to carry into my Blueprint are…»",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "PART 4 COMPLETE",
+        "You've done the discovery work.",
+        "You know more about:",
+        "how clothes work on you",
+        "what you naturally respond to",
+        "what you actually want your appearance to communicate",
+        "what your life requires",
+        "what you repeatedly choose",
+        "what you want more of",
+        "what you don't want too much of",
+        "and where your preferences need to be balanced rather than forced into one perfect category.",
+        "Now we turn all of that into something you can actually use.",
+        "Not another questionnaire.",
+        "Not another personality test.",
+        "A practical reference you can return to when you're getting dressed, evaluating an outfit, or deciding whether something belongs in your wardrobe."
+      ],
+      "controls": [
+        {
+          "id": "brief.1",
+          "label": "I want my clothes to feel:",
+          "type": "text"
+        },
+        {
+          "id": "brief.2",
+          "label": "I want them to look:",
+          "type": "text"
+        },
+        {
+          "id": "brief.3",
+          "label": "The qualities I want most are:",
+          "type": "text"
+        },
+        {
+          "id": "brief.4",
+          "label": "I prefer:",
+          "type": "text"
+        },
+        {
+          "id": "brief.5",
+          "label": "I don’t want my style to become:",
+          "type": "text"
+        },
+        {
+          "id": "brief.6",
+          "label": "My clothes need to work for:",
+          "type": "text"
+        },
+        {
+          "id": "brief.7",
+          "label": "The balance I want to create is:",
+          "type": "text"
+        },
+        {
+          "id": "style.statement",
+          "label": "I want to dress in a way that ______.",
+          "type": "text",
+          "source": "style.brief"
+        },
+        {
+          "id": "brief.complete.1",
+          "label": "My style works best when my clothes respect my body by…",
+          "type": "text"
+        },
+        {
+          "id": "brief.complete.2",
+          "label": "My style feels like me when my clothes express…",
+          "type": "text"
+        },
+        {
+          "id": "brief.complete.3",
+          "label": "My wardrobe works for my life when it supports…",
+          "type": "text"
+        },
+        {
+          "id": "brief.complete.4",
+          "label": "The balance I am trying to create is…",
+          "type": "text"
+        },
+        {
+          "id": "qualities.final",
+          "label": "The three qualities I want to carry into my Blueprint are…",
+          "type": "list",
+          "count": 3,
+          "source": "qualities.core"
+        },
+        {
+          "id": "p57.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43
+      ],
+      "part": 4,
+      "subtitle": "Your Style, in One Place",
+      "art": null
+    },
+    {
+      "page": 58,
+      "title": "Your Personal Style Blueprint",
+      "lines": [
+        "PART 5A — BUILD YOUR BLUEPRINT",
+        "PART 5A — BUILD YOUR BLUEPRINT",
+        "You're recording the system you've discovered: My Style Identity; My Style Language; My Six-Colour Formula; My Style Signatures; My Outfit Directions; My Personal Style Rules; What I Don't Need to Become.",
+        "PART 5B — USE YOUR BLUEPRINT",
+        "You're learning how to apply it: Personal Style Compass; Final Style Statement; One-Glance Blueprint; How to Use Your Blueprint."
+      ],
+      "controls": [],
+      "references": [],
+      "part": 5,
+      "subtitle": "PART 5A — BUILD YOUR BLUEPRINT",
+      "art": "connections"
+    },
+    {
+      "page": 59,
+      "title": "My Style Identity",
+      "lines": [
+        "Who Am I When I Get Dressed?",
+        "Start with the big picture.",
+        "Your style doesn't need a complicated name.",
+        "It needs a clear identity.",
+        "MY ONE-SENTENCE STYLE IDENTITY",
+        "Complete:",
+        "«My style is a combination of __________________, __________________, and __________________.»",
+        "Now make it more personal.",
+        "«I want my clothes to make me feel __________________.»",
+        "«I want my appearance to communicate __________________.»",
+        "«I feel most like myself when my clothes __________________.»",
+        "MY CORE QUALITIES",
+        "Choose the three qualities that are most central to your style.",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "Now define them in your own words.",
+        "For me, this means:",
+        "---",
+        "I can see it in clothing through:"
+      ],
+      "controls": [
+        {
+          "id": "identity",
+          "label": "My one-sentence style identity",
+          "type": "text",
+          "source": "style.statement"
+        },
+        {
+          "id": "identity.notes.1",
+          "label": "I want my clothes to make me feel ______.",
+          "type": "text"
+        },
+        {
+          "id": "identity.notes.2",
+          "label": "I want my appearance to communicate ______.",
+          "type": "text"
+        },
+        {
+          "id": "identity.notes.3",
+          "label": "I feel most like myself when my clothes ______.",
+          "type": "text"
+        },
+        {
+          "id": "identity.notes.4",
+          "label": "For me, this means:",
+          "type": "text"
+        },
+        {
+          "id": "identity.notes.5",
+          "label": "I can see it in clothing through:",
+          "type": "text"
+        },
+        {
+          "id": "qualities.final",
+          "label": "My core qualities",
+          "type": "list",
+          "count": 3,
+          "source": "qualities.core"
+        },
+        {
+          "id": "p59.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        54,
+        57
+      ],
+      "part": 5,
+      "subtitle": "Who Am I When I Get Dressed?",
+      "art": null
+    },
+    {
+      "page": 60,
+      "title": "My Style Language and Style Translation",
+      "lines": [
+        "What My Style Looks Like",
+        "Your Style Identity tells you what you want. Your Style Language helps you recognise what that looks like. Transfer what you've discovered in Parts 1, 2, and 4. Do not start the discovery process again.",
+        "MY STYLE LANGUAGE",
+        "AREA | MY PREFERENCE | WHAT THIS LOOKS LIKE FOR ME",
+        "FIT | __________________ | __________________________________________",
+        "SILHOUETTE | __________________ | ____________________________________",
+        "PROPORTION | __________________ | ____________________________________",
+        "LENGTH | __________________ | _______________________________________",
+        "NECKLINES / OPENINGS | __________________ | ___________________________",
+        "TEXTURES / FABRICS | __________________ | _____________________________",
+        "VISUAL DETAIL | __________________ | __________________________________",
+        "SHOES | __________________ | ________________________________________",
+        "ACCESSORIES | __________________ | ___________________________________",
+        "WHEN I WANT TO LOOK LIKE ME…",
+        "I usually reach for: ________________________________________________",
+        "I want my outfits to communicate: ___________________________________",
+        "The visual qualities I want to repeat are: ____________________________",
+        "REMEMBER",
+        "These are patterns you've identified from your own evidence, not rules. Your style can change and your preferences can evolve. This page gives you a clearer starting point."
+      ],
+      "controls": [
+        {
+          "id": "style.language",
+          "label": "My style language",
+          "type": "table",
+          "rows": [
+            "Fit",
+            "Silhouette",
+            "Proportion",
+            "Length",
+            "Necklines / Openings",
+            "Textures / Fabrics",
+            "Visual Detail",
+            "Shoes",
+            "Accessories"
+          ],
+          "columns": [
+            "My preference",
+            "What this looks like for me"
+          ],
+          "cellSources": {
+            "Fit::My preference": "body.fit",
+            "Silhouette::My preference": "body.silhouette",
+            "Proportion::My preference": "body.proportion",
+            "Length::My preference": "body.length",
+            "Necklines / Openings::My preference": "body.neckline",
+            "Textures / Fabrics::My preference": "synthesis.language.5",
+            "Visual Detail::My preference": "personality.3",
+            "Shoes::My preference": "signatures.repeated.3",
+            "Accessories::My preference": "signatures.repeated.2"
+          }
+        },
+        {
+          "id": "language.notes.1",
+          "label": "I usually reach for:",
+          "type": "text"
+        },
+        {
+          "id": "language.notes.2",
+          "label": "I want my outfits to communicate:",
+          "type": "text"
+        },
+        {
+          "id": "language.notes.3",
+          "label": "The visual qualities I want to repeat are:",
+          "type": "text"
+        },
+        {
+          "id": "p60.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        50,
+        51
+      ],
+      "part": 5,
+      "subtitle": "What My Style Looks Like",
+      "art": null
+    },
+    {
+      "page": 61,
+      "title": "My Six-Colour Formula",
+      "lines": [
+        "The Colours That Help My Wardrobe Feel Like Mine",
+        "You built your Six-Colour Formula in Part 2.",
+        "Now bring the final version here.",
+        "Your formula isn't about limiting you to six colours forever.",
+        "It's a way of understanding the role different colours can play in your wardrobe.",
+        "01 — ANCHOR COLOUR",
+        "The colour that gives your wardrobe a reliable visual foundation.",
+        "My Anchor Colour:",
+        "---",
+        "Why it works for me:",
+        "02 — SUPPORT COLOUR",
+        "A colour that works easily alongside your Anchor.",
+        "My Support Colour:",
+        "03 — SOFT NEUTRAL",
+        "A lighter or softer neutral that gives me another easy option.",
+        "My Soft Neutral:",
+        "04 — STRONG NEUTRAL",
+        "A deeper or stronger neutral that adds contrast or structure.",
+        "My Strong Neutral:",
+        "05 — WILDCARD COLOUR",
+        "A colour I enjoy that adds variation.",
+        "My Wildcard:",
+        "06 — SIGNATURE ACCENT",
+        "A colour that gives my style a recognisable finishing touch.",
+        "My Signature Accent:",
+        "MY COLOUR DIRECTION",
+        "When I look at my colours together, I want my wardrobe to feel:",
+        "Before I Add a Colour…",
+        "Your Six-Colour Formula gives you direction.",
+        "The Rule of Three gives you a practical check.",
+        "Before bringing a new colour into your wardrobe, ask:",
+        "«Can I easily imagine this colour working with at least three things I already own?»",
+        "MY THREE-ITEM CHECK",
+        "New colour / item:",
+        "Existing item 01:",
+        "Existing item 02:",
+        "Existing item 03:",
+        "RESULT",
+        "☐ This colour integrates easily.",
+        "☐ It could work with some styling.",
+        "☐ I love it, but it doesn't need to become a major wardrobe colour.",
+        "REMEMBER",
+        "A colour doesn't have to pass this test for you to wear it.",
+        "The point is simply to distinguish:",
+        "“I love this colour.”",
+        "from:",
+        "“This colour makes sense for the wardrobe I'm building.”",
+        "You already discovered this. Now you're bringing your final answer into your Blueprint.",
+        "Bring your final Six-Colour Formula from Part 2 here. You are not starting over."
+      ],
+      "controls": [
+        {
+          "id": "colours",
+          "label": "My Six-Colour Formula",
+          "type": "colours",
+          "rows": [
+            "Anchor",
+            "Support",
+            "Soft Neutral",
+            "Strong Neutral",
+            "Wildcard",
+            "Signature Accent"
+          ]
+        },
+        {
+          "id": "colour.reason",
+          "label": "Why it works for me:",
+          "type": "text"
+        },
+        {
+          "id": "colour.final",
+          "label": "When I look at my colours together, I want my wardrobe to feel:",
+          "type": "text",
+          "source": "colour.direction.1"
+        },
+        {
+          "id": "colour.new",
+          "label": "New colour / item:",
+          "type": "text"
+        },
+        {
+          "id": "colour.three",
+          "label": "My three-item check",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "colour.result",
+          "label": "Result",
+          "type": "checks",
+          "options": [
+            "This colour integrates easily.",
+            "It could work with some styling.",
+            "I love it, but it doesn’t need to become a major wardrobe colour."
+          ]
+        },
+        {
+          "id": "p61.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        29,
+        30
+      ],
+      "part": 5,
+      "subtitle": "The Colours That Help My Wardrobe Feel Like Mine",
+      "art": "colour"
+    },
+    {
+      "page": 62,
+      "title": "My Style Signatures",
+      "lines": [
+        "The Details That Keep Appearing",
+        "Some parts of your style may happen almost automatically.",
+        "Maybe you reach for earrings every time.",
+        "Maybe you always roll your sleeves.",
+        "Maybe you prefer a watch or bracelet.",
+        "Maybe you repeatedly choose a certain shoe shape.",
+        "Maybe you expose your ankles, tuck your top, wear a particular neckline, add a belt, or finish an outfit with one specific detail.",
+        "These small choices can become part of your visual identity.",
+        "MY REPEATED SIGNATURES",
+        "Jewellery:",
+        "---",
+        "Accessories:",
+        "Shoes:",
+        "Styling details:",
+        "Clothing details:",
+        "Other:",
+        "MY TOP THREE STYLE SIGNATURES",
+        "01 — __________________",
+        "02 — __________________",
+        "03 — __________________",
+        "MY NON-NEGOTIABLE SIGNATURE",
+        "If I could keep only one:",
+        "AUTOMATIC OR DELIBERATE?",
+        "One of my signatures that happens automatically is:",
+        "One I want to make more deliberate is:",
+        "You already discovered this. Now you're bringing your final answer into your Blueprint.",
+        "Review your discoveries from Part 2 and record the signatures you want to carry forward."
+      ],
+      "controls": [
+        {
+          "id": "signatures.repeated.1",
+          "label": "Jewellery:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.repeated.2",
+          "label": "Accessories:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.repeated.3",
+          "label": "Shoes:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.repeated.4",
+          "label": "Styling details:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.repeated.5",
+          "label": "Clothing details:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.repeated.6",
+          "label": "Other:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.top",
+          "label": "My top three style signatures",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "signatures.one",
+          "label": "If I could keep only one:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.auto",
+          "label": "One of my signatures that happens automatically is:",
+          "type": "text",
+          "source": "signatures.automatic"
+        },
+        {
+          "id": "signatures.intent",
+          "label": "One I want to make more deliberate is:",
+          "type": "text",
+          "source": "signatures.deliberate"
+        },
+        {
+          "id": "p62.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        31,
+        32
+      ],
+      "part": 5,
+      "subtitle": "The Details That Keep Appearing",
+      "art": null
+    },
+    {
+      "page": 63,
+      "title": "My Personal Outfit Directions",
+      "lines": [
+        "How My Style Comes Together",
+        "You don't need a literal uniform. It can be useful to understand the types of outfit combinations that repeatedly make sense for you. These are your Personal Outfit Directions: flexible structures you can return to when you don't know what to wear.",
+        "Each direction has four parts:",
+        "BASE — What anchors the outfit?",
+        "SHAPE — What creates the overall silhouette?",
+        "BALANCE — What keeps the outfit visually balanced?",
+        "FINISH — What makes it feel complete?",
+        "OUTFIT DIRECTION 01",
+        "BASE: _____________________________________________________________",
+        "SHAPE: ____________________________________________________________",
+        "BALANCE: _________________________________________________________",
+        "FINISH: __________________________________________________________",
+        "Why this feels like me: ____________________________________________",
+        "OUTFIT DIRECTION 02",
+        "BASE: _____________________________________________________________",
+        "SHAPE: ____________________________________________________________",
+        "BALANCE: _________________________________________________________",
+        "FINISH: __________________________________________________________",
+        "Why this feels like me: ____________________________________________",
+        "OUTFIT DIRECTION 03",
+        "BASE: _____________________________________________________________",
+        "SHAPE: ____________________________________________________________",
+        "BALANCE: _________________________________________________________",
+        "FINISH: __________________________________________________________",
+        "Why this feels like me: ____________________________________________",
+        "EXAMPLE",
+        "BASE: simple fitted top + relaxed trousers",
+        "SHAPE: defined upper body + volume below",
+        "BALANCE: shorter top + longer bottom",
+        "FINISH: earrings + watch + elevated everyday shoes",
+        "This example describes the structure of an outfit; it is not a combination you need to copy. Your own directions should come from your discoveries."
+      ],
+      "controls": [
+        {
+          "id": "outfits",
+          "label": "My personal outfit directions",
+          "type": "outfits",
+          "count": 3
+        },
+        {
+          "id": "p63.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43,
+        57
+      ],
+      "part": 5,
+      "subtitle": "How My Style Comes Together",
+      "art": null
+    },
+    {
+      "page": 64,
+      "title": "My Personal Style Rules",
+      "lines": [
+        "The Rules I Actually Want to Follow",
+        "These aren't fashion rules.",
+        "They're personal preferences you've chosen to remember.",
+        "Use your discoveries to create a short list of statements that help you make decisions.",
+        "COMPLETE",
+        "«I prefer __________________ over __________________.»",
+        "---",
+        "«I feel most comfortable when __________________.»",
+        "«I don't enjoy clothes that __________________.»",
+        "«I like outfits to __________________.»",
+        "«I don't want my style to become __________________.»",
+        "«When choosing between two things I like, I usually choose the one that __________________.»",
+        "MY “MORE OF THIS” LIST",
+        "1. ---",
+        "2. ---",
+        "3. ---",
+        "4. ---",
+        "5. ---",
+        "MY “LESS OF THIS” LIST",
+        "MY ALWAYS-CONSIDER LIST",
+        "Before deciding whether something works for me, I want to consider:"
+      ],
+      "controls": [
+        {
+          "id": "rules.1",
+          "label": "I prefer ______ over ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.2",
+          "label": "I feel most comfortable when ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.3",
+          "label": "I don’t enjoy clothes that ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.4",
+          "label": "I like outfits to ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.5",
+          "label": "I don’t want my style to become ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.6",
+          "label": "When choosing between two things I like, I usually choose the one that ______.",
+          "type": "text"
+        },
+        {
+          "id": "rules.more",
+          "label": "My “more of this” list",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "rules.less",
+          "label": "My “less of this” list",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "rules.consider",
+          "label": "Before deciding whether something works for me, I want to consider:",
+          "type": "text"
+        },
+        {
+          "id": "p64.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43,
+        57
+      ],
+      "part": 5,
+      "subtitle": "The Rules I Actually Want to Follow",
+      "art": null
+    },
+    {
+      "page": 65,
+      "title": "What I Don't Need to Become",
+      "lines": [
+        "My Style Doesn't Have to Look Like Everyone Else's",
+        "There will always be clothes you're told you should own.",
+        "Styles you're told are flattering.",
+        "Trends you're told are essential.",
+        "Aesthetic labels you're told you should fit into.",
+        "But discovering your personal style also means becoming comfortable with what isn't yours.",
+        "COMPLETE",
+        "«I don't need to dress like __________________ to be stylish.»",
+        "---",
+        "«I don't need to own __________________ just because it's considered a wardrobe essential.»",
+        "«I don't need my style to look __________________.»",
+        "«I don't need to follow the fashion rule that says __________________.»",
+        "«I don't need to force myself to like __________________.»",
+        "MY STYLE PERMISSION",
+        "«I give myself permission to dress in a way that __________________.»",
+        "This page matters because personal style isn't only about discovering what you like.",
+        "Sometimes it's about finally giving yourself permission to stop trying to become someone else's version of stylish."
+      ],
+      "controls": [
+        {
+          "id": "permission.1",
+          "label": "I don’t need to dress like ______ to be stylish.",
+          "type": "text"
+        },
+        {
+          "id": "permission.2",
+          "label": "I don’t need to own ______ just because it’s considered a wardrobe essential.",
+          "type": "text"
+        },
+        {
+          "id": "permission.3",
+          "label": "I don’t need my style to look ______.",
+          "type": "text"
+        },
+        {
+          "id": "permission.4",
+          "label": "I don’t need to follow the fashion rule that says ______.",
+          "type": "text"
+        },
+        {
+          "id": "permission.5",
+          "label": "I don’t need to force myself to like ______.",
+          "type": "text"
+        },
+        {
+          "id": "permission.6",
+          "label": "I give myself permission to dress in a way that ______.",
+          "type": "text"
+        },
+        {
+          "id": "p65.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43,
+        57
+      ],
+      "part": 5,
+      "subtitle": "My Style Doesn't Have to Look Like Everyone Else's",
+      "art": null
+    },
+    {
+      "page": 66,
+      "title": "Personal Style Compass",
+      "lines": [
+        "A Filter for Future Purchases",
+        "Your Blueprint can help you decide whether something deserves a place in your wardrobe. Before buying something you like, pause and check it against your actual style.",
+        "SCORE EACH CRITERION FROM 0–5",
+        "0 — NO MATCH: This actively conflicts with what I know about myself.",
+        "1 — VERY WEAK MATCH: Very little about this works for me.",
+        "2 — WEAK MATCH: There are some positives, but significant concerns.",
+        "3 — UNCERTAIN: It could work, but I need to think about it.",
+        "4 — STRONG MATCH: This fits me well.",
+        "5 — VERY STRONG MATCH: This strongly reflects what I know I want and need.",
+        "01 — LIFESTYLE MATCH: Does this make sense for the life I actually live? Score: ___ / 5",
+        "02 — STYLE PERSONALITY MATCH: Does this reflect the visual qualities I actually want? Score: ___ / 5",
+        "03 — COLOUR MATCH: Does this colour integrate well with my colour direction, or am I choosing it intentionally as an exception? Score: ___ / 5",
+        "04 — PHYSICAL MATCH: Does the fit, shape, proportion, neckline, length, or comfort work for me? Score: ___ / 5",
+        "05 — STYLING POTENTIAL: Can I imagine styling this in ways that feel like me? Score: ___ / 5",
+        "MY TOTAL: ____ / 25",
+        "WHAT THE SCORE SUGGESTS",
+        "21–25 — STRONG YES: This looks highly compatible with your current style and wardrobe direction.",
+        "17–20 — LIKELY YES: There is a strong case for it, but take a closer look at the lower-scoring areas.",
+        "13–16 — PAUSE & THINK: You may like the item, but something deserves more consideration.",
+        "5–12 — PROBABLY NOT WORTH BUYING: There are several areas of mismatch.",
+        "0–4 — DEFINITELY NOT FOR THIS WARDROBE: It may be beautiful, but it does not appear to serve your current style.",
+        "BUT REMEMBER",
+        "The score is not a law. You are allowed to buy something because you love it. The Compass is here to help distinguish “I genuinely want this” from “I like this, but it doesn't actually make sense for me.”",
+        "MY DECISION",
+        "☐ Buy anyway — I love it enough.   ☐ Save for later.   ☐ Pass.",
+        "What influenced my decision? ________________________________________",
+        "____________________________________________________________________"
+      ],
+      "controls": [
+        {
+          "id": "p66.choices1",
+          "label": "MY DECISION",
+          "type": "checks",
+          "options": [
+            "Buy anyway — I love it enough.",
+            "Save for later.",
+            "Pass."
+          ]
+        },
+        {
+          "id": "compass.scores",
+          "label": "Score each criterion from 0–5",
+          "type": "compass",
+          "rows": [
+            "01 — LIFESTYLE MATCH: Does this make sense for the life I actually live?",
+            "02 — STYLE PERSONALITY MATCH: Does this reflect the visual qualities I actually want?",
+            "03 — COLOUR MATCH: Does this colour integrate well with my colour direction, or am I choosing it intentionally as an exception?",
+            "04 — PHYSICAL MATCH: Does the fit, shape, proportion, neckline, length, or comfort work for me?",
+            "05 — STYLING POTENTIAL: Can I imagine styling this in ways that feel like me?"
+          ]
+        },
+        {
+          "id": "compass.notes",
+          "label": "What influenced my decision?",
+          "type": "text"
+        },
+        {
+          "id": "p66.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        20,
+        33,
+        43,
+        57
+      ],
+      "part": 5,
+      "subtitle": "A Filter for Future Purchases",
+      "art": null
+    },
+    {
+      "page": 67,
+      "title": "Final Style Statement and Master Blueprint",
+      "lines": [
+        "Everything in One Place",
+        "This is your master reference. Fill it in using the pages you've already completed. Return here when you need a reminder of what your style means to you.",
+        "MY STYLE SENTENCE",
+        "My style is ________________________________________________________.",
+        "MY CORE QUALITIES",
+        "01 __________________  02 __________________  03 __________________",
+        "MY STYLE LANGUAGE",
+        "Fit: __________________________  Silhouette: _______________________",
+        "Proportion: ____________________  Length: ___________________________",
+        "Necklines: _____________________  Textures: _________________________",
+        "Visual detail: __________________ Shoes: ____________________________",
+        "Accessories: _______________________________________________________",
+        "MY SIX-COLOUR FORMULA",
+        "Anchor: ______________ Support: _____________ Soft Neutral: __________",
+        "Strong Neutral: _______ Wildcard: ____________ Signature Accent: ______",
+        "MY STYLE SIGNATURES",
+        "Automatic: _________________________________________________________",
+        "Deliberate: ________________________________________________________",
+        "MY PERSONAL OUTFIT DIRECTIONS",
+        "Direction 1: __________________ Direction 2: _______________________",
+        "Direction 3: _______________________________________________________",
+        "MY PERSONAL STYLE RULES",
+        "I prefer: ______________________ I want more of: ____________________",
+        "I want less of: _________________ I always consider: _________________",
+        "I don't want my style to become: ____________________________________",
+        "MY LIFESTYLE PRIORITIES",
+        "My life requires clothes that: ______________________________________",
+        "The situations I dress for most: ____________________________________",
+        "The practical qualities I value most: ________________________________",
+        "MY SHOPPING FILTER",
+        "Lifestyle: ______ Personality: ______ Colour: ______ Physical: ______",
+        "Styling potential: ______ Before buying, I want to remember: __________",
+        "FINAL STYLE STATEMENT",
+        "I want to dress in a way that _______________________________________.",
+        "____________________________________________________________________",
+        "Keep this page as the detailed master summary. Page 68 is the shorter, screenshot-friendly version."
+      ],
+      "controls": [
+        {
+          "id": "identity",
+          "label": "My style sentence",
+          "type": "text",
+          "source": "style.statement"
+        },
+        {
+          "id": "qualities.final",
+          "label": "My core qualities",
+          "type": "list",
+          "count": 3,
+          "source": "qualities.core"
+        },
+        {
+          "id": "style.language",
+          "label": "My style language",
+          "type": "table",
+          "rows": [
+            "Fit",
+            "Silhouette",
+            "Proportion",
+            "Length",
+            "Necklines / Openings",
+            "Textures / Fabrics",
+            "Visual Detail",
+            "Shoes",
+            "Accessories"
+          ],
+          "columns": [
+            "My preference",
+            "What this looks like for me"
+          ],
+          "cellSources": {
+            "Fit::My preference": "body.fit",
+            "Silhouette::My preference": "body.silhouette",
+            "Proportion::My preference": "body.proportion",
+            "Length::My preference": "body.length",
+            "Necklines / Openings::My preference": "body.neckline",
+            "Textures / Fabrics::My preference": "synthesis.language.5",
+            "Visual Detail::My preference": "personality.3",
+            "Shoes::My preference": "signatures.repeated.3",
+            "Accessories::My preference": "signatures.repeated.2"
+          }
+        },
+        {
+          "id": "colours",
+          "label": "My six-colour formula",
+          "type": "colours",
+          "rows": [
+            "Anchor",
+            "Support",
+            "Soft Neutral",
+            "Strong Neutral",
+            "Wildcard",
+            "Signature Accent"
+          ]
+        },
+        {
+          "id": "signatures.top",
+          "label": "My style signatures",
+          "type": "list",
+          "count": 3
+        },
+        {
+          "id": "outfits",
+          "label": "My personal outfit directions",
+          "type": "outfits",
+          "count": 3
+        },
+        {
+          "id": "rules.summary",
+          "label": "My personal style rules",
+          "type": "text",
+          "source": "rules.1"
+        },
+        {
+          "id": "lifestyle.priority",
+          "label": "My lifestyle priorities",
+          "type": "text",
+          "source": "life.mismatch.3"
+        },
+        {
+          "id": "compass.reminder",
+          "label": "Before buying, I want to remember:",
+          "type": "text",
+          "source": "rules.consider"
+        },
+        {
+          "id": "style.statement",
+          "label": "Final style statement",
+          "type": "text",
+          "source": "style.brief"
+        },
+        {
+          "id": "lifestyle.contexts",
+          "label": "The situations I dress for most:",
+          "type": "text",
+          "source": "life.top"
+        },
+        {
+          "id": "lifestyle.help",
+          "label": "My life requires clothes that:",
+          "type": "text",
+          "source": "life.help"
+        },
+        {
+          "id": "lifestyle.practical",
+          "label": "The practical qualities I value most:",
+          "type": "text",
+          "source": "practical.notes.3"
+        },
+        {
+          "id": "master.environment",
+          "label": "My environmental needs:",
+          "type": "text",
+          "source": "environment.1"
+        },
+        {
+          "id": "rules.more",
+          "label": "I want more of:",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "rules.less",
+          "label": "I want less of:",
+          "type": "list",
+          "count": 5
+        },
+        {
+          "id": "rules.consider",
+          "label": "I always consider:",
+          "type": "text"
+        },
+        {
+          "id": "rules.5",
+          "label": "I don’t want my style to become:",
+          "type": "text"
+        },
+        {
+          "id": "signatures.auto",
+          "label": "Automatic signatures:",
+          "type": "text",
+          "source": "signatures.automatic"
+        },
+        {
+          "id": "signatures.intent",
+          "label": "Deliberate signatures:",
+          "type": "text",
+          "source": "signatures.deliberate"
+        },
+        {
+          "id": "p67.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "part": 5,
+      "subtitle": "Everything in One Place",
+      "art": null
+    },
+    {
+      "page": 68,
+      "title": "One-Glance Blueprint and How to Use Your Blueprint",
+      "lines": [
+        "PART 5B — USE YOUR BLUEPRINT",
+        "Keep This Page",
+        "This is the page to save, screenshot, print, or keep on your phone. Return to it when you're getting dressed, saving inspiration, shopping, or wondering why something you love doesn't quite feel like you.",
+        "MY ONE-GLANCE BLUEPRINT",
+        "STYLE: _____________________________________________________________",
+        "CORE QUALITIES: ____________________________________________________",
+        "STYLE LANGUAGE: ____________________________________________________",
+        "COLOUR FORMULA: ____________________________________________________",
+        "SIGNATURES: ________________________________________________________",
+        "OUTFIT DIRECTIONS: __________________________________________________",
+        "LIFESTYLE PRIORITIES: _______________________________________________",
+        "MY “DON'T NEED TO BECOME” REMINDER: _________________________________",
+        "MY ONE-LINE REMINDER",
+        "I don't need more clothes to become more stylish. I need to understand what makes clothes feel like me.",
+        "HOW TO USE YOUR BLUEPRINT",
+        "Your Blueprint is a reference point, not a test result or permanent identity. Return to it when you feel stuck getting dressed, save new inspiration, consider buying something, notice a new preference, or your lifestyle changes.",
+        "Ask yourself:",
+        "Does this feel like me?",
+        "Does this work for the life I actually live?",
+        "Does this reflect what I have learned about myself?",
+        "Am I choosing this intentionally, or simply because I think I should?",
+        "Your style is allowed to evolve. You can revisit your colours, develop new signatures, and outgrow old preferences. The goal was never to find a perfect answer. It was to become better at answering: “Does this feel like me?”"
+      ],
+      "controls": [
+        {
+          "id": "glance.style",
+          "label": "STYLE:",
+          "type": "text",
+          "source": "identity"
+        },
+        {
+          "id": "glance.qualities",
+          "label": "CORE QUALITIES:",
+          "type": "text",
+          "source": "qualities.final"
+        },
+        {
+          "id": "glance.language",
+          "label": "STYLE LANGUAGE:",
+          "type": "text",
+          "source": "style.language"
+        },
+        {
+          "id": "glance.colours",
+          "label": "COLOUR FORMULA:",
+          "type": "text",
+          "source": "colours"
+        },
+        {
+          "id": "glance.signatures",
+          "label": "SIGNATURES:",
+          "type": "text",
+          "source": "signatures.top"
+        },
+        {
+          "id": "glance.outfits",
+          "label": "OUTFIT DIRECTIONS:",
+          "type": "text",
+          "source": "outfits"
+        },
+        {
+          "id": "glance.life",
+          "label": "LIFESTYLE PRIORITIES:",
+          "type": "text",
+          "source": "lifestyle.priority"
+        },
+        {
+          "id": "glance.permission",
+          "label": "MY “DON’T NEED TO BECOME” REMINDER:",
+          "type": "text",
+          "source": "permission.6"
+        },
+        {
+          "id": "p68.reflection",
+          "label": "Something else I want to remember:",
+          "type": "text"
+        }
+      ],
+      "references": [
+        67
+      ],
+      "part": 5,
+      "subtitle": "PART 5B — USE YOUR BLUEPRINT",
+      "art": null
+    }
+  ]
+}

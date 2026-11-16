@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.outputs/
+.wrangler/
+.sites-runtime/
+.env*
+.dev.vars*
+! .env.example
+*.log
+test-results/
+
+server/assets.generated.mjs
+
+.npm-cache/
