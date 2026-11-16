@@ -1,10 +1,5 @@
 {
   "project_id": "appgprj_6afa9195551481919741c9b0e12d0878",
-  "d1": {
-    "binding": "DB",
-    "migrations_dir": "drizzle"
-  },
-  "r2": {
-    "binding": "BUCKET"
-  }
+  "d1": "DB",
+  "r2": "BUCKET"
 }
