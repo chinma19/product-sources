@@ -72,3 +72,21 @@ Every manuscript page has a stable route `/#/step/NN`. Front matter precedes the
 | 66 | Personal Style Compass | Your Personal Style Blueprint | Compass with five scores and five bands |
 | 67 | Final Style Statement and Master Blueprint | Your Personal Style Blueprint | Editable master dossier |
 | 68 | One-Glance Blueprint and How to Use Your Blueprint | Your Personal Style Blueprint | Phone one-glance reference and exports |
+
+## Approved R1–R10 overlays (2026-11-16)
+
+The 68 routes above remain intact. Source extraction files are unchanged. `content/workbook.json` records resolution IDs on approved additions.
+
+| Resolution | Manuscript route/component | Approved implementation |
+|---|---|---|
+| R1 | 6 / journey | Draft 3 front matter retained; optional four-question baseline; six session navigation |
+| R2 | 14 | Dresses/skirts Mini, Knee, Midi, Maxi; tops retain Very long and Cropped/waist |
+| R3 | 20, 33, 43, 44 | Existing consolidated profiles and mismatch exercise retained; no inventory |
+| R4 | 27, 30, 32 | Optional strongest three, colour behaviour/easiest addition, signature counterfactual |
+| R5 | 50–51 | Locked examples preserved; chosen-word dictionary primary; legacy definitions optional |
+| R6 | 46–47, 54 | Literal cross-part candidates require confirm/reject then copy; three pattern cards retained; editable brief preview requires confirmation |
+| R7–8 | 66 / independent Compass | Original five questions, /25 total, 21–25/17–20/13–16/5–12/0–4 bands and intentional colour exception retained |
+| R9 | 68 / final reference | Eight original fields plus concise rules and shopping-filter summaries |
+| R10 | 67 | Original closing statements retained; five optional closing prompts |
+
+Implementation-added generic reflection controls are no longer shown. Previously saved values remain accepted for backup restoration. Existing 1–7 spectrum positions migrate to equivalent 0–100 storage positions without changing customer-facing choices. Final references read earlier answers unless the customer deliberately overrides them; overrides are retained when upstream answers change. Independent Compass evaluations do not reset journey completion.

@@ -1,19 +1,23 @@
 import workbook from '../content/workbook.json' with {type:'json'};
 export {workbook};
-export const controls = new Map(workbook.pages.flatMap(p=>p.controls.map(c=>[c.id,c])));
-export const emptyState = () => ({answers:{},completed:[],lastStep:1,revision:0,updatedAt:null});
+export const controls = new Map([...(workbook.legacyControls||[]).map(c=>[c.id,c]),...workbook.pages.flatMap(p=>p.controls.map(c=>[c.id,c]))]);
+export const emptyState = () => ({schemaVersion:2,assessmentId:null,status:'NOT_STARTED',createdAt:null,completedAt:null,answerUpdatedAt:{},answers:{},completed:[],lastStep:1,revision:0,updatedAt:null});
+export function migrateState(state){const next={...emptyState(),...state,answers:{...state.answers},answerUpdatedAt:{...state.answerUpdatedAt}};if((state.schemaVersion||1)<2){for(const [id,value]of Object.entries(next.answers)){if((/^dials\.\d+$/.test(id)||['balance.femininity','balance.polish','balance.edge'].includes(id))&&typeof value==='number'&&value>=1&&value<=7)next.answers[id]=Math.round((value-1)*100/6);}const decision=next.answers['p66.choices1'];if(!next.answers['compass.decision']&&Array.isArray(decision)&&decision.length===1)next.answers['compass.decision']=decision[0];}next.schemaVersion=2;return next;}
 export function formatValue(v) {
  if(v==null)return '';
  if(typeof v==='string'||typeof v==='number')return String(v);
- if(Array.isArray(v))return v.map(formatValue).filter(Boolean).join('\n');
- return Object.entries(v).map(([k,val])=> {const s=formatValue(val);return s?`${k}: ${s}`:''}).filter(Boolean).join('\n');
+ if(Array.isArray(v))return v.map(x=>x&&typeof x==='object'&&'quality'in x?[x.quality,x.meaning,x.clothing].filter(Boolean).join(' — '):formatValue(x)).filter(Boolean).join('\n');
+ if(typeof v==='object'&&('name'in v||'hex'in v))return [v.name,v.hex].filter(Boolean).join(' ');
+ return Object.entries(v).map(([k,val])=> {const s=formatValue(val);return s?`${k.replaceAll('::',' — ')}: ${s}`:''}).filter(Boolean).join('\n');
 }
 export function resolveValue(id,answers,seen=new Set()){
  if(seen.has(id))return '';seen.add(id);
  const c=controls.get(id);
  if(c?.cellSources){const defaults=Object.fromEntries(Object.entries(c.cellSources).map(([cell,source])=>[cell,formatValue(resolveValue(source,answers,new Set(seen)))]));return {...defaults,...(answers[id]||{})};}
  if(Object.hasOwn(answers,id))return answers[id];
- return c?.source?resolveValue(c.source,answers,seen):'';
+ const inherited=c?.source?resolveValue(c.source,answers,seen):'';
+ if(id.startsWith('glance.')&&typeof inherited==='object'){if(id==='glance.language')return Object.entries(inherited).filter(([k,v])=>k.endsWith('::My preference')&&v).map(([k,v])=>k.split('::')[0]+': '+formatValue(v)).join('; ');if(Array.isArray(inherited))return inherited.map(formatValue).filter(Boolean).join(' · ');return formatValue(inherited).replaceAll('\n','; ');}
+ return inherited;
 }
 export function blueprintFor(answers){
  return Object.fromEntries(workbook.pages.filter(p=>p.page>=59).map(p=>[p.title,Object.fromEntries(p.controls.filter(c=>!c.id.endsWith('.reflection')).map(c=>[c.label,resolveValue(c.id,answers)]))]));
@@ -26,7 +30,10 @@ export function compassResult(value){
 }
 export function validateValue(c,v){
  const str=x=>typeof x==='string'&&x.length<=8000;
- if(c.type==='evidence'||c.type==='image-sort')return false;
+ if(['evidence','image-sort','assembly'].includes(c.type))return false;
+ if(c.type==='single')return v===''||c.options.includes(v);
+ if(c.type==='dictionary')return Array.isArray(v)&&v.length<=20&&v.every(x=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).every(k=>['quality','meaning','clothing'].includes(k))&&['quality','meaning','clothing'].every(k=>str(x[k]||'')));
+ if(c.type==='candidates')return Array.isArray(v)&&v.length<=100&&v.every(x=>x&&typeof x.term==='string'&&x.term.length<=100&&['accepted','rejected'].includes(x.decision)&&Object.keys(x).every(k=>['term','decision'].includes(k)));
  if(c.type==='text')return str(v);
  if(c.type==='checks')return Array.isArray(v)&&v.length<=c.options.length&&v.every(x=>c.options.includes(x));
  if(c.type==='scale')return v===''||(Number.isInteger(v)&&v>=c.min&&v<=c.max);

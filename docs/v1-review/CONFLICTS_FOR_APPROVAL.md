@@ -1,6 +1,6 @@
 # Personal Style Blueprint v1.0 — source conflicts for approval
 
-Status: awaiting owner decisions. No application code, methodology, stored customer answers or live deployment changed during this review.
+Status: owner approved R1–R10 as recommended on 2026-11-16. This register preserves the original review; see APPROVED_IMPLEMENTATION.md for implementation and validation. No changes were made during the original review.
 
 Read in full: Product Build Specification v1.0 (26 PDF pages); Codex Engineering Build Specification v1.0 (23 PDF pages); approved Clean Master Manuscript Draft 3 (68 customer pages, plus production material). Compared against the existing application source. PDF page numbers below mean the physical attachment page; manuscript numbers mean its approved PAGE NN inventory.
 

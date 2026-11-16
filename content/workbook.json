@@ -1,5 +1,5 @@
 {
-  "version": "draft3-web-1",
+  "version": "draft3-approved-v1.1",
   "brand": "In Her Fashion",
   "title": "Personal Style Blueprint",
   "parts": [
@@ -156,6 +156,34 @@
             "Willingness to answer honestly",
             "No need to get every answer “right”"
           ]
+        },
+        {
+          "id": "baseline.1",
+          "label": "What currently frustrates me about getting dressed?",
+          "type": "text",
+          "optional": true,
+          "resolution": "R1"
+        },
+        {
+          "id": "baseline.2",
+          "label": "What feels unclear about my style?",
+          "type": "text",
+          "optional": true,
+          "resolution": "R1"
+        },
+        {
+          "id": "baseline.3",
+          "label": "What do I hope becomes easier?",
+          "type": "text",
+          "optional": true,
+          "resolution": "R1"
+        },
+        {
+          "id": "baseline.4",
+          "label": "What do I currently think my style is?",
+          "type": "text",
+          "optional": true,
+          "resolution": "R1"
         }
       ],
       "references": [],
@@ -258,11 +286,6 @@
           "id": "fit.notes.3",
           "label": "Something I noticed:",
           "type": "text"
-        },
-        {
-          "id": "p8.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -339,11 +362,6 @@
           "id": "fit.observe.2",
           "label": "I don’t enjoy clothes that ________.",
           "type": "text"
-        },
-        {
-          "id": "p9.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -368,11 +386,6 @@
         {
           "id": "fit.pattern",
           "label": "My Fit Pattern",
-          "type": "text"
-        },
-        {
-          "id": "p10.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -442,11 +455,6 @@
             "Maybe — I like something about it",
             "No — not for me"
           ]
-        },
-        {
-          "id": "p11.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -543,11 +551,6 @@
           "id": "silhouette.notes.5",
           "label": "A silhouette direction I tend to avoid:",
           "type": "text"
-        },
-        {
-          "id": "p12.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -613,11 +616,6 @@
           "id": "proportion.notes.2",
           "label": "Which combinations consistently feel “off” to you?",
           "type": "text"
-        },
-        {
-          "id": "p13.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -650,6 +648,9 @@
         "☐ Three-quarter",
         "☐ Long",
         "DRESSES / SKIRTS",
+        "☐ Mini",
+        "☐ Knee",
+        "☐ Midi",
         "☐ Maxi",
         "REFLECT",
         "You may notice that your preferences aren't consistent across every garment.",
@@ -703,6 +704,9 @@
           "label": "DRESSES / SKIRTS",
           "type": "checks",
           "options": [
+            "Mini",
+            "Knee",
+            "Midi",
             "Maxi"
           ]
         },
@@ -719,11 +723,6 @@
         {
           "id": "length.notes.3",
           "label": "A length I thought I liked but rarely actually wear:",
-          "type": "text"
-        },
-        {
-          "id": "p14.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -786,11 +785,6 @@
             "I admire this on other people",
             "I generally avoid this"
           ]
-        },
-        {
-          "id": "p15.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -850,11 +844,6 @@
           "id": "neckline.notes.3",
           "label": "Something I noticed about how I like my upper body framed:",
           "type": "text"
-        },
-        {
-          "id": "p16.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -903,11 +892,6 @@
             "Moderate",
             "Noticeable"
           ]
-        },
-        {
-          "id": "p17.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -956,11 +940,6 @@
         {
           "id": "exposure.notes",
           "label": "I feel most comfortable with clothing that shows ______ while keeping ______ relatively covered.",
-          "type": "text"
-        },
-        {
-          "id": "p18.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -1057,11 +1036,6 @@
           "id": "comfort.notes.2",
           "label": "Something I’m willing to compromise on occasionally:",
           "type": "text"
-        },
-        {
-          "id": "p19.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -1154,11 +1128,6 @@
         {
           "id": "body.synthesis.4",
           "label": "One thing I understand about myself and clothes now that I did not notice before is:",
-          "type": "text"
-        },
-        {
-          "id": "p20.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -1453,11 +1422,6 @@
           "id": "inspiration.notes.5",
           "label": "The visual qualities I enjoy admiring but don’t necessarily need to wear are:",
           "type": "text"
-        },
-        {
-          "id": "p23.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -1538,11 +1502,6 @@
           "id": "admiration.5",
           "label": "A style direction I might have confused with my personal style is:",
           "type": "text"
-        },
-        {
-          "id": "p24.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -1591,8 +1550,18 @@
             "Simple",
             "Detailed"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.2",
@@ -1602,8 +1571,18 @@
             "Understated",
             "Noticeable"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.3",
@@ -1613,8 +1592,18 @@
             "Soft",
             "Structured"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.4",
@@ -1624,8 +1613,18 @@
             "Feminine",
             "Androgynous"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.5",
@@ -1635,8 +1634,18 @@
             "Classic",
             "Trend-forward"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.6",
@@ -1646,8 +1655,18 @@
             "Relaxed",
             "Polished"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.7",
@@ -1657,8 +1676,18 @@
             "Minimal",
             "Expressive"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.8",
@@ -1668,8 +1697,18 @@
             "Subtle",
             "Dramatic"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "dials.9",
@@ -1679,13 +1718,26 @@
             "Romantic",
             "Edgy"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
-          "id": "p25.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "visual.strongestThree",
+          "label": "My three strongest visual-dial characteristics",
+          "type": "list",
+          "optional": true,
+          "resolution": "R4",
+          "count": 3
         }
       ],
       "references": [],
@@ -1784,11 +1836,6 @@
           "id": "intensity.4",
           "label": "My ideal amount of visual interest is:",
           "type": "text"
-        },
-        {
-          "id": "p26.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -1833,8 +1880,18 @@
             "Soft / Feminine",
             "Strong / Structured"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "balance.polish",
@@ -1844,8 +1901,18 @@
             "Effortless / Relaxed",
             "Highly Polished"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "balance.edge",
@@ -1855,8 +1922,18 @@
             "Classic / Subtle",
             "Strongly Edgy"
           ],
-          "min": 1,
-          "max": 7
+          "min": 0,
+          "max": 100,
+          "positions": [
+            0,
+            17,
+            33,
+            50,
+            67,
+            83,
+            100
+          ],
+          "storageVersion": 2
         },
         {
           "id": "balance.notes.1",
@@ -1876,11 +1953,6 @@
         {
           "id": "balance.notes.4",
           "label": "My balance of femininity, polish and edge:",
-          "type": "text"
-        },
-        {
-          "id": "p27.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -1958,11 +2030,6 @@
           "id": "colour.observe.9",
           "label": "Are there colours you wear because they’re easy rather than because they feel like you?",
           "type": "text"
-        },
-        {
-          "id": "p28.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -2015,11 +2082,6 @@
         {
           "id": "colour.reason",
           "label": "Why these colours work for me:",
-          "type": "text"
-        },
-        {
-          "id": "p29.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -2106,9 +2168,18 @@
           "type": "text"
         },
         {
-          "id": "p30.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "colour.behaviour",
+          "label": "How I want colour to behave",
+          "type": "text",
+          "optional": true,
+          "resolution": "R4"
+        },
+        {
+          "id": "colour.easy",
+          "label": "The easiest way I add colour",
+          "type": "text",
+          "optional": true,
+          "resolution": "R4"
         }
       ],
       "references": [],
@@ -2243,11 +2314,6 @@
           "id": "signatures.notes.3",
           "label": "Which ones make an outfit feel more like you?",
           "type": "text"
-        },
-        {
-          "id": "p31.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -2304,9 +2370,11 @@
           "type": "text"
         },
         {
-          "id": "p32.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "signatures.counterfactual",
+          "label": "If I removed this detail, would the outfit feel less like me?",
+          "type": "text",
+          "optional": true,
+          "resolution": "R4"
         }
       ],
       "references": [],
@@ -2378,11 +2446,6 @@
         {
           "id": "personality.sentence",
           "label": "I want my clothes to feel ______ while looking ______.",
-          "type": "text"
-        },
-        {
-          "id": "p33.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -2475,11 +2538,6 @@
         {
           "id": "visual.direction.2",
           "label": "A repeated detail or idea I want to remember is ______.",
-          "type": "text"
-        },
-        {
-          "id": "p34.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -2636,11 +2694,6 @@
           "id": "life.less.2",
           "label": "A situation I may own too many clothes for:",
           "type": "text"
-        },
-        {
-          "id": "p36.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -2691,11 +2744,6 @@
             "Exercise",
             "Other"
           ]
-        },
-        {
-          "id": "p37.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -2761,11 +2809,6 @@
         {
           "id": "life.map.5",
           "label": "The biggest mismatch I noticed is:",
-          "type": "text"
-        },
-        {
-          "id": "p38.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -2863,11 +2906,6 @@
           "label": "The three things my clothes most need to help me do are:",
           "type": "list",
           "count": 3
-        },
-        {
-          "id": "p39.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -2991,11 +3029,6 @@
           "id": "environment.3",
           "label": "Which ones barely matter?",
           "type": "text"
-        },
-        {
-          "id": "p40.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -3090,11 +3123,6 @@
         {
           "id": "practical.notes.6",
           "label": "I am not willing to compromise on ______.",
-          "type": "text"
-        },
-        {
-          "id": "p41.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -3224,11 +3252,6 @@
           "id": "life.mismatch.3",
           "label": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______.",
           "type": "text"
-        },
-        {
-          "id": "p42.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -3283,11 +3306,6 @@
           "label": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______.",
           "type": "text",
           "source": "life.mismatch.3"
-        },
-        {
-          "id": "p43.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -3353,11 +3371,6 @@
         {
           "id": "life.implications.7",
           "label": "Something I learned about my lifestyle and the way I dress is:",
-          "type": "text"
-        },
-        {
-          "id": "p44.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -3440,11 +3453,6 @@
           "label": "Your Lifestyle",
           "type": "text",
           "source": "lifestyle.priority"
-        },
-        {
-          "id": "p45.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -3533,9 +3541,10 @@
           "count": 3
         },
         {
-          "id": "p46.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "synthesis.decisions",
+          "type": "candidates",
+          "label": "Possible repeated patterns — your decision",
+          "resolution": "R6"
         }
       ],
       "references": [
@@ -3585,11 +3594,6 @@
         {
           "id": "patterns.connection",
           "label": "Across my body, personality, and lifestyle discoveries, a possible connecting pattern is:",
-          "type": "text"
-        },
-        {
-          "id": "p47.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -3676,11 +3680,6 @@
         {
           "id": "tensions.9",
           "label": "I want ______ without becoming ______.",
-          "type": "text"
-        },
-        {
-          "id": "p48.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -3778,11 +3777,6 @@
           "id": "balance.why",
           "label": "Why?",
           "type": "text"
-        },
-        {
-          "id": "p49.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -3831,11 +3825,6 @@
             "What it means to me",
             "How it may show up in clothing"
           ]
-        },
-        {
-          "id": "p50.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -3867,42 +3856,57 @@
         {
           "id": "dictionary.1",
           "label": "When I say “feminine,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.2",
           "label": "When I say “polished,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.3",
           "label": "When I say “casual,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.4",
           "label": "When I say “sexy,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.5",
           "label": "When I say “simple,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.6",
           "label": "When I say “stylish,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
           "id": "dictionary.7",
           "label": "When I say “__________,” I mean…",
-          "type": "text"
+          "type": "text",
+          "optional": true,
+          "resolution": "R5"
         },
         {
-          "id": "p51.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "dictionary.entries",
+          "type": "dictionary",
+          "label": "My own Style Language Dictionary",
+          "resolution": "R5"
         }
       ],
       "references": [],
@@ -3993,11 +3997,6 @@
           "id": "like.me.6",
           "label": "One lifestyle quality:",
           "type": "text"
-        },
-        {
-          "id": "p52.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [],
@@ -4053,11 +4052,6 @@
         {
           "id": "good.on.me.6",
           "label": "An outfit that may not fit a traditional style rule but felt very much like me:",
-          "type": "text"
-        },
-        {
-          "id": "p53.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -4125,9 +4119,10 @@
           "type": "text"
         },
         {
-          "id": "p54.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "brief.assembly",
+          "type": "assembly",
+          "label": "Assemble a draft from my own words",
+          "resolution": "R6"
         }
       ],
       "references": [
@@ -4198,11 +4193,6 @@
         {
           "id": "specific.8",
           "label": "I don’t really enjoy…",
-          "type": "text"
-        },
-        {
-          "id": "p55.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -4313,11 +4303,6 @@
         {
           "id": "synthesis.language.6",
           "label": "Accessories:",
-          "type": "text"
-        },
-        {
-          "id": "p56.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -4450,11 +4435,6 @@
           "type": "list",
           "count": 3,
           "source": "qualities.core"
-        },
-        {
-          "id": "p57.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -4545,11 +4525,6 @@
           "type": "list",
           "count": 3,
           "source": "qualities.core"
-        },
-        {
-          "id": "p59.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -4629,11 +4604,6 @@
         {
           "id": "language.notes.3",
           "label": "The visual qualities I want to repeat are:",
-          "type": "text"
-        },
-        {
-          "id": "p60.reflection",
-          "label": "Something else I want to remember:",
           "type": "text"
         }
       ],
@@ -4748,9 +4718,22 @@
           ]
         },
         {
-          "id": "p61.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "colour.behaviour",
+          "label": "How I want colour to behave",
+          "type": "text",
+          "optional": true,
+          "resolution": "R4",
+          "source": "colour.behaviour",
+          "referenceOnly": true
+        },
+        {
+          "id": "colour.easy",
+          "label": "The easiest way I add colour",
+          "type": "text",
+          "optional": true,
+          "resolution": "R4",
+          "source": "colour.easy",
+          "referenceOnly": true
         }
       ],
       "references": [
@@ -4846,11 +4829,6 @@
           "label": "One I want to make more deliberate is:",
           "type": "text",
           "source": "signatures.deliberate"
-        },
-        {
-          "id": "p62.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -4903,11 +4881,6 @@
           "label": "My personal outfit directions",
           "type": "outfits",
           "count": 3
-        },
-        {
-          "id": "p63.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -4993,11 +4966,6 @@
           "id": "rules.consider",
           "label": "Before deciding whether something works for me, I want to consider:",
           "type": "text"
-        },
-        {
-          "id": "p64.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -5062,11 +5030,6 @@
           "id": "permission.6",
           "label": "I give myself permission to dress in a way that ______.",
           "type": "text"
-        },
-        {
-          "id": "p65.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
         }
       ],
       "references": [
@@ -5113,16 +5076,6 @@
       ],
       "controls": [
         {
-          "id": "p66.choices1",
-          "label": "MY DECISION",
-          "type": "checks",
-          "options": [
-            "Buy anyway — I love it enough.",
-            "Save for later.",
-            "Pass."
-          ]
-        },
-        {
           "id": "compass.scores",
           "label": "Score each criterion from 0–5",
           "type": "compass",
@@ -5140,9 +5093,19 @@
           "type": "text"
         },
         {
-          "id": "p66.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "compass.item",
+          "type": "text",
+          "label": "The item I am considering:"
+        },
+        {
+          "id": "compass.decision",
+          "type": "single",
+          "label": "My decision",
+          "options": [
+            "Buy anyway — I love it enough.",
+            "Save for later.",
+            "Pass."
+          ]
         }
       ],
       "references": [
@@ -5349,9 +5312,61 @@
           "source": "signatures.deliberate"
         },
         {
-          "id": "p67.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "shopping.filter",
+          "type": "table",
+          "label": "My personal shopping filter",
+          "rows": [
+            "Lifestyle",
+            "Personality",
+            "Colour",
+            "Physical",
+            "Styling potential"
+          ],
+          "columns": [
+            "What I want to check"
+          ],
+          "cellSources": {
+            "Lifestyle::What I want to check": "lifestyle.priority",
+            "Personality::What I want to check": "personality.3",
+            "Colour::What I want to check": "colour.final",
+            "Physical::What I want to check": "body.synthesis.3",
+            "Styling potential::What I want to check": "rules.consider"
+          }
+        },
+        {
+          "id": "closing.1",
+          "label": "I dress for…",
+          "type": "text",
+          "optional": true,
+          "resolution": "R10"
+        },
+        {
+          "id": "closing.2",
+          "label": "I feel most like myself in…",
+          "type": "text",
+          "optional": true,
+          "resolution": "R10"
+        },
+        {
+          "id": "closing.3",
+          "label": "My style is a combination of…",
+          "type": "text",
+          "optional": true,
+          "resolution": "R10"
+        },
+        {
+          "id": "closing.4",
+          "label": "I don’t need my clothes to…",
+          "type": "text",
+          "optional": true,
+          "resolution": "R10"
+        },
+        {
+          "id": "closing.5",
+          "label": "I want my wardrobe to help me…",
+          "type": "text",
+          "optional": true,
+          "resolution": "R10"
         }
       ],
       "references": [
@@ -5445,9 +5460,18 @@
           "source": "permission.6"
         },
         {
-          "id": "p68.reflection",
-          "label": "Something else I want to remember:",
-          "type": "text"
+          "id": "glance.rules",
+          "type": "text",
+          "label": "PERSONAL STYLE RULES:",
+          "source": "rules.summary",
+          "resolution": "R9"
+        },
+        {
+          "id": "glance.filter",
+          "type": "text",
+          "label": "SHOPPING FILTER:",
+          "source": "shopping.filter",
+          "resolution": "R9"
         }
       ],
       "references": [
@@ -5457,5 +5481,422 @@
       "subtitle": "PART 5B — USE YOUR BLUEPRINT",
       "art": null
     }
-  ]
+  ],
+  "decisions": {
+    "status": "approved",
+    "ids": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9",
+      "R10"
+    ],
+    "scope": "Owner approval in originating conversation; preserve approved Draft 3 copy except the R2 option amendment."
+  },
+  "sessions": [
+    {
+      "name": "Your Body",
+      "start": 6,
+      "end": 20,
+      "time": "30–45 minutes"
+    },
+    {
+      "name": "Personality: inspiration & visual preferences",
+      "start": 21,
+      "end": 27,
+      "time": "30–45 minutes"
+    },
+    {
+      "name": "Personality: colour & signatures",
+      "start": 28,
+      "end": 34,
+      "time": "About 30 minutes"
+    },
+    {
+      "name": "Your Lifestyle",
+      "start": 35,
+      "end": 44,
+      "time": "20–30 minutes"
+    },
+    {
+      "name": "Connect the Dots",
+      "start": 45,
+      "end": 57,
+      "time": "20–30 minutes"
+    },
+    {
+      "name": "Build your Blueprint",
+      "start": 58,
+      "end": 68,
+      "time": "20–30 minutes"
+    }
+  ],
+  "legacyControls": [
+    {
+      "id": "p8.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p9.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p10.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p11.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p12.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p13.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p14.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p15.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p16.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p17.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p18.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p19.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p20.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p23.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p24.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p25.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p26.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p27.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p28.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p29.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p30.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p31.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p32.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p33.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p34.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p36.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p37.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p38.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p39.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p40.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p41.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p42.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p43.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p44.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p45.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p46.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p47.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p48.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p49.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p50.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p51.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p52.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p53.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p54.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p55.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p56.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p57.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p59.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p60.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p61.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p62.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p63.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p64.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p65.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p66.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p67.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p68.reflection",
+      "label": "Something else I want to remember:",
+      "type": "text",
+      "legacy": true
+    },
+    {
+      "id": "p66.choices1",
+      "label": "MY DECISION",
+      "type": "checks",
+      "options": [
+        "Buy anyway — I love it enough.",
+        "Save for later.",
+        "Pass."
+      ],
+      "legacy": true
+    },
+    {
+      "id": "brief.pending",
+      "type": "text",
+      "label": "Unconfirmed draft",
+      "legacy": true,
+      "internal": true
+    }
+  ],
+  "optionalPolicy": "v1-only additions are optional. No extra wardrobe audit, AI identity, or compulsory new journaling."
 }
