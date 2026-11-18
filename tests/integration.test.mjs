@@ -12,7 +12,7 @@ const api=async(path,{owner='alice',method='GET',body,headers={}}={})=>{
  if(body instanceof FormData){const encoded=new Request(origin+path,{method,body});h['Content-Type']=encoded.headers.get('Content-Type');body=await encoded.arrayBuffer()}else if(body){h['Content-Type']='application/json';body=JSON.stringify(body)}
  return mf.dispatchFetch(origin+path,{method,headers:h,body});
 };
-before(async()=>{await rm(persistence,{recursive:true,force:true});mf=new Miniflare(options);env=await mf.getBindings();await env.DB.exec(await readFile('drizzle/0000_private_workbook.sql','utf8'));await env.DB.exec(await readFile('drizzle/0001_assessment_and_annotations.sql','utf8'))});
+before(async()=>{await rm(persistence,{recursive:true,force:true});mf=new Miniflare(options);env=await mf.getBindings();await env.DB.exec(await readFile('drizzle/0000_private_workbook.sql','utf8'));await env.DB.exec(await readFile('drizzle/0001_assessment_and_annotations.sql','utf8'));await env.DB.exec(await readFile('drizzle/0002_evidence_display_order.sql','utf8'))});
 after(async()=>{await mf?.dispose()});
 function sample(c){
  if(c.type==='single')return c.options[0];

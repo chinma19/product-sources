@@ -2,6 +2,7 @@ import {workbook,controls,emptyState,migrateState,applyPatch,blueprintFor} from 
 import {candidatePatterns,validateAnnotations,evidenceSummary} from './synthesis.mjs';
 import {generateBlueprintPDF} from './pdf.mjs';
 import {blueprintSections,profileObjects} from './blueprint.mjs';
+import {imageData,evidenceOrder} from './evidence.mjs';
 import {assets} from './assets.generated.mjs';
 export const securityHeaders={ 'X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Cache-Control':'private, no-store','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' blob: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https://*.chatgpt.com https://chatgpt.com",'Permissions-Policy':'camera=(), microphone=(), geolocation=()'};
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{...securityHeaders,'Content-Type':'application/json'}});
@@ -10,7 +11,7 @@ async function boundedRequest(req,max){const length=Number(req.headers.get('Cont
 async function bodyJson(req){const txt=await req.text();if(txt.length>500000)throw new HttpError(413,'Responses are too large. Export a backup and shorten long entries.');try{return JSON.parse(txt)}catch{throw new HttpError(400,'Invalid JSON body.')}}
 const cleanText=(v,max=250)=>typeof v==='string'?v.trim().slice(0,max):'';
 const assetPath=id=>'/api/evidence/'+id;
-function safeAsset(row){return {id:row.id,title:row.title,kind:row.kind,reference:row.reference,sort:row.sort_group,url:row.object_key?assetPath(row.id):null,createdAt:row.created_at,annotations:JSON.parse(row.annotations||'{}'),revision:row.revision||0,updatedAt:row.updated_at||row.created_at};}
+function safeAsset(row){return {id:row.id,title:row.title,kind:row.kind,reference:row.reference,sort:row.sort_group,position:row.display_order||0,url:row.object_key?assetPath(row.id)+'?v='+(row.revision||0):null,createdAt:row.created_at,annotations:JSON.parse(row.annotations||'{}'),revision:row.revision||0,updatedAt:row.updated_at||row.created_at};}
 async function load(env,owner){const r=await env.DB.prepare('SELECT * FROM progress WHERE owner_id = ?').bind(owner).first();return r?migrateState({...JSON.parse(r.document),assessmentId:r.assessment_id||null,status:r.status||'IN_PROGRESS',createdAt:r.created_at||null,completedAt:r.completed_at||null,revision:r.revision,updatedAt:r.updated_at}):emptyState()}
 async function recoveryDescriptor(owner){const digest=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))).map(v=>v.toString(16).padStart(2,'0')).join('');return {name:await digest('inherfashion-cache-v2:'+owner),secret:await digest('inherfashion-recovery-key-v2:'+owner)}}
 async function saveState(env,owner,current,body){
@@ -33,7 +34,7 @@ async function api(req,env,path){
  const owner=authorized(req);await entitlement(env,owner);
  if(!['GET','HEAD'].includes(req.method))sameOrigin(req);
  if(path==='/api/bootstrap'&&req.method==='GET'){
-  const state=await load(env,owner);const {results}=await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY created_at ASC').bind(owner).all();
+  const state=await load(env,owner);const {results}=await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY '+evidenceOrder).bind(owner).all();
   const email=req.headers.get('oai-authenticated-user-email')||'';
   const items=results.map(safeAsset);return json({user:{email,name:email.split('@')[0]||'Your private workbook'},state,evidence:items,evidenceSummary:evidenceSummary(items),recovery:await recoveryDescriptor(owner),content:workbook});
  }
@@ -52,25 +53,46 @@ async function api(req,env,path){
  }
  if(path==='/api/blueprint'&&req.method==='GET'){const s=await load(env,owner);return json({sections:blueprintSections(s.answers),profiles:profileObjects(s.answers),revision:s.revision})}
  if(path==='/api/export'&&req.method==='GET'){
-  const state=await load(env,owner);return new Response(JSON.stringify({product:'In Her Fashion Personal Style Blueprint',formatVersion:1,exportedAt:new Date().toISOString(),state,blueprint:blueprintFor(state.answers),sections:blueprintSections(state.answers),profiles:profileObjects(state.answers),responses:Object.entries(state.answers).map(([field,value])=>({assessmentId:state.assessmentId,exerciseId:workbook.pages.find(p=>p.controls.some(c=>c.id===field))?.page||null,field,value,updatedAt:state.answerUpdatedAt?.[field]||null})),evidence:(await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY created_at ASC').bind(owner).all()).results.map(safeAsset)},null,2),{headers:{...securityHeaders,'Content-Type':'application/json','Content-Disposition':'attachment; filename="My-Personal-Style-Blueprint.json"'}});
+  const state=await load(env,owner);return new Response(JSON.stringify({product:'In Her Fashion Personal Style Blueprint',formatVersion:1,exportedAt:new Date().toISOString(),state,blueprint:blueprintFor(state.answers),sections:blueprintSections(state.answers),profiles:profileObjects(state.answers),responses:Object.entries(state.answers).map(([field,value])=>({assessmentId:state.assessmentId,exerciseId:workbook.pages.find(p=>p.controls.some(c=>c.id===field))?.page||null,field,value,updatedAt:state.answerUpdatedAt?.[field]||null})),evidence:(await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY '+evidenceOrder).bind(owner).all()).results.map(safeAsset)},null,2),{headers:{...securityHeaders,'Content-Type':'application/json','Content-Disposition':'attachment; filename="My-Personal-Style-Blueprint.json"'}});
  }
  if(path==='/api/evidence'&&req.method==='POST'){
-  const count=await env.DB.prepare('SELECT count(*) AS n FROM evidence WHERE owner_id = ?').bind(owner).first();if(count.n>=40)throw new HttpError(400,'Your evidence library holds up to 40 items. Remove an item before adding another.');
   const contentType=req.headers.get('Content-Type')||'';let file=null,data;
-  if(contentType.includes('multipart/form-data')){if(Number(req.headers.get('Content-Length'))>8500000)throw new HttpError(413,'Please choose an image under 8 MB.');const form=await req.formData();file=form.get('file');data={title:form.get('title'),kind:form.get('kind'),reference:form.get('reference')};}
+  if(contentType.includes('multipart/form-data')){if(Number(req.headers.get('Content-Length'))>8500000)throw new HttpError(413,'Please choose an image under 8 MB.');const form=await req.formData();file=form.get('file');data={title:form.get('title'),kind:form.get('kind'),reference:form.get('reference'),uploadId:form.get('uploadId')};}
   else data=await bodyJson(req);
+  if(data.uploadId!=null&&!/^[a-f0-9-]{36}$/.test(data.uploadId))throw new HttpError(400,'Invalid upload identifier.');
+  if(data.uploadId){const existing=await env.DB.prepare('SELECT * FROM evidence WHERE id = ? AND owner_id = ?').bind(data.uploadId,owner).first();if(existing)return json(safeAsset(existing),201)}
+  const count=await env.DB.prepare('SELECT count(*) AS n FROM evidence WHERE owner_id = ?').bind(owner).first();if(count.n>=40)throw new HttpError(400,'Your evidence library holds up to 40 items. Remove an item before adding another.');
   const kind=data.kind;if(!['recent','inspiration'].includes(kind))throw new HttpError(400,'Choose Recent Outfits or Inspiration.');
   const title=cleanText(data.title)||'Untitled evidence';let reference=cleanText(data.reference,1500);
   if(reference&&!/^https?:\/\//i.test(reference)&&reference.length>1000)throw new HttpError(400,'Keep written references under 1,000 characters.');
-  const id=crypto.randomUUID();let key=null,mime=null,size=0;
+  const id=data.uploadId||crypto.randomUUID();let key=null,mime=null,size=0;
   if(file){
-   if(!(file instanceof File)||!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>8000000||file.size===0)throw new HttpError(400,'Use a JPG, PNG or WebP image under 8 MB.');
-   const bytes=new Uint8Array(await file.arrayBuffer());const valid=file.type==='image/png'?bytes[0]===137&&bytes[1]===80&&bytes[2]===78&&bytes[3]===71:file.type==='image/jpeg'?bytes[0]===255&&bytes[1]===216:bytes[0]===82&&bytes[1]===73&&bytes[2]===70&&bytes[3]===70&&bytes[8]===87&&bytes[9]===69&&bytes[10]===66&&bytes[11]===80;
-   if(!valid)throw new HttpError(400,'This file does not match its image format.');
-   key='private/'+id;mime=file.type;size=file.size;await env.BUCKET.put(key,bytes,{httpMetadata:{contentType:mime}});
+   let image;try{image=await imageData(file)}catch(e){throw new HttpError(400,e.message)}
+   key='private/'+crypto.randomUUID();mime=image.mime;size=image.size;await env.BUCKET.put(key,image.bytes,{httpMetadata:{contentType:mime}});
   }else if(!reference)throw new HttpError(400,'Add an image or a written/link reference.');
-  const now=new Date().toISOString();try{await env.DB.prepare('INSERT INTO evidence (id, owner_id, object_key, mime, byte_size, title, kind, reference, sort_group, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').bind(id,owner,key,mime,size,title,kind,reference,'',now).run()}catch(e){if(key)await env.BUCKET.delete(key);throw e}
-  return json({id,title,kind,reference,sort:'',url:key?assetPath(id):null,createdAt:now,annotations:{},revision:0,updatedAt:now},201);
+  const position=(await env.DB.prepare('SELECT COALESCE(MAX(display_order), -1) + 1 AS n FROM evidence WHERE owner_id = ?').bind(owner).first()).n;
+  const now=new Date().toISOString();try{await env.DB.prepare('INSERT INTO evidence (id, owner_id, object_key, mime, byte_size, title, kind, reference, sort_group, created_at, display_order) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)').bind(id,owner,key,mime,size,title,kind,reference,'',now,position).run()}catch(e){if(key)await env.BUCKET.delete(key);if(data.uploadId){const existing=await env.DB.prepare('SELECT * FROM evidence WHERE id = ? AND owner_id = ?').bind(id,owner).first();if(existing)return json(safeAsset(existing),201)}throw e}
+  return json({id,title,kind,reference,sort:'',position,url:key?assetPath(id)+'?v=0':null,createdAt:now,annotations:{},revision:0,updatedAt:now},201);
+ }
+ if(path==='/api/evidence/order'&&req.method==='PATCH'){
+  const b=await bodyJson(req);const items=b.items;
+  if(!Array.isArray(items)||items.length===0||items.length>40||new Set(items.map(x=>x?.id)).size!==items.length||!items.every(x=>x&&/^[a-f0-9-]{36}$/.test(x.id)&&Number.isInteger(x.revision)&&x.revision>=0))throw new HttpError(400,'Choose a valid evidence order.');
+  // One guarded statement: all positions change together, or none do, even across tabs.
+  const payload=JSON.stringify(items),now=new Date().toISOString();
+  const result=await env.DB.prepare(`UPDATE evidence SET display_order = (SELECT CAST(j.key AS INTEGER) FROM json_each(?) j WHERE json_extract(j.value, '$.id') = evidence.id), revision = revision + 1, updated_at = ? WHERE owner_id = ? AND (SELECT COUNT(*) FROM evidence WHERE owner_id = ?) = ? AND NOT EXISTS (SELECT 1 FROM json_each(?) j LEFT JOIN evidence e ON e.id = json_extract(j.value, '$.id') AND e.owner_id = ? WHERE e.id IS NULL OR e.revision != json_extract(j.value, '$.revision'))`).bind(payload,now,owner,owner,items.length,payload,owner).run();
+  if(result.meta.changes!==items.length)throw new HttpError(409,'Your library changed in another session. Reload it before rearranging.');
+  return json({evidence:(await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY '+evidenceOrder).bind(owner).all()).results.map(safeAsset)});
+ }
+ const replacement=path.match(/^\/api\/evidence\/([a-f0-9-]{36})\/image$/);
+ if(replacement&&req.method==='PUT'){
+  const row=await env.DB.prepare('SELECT * FROM evidence WHERE id = ? AND owner_id = ?').bind(replacement[1],owner).first();if(!row)throw new HttpError(404,'This evidence item is not available.');
+  if(!(req.headers.get('Content-Type')||'').includes('multipart/form-data'))throw new HttpError(400,'Choose an image file to replace this image.');
+  const form=await req.formData();if(!/^\d+$/.test(String(form.get('baseRevision')))||Number(form.get('baseRevision'))!==row.revision)throw new HttpError(409,'This image changed in another session. Reload before replacing it.');
+  let image;try{image=await imageData(form.get('file'))}catch(e){throw new HttpError(400,e.message)}
+  const key='private/'+crypto.randomUUID(),now=new Date().toISOString();await env.BUCKET.put(key,image.bytes,{httpMetadata:{contentType:image.mime}});
+  try{const result=await env.DB.prepare('UPDATE evidence SET object_key = ?, mime = ?, byte_size = ?, revision = revision + 1, updated_at = ? WHERE id = ? AND owner_id = ? AND revision = ?').bind(key,image.mime,image.size,now,row.id,owner,row.revision).run();if(!result.meta.changes)throw new HttpError(409,'This image changed. Reload before replacing it.');}catch(e){await env.BUCKET.delete(key);throw e}
+  if(row.object_key)await env.BUCKET.delete(row.object_key);
+  return json(safeAsset({...row,object_key:key,mime:image.mime,byte_size:image.size,revision:row.revision+1,updated_at:now}));
  }
  const match=path.match(/^\/api\/evidence\/([a-f0-9-]{36})$/);
  if(match){
@@ -86,7 +108,7 @@ async function api(req,env,path){
    const now=new Date().toISOString(),annotation=b.annotations??JSON.parse(row.annotations||'{}'),sort=b.sort??row.sort_group;
    const result=await env.DB.prepare('UPDATE evidence SET sort_group = ?, annotations = ?, revision = revision + 1, updated_at = ? WHERE id = ? AND owner_id = ? AND revision = ?').bind(sort,JSON.stringify(annotation),now,row.id,owner,row.revision).run();
    if(!result.meta.changes)throw new HttpError(409,'This evidence item changed. Reload and try again.');
-   return json({...safeAsset(row),sort,annotations:annotation,revision:row.revision+1,updatedAt:now});
+   return json(safeAsset({...row,sort_group:sort,annotations:JSON.stringify(annotation),revision:row.revision+1,updated_at:now}));
   }
   if(req.method==='DELETE'){if(row.object_key)await env.BUCKET.delete(row.object_key);await env.DB.prepare('DELETE FROM evidence WHERE id = ? AND owner_id = ?').bind(row.id,owner).run();return json({deleted:true})}
  }
@@ -95,7 +117,7 @@ async function api(req,env,path){
 export default {async fetch(req,env){
  try{
   const path=new URL(req.url).pathname;
-  if(path.startsWith('/api/')){if(['POST','PATCH'].includes(req.method))req=await boundedRequest(req,path==='/api/evidence'?8500000:500000);return await api(req,env,path);}
+  if(path.startsWith('/api/')){if(['POST','PATCH','PUT'].includes(req.method))req=await boundedRequest(req,path==='/api/evidence'||path.endsWith('/image')?8500000:500000);return await api(req,env,path);}
   const file=assets[path==='/'?'/index.html':path];if(!file)return new Response('Not found',{status:404,headers:securityHeaders});
   const bytes=Uint8Array.from(atob(file.data),c=>c.charCodeAt(0));return new Response(req.method==='HEAD'?null:bytes,{headers:{...securityHeaders,'Content-Type':file.type,...(path.startsWith('/assets/')?{'Cache-Control':'public, max-age=86400'}:{})}});
  }catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);console.error('Blueprint request failed',e.name);return json({error:'We could not complete that request. Your saved progress is safe. Please try again.'},500)}
