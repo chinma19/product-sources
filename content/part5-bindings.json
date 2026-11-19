@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "policy": "Literal response reuse only. Ordered fallbacks express the same question; no style identity, outfit or permission is inferred. Existing stored values take precedence until the customer explicitly relinks them.",
+  "fields": {
+    "identity.notes.1": {
+      "sources": [
+        "brief.1",
+        "direction.1",
+        "specific.3",
+        "specific.1"
+      ]
+    },
+    "identity.notes.2": {
+      "sources": [
+        "specific.2"
+      ]
+    },
+    "identity.notes.3": {
+      "sources": [
+        "fit.observe.1",
+        "brief.complete.2"
+      ]
+    },
+    "identity.notes.4": {
+      "sources": [
+        "dictionary.entries",
+        "translation"
+      ],
+      "strategy": "meanings"
+    },
+    "identity.notes.5": {
+      "sources": [
+        "dictionary.entries",
+        "translation"
+      ],
+      "strategy": "clothing"
+    },
+    "language.notes.1": {
+      "sources": [
+        "fit.notes.1"
+      ]
+    },
+    "language.notes.2": {
+      "sources": [
+        "specific.2"
+      ]
+    },
+    "language.notes.3": {
+      "sources": [
+        "visual.qualities"
+      ]
+    },
+    "signatures.repeated.1": {
+      "sources": [
+        "p31.choices1"
+      ]
+    },
+    "signatures.repeated.2": {
+      "sources": [
+        "p31.choices2"
+      ]
+    },
+    "signatures.repeated.3": {
+      "sources": [
+        "p31.choices3"
+      ]
+    },
+    "signatures.repeated.4": {
+      "sources": [
+        "p31.choices4"
+      ]
+    },
+    "signatures.repeated.5": {
+      "sources": [
+        "p31.choices5"
+      ]
+    },
+    "closing.1": {
+      "sources": [
+        "brief.6",
+        "direction.5",
+        "lifestyle.contexts"
+      ]
+    },
+    "closing.2": {
+      "sources": [
+        "fit.observe.1",
+        "brief.complete.2"
+      ]
+    },
+    "closing.3": {
+      "sources": [
+        "visual.combination",
+        "specific.5"
+      ]
+    },
+    "closing.5": {
+      "sources": [
+        "life.help"
+      ]
+    },
+    "rules.summary": {
+      "sources": [
+        "rules.1",
+        "rules.2",
+        "rules.3",
+        "rules.4",
+        "rules.5",
+        "rules.6",
+        "rules.more",
+        "rules.less",
+        "rules.consider"
+      ],
+      "strategy": "labelled"
+    }
+  },
+  "tables": {
+    "style.language": {
+      "Fit": {
+        "sources": [
+          "body.fit",
+          "synthesis.language.2"
+        ],
+        "clothingSources": [
+          "synthesis.language.2"
+        ],
+        "terms": [
+          "fit"
+        ]
+      },
+      "Silhouette": {
+        "sources": [
+          "body.silhouette",
+          "synthesis.language.1"
+        ],
+        "clothingSources": [
+          "synthesis.language.1"
+        ],
+        "terms": [
+          "silhouette",
+          "shape"
+        ]
+      },
+      "Proportion": {
+        "sources": [
+          "body.proportion",
+          "synthesis.language.3"
+        ],
+        "clothingSources": [
+          "synthesis.language.3"
+        ],
+        "terms": [
+          "proportion",
+          "proportions"
+        ]
+      },
+      "Length": {
+        "sources": [
+          "body.length"
+        ],
+        "clothingSources": [],
+        "terms": [
+          "length",
+          "lengths"
+        ]
+      },
+      "Necklines / Openings": {
+        "sources": [
+          "body.neckline"
+        ],
+        "clothingSources": [],
+        "terms": [
+          "neckline",
+          "necklines",
+          "openings",
+          "necklines / openings"
+        ]
+      },
+      "Textures / Fabrics": {
+        "sources": [
+          "synthesis.language.5"
+        ],
+        "clothingSources": [
+          "synthesis.language.5"
+        ],
+        "terms": [
+          "texture",
+          "textures",
+          "fabric",
+          "fabrics",
+          "textures / fabrics"
+        ]
+      },
+      "Visual Detail": {
+        "sources": [
+          "synthesis.language.4",
+          "personality.3"
+        ],
+        "clothingSources": [
+          "synthesis.language.4"
+        ],
+        "terms": [
+          "detail",
+          "details",
+          "visual detail"
+        ]
+      },
+      "Shoes": {
+        "sources": [
+          "signatures.repeated.3"
+        ],
+        "clothingSources": [],
+        "terms": [
+          "shoes",
+          "footwear"
+        ]
+      },
+      "Accessories": {
+        "sources": [
+          "synthesis.language.6",
+          "signatures.repeated.2"
+        ],
+        "clothingSources": [
+          "synthesis.language.6"
+        ],
+        "terms": [
+          "accessories"
+        ]
+      }
+    }
+  }
+}

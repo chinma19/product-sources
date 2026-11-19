@@ -19,8 +19,8 @@ async function saveState(env,owner,current,body){
  const revision=current.revision+1,now=new Date().toISOString(),assessmentId=current.assessmentId||crypto.randomUUID(),createdAt=current.createdAt||now;
  const status=next.completed.length===68?'COMPLETED':'IN_PROGRESS',completedAt=status==='COMPLETED'?(current.completedAt||now):null;
  const answerUpdatedAt={...current.answerUpdatedAt,...Object.fromEntries(Object.keys(body.answers||{}).map(k=>[k,now]))};
- next={...next,schemaVersion:2,assessmentId,createdAt,completedAt,status,answerUpdatedAt};
- const document=JSON.stringify({schemaVersion:2,answers:next.answers,completed:next.completed,lastStep:next.lastStep,answerUpdatedAt});
+ next={...next,schemaVersion:3,assessmentId,createdAt,completedAt,status,answerUpdatedAt};
+ const document=JSON.stringify({schemaVersion:3,bindingState:next.bindingState,answers:next.answers,completed:next.completed,lastStep:next.lastStep,answerUpdatedAt});
  if(new TextEncoder().encode(document).length>1500000)throw new HttpError(413,'Your written responses are too large to save together. Export your backup and shorten longer entries.');
  let result;
  if(current.revision===0)result=await env.DB.prepare('INSERT INTO progress (owner_id, document, revision, updated_at, assessment_id, created_at, completed_at, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(owner_id) DO NOTHING').bind(owner,document,revision,now,assessmentId,createdAt,completedAt,status).run();
@@ -48,12 +48,12 @@ async function api(req,env,path){
   return json(next);
  }
  if(path==='/api/blueprint.pdf'&&req.method==='GET'){
-  const state=await load(env,owner);const bytes=p=>Uint8Array.from(atob(assets[p].data),c=>c.charCodeAt(0));let pdf;try{pdf=await generateBlueprintPDF(state.answers,{body:bytes('/assets/DM-Sans.ttf'),display:bytes('/assets/Cormorant-Garamond.ttf')},{glance:new URL(req.url).searchParams.get('view')==='glance'})}catch(e){throw new HttpError(e.status||500,e.message)}
+  const state=await load(env,owner);const bytes=p=>Uint8Array.from(atob(assets[p].data),c=>c.charCodeAt(0));let pdf;try{pdf=await generateBlueprintPDF(state.answers,{body:bytes('/assets/DM-Sans.ttf'),display:bytes('/assets/Cormorant-Garamond.ttf')},{glance:new URL(req.url).searchParams.get('view')==='glance',bindingState:state.bindingState})}catch(e){throw new HttpError(e.status||500,e.message)}
   return new Response(pdf,{headers:{...securityHeaders,'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="My-Personal-Style-Blueprint.pdf"'}});
  }
- if(path==='/api/blueprint'&&req.method==='GET'){const s=await load(env,owner);return json({sections:blueprintSections(s.answers),profiles:profileObjects(s.answers),revision:s.revision})}
+ if(path==='/api/blueprint'&&req.method==='GET'){const s=await load(env,owner);return json({sections:blueprintSections(s.answers,{bindingState:s.bindingState}),profiles:profileObjects(s.answers,s.bindingState),revision:s.revision})}
  if(path==='/api/export'&&req.method==='GET'){
-  const state=await load(env,owner);return new Response(JSON.stringify({product:'In Her Fashion Personal Style Blueprint',formatVersion:1,exportedAt:new Date().toISOString(),state,blueprint:blueprintFor(state.answers),sections:blueprintSections(state.answers),profiles:profileObjects(state.answers),responses:Object.entries(state.answers).map(([field,value])=>({assessmentId:state.assessmentId,exerciseId:workbook.pages.find(p=>p.controls.some(c=>c.id===field))?.page||null,field,value,updatedAt:state.answerUpdatedAt?.[field]||null})),evidence:(await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY '+evidenceOrder).bind(owner).all()).results.map(safeAsset)},null,2),{headers:{...securityHeaders,'Content-Type':'application/json','Content-Disposition':'attachment; filename="My-Personal-Style-Blueprint.json"'}});
+  const state=await load(env,owner);return new Response(JSON.stringify({product:'In Her Fashion Personal Style Blueprint',formatVersion:1,exportedAt:new Date().toISOString(),state,blueprint:blueprintFor(state.answers,state.bindingState),sections:blueprintSections(state.answers,{bindingState:state.bindingState}),profiles:profileObjects(state.answers,state.bindingState),responses:Object.entries(state.answers).map(([field,value])=>({assessmentId:state.assessmentId,exerciseId:workbook.pages.find(p=>p.controls.some(c=>c.id===field))?.page||null,field,value,updatedAt:state.answerUpdatedAt?.[field]||null})),evidence:(await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ? ORDER BY '+evidenceOrder).bind(owner).all()).results.map(safeAsset)},null,2),{headers:{...securityHeaders,'Content-Type':'application/json','Content-Disposition':'attachment; filename="My-Personal-Style-Blueprint.json"'}});
  }
  if(path==='/api/evidence'&&req.method==='POST'){
   const contentType=req.headers.get('Content-Type')||'';let file=null,data;

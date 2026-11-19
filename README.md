@@ -62,3 +62,7 @@ No customer access audience, payment integration or custom domain is changed by 
 ## UX/editorial development update
 
 [Implementation and migration notes](docs/UX_EDITORIAL_IMPROVEMENTS.md) and [regression results](docs/UX_TEST_REPORT.md) describe the contextual references, batch image queue and responsive editorial layer. These branch changes are **not deployed**; the existing private Site is unchanged. Migration 0002 is additive and remains pending on the live database.
+
+## Approved Part 5 corrections
+
+[Release notes and verification](docs/PART5_C1_C6_RELEASE.md) document source-linked result views, conservative legacy review, sparse overrides, confirmed concise summaries, direct one-page PDF output and 10–12-photo batch tests. Approved manuscript content remains unchanged. Customer record schema 3 adds binding/confirmation metadata without removing prior values.

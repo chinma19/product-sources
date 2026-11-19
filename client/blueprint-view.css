@@ -1,0 +1,54 @@
+/* A personal reference first; response controls appear only on explicit edit. */
+.blueprint-output{--result-rule:#d8d0c6;--result-muted:#786b60;--result-ink:#4a3b32;max-width:1100px;margin:auto}
+.blueprint-output .glance-dossier{padding:30px;background:#f5f0e8;border:1px solid var(--result-rule);margin-bottom:42px}
+.blueprint-output h2{font-size:clamp(32px,3.8vw,46px);margin-bottom:24px}
+.blueprint-glance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 28px}
+.blueprint-glance-grid>.blueprint-result-field:first-child{grid-column:1/-1}
+.blueprint-result-field{padding:18px 0;border-top:1px solid var(--result-rule);min-width:0}
+.result-field-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:10px}
+.blueprint-result-field .result-field-heading>h3{font-family:var(--body);font-size:12px;font-weight:500;line-height:1.55;margin:0;color:var(--result-ink);overflow-wrap:anywhere}
+.result-field-heading>button{font-size:11px;min-height:44px;flex-shrink:0;align-self:start;padding:0 3px}
+.blueprint-answer{font-size:15px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 10px}
+.blueprint-glance-grid>.blueprint-result-field:first-child .blueprint-answer{font-family:var(--display);font-size:27px;line-height:1.3}
+.result-provenance{font-size:10px;line-height:1.6;color:var(--result-muted);margin-top:12px}
+.result-provenance>span{margin-right:3px}
+.result-provenance details{display:inline-block;margin-left:9px;vertical-align:top}
+.result-provenance summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.result-provenance details p{margin:8px 0}
+.result-provenance a,.blueprint-source-links a,a.blueprint-source-links{text-decoration:underline;text-underline-offset:4px}
+.blueprint-missing{font-size:13px;color:var(--result-muted);margin:0 0 7px}
+.blueprint-source-links{font-size:12px;line-height:1.7;margin-bottom:0}
+.blueprint-result-master>.blueprint-result-section{margin-bottom:34px}
+.blueprint-result-section>.result-section-title{font-family:var(--display);font-size:32px;line-height:1.2;margin:26px 0 18px}
+.blueprint-result-section>.blueprint-result-field{padding:16px 0}
+.blueprint-result-section>.blueprint-result-field:first-of-type{border-top:0}
+.blueprint-word-list{list-style:none;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap}
+.blueprint-word-list>li{padding:7px 11px;border:1px solid var(--result-rule);font-size:13px;overflow-wrap:anywhere;max-width:100%}
+.blueprint-word-list>li>p{white-space:pre-wrap;margin:7px 0 0;line-height:1.7}
+.blueprint-colours{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 22px;margin:0}
+.blueprint-colours>div{min-width:0}
+.blueprint-colours dt{font-size:10px;color:var(--result-muted);margin-bottom:6px}
+.blueprint-colours dd{display:flex;gap:9px;align-items:center;margin:0;font-size:13px;overflow-wrap:anywhere}
+.blueprint-colours dd>span{min-width:0}
+.blueprint-colours small{display:block;font-size:10px;color:var(--result-muted);margin-top:3px}
+.result-swatch{flex-shrink:0;color:var(--result-rule)}
+.blueprint-structured{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.blueprint-structured>section{border-left:2px solid var(--result-rule);padding-left:14px;min-width:0}
+.blueprint-structured h4{font-family:var(--display);font-size:23px;font-weight:400;margin:0 0 8px;color:var(--result-ink)}
+.blueprint-structured dl{margin:0;font-size:13px}
+.blueprint-structured dl>div{margin-bottom:9px}
+.blueprint-structured dt{font-size:10px;color:var(--result-muted);margin-bottom:3px}
+.blueprint-structured dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}
+.blueprint-inline-editor{padding:15px;background:var(--ivory);border:1px solid var(--result-rule)}
+.blueprint-inline-editor>.response{margin-bottom:0;border-bottom:0;padding-bottom:0}
+.blueprint-optional{padding:15px 0;border-top:1px solid var(--result-rule)}
+.blueprint-optional>summary{font-size:13px;cursor:pointer;padding:10px 0}
+.blueprint-optional>.blueprint-result-field{border:0}
+@media(max-width:760px){.blueprint-output .glance-dossier{padding:20px 16px;margin:0 0 34px}.blueprint-glance-grid{grid-template-columns:minmax(0,1fr);gap:0}.blueprint-glance-grid>.blueprint-result-field:first-child{grid-column:auto}.blueprint-answer{font-size:15px}.blueprint-structured{grid-template-columns:minmax(0,1fr)}.blueprint-colours{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.blueprint-result-section>.result-section-title{font-size:28px}.blueprint-inline-editor{padding:12px}.result-field-heading{gap:10px}.result-field-heading>button{min-height:44px}.blueprint-result-field .result-field-heading>h3{font-size:12px}.blueprint-output h2{font-size:34px}.blueprint-glance-grid>.blueprint-result-field:first-child .blueprint-answer{font-size:25px}}
+@media print{.result-field-heading>button,.result-provenance,.blueprint-source-links,.blueprint-missing{display:none}.blueprint-output .glance-dossier{break-inside:avoid}}
+/* Readable response type on phones; provenance remains secondary. */
+.blueprint-result-field .result-field-heading>h3{font-size:14px}
+.blueprint-answer,.blueprint-word-list>li,.blueprint-colours dd,.blueprint-structured dl,.blueprint-structured dd{font-size:16px}
+.blueprint-colours dt,.blueprint-structured dt,.blueprint-missing,.blueprint-source-links,.blueprint-optional>summary{font-size:14px}
+.result-provenance,.result-field-heading>button,.blueprint-colours small{font-size:12px}
+@media(max-width:760px){.blueprint-result-field .result-field-heading>h3{font-size:14px}.blueprint-answer{font-size:16px}}

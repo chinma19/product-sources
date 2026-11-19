@@ -1,3 +1,4 @@
+import {resolveValue,sourceSnapshot} from './model.mjs';
 // Evidence-backed literal repetition only. No NLP, body diagnosis, or inferred aesthetic.
 const positive=new Set(['Love it','Like it','Yes — I love this','Must have','Nice to have','Non-negotiable','Important']);
 export function candidatePatterns(answers,evidence=[]){
@@ -9,12 +10,13 @@ export function candidatePatterns(answers,evidence=[]){
  for(const item of evidence){const a=item.annotations||{};if(item.kind==='recent'&&['Love it','Like it'].includes(a.fitReaction)){record(a.fit,'evidence:'+item.id,1);for(const t of a.silhouette||[])record(t,'evidence:'+item.id,1)}if(item.kind==='inspiration'&&item.sort==='Beautiful + Me')for(const key of ['silhouette','colour','texture','detail','feeling'])for(const t of a[key]||[])record(t,'evidence:'+item.id,2)}
  return [...terms.values()].filter(x=>x.parts.size>=2).map(({term,sources})=>({term,sources})).sort((a,b)=>a.term.localeCompare(b.term));
 }
-export function assembleBrief(answers){
- const list=k=>Array.isArray(answers[k])?answers[k].filter(s=>typeof s==='string'&&s.trim()):[];
+export function assembleBrief(answers,bindingState={}){
+ const value=id=>resolveValue(id,answers,new Set(),bindingState),list=k=>Array.isArray(value(k))?value(k).filter(s=>typeof s==='string'&&s.trim()):[];
  const core=list('qualities.core'),support=list('qualities.supporting'),accent=list('qualities.accent');
- const life=typeof answers['direction.5']==='string'?answers['direction.5'].trim():typeof answers['lifestyle.priority']==='string'?answers['lifestyle.priority'].trim():'';
+ const life=[value('direction.5'),value('lifestyle.priority')].find(v=>typeof v==='string'&&v.trim())?.trim()||'';
  const missing=[];if(!core.length)missing.push('core qualities');if(!support.length)missing.push('one supporting quality');if(!accent.length)missing.push('one accent quality');if(!life)missing.push('lifestyle');
- return {text:`I want to dress in a way that feels ${core.join(', ')||'[CORE QUALITIES]'}, combining ${support[0]||'[QUALITY]'} with ${accent[0]||'[QUALITY]'}, while keeping my clothes practical for ${life||'[LIFESTYLE]'}.`,missing,sourceIds:['qualities.core','qualities.supporting','qualities.accent','direction.5','lifestyle.priority']};
+ const sourceIds=['qualities.core','qualities.supporting','qualities.accent','direction.5','lifestyle.priority'];
+ return {text:`I want to dress in a way that feels ${core.join(', ')||'[CORE QUALITIES]'}, combining ${support[0]||'[QUALITY]'} with ${accent[0]||'[QUALITY]'}, while keeping my clothes practical for ${life||'[LIFESTYLE]'}.`,missing,sourceIds,sourceSnapshot:sourceSnapshot(sourceIds,answers,bindingState)};
 }
 export function validateAnnotations(kind,a){
  if(!a||typeof a!=='object'||Array.isArray(a))return false;
