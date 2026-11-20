@@ -52,3 +52,14 @@
 .blueprint-colours dt,.blueprint-structured dt,.blueprint-missing,.blueprint-source-links,.blueprint-optional>summary{font-size:14px}
 .result-provenance,.result-field-heading>button,.blueprint-colours small{font-size:12px}
 @media(max-width:760px){.blueprint-result-field .result-field-heading>h3{font-size:14px}.blueprint-answer{font-size:16px}}
+/* Read-only gap guidance stays separate from the customer's recorded content. */
+.blueprint-gap-guidance{font-size:14px;line-height:1.6;max-width:100%}
+.blueprint-gap-guidance .blueprint-missing{margin:0 0 5px}
+.blueprint-gap-guidance .blueprint-source-links{font-size:14px;line-height:1.65;margin:0}
+.blueprint-gap-guidance a{display:inline-block;min-height:32px;padding:3px 0;text-decoration:underline;text-underline-offset:3px}
+.blueprint-gap-guidance[data-guidance-kind=new]{border-left:2px solid var(--result-rule);padding-left:12px}
+.blueprint-result-field.is-missing{padding-top:12px;padding-bottom:14px}
+.blueprint-structured [data-missing-cell]{margin-bottom:14px}
+.blueprint-colours [data-missing-role]{padding:10px 0;border-top:1px solid var(--result-rule)}
+.blueprint-colours [data-missing-role] dd{display:block}
+@media print{[data-blueprint-guidance],[data-missing-cell],[data-missing-role]{display:none!important}}
