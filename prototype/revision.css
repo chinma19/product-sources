@@ -1,0 +1,72 @@
+/* Review-only adjustments shared by the exercise, photo viewer and mobile chrome. */
+html { scroll-padding-top: 100px; }
+#preview-app { min-width: 0; }
+.preview-content, .preview-header, .preview-notice { min-width: 0; }
+.preview-notice { align-items: center; flex-wrap: wrap; font-size: 12px; }
+.preview-notice > strong { font-size: 12px; letter-spacing: .09em; font-weight: 500; }
+.preview-notice > span { flex: 1 1 360px; line-height: 1.6; }
+.preview-notice > button { min-height: 44px; font-size: 14px; }
+.header-tools { min-width: 0; }
+.header-tools > [data-local-status] { max-width: 210px; overflow-wrap: anywhere; }
+.preview-modal-backdrop { height: var(--preview-viewport-height, 100dvh); overscroll-behavior: contain; }
+.preview-modal {
+  width: min(900px, 100%); max-width: 100vw; min-width: 0;
+  height: var(--preview-viewport-height, 100dvh); max-height: var(--preview-viewport-height, 100dvh);
+  overscroll-behavior: contain; scroll-padding-top: 85px;
+  padding-top: 0; padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  -webkit-overflow-scrolling: touch;
+}
+.preview-modal .modal-top {
+  position: sticky; top: 0; z-index: 3; display: flex;
+  justify-content: space-between; align-items: center; gap: 16px;
+  margin: 0 -1px 22px; padding: calc(12px + env(safe-area-inset-top, 0px)) 0 12px;
+  background: var(--paper); border-bottom: 1px solid var(--line); font-size: 14px;
+}
+.preview-modal .modal-top button { min-width: 58px; min-height: 44px; font-size: 14px; }
+.preview-modal h2, .preview-modal p, .preview-modal label { overflow-wrap: anywhere; }
+.preview-modal .photo-original { display: block; margin-bottom: 12px; }
+.preview-modal .photo-large { width: 100%; height: auto; max-height: 65dvh; object-fit: contain; background: var(--canvas); }
+.preview-modal .photo-hint { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.saved-observations { border-block: 1px solid var(--line); padding: 20px 0 12px; margin: 20px 0; }
+.saved-observations > h3 { font-family: var(--serif); font-size: 28px; font-weight: 400; margin-bottom: 10px; }
+.saved-observations > .provenance-label { font-size: 13px; color: var(--muted); }
+.saved-observations dl { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.saved-observations dt { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.saved-observations dd { font-size: 16px; margin: 0 0 8px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.preview-modal .annotation-editor > summary { min-height: 48px; font-size: 16px; }
+.preview-modal .annotation-form input, .preview-modal .annotation-form textarea, .preview-modal .annotation-form select { min-width: 0; max-width: 100%; font-size: 16px; }
+.preview-modal .annotation-form label { font-size: 14px; line-height: 1.6; }
+.preview-modal .annotation-form button { min-height: 46px; }
+.preview-photo-library > figure, .photo-actions, .upload-preview { min-width: 0; }
+.photo-actions button, .photo-actions label { font-size: 14px; }
+.upload-preview button, .upload-preview input, .upload-preview label { font-size: 14px; }
+.upload-preview input, .evidence-form input, .evidence-form textarea { font-size: 16px; }
+.source-rating { padding-block: 10px; font-size: 16px; }
+.source-rating select { margin-top: 8px; min-height: 48px; font-size: 16px; }
+.preview-modal .exercise-evidence-gallery .exercise-evidence-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#preview-app .exercise-stage:focus-visible { outline-offset: 8px; }
+#preview-app .exercise-stage-links > button[aria-current=location] { border-bottom-color: var(--accent); background: var(--canvas); color: var(--ink); }
+@media (max-width: 760px) {
+  html { scroll-padding-top: 140px; }
+  .preview-notice { padding: 8px 16px; gap: 4px 12px; }
+  .preview-notice > span { flex: 1 1 100%; order: 3; font-size: 12px; }
+  .preview-notice > button { margin-left: auto; }
+  .preview-header { padding: 15px 16px; gap: 10px; }
+  .preview-brand { font-size: 26px; white-space: normal; }
+  .preview-brand > span { font-size: 10px; letter-spacing: .06em; line-height: 1.5; }
+  .header-tools { flex-shrink: 0; }
+  .header-tools > button { padding: 8px 10px; min-height: 44px; }
+  .preview-modal { padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+  .saved-observations dl { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .preview-modal .photo-large { max-height: 58dvh; }
+  .preview-modal .exercise-evidence-gallery .exercise-evidence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .preview-modal .preview-photo-library { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .preview-modal .photo-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .photo-actions label, .photo-actions button:last-child { grid-column: auto; }
+  .photo-actions input { width: 100%; font-size: 14px; }
+  .preview-modal .upload-preview-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .preview-modal .upload-preview { padding: 8px; }
+  .preview-modal .upload-preview > button { padding-inline: 8px; width: 100%; }
+  .preview-mobile-nav { padding-bottom: max(8px, env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

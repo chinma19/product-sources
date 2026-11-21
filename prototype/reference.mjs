@@ -1,5 +1,6 @@
 import {resolveValue,formatValue} from '../server/model.mjs';
 import {escapeHTML as e} from '../client/exports.mjs';
+import {provenanceMarkup} from './provenance.mjs';
 
 const imageSource=value=>typeof value==='string'&&/^(data:image\/(?:png|jpeg|webp|gif|svg\+xml)[;,]|blob:)/i.test(value)?value:'';
 const safeMode=mode=>mode==='master'?'master':'glance';
@@ -19,13 +20,14 @@ export function renderReference({state,workbook,evidence=[],photo,mode='glance',
  const qualities=words(valueOf('qualities.final',state));
  const control=editorId?workbook?.pages.flatMap(page=>page.controls).find(field=>field.id===editorId):null;
  const output=typeof renderOutput==='function'?renderOutput(selectedMode):'';
- return `<main class="preview-reference reference-${selectedMode}" aria-labelledby="reference-title">
+ return `<main class="preview-reference reference-${selectedMode}" id="prototype-main" aria-labelledby="reference-title">
   <div class="reference-topline"><span>IN HER FASHION</span><span>BODY + PERSONALITY + LIFESTYLE</span></div>
   <section class="reference-cover" aria-label="My personal style reference">
    <div class="reference-cover-copy">
     <p class="reference-kicker">YOUR PERSONAL STYLE BLUEPRINT</p>
     <h1 id="reference-title">My Personal<br>Style Blueprint</h1>
-    ${identity?`<div class="reference-cover-identity"><p class="reference-small-label">MY STYLE IDENTITY</p><p class="reference-identity">${e(identity)}</p><button class="reference-text-action" data-action="edit-field" data-id="identity">Edit my style identity</button></div>`:''}
+    <p class="reference-sample-line">Sample customer answers · assembled from saved example responses</p>
+    ${identity?`<div class="reference-cover-identity"><p class="reference-small-label">MY STYLE IDENTITY</p><p class="reference-identity">${e(identity)}</p>${provenanceMarkup('identity',state,{compact:true,includeSources:false})}<button class="reference-text-action" data-action="edit-field" data-id="identity">Edit my style identity</button></div>`:''}
     ${qualities.length?`<ul class="reference-quality-line" aria-label="My core qualities">${qualities.map(word=>`<li>${e(word)}</li>`).join('')}</ul>`:''}
    </div>
    <figure class="reference-portrait">${photoURL?`<img src="${e(photoURL)}" alt="${e(portrait.title||'My outfit reference')}" loading="eager" decoding="async">`:`<div class="reference-photo-placeholder"><span>IN HER FASHION</span><p>My personal<br>style reference</p></div>`}<figcaption><span>MY EVIDENCE</span>${portrait?.title?`<span>${e(portrait.title)}</span>`:''}</figcaption></figure>

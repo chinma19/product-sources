@@ -1,0 +1,39 @@
+export function reviewPage(){return `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; frame-src 'self' file:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>In Her Fashion · Desktop and mobile design review</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#3f342d;background:#f4f0e9;font-size:16px}*{box-sizing:border-box}body{margin:0}main{max-width:1440px;margin:auto;padding:24px}h1{font:400 36px/1.1 Georgia,serif;margin:12px 0 18px}h2{font:400 28px/1.2 Georgia,serif}p{line-height:1.7;max-width:900px}.kicker{font-size:12px;letter-spacing:.1em}.note{font-size:14px;color:#75695e}button,a{font-size:14px;color:inherit}button{min-height:44px;border:1px solid #d8d0c6;background:#fffdf9;padding:10px 15px;cursor:pointer}button[aria-pressed=true]{background:#3f342d;color:#fffdf9;border-color:#3f342d}button:focus-visible,a:focus-visible{outline:2px solid #866a52;outline-offset:4px}nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.canvas{background:#e6ded3;padding:16px;overflow:auto;max-width:100%;border:1px solid #d8d0c6}iframe{display:block;box-sizing:content-box;width:390px;height:852px;max-width:none;border:1px solid #d8d0c6;background:#fffdf9;margin:auto}.compare{overflow:auto;margin:32px 0}table{width:100%;border-collapse:collapse;background:#fffdf9}th,td{padding:16px;text-align:left;border-bottom:1px solid #d8d0c6;font-size:14px;line-height:1.7;min-width:160px}th{font-weight:500}li{line-height:1.7;margin:10px 0}a{text-underline-offset:4px}.recommendation{padding:18px 22px;border-left:2px solid #866a52;background:#fffdf9;margin-top:26px}@media(max-width:600px){main{padding:18px 12px}h1{font-size:30px}.canvas{padding:8px}nav{gap:6px}button{padding:10px 12px}.recommendation{padding:16px}}
+</style></head><body><main>
+<p class="kicker">IN HER FASHION · ISOLATED DESIGN REVIEW</p><h1>Evidence in view.<br>Your own discoveries.</h1>
+<p>This is a working viewport review of the revised discovery exercise and finished Blueprint. The child preview contains <strong>sample customer answers</strong> and stock sample photos. Your saved workbook and account are not connected.</p>
+<p><a href="index.html#/exercise" target="_blank" rel="noopener">Open the full-window prototype</a> · <a href="DESIGN-COMPARISON.md">Read the design comparison</a></p>
+<nav aria-label="Review viewport width">
+${[[360,'360px'],[390,'390px'],[430,'430px'],[768,'Tablet · 768px'],[1280,'Desktop · 1280px']].map(([width,label])=>`<button data-review-width="${width}" aria-pressed="${width===390}">${label}</button>`).join('')}
+</nav>
+<nav aria-label="Review screen"><button data-review-screen="exercise" aria-pressed="true">Discovery exercise</button><button data-review-screen="blueprint" aria-pressed="false">Master / One-Glance</button></nav>
+<p id="review-size" class="note" role="status">Working viewport: 390px wide. Resize the same live screen to keep your current responses.</p>
+<div class="canvas"><iframe id="review-frame" title="Working Personal Style Blueprint at 390 pixels" width="390" height="852" src="index.html#/exercise"></iframe></div>
+<p class="note">The frame uses the selected CSS-pixel width without scaling. Wide frames scroll horizontally inside this review canvas. This is a responsive working preview, not proof of a physical-device test. If your browser blocks local frames, open index.html directly.</p>
+<section class="recommendation"><h2>Recommended: continuous scroll</h2><p>Keep observation, choices and reflections in one document, with compact jump navigation and a collapsible full evidence gallery. This makes earlier context visible and removes required stage-switching clicks. The separate-stage alternative remains available in the exercise so you can compare reading comfort using exactly the same answers.</p></section>
+<div class="compare"><table><caption>Exercise pattern comparison</caption><thead><tr><th>Consideration</th><th>Continuous scroll</th><th>Separate stages</th></tr></thead><tbody>
+<tr><th>Reading comfort</th><td>Whole exercise stays available; section rules keep the sequence clear.</td><td>Less visible at once; earlier context needs another stage selection.</td></tr>
+<tr><th>Navigation and clicks</th><td>Scroll naturally; use jumps when useful. No stage clicks are required.</td><td>Switch between stages to see all questions; any stage is directly accessible.</td></tr>
+<tr><th>Photo evidence</th><td>Full relevant gallery above questions, with a persistent evidence shortcut.</td><td>Same gallery and shortcut; photo availability does not depend on stage.</td></tr>
+<tr><th>Accessibility</th><td>Native document order, headings and labelled controls; longer page to navigate.</td><td>Shorter views; needs clear focus placement and current-stage feedback.</td></tr>
+<tr><th>Mobile</th><td>Single-column writing, compact navigator and expandable two-column photos.</td><td>Same mobile controls and saved answers, with more view changes.</td></tr>
+</tbody></table></div>
+<h2>Review without changing your workbook</h2><ol><li>Change a response, switch layout patterns and confirm the same response remains.</li><li>Open every relevant outfit and read the literal saved annotations. Close the viewer to return to your place.</li><li>Try a 12-photo batch in each evidence set, then return to the discovery gallery.</li><li>Use My Blueprint to review inherited information, deliberate edits, missing guidance and both PDF exports.</li></ol>
+<p class="note">No production deployment, access change or data migration is part of this review. Native phone file pickers, real IndexedDB permissions, screen-reader behaviour and download handoff still require real-browser verification.</p>
+</main><script>
+const frame=document.querySelector('#review-frame');
+for(const button of document.querySelectorAll('[data-review-width]'))button.addEventListener('click',()=>{
+ const width=Number(button.dataset.reviewWidth);frame.width=width;frame.style.width=width+'px';frame.title='Working Personal Style Blueprint at '+width+' pixels';
+ for(const other of document.querySelectorAll('[data-review-width]'))other.setAttribute('aria-pressed',String(other===button));
+ document.querySelector('#review-size').textContent='Working viewport: '+width+'px wide. The live screen and responses have been retained.';
+});
+for(const button of document.querySelectorAll('[data-review-screen]'))button.addEventListener('click',()=>{
+ frame.src='index.html#/'+button.dataset.reviewScreen;
+ for(const other of document.querySelectorAll('[data-review-screen]'))other.setAttribute('aria-pressed',String(other===button));
+});
+</script></body></html>`;}

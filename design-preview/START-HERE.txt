@@ -1,9 +1,13 @@
-In Her Fashion — Editorial design preview
+In Her Fashion — Revised editorial design preview
 
-Open index.html in a current browser. No server, account or Cloudflare setup is required.
+Extract this ZIP first. Open review.html for a working width selector: 360, 390, 430, 768 and 1280 CSS pixels. Open index.html directly for the full-window prototype. No server, account or Cloudflare setup is required.
 
-The three screens use clearly labelled synthetic example data and stock sample photography. Edits save only in this browser under a separate preview namespace. No live workbook is accessed. Images you add use this browser's IndexedDB where available; storage failures are shown honestly.
+Discover compares continuous scroll with separate stages using the same answers. All relevant recent outfit references appear above the questions and through a persistent evidence shortcut. Master / One-Glance retains source inheritance, deliberate edits, partial-completion guidance and existing PDF export.
 
-This prototype is not a deployment or replacement of version 4. Other exercises open their original guidance for context; only the chapter view, exercise 12 and final-reference screens are redesigned. PDF export is a local demonstration using the same approved data and PDF code. Production authentication, server persistence and R2 are unchanged and are not being simulated as verified.
+The screens start with SAMPLE CUSTOMER ANSWERS and stock sample photography. Edits save only in this browser under a separate preview namespace. Your live workbook and evidence are never accessed. Images you add use a separate browser IndexedDB database where available; storage failures are reported.
 
-Use Reset example to start again. See the repository prototype/README.md for design proposal, review tasks, limitations and reproduction.
+The width selector is a responsive working preview, not a physical-device test. If a browser blocks local frames, open index.html directly. Native phone file handling, IndexedDB permission and PDF download handoff still need real-browser verification. Some phone file viewers do not execute HTML; use a browser that supports local HTML.
+
+Only the chapter view, exercise 12 and final-reference screens are redesigned. Other original exercises are reference-only in this prototype. Production authentication, server persistence, access, payments and hosting are unchanged. No deployment has been made.
+
+Use Reset example to clear only this isolated preview. Read DESIGN-COMPARISON.md for the proposal, comparison, test boundaries and review checklist.

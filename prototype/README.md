@@ -1,69 +1,92 @@
-# In Her Fashion — editorial product UX proposal
+# In Her Fashion — revised editorial UX prototype
 
-This feature branch is a reviewable design proposal, not a release. The owner-private version 4 application, its 68-step manuscript, authentication, storage, uploaded evidence, payment boundary and hosting configuration are unchanged.
+This is an isolated design proposal on `codex/editorial-design-preview`, awaiting approval for integration. The owner-private version 4 application, Draft 3 wording, all 68 exercises, scoring, customer responses, customer evidence, access, payments and hosting configuration are unchanged. There is no customer-data migration or production deployment.
 
-## Try the three working screens
+## Open the working comparison
 
-Download `design-preview/Personal_Style_Blueprint_Design_Preview.zip`, extract it and open `index.html` in a current browser. The HTML contains its own scripts, fonts and three sample photos; no server, Cloudflare setup or account is needed. Alternatively run `npm ci --cache .npm-cache` then `npm run design:build` and open `design-preview/index.html`.
+Download `design-preview/Personal_Style_Blueprint_Design_Preview.zip`, extract it, then open **review.html** in a current browser. The review has a single live iframe with **360px, 390px, 430px, 768px tablet and 1280px desktop** width selectors. Changing width resizes the same session without scaling or resetting its responses. Screen selectors open the discovery exercise or Master / One-Glance presentation.
 
-The top ribbon identifies this as an example session. It uses only synthetic responses and licensed sample photographs, never the customer's saved workbook. The example's completion counts are computed from its saved record; they are not production progress.
+Open **index.html** directly for a full-window preview. The HTML embeds the scripts, fonts and three stock sample photos; no account, server or Cloudflare configuration is required. If a browser blocks local frames, use index.html. Some phone file viewers do not execute JavaScript in downloaded HTML; native phone opening, upload and download handoff remain manual checks. No live mobile URL has been deployed.
 
-1. **The journey:** a compact resume feature, five expandable chapters and preparation. All 68 original titles remain visible on expansion. Step 12 opens the represented discovery exercise. Other steps open their approved original guidance for context; they have not been redesigned.
-2. **Silhouette Comparison:** the original step-12 questions are grouped into LOOK / CHOOSE / REFLECT / RECORD views. Every phase is directly available; there is no forced quiz sequence. Earlier silhouette selections are visible beside relevant outfit references. Choosing/reflecting/recording saves local responses. The original guidance remains available in full.
-3. **My Blueprint:** a personalised identity, photograph and colour formula lead into One-Glance or Master mode. Customer words, original labels, missing-information guidance, source provenance and override semantics use version 4's existing model. Inputs appear only after choosing Edit. Master sections expand on demand rather than presenting a long wall of fields.
+The header and represented screens explicitly identify **sample customer answers**. The existing synthetic example session and anything added to it save only in the separate preview namespace `inherfashion.editorial-preview.v1`. Images use only the preview database `ihf-editorial-preview-photos`. Neither the live workbook nor its evidence is accessed. Unavailable browser storage is reported without claiming a successful save. Reset clears only the isolated example.
 
-The other existing v4 screens and production UI remain unchanged. This proposal does not implement the redesign across all 68 pages.
+## Three representative screens
 
-## Product UX direction
+1. **The journey:** compact resume feature, expandable preparation and five chapters, computed completion counts and all 68 original step titles. Step 12 opens the working discovery exercise. Other original exercises are available as reference panels; only step 11's silhouette source ratings have a working earlier-answer editor here. This is not a redesign of all 68 screens.
+2. **Silhouette Comparison:** the exact seven original controls, labels, options and full guidance, in continuous scroll by default with optional LOOK / CHOOSE / REFLECT / RECORD jumps. A switch retains the separate-stage alternative and the same answers. There are no required phase clicks or extra completion requirements.
+3. **My Blueprint:** retained editorial Master / One-Glance presentation, inherited answers, deliberate edits, confirmed wording, source links, partial-completion guidance, optional focused editors and existing version 4 PDF exports.
 
-A calm fashion publication organised around a personal discovery process. Reduce oversized headings and empty space that add scrolling; retain generous separation between ideas. Make current context, saved observations and the next action easy to find. Let customer photographs provide visual interest rather than decorative graphics or prescribed aesthetics.
+## Evidence is central
 
-The exercise separates observation, comparison and writing without replacing the approved methodology. Evidence is available at the moment of reflection. The final reference emphasises readable answers; source links, guidance and editing remain accessible on demand. No additional style diagnosis, inference, score or wardrobe audit is introduced.
+The represented Silhouette Comparison uses the **Recent Outfits** collection explicitly. All relevant items appear in a prominent, collapsible gallery above the questions; none is removed by a three- or four-photo display cap. Inspiration images stay in their own collection and are not mixed into this exercise. The total existing library limit remains **40 items**. Other, unrepresented exercises are not assigned photograph galleries speculatively.
 
-## Responsive layout and design system
+The full collection uses compact portrait containers with `object-fit: contain`, captions and literal saved annotation excerpts. Opening a photo enlarges it, shows all saved annotations and offers the existing optional annotation editor. A full-size image link is also available. Written references have text cards rather than broken image placeholders. No photographs are interpreted automatically.
 
-| Pattern | Desktop | Mobile |
+The sticky stage navigator includes a **View outfit references** shortcut. It opens the same relevant collection while customers write longer reflections. Photo and source overlays preserve the question DOM, current typed value, selection and scroll position. Closing an overlay returns keyboard focus to its trigger; nested viewers return to their parent gallery. Galleries are not repeated under every question.
+
+Batch selection, desktop drop support, previews, per-image progress/errors/retry, annotation, replacement, ordering and deletion remain available for both evidence sets. Photo bytes and lightweight metadata are saved separately; either failure is reported honestly.
+
+## Continuous scroll versus separate stages
+
+| Consideration | Continuous scroll | Separate stages |
 |---|---|---|
-| Chapter overview | 210px chapter rail; 1220px overall canvas; editorial resume feature and chapter rows | Single column, collapsed chapter lists, compact three-view bottom navigation |
-| Exercise | Compact process rail, 560–650px reading area, 210–246px outfit/source rail | Direct phase tabs, 20px side margins, stacked questions, two-column photo collection |
-| Final reference | Saved identity and portrait, two-column reference composition; expandable Master sections | Compact cover and portrait, readable stacked result sections; full-height editor drawer |
-| Galleries | Consistent portrait containers with `object-fit: contain`; captions and observation drawer | Tap to inspect; multiple-file selector; touch alternatives to reordering |
-| Source answers | Relevant saved choices inline; more detail expanded when needed | Compact context panel before the question |
-| Editing | Explicit Edit action opens a focused drawer | Same interaction, with focus containment and Escape/Close support |
+| Reading comfort | Guidance and all questions remain in one document, separated by clear headings and warm rules. Longer page. | Fewer questions visible at once. Earlier questions need a stage change. |
+| Navigation | Scroll naturally or use optional jumps. Zero stage changes are required to reach all questions. | Three stage changes are needed to see the other three stages from the starting view. Every stage remains directly accessible. |
+| Visual evidence | Full relevant collection above questions plus a persistent shortcut. | The same collection and shortcut remain available in every stage. |
+| Revising a response | Earlier inputs stay in place. No view switch required. | Change stage to review another group; saved values remain shared. |
+| Accessibility | Native document order, headings, fieldsets and labelled inputs; a longer page to navigate. | Shorter document, with additional focus placement and current-stage feedback to understand. |
+| Mobile | Single-column questions; expandable evidence prevents the photo collection dominating every revisit. | Same touch controls and photo availability, with more stage switches. |
 
-Type: existing Cormorant Garamond for editorial headings, DM Sans for reading and controls. Main headings 40–48px desktop and 34px mobile; body 16px; labels 14px; secondary metadata 12px. Use a 4px spacing unit: 8/12 for related items, 16/24 for components, 32/48 for sections. Use thin warm rules, restrained ink/ivory/oat surfaces and minimal borders rather than dashboard cards.
+**Recommendation:** use continuous scroll as the default for this evidence-based exercise, with compact jump navigation and an expandable full gallery. It keeps related observations available and removes unnecessary view changes. Retain the comparison option during design review; this is a design recommendation, not a measured user-study result. Confirm reading comfort on actual phones before approving a product-wide pattern.
 
-Colours: paper `#fffdf9`, canvas `#f4f0e9`, ink `#3f342d`, muted text `#75695e`, rule `#d8d0c6`, restrained accent `#866a52`. The customer's own six-colour formula is data, not part of the application's imposed aesthetic.
+## Desktop and mobile comparison
 
-Breakpoints: compact desktop/tablet treatment below 1100px; stacked layout below 760px. Controls and response inputs remain readable without browser zoom. Reduced-motion preferences and visible keyboard focus are respected.
+| Viewport | Exercise and photographs | Finished Blueprint and editing |
+|---|---|---|
+| 360px | Single-column writing; 16px response inputs; compact four-stage navigator; expandable two-column photo grid. | Stacked readable sections and colour roles; full-width PDF action and focused editor. |
+| 390px | Same structure with more room for captions and comparisons. | Same single-column reference, wrapping long saved text and source links. |
+| 430px | Same touch-first layout; no extra questions or desktop-only actions. | Same complete content, controls and PDF actions. |
+| Tablet · 768px | Wider single reading column and three-column evidence grid. | Editorial cover; simplified reference grids, readable source panels and bounded editor. |
+| Desktop · 1280px | Reading canvas up to 1040px, two-column choice cards, four-column evidence grid. | Editorial identity/photo cover, two-column reference composition and side editor. |
 
-## Working interactions and boundaries
+The comparison page changes the iframe's real CSS-pixel width; it does not shrink a desktop screenshot. It is a working responsive review tool, not physical-device verification.
 
-- Navigation, original guidance, phase switching, selections, reflections, source review, live answer inheritance on returning to the reference, deliberate overrides and completion counts.
-- Browser-local save/resume in a separate preview namespace. Reset clears only that isolated example. Storage failures are shown honestly, with a close warning for unsaved changes.
-- Local sample-photo collection: batch selection for Recent Outfits/Inspiration, previews, individual errors/retry, annotation, replacement, move earlier/later and deletion. Successful photo storage uses a separate IndexedDB database; if storage is unavailable, the upload remains failed and existing images are retained.
-- Confirmed concise wording remains separate from pending drafts; source changes do not silently rewrite confirmed text.
-- One-Glance/full PDF generation uses the existing v4 PDF implementation and embedded licensed fonts. Exported PDFs contain the example customer's answers, not sample photographs or display-only missing guidance.
+Typography retains Cormorant Garamond headings and DM Sans controls/body. Body and inputs use 16px; primary labels and controls 14px; secondary metadata 12–13px. Editorial headings are approximately 34px mobile and 40–48px desktop. Spacing follows the existing 4px unit, with 8/12/16/24/32/48px intervals. Warm ivory, oat, taupe, brown and charcoal remain restrained application colours; the customer's six-colour formula remains their own data.
 
-This is not a customer authentication or server-storage test. The prototype never calls the production APIs, and its Content Security Policy blocks network connections. Production Sites sign-in, D1/R2, encrypted recovery, server PDF endpoint and batch-upload implementation remain intact. Local preview storage does not replace those services. OS file pickers, IndexedDB permissions under `file://`, physical mobile layouts and download handoff still require browser review; no browser-control tool was exposed during implementation.
+Mobile controls have at least 44px targets; inputs stay 16px to avoid focus zoom. Editors have a bounded body scroller, persistent Close/Done actions, safe-area padding and dynamic viewport height support. Dialogs are labelled; background content is inert while a modal is active; keyboard focus is contained and returned. Reduced-motion preferences are respected.
 
-Three stock images are explicitly samples, not customer evidence or wardrobe recommendations. Source URLs, checksums and licence references are in `prototype/assets/PHOTO_SOURCES.json` and the download's `LICENSES.txt`. The photos demonstrate outfit shape; they are not a complete representation of customer bodies or style preferences.
+## Answer provenance and wording
 
-## Review tasks
+Presentation labels distinguish:
 
-- Open chapters and compare the reading density with version 4.
-- In Discover, change a selection; use RECORD to edit the silhouette direction; view its result in My Blueprint.
-- Edit a final field deliberately, then revise a source. Confirm the override remains intentional.
-- Add sample photos, annotate one and reopen the file to check local resume.
-- Switch One-Glance/Master and export both PDFs.
-- Review desktop and phone widths, navigation, photo sizing, source panels, editing and keyboard behaviour.
+- **Customer-written reflection** and **Customer-selected options** for direct responses.
+- **Inherited from earlier responses**, with source links, for connected final answers.
+- **Deliberately edited** for an explicit final override.
+- **Confirmed customer wording**, including a review notice if recorded sources change.
+- **Optional draft · review required** for pending assembled wording.
 
-Approval should settle the composition and interaction patterns before integrating this design with authenticated customer data or extending it to further exercises. No deployment or access change has been made.
+These labels come from version 4's saved-response/binding metadata. They are UI guidance, never customer content or new workbook questions. Existing ambiguous values remain saved and available for review. Table-cell provenance remains separate where a customer edits only one cell.
 
-## Verification
+Drafts are assembled only from recorded responses through the existing implementation. Nothing is generated from photographs, no aesthetic is assigned, and no draft enters a final answer without the customer's confirmation. Changing earlier responses does not silently rewrite confirmed wording or deliberate overrides. Provenance labels, sample disclosures and missing-information guidance are not added to the exported PDF as customer answers.
 
-`npm run build` passes. All 94 automated tests pass: the existing 84 regression tests and 10 isolated-prototype tests. The prototype tests were rerun after the final source-panel return fix. Coverage includes the approved control options, all five chapter counts, navigation, local save/resume, source-derived answers, preservation of deliberate final edits, real PDF bytes (including the one-page One-Glance export), and 12-image batches for both evidence sets. Both successful local photo recovery and unavailable-storage errors are exercised, including failures to save photo metadata or annotations. Written references remain text rather than broken images.
+## Verification and limits
 
-The interaction tests use Happy DOM and a controlled photo-storage adapter. They do not verify browser geometry, native file pickers, physical touch behaviour or actual browser IndexedDB permissions. Desktop/mobile visual inspection, keyboard review and native download handoff remain review tasks. No real-browser pass is claimed.
+The production build and **all 101 automated tests pass**, with zero failures or skips: 84 existing regression tests and 17 isolated-prototype tests. New coverage includes all 40 relevant references, 12-photo batches in both collections up to the 40-item limit, unchanged existing annotations, continuous/separate flow consistency, preservation of the question DOM/value/selection/scroll through photo inspection, nested-dialog focus, all provenance kinds, stale confirmed wording and the five-width single-iframe review. Existing save/resume, deliberate override, partial-completion and real PDF-byte tests continue to pass. The One-Glance example export has one page.
 
-The standalone build checks that protected production files remain byte-for-byte unchanged. The downloadable ZIP contains the standalone HTML, opening instructions and asset licences; it requires no network resources. Reproduce the prototype checks with `npm run design:test`.
+The interaction suite uses Happy DOM and a controlled photo-storage adapter. It can establish saved-value behaviour, event handling, source propagation, PDF bytes and failure handling. It cannot establish native browser geometry, actual screen-reader output, touch behaviour, OS photo pickers, real IndexedDB permissions or phone download handoff.
+
+The managed workspace reports a desktop capability but exposes no desktop JavaScript/browser-control tool in this session. The [Sites skill](skill://plugin_connector_1p_689987207de08191979cf68eca2941c6/sites/SKILL.md) says, “If `cua_repl.js` is unavailable, skip browser QA.” No browser server or substitute browser was started. Real-browser checks remain outstanding. Production sign-in, D1/R2 and the authenticated server PDF endpoint have not been retested by this offline prototype.
+
+Build with `npm run design:build`, test the isolated preview with `npm run design:test`, and run the full regression suite with `npm test`. The build guards protected production-file hashes. The downloadable ZIP contains index.html, review.html, this comparison, instructions and licences. Photo source URLs, checksums and licence references are in `prototype/assets/PHOTO_SOURCES.json` and LICENSES.txt.
+
+## Review checklist before integration
+
+- Compare both exercise patterns at all five widths; read and revise every represented original question.
+- Add 10–12 photos at once to each evidence set; inspect all relevant recent photos and the saved annotations.
+- Collapse/reopen the gallery; use the shortcut from a long reflection; close a photo and confirm your place and text remain.
+- Edit step 11, return to the question and verify the literal earlier selections update.
+- Change a source, inspect inherited content and preserve a deliberate final edit and confirmed wording.
+- Review partial completion, Master and One-Glance; download both PDFs.
+- On actual mobile browsers, verify photo selection, keyboard navigation and editing, save/reopen and PDF handoff. An offline width frame does not replace these checks.
+
+Approve the represented composition and interaction patterns before integrating them into authenticated customer flows or extending them to the other exercises. No deployment or access change is included.
