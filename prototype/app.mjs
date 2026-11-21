@@ -8,7 +8,8 @@ import {generateBlueprintPDF} from '../server/pdf.mjs';
 import {escapeHTML as e,downloadBlob} from '../client/exports.mjs';
 import {renderChapter} from './chapter.mjs';
 import {renderExercise} from './exercise.mjs';
-import {relevantEvidence,renderEvidenceGallery} from './evidence-gallery.mjs';
+import {relevantEvidence,renderEvidenceGallery,evidenceCollections,collectionLabel} from './evidence-gallery.mjs';
+import {exercisePlan} from './exercise-plan.mjs';
 import {renderReference} from './reference.mjs';
 import {provenanceMarkup,decorateProvenance} from './provenance.mjs';
 import {field,readField} from './fields.mjs';
@@ -24,7 +25,7 @@ import './revision.css';
 const root=document.querySelector('#preview-app');
 const store=new PreviewStore();
 const photoURLs=new Map();
-const stages=['look','choose','reflect','record'];
+const stages=exercisePlan(workbook.pages[11]).map(block=>block.id);
 let view=['journey','exercise','blueprint'].includes(location.hash.slice(2))?location.hash.slice(2):'journey';
 let mode='glance',editorId=null,overlay=null,notice='',busy=false,lastQuestion=null,editorReturn=null;
 let pageReturn=null,overlayHistory=[],lockedBody=null;
@@ -36,6 +37,10 @@ const photo=item=>photoURLs.get(item.id)||assets[item.asset]||'';
 const phase=()=>stages.includes(store.workspace.phase)?store.workspace.phase:'choose';
 const flow=()=>store.workspace.exerciseFlow==='separate'?'separate':'continuous';
 const sourceLink=n=>`#/source/${n}`;
+const libraryCollection=()=>store.workspace.libraryCollection==='inspiration'?'inspiration':'recent';
+function selectedCollection(step){const allowed=evidenceCollections(step),saved=store.workspace.evidenceCollections?.[step];return allowed.includes(saved)?saved:allowed[0];}
+function libraryTabs(){return `<div class="evidence-collection-tabs" role="group" aria-label="Photo collections">${['recent','inspiration'].map(kind=>`<button data-action="library-collection" data-collection="${kind}" aria-pressed="${libraryCollection()===kind}">${collectionLabel(kind)}</button>`).join('')}</div>`;}
+
 
 function announce(text){document.querySelector('#preview-announcements').textContent=text;}
 function status(){
@@ -90,9 +95,9 @@ function header(){return `
  <header class="preview-header"><a href="#/journey" class="preview-brand">In Her Fashion<span>PERSONAL STYLE BLUEPRINT</span></a>
  <nav aria-label="Design preview">${[['journey','The journey'],['exercise','Discover'],['blueprint','My Blueprint']].map(([key,label])=>`<button data-action="navigate" data-view="${key}" ${view===key?'aria-current="page"':''}>${label}</button>`).join('')}</nav>
  <div class="header-tools"><span data-local-status></span><button data-action="gallery">My photos</button></div></header>`;}
-function libraryMarkup(){return evidence().map(item=>`<figure>
+function libraryMarkup(){return evidence().filter(item=>item.kind===libraryCollection()).map(item=>`<figure>
  <button class="photo-button" data-action="photo" data-photo="${e(item.id)}">${photo(item)?`<img src="${e(photo(item))}" alt="${e(item.title)}" loading="lazy">`:`<span class="written-ref">${e(item.reference||item.title)}</span>`}</button>
- <figcaption>${e(item.title)}<small>${item.asset?'Stock sample photo · ':''}${item.kind==='recent'?'Recent outfit':'Inspiration'}</small></figcaption>
+ <figcaption>${e(item.title)}<small>${item.asset?'Stock sample photo · ':''}${collectionLabel(item.kind)}</small></figcaption>
  <div class="photo-actions"><button data-action="move-photo" data-photo="${e(item.id)}" data-direction="-1">Move earlier</button><button data-action="move-photo" data-photo="${e(item.id)}" data-direction="1">Move later</button>
  <label>Replace image<input type="file" data-replace="${e(item.id)}" accept="image/jpeg,image/png,image/webp"></label><button data-action="delete-photo" data-photo="${e(item.id)}">Remove</button></div></figure>`).join('');}
 function savedAnnotations(item){
@@ -107,6 +112,7 @@ function sourcePanel(step){
  const page=workbook.pages[step-1];
  return `<p class="prototype-kicker">ORIGINAL WORKBOOK · STEP ${page.page}</p><h2>${e(page.title)}</h2>
  <p class="preview-boundary">Sample customer answers. Only step 12 and its step-11 source ratings have working discovery editors in this design preview. Other original exercises are available here for reference.</p>
+ ${page.page===23?renderEvidenceGallery({evidence:evidence(),photo,step:23,collection:selectedCollection(23),compact:true}):''}
  <details><summary>Original guidance</summary>${page.lines.map(line=>`<p>${e(line)}</p>`).join('')}</details>
  ${page.controls.filter(c=>c.type!=='assembly'&&!c.internal).map(c=>{
   const value=formatValue(resolveValue(c.id,state().answers,new Set(),state().bindingState));
@@ -120,14 +126,14 @@ function overlayHTML(){
  let content='',title='My earlier discoveries';
  if(overlay.type==='source')content=sourcePanel(overlay.step);
  if(overlay.type==='gallery'){
-  title='My photos';content=`<p class="prototype-kicker">YOUR EVIDENCE</p><h2>A collection to return to.</h2><p class="preview-boundary">Stock sample photos and images you add to this isolated preview. Your account's evidence is not accessed. The existing 40-item library limit is retained.</p>${uploadPanel('recent')}<div class="preview-photo-library">${libraryMarkup()}</div>`;
+  title='My photos';content=`<p class="prototype-kicker">YOUR EVIDENCE</p><h2 class="library-collection-title">${collectionLabel(libraryCollection())}</h2><p class="preview-boundary">Stock sample photos and images you add to this isolated preview. Your account's evidence is not accessed. The existing 40-item library limit is retained.</p>${libraryTabs()}${uploadPanel(libraryCollection())}<div class="preview-photo-library" data-library-collection="${libraryCollection()}">${libraryMarkup()}</div>`;
  }
  if(overlay.type==='exercise-evidence'){
-  title='Recent outfit evidence';content=`<p class="preview-boundary">All recent outfits for this exercise. Select a photograph to enlarge it and read the annotations you saved.</p>${renderEvidenceGallery({evidence:relevantEvidence(evidence()),photo,compact:true,galleryOpen:true})}`;
+  const step=overlay.step||12,collection=selectedCollection(step);title=collectionLabel(collection);content=`<p class="preview-boundary">${collectionLabel(collection)} for this exercise. Select a photograph to enlarge it and read the annotations you saved.</p>${renderEvidenceGallery({evidence:evidence(),photo,step,collection,compact:true,galleryOpen:true})}`;
  }
  if(overlay.type==='photo'){
   const item=evidence().find(x=>x.id===overlay.id);if(!item)return '';
-  title='My observation';content=`<p class="prototype-kicker">${item.asset?'STOCK SAMPLE PHOTO':'MY PREVIEW PHOTO'}</p><h2>${e(item.title)}</h2>
+  title=collectionLabel(item.kind);content=`<p class="photo-collection-label">${collectionLabel(item.kind)}</p><p class="prototype-kicker">${item.asset?'STOCK SAMPLE PHOTO':'MY PREVIEW PHOTO'}</p><h2>${e(item.title)}</h2>
   ${photo(item)?`<a class="photo-original" href="${e(photo(item))}" target="_blank" rel="noopener" aria-label="Open full-size ${e(item.title)} in a new tab"><img class="photo-large" src="${e(photo(item))}" alt="${e(item.title)}"></a><p class="photo-hint">Select the image to open its full size. Your question stays here when you return.</p>`:`<div class="written-ref">${e(item.reference||item.title)}</div>`}
   ${savedAnnotations(item)}${annotationForm(item)}`;
  }
@@ -144,12 +150,14 @@ function render(){
  renderOverlay(false);status();window.scrollTo?.(x,y);
 }
 function refreshLibrary(){
- const library=document.querySelector('.preview-photo-library');if(library)library.innerHTML=libraryMarkup();
+ const library=document.querySelector('.preview-photo-library');if(library){library.innerHTML=libraryMarkup();library.dataset.libraryCollection=libraryCollection();}
+ const title=document.querySelector('.library-collection-title');if(title)title.textContent=collectionLabel(libraryCollection());
+ for(const button of document.querySelectorAll('[data-action=library-collection]'))button.setAttribute('aria-pressed',String(button.dataset.collection===libraryCollection()));
 }
 function refreshExerciseGallery(){
  const host=document.querySelector('.preview-content [data-evidence-gallery]');
  if(host)host.outerHTML=renderEvidenceGallery({evidence:relevantEvidence(evidence()),photo,galleryOpen:host.open});
- for(const button of document.querySelectorAll('[data-action="exercise-evidence"]'))button.textContent=`View outfits (${relevantEvidence(evidence()).length})`;
+ for(const button of document.querySelectorAll('[data-action="exercise-evidence"]'))button.textContent=`Recent Outfits (${relevantEvidence(evidence()).length})`;
 }
 function refreshSourceContext(){
  if(view==='exercise'){
@@ -258,6 +266,7 @@ root.addEventListener('change',event=>{
  const el=event.target;
  if(el.dataset.answer&&(['checkbox','radio'].includes(el.type)||el.tagName==='SELECT')){patch({answers:{[el.dataset.answer]:readField(el,state())}});refreshProvenance(el);}
  if(el.dataset.rating){patch({answers:{'silhouette.ratings':{...state().answers['silhouette.ratings'],[el.dataset.rating]:el.value}}});sourceDirty=true;}
+ if(el.id==='batch-kind'){store.workspace.libraryCollection=el.value;store.persist();refreshLibrary();status();}
  if(el.id==='batch-images'){queue.add([...el.files],document.querySelector('#batch-kind').value);el.value='';}
  if(el.dataset.replace){const item=evidence().find(x=>x.id===el.dataset.replace);queue.add([...el.files],item.kind,{id:item.id,revision:item.revision});el.value='';}
 });
@@ -290,7 +299,7 @@ root.addEventListener('click',async event=>{
  }
  if(action==='phase'){jumpStage(button.dataset.phase);return;}
  if(action==='next-phase'){jumpStage(stages[Math.min(3,stages.indexOf(phase())+1)]);return;}
- if(action==='exercise-evidence'){openOverlay({type:'exercise-evidence'});return;}
+ if(action==='exercise-evidence'){openOverlay({type:'exercise-evidence',step:12});return;}
  if(action==='complete-exercise'){
   patch({completed:[...new Set([...state().completed,12])],lastStep:12});notice=store.saved?'Your discovery is saved. Your Blueprint uses this recorded direction.':store.error;navigate('blueprint');return;
  }
@@ -311,14 +320,16 @@ root.addEventListener('click',async event=>{
   if(action==='confirm-current-wording')patch({confirmFields:[{id,sourceIds:confirmationSources(id,state())}]});
   if(overlay){sourceDirty=true;renderOverlay(false);}else render();return;
  }
- if(action==='gallery'){openOverlay({type:'gallery'});return;}
+ if(action==='library-collection'){store.workspace.libraryCollection=button.dataset.collection==='inspiration'?'inspiration':'recent';store.persist();renderOverlay(false);document.querySelector(`#preview-overlay-root [data-action=library-collection][data-collection=${libraryCollection()}]`)?.focus({preventScroll:true});return;}
+ if(action==='evidence-collection'){const step=Number(button.dataset.step),kind=button.dataset.collection;if(!evidenceCollections(step).includes(kind))return;store.workspace.evidenceCollections={...store.workspace.evidenceCollections,[step]:kind};store.persist();if(overlay)renderOverlay(false);document.querySelector(`#preview-overlay-root [data-action=evidence-collection][data-collection=${kind}]`)?.focus({preventScroll:true});return;}
+ if(action==='gallery'){if(button.dataset.collection)store.workspace.libraryCollection=button.dataset.collection;openOverlay({type:'gallery'});return;}
  if(action==='photo'){openOverlay({type:'photo',id:button.dataset.photo});return;}
  if(action==='close-overlay'){closeOverlay();return;}
  if(action==='upload-all'){await queue.start();return;}
  if(action==='retry-upload'){await queue.start(button.dataset.task);return;}
  if(action==='remove-upload'){queue.remove(button.dataset.task);return;}
  if(action==='move-photo'){
-  const index=evidence().findIndex(x=>x.id===button.dataset.photo),next=index+Number(button.dataset.direction);
+  const item=evidence().find(x=>x.id===button.dataset.photo),collection=evidence().filter(x=>x.kind===item.kind),position=collection.findIndex(x=>x.id===item.id),neighbour=collection[position+Number(button.dataset.direction)],index=evidence().indexOf(item),next=neighbour?evidence().indexOf(neighbour):-1;
   if(next>=0&&next<evidence().length){[store.workspace.evidence[index],store.workspace.evidence[next]]=[store.workspace.evidence[next],store.workspace.evidence[index]];store.persist();evidenceDirty=true;refreshLibrary();status();}return;
  }
  if(action==='delete-photo'){

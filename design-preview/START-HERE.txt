@@ -1,13 +1,13 @@
-In Her Fashion — Revised editorial design preview
+In Her Fashion — Refined editorial design preview
 
-Extract this ZIP first. Open review.html for a working width selector: 360, 390, 430, 768 and 1280 CSS pixels. Open index.html directly for the full-window prototype. No server, account or Cloudflare setup is required.
+Extract this ZIP first. Open review.html for a working width selector: 360, 390, 430, 768 and 1280 CSS pixels. Open index.html directly for the full-window prototype. No account or Cloudflare setup is needed for these local files. A separate owner-private HTTPS review link is provided in the delivery message for actual-phone testing.
 
-Discover compares continuous scroll with separate stages using the same answers. All relevant recent outfit references appear above the questions and through a persistent evidence shortcut. Master / One-Glance retains source inheritance, deliberate edits, partial-completion guidance and existing PDF export.
+Continuous scroll is preferred, with section jumps adapted to the source. Silhouette Comparison follows YESes, MAYBES/NOs, LOOK FOR, RECORD. All original questions/options remain. Recent Outfits and Inspiration Photos are labelled and shown separately; the exercise uses only its relevant collection. Step 23 demonstrates both collections separately in a read-only reference panel. The mobile One-Glance statement uses smaller text; Master typography is retained.
 
-The screens start with SAMPLE CUSTOMER ANSWERS and stock sample photography. Edits save only in this browser under a separate preview namespace. Your live workbook and evidence are never accessed. Images you add use a separate browser IndexedDB database where available; storage failures are reported.
+The screens start with SAMPLE CUSTOMER ANSWERS and stock sample photography. Edits save only in this browser under a separate preview namespace. Your live workbook and evidence are never accessed. Test images use a separate browser IndexedDB database where available; storage failures are reported.
 
-The width selector is a responsive working preview, not a physical-device test. If a browser blocks local frames, open index.html directly. Native phone file handling, IndexedDB permission and PDF download handoff still need real-browser verification. Some phone file viewers do not execute HTML; use a browser that supports local HTML.
+The width selector is a working preview, not a physical-device test. If a browser blocks local frames, open index.html directly. Some phone file viewers do not execute HTML; the separate private HTTPS link avoids this limitation. Native phone file handling and PDF download handoff remain manual acceptance checks.
 
-Only the chapter view, exercise 12 and final-reference screens are redesigned. Other original exercises are reference-only in this prototype. Production authentication, server persistence, access, payments and hosting are unchanged. No deployment has been made.
+Only the chapter view, exercise 12 and final-reference screens are redesigned. Other original exercises are reference-only. The version 4 Site, production authentication, customer persistence, access, payments and hosting configuration are unchanged. The phone review is a separate static Site with synthetic data and no customer database or storage bindings.
 
-Use Reset example to clear only this isolated preview. Read DESIGN-COMPARISON.md for the proposal, comparison, test boundaries and review checklist.
+Use Reset example to clear only this isolated preview. Read DESIGN-COMPARISON.md for source rules, test results and the phone review checklist.

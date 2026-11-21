@@ -70,3 +70,14 @@ html { scroll-padding-top: 100px; }
   .preview-mobile-nav { padding-bottom: max(8px, env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Collections are explicit and never merged in an exercise gallery. */
+.evidence-collection-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 16px; }
+.evidence-collection-tabs > button { font-size: 14px; min-height: 44px; padding: 10px 14px; }
+.evidence-collection-tabs > button[aria-pressed=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.photo-collection-label { font-size: 14px; font-weight: 500; margin: 16px 0; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.exercise-source-cue { font-size: 16px; line-height: 1.6; margin-bottom: -12px; }
+.exercise-stage-links { grid-template-columns: repeat(var(--stage-count, 4), minmax(0, 1fr)); }
+@media(max-width:760px) {
+ .exercise-stage-links > button { font-size: 13px; line-height: 1.4; padding-inline: 3px; }
+ .evidence-collection-tabs { padding-inline: 12px; }
+}

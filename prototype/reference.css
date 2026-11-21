@@ -276,3 +276,14 @@ body:has(#preview-app .reference-editor-backdrop){overflow:hidden}
 /* Root can set this from visualViewport.height on keyboards that do not resize
    CSS viewport units; the fallback remains the dynamic browser viewport. */
 .preview-reference .reference-editor-backdrop,.preview-reference .reference-editor{height:var(--preview-viewport-height,100dvh);max-height:var(--preview-viewport-height,100dvh)}
+/* Compact phone reference; Master typography and all saved wording are unchanged. */
+@media(max-width:760px){
+ .preview-reference.reference-glance .reference-publication{padding-top:20px;padding-bottom:20px}
+ .preview-reference.reference-glance .blueprint-result-glance>.eyebrow{margin-bottom:6px}
+ .preview-reference.reference-glance .blueprint-result-glance>h2{font-size:26px;line-height:1.15;margin-bottom:16px}
+ .preview-reference.reference-glance .blueprint-result-field{padding-top:14px;padding-bottom:16px}
+ .preview-reference.reference-glance .result-field-heading{margin-bottom:8px}
+ .preview-reference.reference-glance [data-result-id="glance.style"]{padding-top:0;padding-bottom:16px}
+ .preview-reference.reference-glance [data-result-id="glance.style"]>.blueprint-answer{font-size:21px;line-height:1.45;letter-spacing:0;margin:0 0 12px}
+ .preview-reference.reference-glance .blueprint-result-field>.preview-answer-provenance{margin-top:8px}
+}
