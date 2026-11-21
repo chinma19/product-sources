@@ -1,0 +1,15 @@
+import {applyPatch,migrateState} from '../server/model.mjs';
+import {PREVIEW_STORAGE,exampleWorkspace} from './fixture.mjs';
+// This preview never instantiates production ProgressStore or contacts /api.
+export class PreviewStore{
+ constructor(storage){this.error='';this.saved=false;this.dirty=false;let record;try{this.storage=storage===undefined?globalThis.localStorage:storage;const text=this.storage?.getItem(PREVIEW_STORAGE);if(text)record=JSON.parse(text);this.saved=record?.format==='ihf-editorial-preview/1'}catch{this.error='Browser storage is unavailable. Changes stay in this tab.'}this.workspace=record?.format==='ihf-editorial-preview/1'?{...record,state:migrateState(record.state)}:exampleWorkspace();}
+ patch(patch){this.workspace.state=applyPatch(this.workspace.state,{...patch,baseRevision:this.workspace.state.revision});this.workspace.state.revision++;this.workspace.state.updatedAt=new Date().toISOString();this.workspace.state.status=this.workspace.state.completed.length===68?'COMPLETED':'IN_PROGRESS';this.persist();return this.workspace.state}
+ persist(){try{this.storage?.setItem(PREVIEW_STORAGE,JSON.stringify(this.workspace));this.saved=!!this.storage;this.error=this.saved?'':'Browser storage is unavailable. Changes stay in this tab.'}catch{this.saved=false;this.error='Browser storage is full or unavailable. Changes stay in this tab.'}this.dirty=!this.saved;return this.saved}
+ reset(){this.workspace=exampleWorkspace();this.persist()}
+}
+export async function savePhoto(record){return new Promise((resolve,reject)=>{if(!globalThis.indexedDB){reject(Error('Image storage is unavailable in this browser.'));return}const req=indexedDB.open('ihf-editorial-preview-photos',1);req.onupgradeneeded=()=>req.result.createObjectStore('photos',{keyPath:'id'});req.onerror=()=>reject(req.error);req.onsuccess=()=>{const db=req.result,tx=db.transaction('photos','readwrite');tx.objectStore('photos').put(record);tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)}}})}
+export async function readPhotos(){return new Promise(resolve=>{if(!globalThis.indexedDB){resolve([]);return}const req=indexedDB.open('ihf-editorial-preview-photos',1);req.onupgradeneeded=()=>req.result.createObjectStore('photos',{keyPath:'id'});req.onerror=()=>resolve([]);req.onsuccess=()=>{const db=req.result,tx=db.transaction('photos','readonly'),get=tx.objectStore('photos').getAll();get.onsuccess=()=>{db.close();resolve(get.result)};get.onerror=()=>{db.close();resolve([])}}})}
+
+async function mutatePhotos(action,id){return new Promise(resolve=>{if(!globalThis.indexedDB){resolve();return}const request=indexedDB.open('ihf-editorial-preview-photos',1);request.onupgradeneeded=()=>request.result.createObjectStore('photos',{keyPath:'id'});request.onerror=()=>resolve();request.onsuccess=()=>{const db=request.result,tx=db.transaction('photos','readwrite'),photos=tx.objectStore('photos');action==='clear'?photos.clear():photos.delete(id);tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();resolve()}}})}
+export const removePhoto=id=>mutatePhotos('delete',id);
+export const clearPhotos=()=>mutatePhotos('clear');

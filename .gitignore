@@ -12,3 +12,5 @@ test-results/
 server/assets.generated.mjs
 
 .npm-cache/
+
+prototype/assets.generated.mjs

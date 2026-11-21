@@ -1,0 +1,46 @@
+{
+  "purpose": "Stock outfit photography for the isolated prototype only; these are sample images, not customer-uploaded evidence.",
+  "images": [
+    {
+      "file": "look-01.jpg",
+      "provider": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?fm=jpg&fit=max&w=800&q=72",
+      "license_url": "https://unsplash.com/license",
+      "display_label": "SAMPLE OUTFIT",
+      "description": "Full-length blue belted coat with a pale headscarf, pink cross-body bag and white boots outside a cathedral.",
+      "bytes": 179472,
+      "width": 800,
+      "height": 1200,
+      "sha256": "f8dfb527084e233cd4e90910545debd3520da477d9df12187901f4c5eeb514b0",
+      "visually_inspected": true
+    },
+    {
+      "file": "look-02.jpg",
+      "provider": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?fm=jpg&fit=max&w=800&q=70",
+      "license_url": "https://unsplash.com/license",
+      "display_label": "SAMPLE OUTFIT",
+      "description": "Full-length mustard cropped hoodie and relaxed joggers with white heeled boots on an outdoor basketball court.",
+      "bytes": 101040,
+      "width": 800,
+      "height": 1107,
+      "sha256": "9239664fd6ca3df71d68f1b14babd021025a23912ec77f189cd7c40edd821738",
+      "visually_inspected": true
+    },
+    {
+      "file": "look-03.jpg",
+      "provider": "Unsplash",
+      "source_url": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?fm=jpg&fit=max&w=800&q=68",
+      "license_url": "https://unsplash.com/license",
+      "display_label": "SAMPLE OUTFIT",
+      "description": "Short-sleeved denim shirt dress with a defined waist and flared skirt on a white backdrop; cropped from the neck to the knees.",
+      "bytes": 127939,
+      "width": 800,
+      "height": 1200,
+      "sha256": "ca1e06baa8ce6ba1585b1724d3fedc9069ee331210213ceffd0d9a0cd55cfd32",
+      "visually_inspected": true
+    }
+  ],
+  "selection_note": "Images show varied outfit shapes and styling. Body-size diversity is not represented by this small sample; do not infer customer preferences from these photographs.",
+  "download_note": "A candidate at https://images.unsplash.com/photo-1529139513065-c517ca60037d returned HTTP 404 and was not used. All three final image URLs downloaded successfully. Images were sized by Unsplash CDN parameters; no local image editing was performed."
+}

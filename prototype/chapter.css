@@ -1,0 +1,134 @@
+/* Isolated editorial chapter overview. No live application selectors. */
+.chapter-preview-layout{display:grid;grid-template-columns:210px minmax(0,1fr);max-width:1220px;margin:0 auto;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}
+.chapter-preview-layout *{box-sizing:border-box}
+.chapter-preview-layout h1,.chapter-preview-layout h2,.chapter-preview-layout p,.chapter-preview-layout ol,.chapter-preview-layout figure{margin-top:0}
+.chapter-preview-layout h1,.chapter-preview-layout h2{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-.025em}
+.chapter-preview-layout button,.chapter-preview-layout a,.chapter-preview-layout summary{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.chapter-preview-layout button{font:inherit;color:inherit;cursor:pointer}
+.chapter-preview-layout button:focus-visible,.chapter-preview-layout summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.chapter-preview-layout .prototype-kicker{font-family:var(--sans);font-size:14px;font-weight:400;letter-spacing:.12em;line-height:1.5;color:var(--muted);margin-bottom:13px}
+.chapter-rail{padding:36px 22px 40px 0;border-right:1px solid var(--line);align-self:start;position:sticky;top:0}
+.chapter-rail-heading h2{font-size:28px;line-height:1.1;margin-bottom:24px}
+.chapter-view-nav{display:flex;flex-direction:column;gap:4px;margin-bottom:28px}
+.chapter-view-nav button{border:0;background:transparent;text-align:left;min-height:44px;font-size:14px;padding:9px 12px;border-left:2px solid transparent}
+.chapter-view-nav button[aria-current=page]{background:var(--canvas);border-left-color:var(--accent);color:var(--ink)}
+.chapter-view-nav button:hover{background:var(--canvas)}
+.chapter-rail-progress{border-top:1px solid var(--line);padding-top:20px;margin-bottom:30px}
+.chapter-rail-progress p{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin-bottom:12px}
+.chapter-rail-progress strong{font-weight:400;white-space:nowrap}
+.chapter-rail-progress progress{appearance:none;width:100%;height:3px;border:0;display:block;background:var(--line);accent-color:var(--accent)}
+.chapter-rail-progress progress::-webkit-progress-bar{background:var(--line)}
+.chapter-rail-progress progress::-webkit-progress-value{background:var(--accent)}
+.chapter-rail-progress progress::-moz-progress-bar{background:var(--accent)}
+.chapter-rail-index>ol{list-style:none;padding:0;margin-bottom:0}
+.chapter-rail-index li{display:flex;gap:12px;font-size:14px;line-height:1.5;padding:12px 0;color:var(--muted)}
+.chapter-rail-index li.is-current{color:var(--ink)}
+.chapter-rail-number{font-family:var(--serif);font-size:23px;line-height:1.15;flex:0 0 23px}
+.chapter-rail-index small{display:block;font-size:14px;margin-top:3px;color:var(--muted)}
+.chapter-rail-note{font-family:var(--serif);font-size:22px;line-height:1.35;margin:28px 0 0;padding-top:25px;border-top:1px solid var(--line);color:var(--muted)}
+.chapter-main{min-width:0;padding:36px 0 60px 42px}
+.chapter-page-heading{margin-bottom:27px;max-width:740px}
+.chapter-page-heading h1{font-size:42px;line-height:1.05;margin-bottom:15px}
+.chapter-page-heading>p:last-child{font-size:16px;margin-bottom:0;color:var(--muted)}
+.chapter-resume{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:28px;background:var(--canvas);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:25px 24px;margin-bottom:38px}
+.chapter-resume-copy{min-width:0}
+.chapter-resume-meta{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:5px 20px;margin-bottom:13px}
+.chapter-resume h2{font-size:34px;line-height:1.1;margin-bottom:14px}
+.chapter-resume-excerpt{max-width:480px;font-size:16px;line-height:1.65;margin-bottom:14px}
+.chapter-resume-progress{font-size:14px;color:var(--muted);margin-bottom:21px}
+.chapter-resume-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 23px}
+.chapter-preview-layout .prototype-primary{min-height:46px;padding:11px 20px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-size:14px;line-height:1.5}
+.chapter-preview-layout .prototype-primary:hover{background:var(--accent);border-color:var(--accent)}
+.chapter-preview-layout .prototype-text-button{padding:10px 0;min-height:44px;border:0;background:transparent;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+.chapter-resume-image{margin:0;align-self:center}
+.chapter-resume-image img{display:block;width:100%;height:226px;object-fit:contain;background:var(--paper)}
+.chapter-resume-image figcaption{font-size:14px;line-height:1.5;color:var(--muted);margin-top:8px;overflow-wrap:anywhere}
+.chapter-resume-words{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:center;color:var(--muted);font-family:var(--serif);font-size:24px;font-style:italic}
+.chapter-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:20px}
+.chapter-section-heading h2{font-size:28px;line-height:1.15;margin-bottom:0}
+.chapter-section-heading>p{font-size:14px;line-height:1.5;color:var(--muted);margin:0;text-align:right}
+.chapter-outline{border-top:1px solid var(--line)}
+.chapter-outline:last-child{border-bottom:1px solid var(--line)}
+.chapter-outline>summary{display:grid;grid-template-columns:40px minmax(0,1fr) 137px 19px;align-items:center;gap:12px;list-style:none;cursor:pointer;padding:22px 0}
+.chapter-outline>summary::-webkit-details-marker,.chapter-preparation>summary::-webkit-details-marker{display:none}
+.chapter-outline-number{font-family:var(--serif);font-size:28px;color:var(--accent);line-height:1}
+.chapter-outline-name{min-width:0}
+.chapter-outline-title{font-family:var(--serif);font-size:29px;line-height:1.15;display:block;color:var(--ink)}
+.chapter-outline-note{font-size:14px;line-height:1.5;color:var(--muted);display:block;margin-top:7px}
+.chapter-outline-progress{font-size:14px;line-height:1.5;color:var(--muted);display:block;text-align:right}
+.chapter-outline-state{display:block;margin-top:5px}
+.chapter-outline-state.is-current{color:var(--ink)}
+.chapter-outline-toggle{font-size:20px;text-align:center;color:var(--accent);transition:transform .15s}
+.chapter-outline[open] .chapter-outline-toggle{transform:rotate(45deg)}
+.chapter-outline-expanded{padding:0 0 20px 52px}
+.chapter-outline-intro{font-size:14px;color:var(--muted);margin-bottom:12px}
+.chapter-step-list{list-style:none;padding:0;margin-bottom:0}
+.chapter-step-list>li{border-top:1px solid var(--line)}
+.chapter-step-list button{width:100%;display:grid;grid-template-columns:30px minmax(0,1fr) 118px;gap:12px;align-items:center;min-height:49px;padding:12px 9px;border:0;background:transparent;text-align:left;font-size:16px;line-height:1.5}
+.chapter-step-list button:hover{background:var(--canvas)}
+.chapter-step-list button[aria-current=step]{background:var(--canvas)}
+.chapter-step-number{color:var(--muted);font-size:14px}
+.chapter-step-title{min-width:0;overflow-wrap:anywhere}
+.chapter-step-status{font-size:14px;color:var(--muted);text-align:right}
+.chapter-preparation{margin-top:21px;border-bottom:1px solid var(--line)}
+.chapter-preparation>summary{display:flex;gap:20px;align-items:center;list-style:none;cursor:pointer;padding:13px 0 20px;font-size:14px;min-height:48px;color:var(--muted)}
+.chapter-preparation>summary>span:first-child{flex:1;color:var(--ink)}
+.chapter-preparation>summary>span:last-child{font-size:20px;color:var(--accent)}
+.chapter-preparation .chapter-step-list{padding-bottom:20px}
+.chapter-evidence{margin-top:35px}
+.chapter-evidence .prototype-kicker{margin-bottom:9px}
+.chapter-evidence-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.chapter-evidence-strip>figure{margin:0;min-width:0}
+.chapter-evidence-strip img{width:100%;height:170px;object-fit:contain;display:block;background:var(--canvas)}
+.chapter-evidence-strip figcaption{font-size:14px;line-height:1.5;margin-top:10px;overflow-wrap:anywhere}
+.chapter-evidence-strip small{display:block;font-size:14px;color:var(--muted);margin-top:4px}
+.chapter-unavailable{font-family:var(--sans);padding:30px}
+@media(min-width:761px) and (max-width:1050px){.chapter-preview-layout{grid-template-columns:190px minmax(0,1fr)}.chapter-main{padding-left:28px}.chapter-resume{grid-template-columns:minmax(0,1fr) 150px;gap:20px;padding:22px 18px}.chapter-resume-image img{height:200px}.chapter-outline>summary{grid-template-columns:32px minmax(0,1fr) 108px 16px;gap:10px}.chapter-outline-title{font-size:26px}.chapter-outline-expanded{padding-left:42px}.chapter-evidence-strip{gap:12px}.chapter-evidence-strip img{height:145px}.chapter-step-list button{grid-template-columns:26px minmax(0,1fr)}.chapter-step-status{grid-column:2;text-align:left}}
+@media(max-width:760px){
+ .chapter-preview-layout{display:block}
+ .chapter-rail{position:static;border-right:0;padding:18px 20px 0}
+ .chapter-rail-heading,.chapter-rail-index,.chapter-rail-note{display:none}
+ .chapter-view-nav{display:flex;flex-direction:row;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+ .chapter-view-nav button{border-left:0;border-bottom:2px solid transparent;padding:10px 11px;font-size:14px}
+ .chapter-view-nav button[aria-current=page]{border-bottom-color:var(--accent)}
+ .chapter-rail-progress{margin-bottom:0;padding-top:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+ .chapter-rail-progress p{margin-bottom:10px}
+ .chapter-main{padding:25px 20px 48px}
+ .chapter-page-heading{margin-bottom:23px}
+ .chapter-page-heading h1{font-size:34px;margin-bottom:13px}
+ .chapter-preview-layout .prototype-kicker{font-size:14px;letter-spacing:.09em;margin-bottom:10px}
+ .chapter-resume{grid-template-columns:minmax(0,1fr) 112px;gap:15px;margin-bottom:30px;padding:20px 15px}
+ .chapter-resume h2{font-size:29px;line-height:1.07;margin-bottom:13px}
+ .chapter-resume-meta{font-size:14px;margin-bottom:13px;gap:3px}
+ .chapter-resume-meta>span{display:block;width:100%}
+ .chapter-resume-excerpt{grid-column:1/-1;font-size:16px;line-height:1.6}
+ .chapter-resume-progress{font-size:14px;line-height:1.55;margin-bottom:16px}
+ .chapter-resume-actions{gap:3px}
+ .chapter-resume-actions>button{width:100%;text-align:center}
+ .chapter-resume-image{align-self:start;margin-top:37px}
+ .chapter-resume-image img{height:165px}
+ .chapter-resume-image figcaption{font-size:14px}
+ .chapter-resume-words{grid-template-columns:1fr;font-size:21px;gap:9px}
+ .chapter-section-heading{display:block;margin-bottom:18px}
+ .chapter-section-heading h2{font-size:27px;line-height:1.12}
+ .chapter-section-heading>p{text-align:left;font-size:14px;margin-top:10px}
+ .chapter-outline>summary{grid-template-columns:27px minmax(0,1fr) 16px;gap:11px;padding:20px 0}
+ .chapter-outline-number{font-size:25px;align-self:start;margin-top:3px}
+ .chapter-outline-title{font-size:27px}
+ .chapter-outline-note{font-size:14px;margin-top:6px}
+ .chapter-outline-progress{grid-column:2;display:flex;gap:12px;flex-wrap:wrap;font-size:14px;text-align:left;line-height:1.5;margin-top:0}
+ .chapter-outline-state{margin-top:0}
+ .chapter-outline-toggle{grid-column:3;grid-row:1;align-self:start;margin-top:2px}
+ .chapter-outline-expanded{padding:0 0 18px 0}
+ .chapter-outline-intro{font-size:14px;line-height:1.6;margin-bottom:15px}
+ .chapter-step-list button{grid-template-columns:26px minmax(0,1fr);gap:3px 10px;padding:13px 8px;font-size:16px}
+ .chapter-step-status{grid-column:2;text-align:left;font-size:14px}
+ .chapter-preparation{margin-top:13px}
+ .chapter-preparation>summary{gap:12px;font-size:14px}
+ .chapter-evidence{margin-top:28px}
+ .chapter-evidence-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
+ .chapter-evidence-strip img{height:175px}
+ .chapter-evidence-strip figcaption,.chapter-evidence-strip small{font-size:14px}
+}
+@media(max-width:389px){.chapter-resume{display:block}.chapter-resume-image{display:none}.chapter-resume h2{font-size:30px}.chapter-resume-actions{display:flex;align-items:center;gap:12px}.chapter-resume-actions>button{width:auto}.chapter-resume-words{display:none}.chapter-resume-excerpt{max-width:none}}
+@media(prefers-reduced-motion:reduce){.chapter-outline-toggle{transition:none}}
