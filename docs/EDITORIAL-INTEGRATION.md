@@ -43,3 +43,16 @@ No customer records are embedded in the preview sources or seeded automatically.
 Automated DOM/API tests establish functionality but do not establish physical browser geometry, touch behaviour, OS file-picker behaviour or download handoff. This chat does not expose desktop/browser control. Under the [Sites skill](skill://plugin_connector_1p_689987207de08191979cf68eca2941c6/sites/SKILL.md), “If `cua_repl.js` is unavailable, skip browser QA.” Native desktop/mobile visual checks remain acceptance work; no browser pass is claimed.
 
 Do not merge or deploy this branch to the version 4 Site until the owner explicitly approves the integrated product after acceptance testing.
+
+## Published acceptance environment
+
+- URL: **https://inherfashion-integration-review.fabulousloon.chatgpt.site**
+- Site: `appgprj_6b057ae4ed348191af2e0da0149f781d`, independent version **1**.
+- Application source commit: `a715804cd7e3009d4d2d6e1dff64312947933ab0`.
+- Published deployment-source commit: `dbba39563773f64d9fcce618820fdaae4e9d44e0` in the separate Site source repository.
+- Access verified: one allowed owner, zero groups and zero external visitors. Unauthenticated HTTP request returned **401**.
+- The new `DB` binding contains `progress`, `evidence` and `entitlements`. The Worker uses the separate Site's `BUCKET` binding for private photo objects. No customer records were seeded or copied.
+- Native publication succeeded. The existing version 4 Site remains on version **4**, with access-policy revision **1** unchanged.
+- No automatic expiry is configured for this acceptance Site.
+
+Use the same owner ChatGPT account. A fresh workbook here is expected because Site identity and storage are separate. Complete test exercises or restore a copy of your answers through **My Blueprint → Restore answers**; upload test photos separately. Do not use acceptance testing as approval to replace version 4. The owner must explicitly approve the integrated release first.
