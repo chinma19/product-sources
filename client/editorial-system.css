@@ -1,0 +1,377 @@
+/* Approved editorial system around the existing authenticated workbook controls.
+   The response schema, scoring and exports are not defined by this stylesheet. */
+:root {
+  --ivory: #f4f0e9;
+  --white: #fffdf9;
+  --oat: #e9e1d6;
+  --taupe: #b7a696;
+  --brown: #3f342d;
+  --ink: #3f342d;
+  --stone: #d8d0c6;
+  --muted: #75695e;
+  --paper: var(--white);
+  --canvas: var(--ivory);
+  --line: var(--stone);
+  --accent: #866a52;
+  --serif: var(--display);
+  --sans: var(--body);
+}
+#app {
+  min-width: 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.65;
+  background: var(--paper);
+}
+#app *, #app *::before, #app *::after { box-sizing: border-box; }
+#app main, #app section, #app article, #app fieldset { min-width: 0; }
+#app button, #app input, #app textarea, #app select { font-family: var(--body); }
+#app button, #app .button, #app summary, #app .text-button { min-height: 44px; }
+#app button, #app .button, #app .text-button, #app .text-link { font-size: 14px; }
+#app input, #app textarea, #app select { min-width: 0; max-width: 100%; font-size: 16px; }
+#app textarea { line-height: 1.7; padding: 12px 14px; min-height: 100px; border-color: var(--stone); }
+#app input[type=text], #app input[type=number], #app select {
+  border-color: var(--stone);
+  background-color: var(--paper);
+  min-height: 46px;
+}
+#app select {
+  appearance: none;
+  padding-right: 38px;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+#app :where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+#app :where(label, legend, p, dd, li, a) { overflow-wrap: anywhere; }
+#app .eyebrow { font-size: 12px; line-height: 1.6; letter-spacing: .1em; font-weight: 500; margin-bottom: 14px; }
+#app .field-note, #app .transfer-note { font-size: 14px; line-height: 1.65; }
+#app .button { min-height: 46px; padding: 11px 20px; background: var(--brown); color: var(--paper); border-radius: 0; }
+#app .text-button { padding-block: 10px; font-size: 14px; }
+#app .text-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; }
+#app .topbar {
+  max-width: 1440px;
+  height: auto;
+  min-height: 84px;
+  margin: auto;
+  padding: 16px 32px;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+#app .brand { font-size: 29px; font-weight: 400; line-height: 1.1; }
+#app .brand span { font-size: 10px; line-height: 1.5; letter-spacing: .1em; margin-top: 6px; }
+#app .topbar > nav { gap: 24px; font-size: 14px; }
+#app .topbar > nav > a { display: inline-flex; align-items: center; min-height: 44px; }
+#app .account { font-size: 12px; gap: 4px; }
+#app .account > a { display: inline-flex; align-items: center; min-height: 32px; font-size: 12px; }
+#app #save-status { font-size: 12px; max-width: 220px; }
+#app .mobile-drawer { font-size: 14px; }
+#app .mobile-drawer > a { min-height: 44px; display: flex; align-items: center; }
+#app .workbook-shell { max-width: 1220px; margin: 0 auto; grid-template-columns: 210px minmax(0, 1fr); }
+#app .journey-nav { padding: 28px 18px 40px 0; top: 0; border-right-color: var(--line); font-size: 14px; }
+#app .journey-nav .nav-title { font-size: 12px; letter-spacing: .08em; }
+#app .journey-nav summary { font-size: 14px; min-height: 48px; gap: 10px; }
+#app .journey-nav summary small { font-size: 12px; line-height: 1.5; }
+#app .journey-nav summary > span:nth-child(2) { min-width: 0; }
+#app .journey-nav li a { font-size: 14px; line-height: 1.5; min-height: 44px; padding: 10px 6px; }
+#app .journey-nav li a span { font-size: 12px; }
+#app .journey-nav .chapter-start, #app .journey-nav .nav-evidence { font-size: 14px; min-height: 44px; }
+#app .journey-nav .privacy-note { font-size: 12px; line-height: 1.65; }
+#app .step-main { width: 100%; max-width: 1010px; padding: 30px 32px 56px; }
+#app .step-main > h1 { font-size: 42px; line-height: 1.08; max-width: 760px; font-weight: 400; margin-bottom: 18px; }
+#app .step-topline { font-size: 12px; line-height: 1.6; margin-bottom: 25px; padding-bottom: 15px; }
+#app .step-intro { max-width: 720px; font-size: 16px; line-height: 1.7; margin-bottom: 24px; }
+#app .chapter-switcher { gap: 4px 18px; margin-bottom: 23px; padding-bottom: 12px; }
+#app .chapter-switcher a { font-size: 14px; line-height: 1.5; min-height: 44px; }
+#app .chapter-switcher a > span { font-size: 20px; }
+#app .original-guidance { margin: 24px 0; }
+#app .original-guidance > summary, #app .illustration-panel > summary { font-size: 14px; min-height: 46px; }
+#app .manuscript { max-width: 740px; font-size: 16px; line-height: 1.7; }
+#app .manuscript h3 { font-size: 14px; line-height: 1.6; letter-spacing: .06em; }
+#app .manuscript .guidance-options { font-size: 14px; }
+#app .step-art { max-width: 500px; margin: 16px auto 24px; }
+#app .step-art svg { max-height: 270px; }
+#app .exercise-heading { padding-top: 0; margin-bottom: 20px; }
+#app .exercise-heading p:last-child { font-size: 14px; }
+#app .response { padding: 0 0 24px; margin-bottom: 24px; border-bottom-color: var(--line); }
+#app .response > label, #app .response > fieldset > legend { font-size: 16px; font-weight: 400; line-height: 1.6; margin-bottom: 12px; }
+#app .response fieldset { min-width: 0; }
+#app .check-options { gap: 10px 14px; }
+#app .check-option { min-height: 48px; padding: 12px 14px; border-color: var(--line); font-size: 16px; line-height: 1.5; }
+#app .check-option input { width: 18px; height: 18px; flex-basis: 18px; }
+#app .matrix { display: block; }
+#app .matrix-row { border: 0 !important; border-top: 1px solid var(--line) !important; padding: 17px 0 !important; background: transparent; }
+#app .matrix-row > legend { font-size: 24px; line-height: 1.3; font-weight: 400; padding: 0 0 10px !important; }
+#app .rating-options { gap: 8px; }
+#app .rating-options > label { flex: 1 1 115px; }
+#app .rating-options > label > span { font-size: 14px; line-height: 1.5; min-height: 46px; padding: 10px 12px; }
+#app .rating-options .clear-choice { font-size: 14px; min-height: 44px; }
+#app .numbered-entry { gap: 12px; margin-top: 10px; }
+#app .numbered-entry > span:first-child { font-size: 23px; min-width: 25px; }
+#app .scale-labels { font-size: 14px; line-height: 1.5; gap: 24px; margin-bottom: 15px; }
+#app .scale-options { background: linear-gradient(90deg, var(--paper), var(--oat)); border-color: var(--line); padding: 6px; gap: 6px; }
+#app .scale-options > label > span { min-height: 44px; font-size: 16px; padding: 10px 4px; border-radius: 0; border-color: var(--line); }
+#app .score-row { gap: 20px; padding: 16px 0; font-size: 16px; line-height: 1.6; }
+#app .score-row > input, #app .score-row > select { flex: 0 0 100px; width: 100px; }
+#app .calculated { padding: 22px; margin-top: 22px; background: var(--canvas); }
+#app .calculated > strong { font-size: 38px; line-height: 1.1; }
+#app .calculated p { font-size: 16px; line-height: 1.6; }
+#app .calculated small { font-size: 14px; line-height: 1.6; }
+#app .colour-roles { gap: 18px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#app .colour-role { min-width: 0; padding: 14px; border-color: var(--line); display: block; }
+#app .colour-role > label { display: block; min-width: 0; }
+#app .colour-role > label:nth-child(2) > span { font-size: 14px; line-height: 1.5; margin-bottom: 8px; }
+#app .colour-role > small { display: block; font-size: 12px; margin-top: 8px; }
+#app .colour-chip, #app .colour-chip input[type=color] { height: 60px; min-height: 44px; width: 100%; }
+#app .translation-cells { gap: 16px 20px; }
+#app .translation-cells > label, #app .dictionary-entry > label { font-size: 14px; line-height: 1.6; }
+#app .translation-row { padding: 20px 0; border-top-color: var(--line); }
+#app .translation-row > h3, #app .dictionary-entry h3 { font-family: var(--display); font-size: 26px; line-height: 1.2; font-weight: 400; }
+#app .dictionary-entry { padding: 22px 0; gap: 15px; }
+#app .optional-reflection > summary { min-height: 44px; font-size: 14px; line-height: 1.6; }
+#app .source-preview { padding: 12px 15px; font-size: 14px; line-height: 1.65; background: var(--canvas); }
+#app .source-preview > span, #app .source-preview > a { font-size: 12px; }
+#app .source-preview p { font-size: 14px; }
+#app .discoveries-panel { margin-bottom: 24px; padding: 0 18px 14px; background: var(--canvas); border-color: var(--line); }
+#app .discoveries-panel > summary { font-size: 14px; min-height: 48px; }
+#app .discoveries-panel > summary > span { font-size: 12px; line-height: 1.5; }
+#app .discoveries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 22px; }
+#app .discovery-record h3 { font-size: 14px; line-height: 1.6; }
+#app .context-note, #app .recorded-answer, #app .answer-expansion > summary { font-size: 14px; line-height: 1.65; }
+#app .answer-expansion summary span, #app .edit-discovery, #app .more-discoveries > summary { font-size: 14px; }
+#app .answer-expansion[open] > summary { font-size: 0; }
+#app .answer-expansion[open] > summary span { font-size: 14px; }
+#app .context-images figcaption, #app .context-images figcaption small { font-size: 12px; line-height: 1.6; }
+#app .reference-panel > summary, #app .reference-panel p { font-size: 14px; line-height: 1.65; }
+#app .return-banner { max-width: 1440px; margin: auto; padding: 12px 32px; font-size: 14px; gap: 14px; }
+#app .return-banner button { font-size: 14px; }
+#app .step-actions { padding-top: 24px; gap: 12px 20px; flex-wrap: wrap; }
+#app .step-actions > button, #app .step-actions > a { font-size: 14px; min-height: 44px; }
+#app .step-main > .completion-note { font-size: 14px; }
+#app .evidence-main, #app .blueprint-main, #app .compass-main { max-width: 1220px; padding: 32px 32px 56px; margin: auto; }
+#app .compass-main > h1, #app .evidence-main > h1 { font-size: 42px; line-height: 1.08; font-weight: 400; }
+#app .compass-main .response { max-width: 850px; }
+#app .export-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+#app .export-actions > button, #app .export-actions > label { min-height: 46px; font-size: 14px; }
+#app .annotation-editor > summary, #app .annotation-form label { font-size: 14px; }
+#app .annotation-status { font-size: 14px; }
+#app .evidence-item figcaption small, #app .replace-image, #app .replace-image input, #app .evidence-tools button { font-size: 14px; }
+#app .upload-heading .eyebrow { font-size: 12px; }
+#app .upload-heading label, #app .drop-zone > label span, #app .drop-zone input, #app .queue-heading p, #app .upload-preview label, #app .upload-preview button { font-size: 14px; }
+#app .upload-preview p, #app .upload-preview [role=status] { font-size: 12px; line-height: 1.6; }
+#app .upload-preview input { font-size: 16px; }
+#app .candidate-record .candidate-sources, #app .candidate-record button, #app .draft-preview label { font-size: 14px; line-height: 1.6; }
+#app .draft-preview { padding: 20px; background: var(--canvas); }
+#app .recovery-notice { padding: 16px 32px; font-size: 14px; line-height: 1.6; }
+#app .recovery-notice button { font-size: 14px; }
+#app .site-footer { max-width: 1440px; margin: auto; padding: 28px 32px; font-size: 12px; line-height: 1.6; }
+
+/* Journey overview: one calm editorial map, with the long lists closed initially. */
+#app .editorial-journey { max-width: 1120px; margin: auto; padding: 34px 32px 56px; }
+#app .editorial-journey-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 28px; }
+#app .editorial-journey-heading > div { min-width: 0; }
+#app .editorial-journey-heading h1 { font-size: 44px; line-height: 1.05; font-weight: 400; margin-bottom: 14px; }
+#app .editorial-journey-heading p { margin-bottom: 0; font-size: 16px; }
+#app .editorial-overall-progress { width: 280px; max-width: 100%; flex-shrink: 0; padding-block: 5px; }
+#app .editorial-overall-progress > p:first-child { display: flex; justify-content: space-between; gap: 18px; font-size: 14px; margin-bottom: 12px; }
+#app .editorial-overall-progress strong { font-weight: 400; white-space: nowrap; }
+#app .editorial-overall-progress > p:last-child { font-size: 14px; color: var(--muted); margin-top: 12px; }
+#app .editorial-overall-progress progress { appearance: none; display: block; width: 100%; height: 3px; border: 0; background: var(--line); accent-color: var(--accent); }
+#app .editorial-overall-progress progress::-webkit-progress-bar { background: var(--line); }
+#app .editorial-overall-progress progress::-webkit-progress-value { background: var(--accent); }
+#app .editorial-overall-progress progress::-moz-progress-bar { background: var(--accent); }
+#app .editorial-resume { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 32px; padding: 26px; margin-bottom: 34px; border-block: 1px solid var(--line); background: var(--canvas); }
+#app .editorial-resume h2 { font-size: 34px; line-height: 1.1; font-weight: 400; margin-bottom: 14px; }
+#app .editorial-resume-copy > p:not(.eyebrow) { max-width: 600px; font-size: 16px; margin-bottom: 16px; }
+#app .editorial-resume-meta { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+#app .editorial-resume-copy > .editorial-resume-progress { font-size: 14px !important; color: var(--muted); }
+#app .editorial-resume-actions { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+#app .editorial-resume figure { align-self: center; margin: 0; min-width: 0; }
+#app .editorial-resume img { display: block; width: 100%; height: 230px; object-fit: contain; background: var(--paper); }
+#app .editorial-resume figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+#app .editorial-resume figcaption > small { display: block; font-size: 12px; color: var(--muted); margin-top: 4px; }
+#app .editorial-resume-method { display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 13px 18px; font-family: var(--display); font-style: italic; font-size: 25px; line-height: 1.25; color: var(--muted); }
+#app .editorial-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+#app .editorial-section-heading > h2 { font-size: 29px; font-weight: 400; line-height: 1.15; margin-bottom: 0; }
+#app .editorial-section-heading > p { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+#app .editorial-chapter { margin: 0; padding: 0; border-top: 1px solid var(--line); }
+#app .editorial-chapter:last-child { border-bottom: 1px solid var(--line); }
+#app .editorial-chapter > summary { display: grid; grid-template-columns: 35px minmax(0, 1fr) 140px 20px; gap: 14px; padding: 22px 0; align-items: center; list-style: none; }
+#app .editorial-chapter > summary::-webkit-details-marker { display: none; }
+#app .editorial-chapter-number { font-family: var(--display); font-size: 27px; line-height: 1; color: var(--accent); }
+#app .editorial-chapter-name { min-width: 0; }
+#app .editorial-chapter-name > span { display: block; font-family: var(--display); font-weight: 400; font-size: 29px; line-height: 1.15; }
+#app .editorial-chapter-name > small { display: block; margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+#app .editorial-chapter-progress { text-align: right; font-size: 14px; color: var(--muted); line-height: 1.5; }
+#app .editorial-chapter-progress > small { display: block; font-size: 14px; margin-top: 4px; }
+#app .editorial-chapter-toggle { font-size: 21px; text-align: center; color: var(--accent); transition: transform .15s; }
+#app .editorial-chapter[open] .editorial-chapter-toggle { transform: rotate(45deg); }
+#app .editorial-chapter-body { padding: 0 0 18px 49px; }
+#app .editorial-step-list { list-style: none; margin: 0; padding: 0; }
+#app .editorial-step-list > li { border-top: 1px solid var(--line); }
+#app .editorial-step-list a { display: grid; grid-template-columns: 29px minmax(0, 1fr) 110px; gap: 12px; align-items: center; min-height: 48px; padding: 12px 8px; font-size: 16px; line-height: 1.5; }
+#app .editorial-step-list a:hover, #app .editorial-step-list a[aria-current=step] { background: var(--canvas); text-decoration: none; }
+#app .editorial-step-number { color: var(--muted); font-size: 14px; }
+#app .editorial-step-status { color: var(--muted); font-size: 14px; text-align: right; }
+#app .editorial-preparation { margin-top: 20px; border-bottom: 1px solid var(--line); }
+#app .editorial-preparation > summary { display: flex; gap: 20px; padding: 15px 0; align-items: center; font-size: 14px; }
+#app .editorial-preparation > summary > span:first-child { flex: 1; }
+#app .editorial-preparation > .editorial-step-list { padding-bottom: 20px; }
+#app .editorial-session-plan { margin: 24px 0 0; padding: 0; border-top: 0; border-bottom: 1px solid var(--line); }
+#app .editorial-session-plan > summary { padding: 14px 0; font-size: 14px; }
+#app .editorial-session-links > a { display: grid; grid-template-columns: 90px minmax(0, 1fr) 130px; gap: 20px; min-height: 48px; padding: 15px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.6; }
+#app .editorial-session-links strong { font-weight: 400; }
+#app .editorial-session-links span, #app .editorial-session-links small { color: var(--muted); font-size: 14px; }
+#app .editorial-journey-endnote { display: flex; justify-content: space-between; gap: 24px; align-items: baseline; margin-top: 24px; font-size: 14px; color: var(--muted); }
+#app .editorial-journey-endnote > p { margin-bottom: 0; }
+
+/* Existing welcome selectors remain valid for navigation and resume. */
+#app .home .hero { min-height: 0; max-width: 1220px; margin: auto; padding: 44px 40px 48px; gap: 48px; }
+#app .home .hero h1 { font-size: 64px; line-height: 1.01; font-weight: 400; margin-bottom: 26px; }
+#app .home .hero-lead { font-size: 16px; line-height: 1.7; max-width: 440px; }
+#app .home .hero .eyebrow { font-size: 12px; margin-bottom: 24px; }
+#app .home .hero-meta { font-size: 12px; line-height: 1.6; letter-spacing: .08em; margin-top: 21px; }
+#app .editorial-home { max-width: 1220px; margin: auto; }
+#app .editorial-home-evidence figure { margin: 0; }
+#app .editorial-home-evidence img { display: block; width: 100%; height: 400px; object-fit: contain; background: var(--canvas); }
+#app .editorial-home-evidence figcaption { font-size: 14px; color: var(--muted); margin-top: 9px; }
+#app .editorial-home-principle { background: var(--canvas); padding: 32px; font-family: var(--display); font-size: 31px; line-height: 1.2; }
+#app .editorial-home-principle p { margin-bottom: 22px; }
+#app .editorial-home-principle p:last-child { margin-bottom: 0; }
+#app .editorial-home-journey { max-width: 1040px; margin: auto; border-top: 1px solid var(--line); padding: 34px 0 42px; }
+#app .editorial-home-journey > h2 { font-size: 36px; line-height: 1.1; font-weight: 400; }
+#app .editorial-home-journey > p { max-width: 600px; }
+#app .editorial-home-chapters { margin: 24px 0 20px; border-top: 1px solid var(--line); }
+#app .editorial-home-chapters > a { display: grid; grid-template-columns: 35px minmax(0, 1fr) 140px; gap: 20px; min-height: 60px; padding: 18px 0; border-bottom: 1px solid var(--line); align-items: center; }
+#app .editorial-home-chapters > a > span { font-family: var(--display); font-size: 24px; color: var(--muted); }
+#app .editorial-home-chapters strong { font-family: var(--display); font-size: 28px; font-weight: 400; line-height: 1.15; }
+#app .editorial-home-chapters small { font-size: 14px; color: var(--muted); text-align: right; }
+#app .editorial-home-evidence-note { margin: 0 40px 44px; padding: 32px; background: var(--canvas); text-align: center; }
+#app .editorial-home-evidence-note > h2 { font-size: 34px; font-weight: 400; }
+#app .editorial-home-evidence-note > p { font-size: 16px; }
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  #app .topbar { padding-inline: 24px; gap: 18px; }
+  #app .topbar > nav { gap: 16px; }
+  #app .brand { font-size: 26px; }
+  #app .brand span { font-size: 9px; letter-spacing: .06em; }
+  #app .account { max-width: 150px; }
+  #app .workbook-shell { grid-template-columns: 185px minmax(0, 1fr); padding-inline: 20px; }
+  #app .journey-nav { padding-right: 14px; }
+  #app .step-main { padding: 28px 24px 48px; }
+  #app .step-main > h1 { font-size: 38px; }
+  #app .check-options, #app .translation-cells, #app .discoveries-grid { grid-template-columns: minmax(0, 1fr); }
+  #app .colour-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #app .editorial-resume { grid-template-columns: minmax(0, 1fr) 180px; gap: 24px; }
+  #app .editorial-journey-heading { gap: 28px; }
+  #app .editorial-overall-progress { width: 240px; }
+  #app .editorial-home-journey { margin-inline: 32px; }
+}
+@media (max-width: 760px) {
+  #app .topbar { min-height: 0; padding: 14px 16px 10px; flex-wrap: wrap; gap: 10px 14px; }
+  #app .brand { white-space: normal; max-width: calc(100% - 70px); font-size: 28px; }
+  #app .brand span { font-size: 10px; letter-spacing: .06em; line-height: 1.5; }
+  #app .mobile-menu { display: inline-flex; align-items: center; justify-content: center; min-width: 52px; font-size: 14px; padding: 8px 0; }
+  #app .topbar > nav { display: none; }
+  #app .topbar > .account { width: 100%; max-width: 100%; flex-direction: row; justify-content: space-between; align-items: center; font-size: 12px; }
+  #app .topbar > .account > a { min-height: 32px; font-size: 12px; }
+  #app .mobile-drawer.is-open { padding: 12px 16px; gap: 4px 16px; }
+  #app .workbook-shell { display: block; }
+  #app .journey-nav { display: none; position: static; padding: 12px 16px 24px; border-right: 0; border-bottom: 1px solid var(--line); max-height: 65dvh; overflow-y: auto; }
+  #app .journey-nav.is-open { display: block; }
+  #app .journey-nav ol { padding-left: 20px; }
+  #app .step-main { padding: 24px 16px 42px; }
+  #app .step-main > h1 { font-size: 34px; line-height: 1.08; margin-bottom: 17px; }
+  #app .step-topline { margin-bottom: 22px; gap: 5px 16px; font-size: 12px; }
+  #app .step-intro { font-size: 16px; line-height: 1.7; }
+  #app .chapter-switcher { gap: 0 14px; margin-bottom: 20px; }
+  #app .chapter-switcher a { font-size: 14px; min-height: 44px; }
+  #app .chapter-switcher a > span { font-size: 18px; }
+  #app .check-options, #app .translation-cells, #app .discoveries-grid { grid-template-columns: minmax(0, 1fr); }
+  #app .check-option { font-size: 16px; min-height: 48px; padding: 12px; }
+  #app .response > label, #app .response > fieldset > legend { font-size: 16px; }
+  #app .rating-options > label { flex-basis: 115px; }
+  #app .rating-options > label > span { font-size: 14px; min-height: 46px; }
+  #app .matrix-row > legend { font-size: 23px; }
+  #app .scale-options { gap: 3px; padding: 5px; }
+  #app .scale-options > label > span { padding: 9px 1px; font-size: 16px; }
+  #app .score-row { gap: 12px; font-size: 16px; }
+  #app .score-row > input, #app .score-row > select { width: 84px; flex-basis: 84px; }
+  #app .colour-roles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #app .colour-role { padding: 12px; }
+  #app .colour-role input[type=text] { padding: 10px; }
+  #app .source-preview, #app .discoveries-panel { padding-inline: 13px; }
+  #app .discoveries-panel > summary { align-items: start; }
+  #app .discoveries-panel > summary > span { max-width: 110px; text-align: right; }
+  #app .return-banner { padding: 12px 16px; align-items: stretch; gap: 8px; }
+  #app .return-banner button { text-align: left; }
+  #app .step-actions { gap: 12px; }
+  #app .step-actions > .button { width: 100%; justify-content: center; }
+  #app .evidence-main, #app .blueprint-main, #app .compass-main { padding: 24px 16px 42px; }
+  #app .compass-main > h1, #app .evidence-main > h1 { font-size: 34px; }
+  #app .export-actions { gap: 8px; }
+  #app .export-actions > button, #app .export-actions > label { width: 100%; justify-content: center; }
+  #app .annotation-form input, #app .annotation-form textarea, #app .annotation-form select { font-size: 16px; }
+  #app .recovery-notice { padding: 14px 16px; }
+  #app .site-footer { padding: 24px 16px; font-size: 12px; gap: 16px; }
+  #app .site-footer > span:last-child { max-width: 170px; }
+  #app .editorial-journey { padding: 24px 16px 42px; }
+  #app .editorial-journey-heading { display: block; margin-bottom: 24px; }
+  #app .editorial-journey-heading h1 { font-size: 34px; }
+  #app .editorial-overall-progress { width: 100%; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+  #app .editorial-resume { grid-template-columns: minmax(0, 1fr) 110px; padding: 20px 15px; gap: 16px; margin-bottom: 28px; }
+  #app .editorial-resume h2 { font-size: 29px; line-height: 1.1; }
+  #app .editorial-resume-meta { font-size: 14px; gap: 3px; }
+  #app .editorial-resume-meta > span { width: 100%; }
+  #app .editorial-resume img { height: 170px; }
+  #app .editorial-resume figure { align-self: start; margin-top: 30px; }
+  #app .editorial-resume figcaption { font-size: 12px; }
+  #app .editorial-resume-copy > p:not(.eyebrow) { font-size: 16px; }
+  #app .editorial-resume-actions { gap: 6px 16px; }
+  #app .editorial-resume-method { grid-template-columns: minmax(0, 1fr); gap: 10px; font-size: 22px; }
+  #app .editorial-section-heading { display: block; margin-bottom: 18px; }
+  #app .editorial-section-heading > h2 { font-size: 27px; }
+  #app .editorial-section-heading > p { margin-top: 10px; }
+  #app .editorial-chapter > summary { grid-template-columns: 27px minmax(0, 1fr) 18px; gap: 8px 11px; padding: 20px 0; }
+  #app .editorial-chapter-number { align-self: start; margin-top: 2px; font-size: 24px; }
+  #app .editorial-chapter-name > span { font-size: 27px; }
+  #app .editorial-chapter-name > small { font-size: 14px; }
+  #app .editorial-chapter-progress { grid-column: 2; display: flex; flex-wrap: wrap; gap: 5px 13px; text-align: left; }
+  #app .editorial-chapter-progress > small { margin: 0; }
+  #app .editorial-chapter-toggle { grid-column: 3; grid-row: 1; align-self: start; }
+  #app .editorial-chapter-body { padding: 0 0 18px; }
+  #app .editorial-step-list a { grid-template-columns: 26px minmax(0, 1fr); gap: 4px 10px; padding: 12px 7px; }
+  #app .editorial-step-status { grid-column: 2; text-align: left; }
+  #app .editorial-preparation > summary { gap: 10px; }
+  #app .editorial-session-links > a { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+  #app .editorial-journey-endnote { display: block; margin-top: 22px; }
+  #app .editorial-journey-endnote > a { margin-top: 8px; }
+  #app .home .hero { display: block; padding: 30px 16px 34px; }
+  #app .home .hero h1 { font-size: 48px; line-height: 1.03; }
+  #app .home .hero .eyebrow { font-size: 12px; margin-bottom: 20px; }
+  #app .home .hero-lead { max-width: 100%; }
+  #app .editorial-home-evidence { margin-top: 28px; }
+  #app .editorial-home-evidence img { height: 250px; }
+  #app .editorial-home-principle { padding: 24px; font-size: 28px; }
+  #app .editorial-home-journey { margin-inline: 16px; padding: 28px 0; }
+  #app .editorial-home-journey > h2 { font-size: 31px; }
+  #app .editorial-home-chapters > a { grid-template-columns: 28px minmax(0, 1fr); gap: 6px 12px; padding: 16px 0; }
+  #app .editorial-home-chapters strong { font-size: 26px; }
+  #app .editorial-home-chapters small { grid-column: 2; text-align: left; }
+  #app .editorial-home-evidence-note { margin: 0 16px 28px; padding: 24px 18px; }
+  #app .editorial-home-evidence-note > h2 { font-size: 30px; }
+}
+@media (max-width: 389px) {
+  #app .editorial-resume { display: block; }
+  #app .editorial-resume figure, #app .editorial-resume-method { display: none; }
+  #app .editorial-resume h2 { font-size: 30px; }
+  #app .editorial-resume-actions { gap: 8px 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #app .editorial-chapter-toggle { transition: none; }
+}

@@ -1,5 +1,7 @@
 # In Her Fashion — Personal Style Blueprint
 
+The approved editorial experience is integrated on `codex/editorial-integration` for a separate owner-private acceptance preview. See [the integration report and acceptance checklist](docs/EDITORIAL-INTEGRATION.md). The version 4 Site remains unchanged until explicit approval.
+
 A private, interactive personal style workbook, not a PDF landing page. All 68 approved Draft 3 manuscript pages are mapped to a guided web journey. Customer answers drive their own editable reference; there is no AI, inferred aesthetic, body diagnosis, or prescribed wardrobe.
 
 ## Product and content

@@ -1,0 +1,638 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "collections": [],
+      "reason": "Cover, not an image exercise.",
+      "cues": [
+        "PERSONAL STYLE BLUEPRINT"
+      ]
+    },
+    {
+      "page": 2,
+      "collections": [],
+      "reason": "Opening explanation; no collection requested.",
+      "cues": [
+        "You are not here to find the “right” style."
+      ]
+    },
+    {
+      "page": 3,
+      "collections": [],
+      "reason": "Methodology explanation; no collection requested.",
+      "cues": [
+        "BODY + PERSONALITY + LIFESTYLE"
+      ]
+    },
+    {
+      "page": 4,
+      "collections": [],
+      "reason": "General method instructions, not a per-exercise gallery.",
+      "cues": [
+        "LOOK",
+        "CHOOSE",
+        "REFLECT",
+        "RECORD"
+      ]
+    },
+    {
+      "page": 5,
+      "collections": [
+        "recent",
+        "inspiration"
+      ],
+      "reason": "Evidence preparation: two named collections, kept separate. Real Life is reflection, not a third photo library.",
+      "cues": [
+        "01 — RECENT OUTFITS",
+        "02 — INSPIRATION",
+        "Do not create a new evidence set every time a page asks you to reflect. Reuse these same sets throughout the workbook."
+      ]
+    },
+    {
+      "page": 6,
+      "collections": [],
+      "reason": "Preparation checklist checks readiness of both sets; it does not require displaying both galleries.",
+      "cues": [
+        "☐ Recent outfit photos ready",
+        "☐ Inspiration set ready"
+      ]
+    },
+    {
+      "page": 7,
+      "collections": [],
+      "reason": "Body introduction; no individual image task.",
+      "cues": [
+        "It's about noticing what actually works for you."
+      ]
+    },
+    {
+      "page": 8,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Direct Recent Outfits observation.",
+      "cues": [
+        "Look through your recent outfits."
+      ]
+    },
+    {
+      "page": 9,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Continuation of fit observation from p8. Saved observations come first; Recent Outfits can support them.",
+      "cues": [
+        "Now step back from individual outfits.",
+        "Complete these statements based on what you just observed."
+      ]
+    },
+    {
+      "page": 10,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Interpret p8–9 fit choices, with the same Recent Outfits as supporting evidence.",
+      "cues": [
+        "Which fit appeared most often among the outfits you loved?"
+      ]
+    },
+    {
+      "page": 11,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Body silhouette comparisons can use the reusable Recent Outfits set established on p8. Original silhouette illustrations/choices remain primary; no Inspiration gallery is requested.",
+      "cues": [
+        "Consider these silhouette directions:",
+        "Look through your recent outfits."
+      ]
+    },
+    {
+      "page": 12,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Review p11 customer-selected silhouettes in the Body context. Recent Outfits support the comparison; do not add Inspiration.",
+      "cues": [
+        "Look at the silhouettes you marked YES.",
+        "Now look at your MAYBES.",
+        "And your NOs."
+      ]
+    },
+    {
+      "page": 13,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Physical proportion comparisons can use the same Recent Outfits; the supplied combinations remain the exercise, with no new set or Inspiration requirement.",
+      "cues": [
+        "Which combinations make your outfits feel most natural?"
+      ]
+    },
+    {
+      "page": 14,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Direct Recent Outfits length review.",
+      "cues": [
+        "Look through your recent outfits and identify the lengths you repeatedly choose."
+      ]
+    },
+    {
+      "page": 15,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Own repeated neckline choices/wearing in the Body section. Recent Outfits may support observation; admiring a neckline on other people does not automatically request the Inspiration set.",
+      "cues": [
+        "I repeatedly choose this",
+        "I happily wear this",
+        "I admire this on other people"
+      ]
+    },
+    {
+      "page": 16,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Reflect on p15 choices; Recent Outfits remain optional supporting Body evidence.",
+      "cues": [
+        "Look at your choices."
+      ]
+    },
+    {
+      "page": 17,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Own skin-exposure preferences in the Body section. Recent Outfits can support recall; images do not determine personal comfort or boundaries.",
+      "cues": [
+        "The goal is to identify your own boundary.",
+        "LOOK AT THESE AREAS"
+      ]
+    },
+    {
+      "page": 18,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Continuation of p17 own exposure preferences, with Recent Outfits as optional supporting evidence.",
+      "cues": [
+        "Look across your answers.",
+        "What kind of exposure feels most natural to you?"
+      ]
+    },
+    {
+      "page": 19,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Own lived comfort/movement experiences; Recent Outfits and recorded notes may support recall. Never infer comfort from an image.",
+      "cues": [
+        "Think about what makes you physically aware of your clothes in a negative way."
+      ]
+    },
+    {
+      "page": 20,
+      "collections": [],
+      "reason": "Consolidated Body profile: reuse recorded answers, not a compulsory gallery or new observation exercise.",
+      "cues": [
+        "Use the evidence you recorded; this is a summary of your observations, not a set of rules."
+      ]
+    },
+    {
+      "page": 21,
+      "collections": [
+        "inspiration"
+      ],
+      "reason": "Direct preparation of the visual Inspiration collection.",
+      "cues": [
+        "Create a collection of 10–15 outfits that caught your attention."
+      ]
+    },
+    {
+      "page": 22,
+      "collections": [
+        "inspiration"
+      ],
+      "reason": "Direct Inspiration Set preparation.",
+      "cues": [
+        "YOUR INSPIRATION SET",
+        "Collect 10–15 outfits that made you stop and look."
+      ]
+    },
+    {
+      "page": 23,
+      "collections": [
+        "inspiration",
+        "recent"
+      ],
+      "reason": "Inspiration is primary. The reflection explicitly compares inspiration with actual clothes; show Recent Outfits only for that comparison, in a distinct labelled collection, never a merged default gallery.",
+      "cues": [
+        "Now go through your 10–15 outfits again.",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Are there any qualities that appear frequently in your inspiration but rarely appear in your actual clothes?"
+      ]
+    },
+    {
+      "page": 24,
+      "collections": [
+        "inspiration"
+      ],
+      "reason": "Sort the existing Inspiration set. The four groups are customer decisions, not automatic classifications.",
+      "cues": [
+        "SORT YOUR INSPIRATION",
+        "Go through your 10–15 saved outfits and place each one into one of these categories:"
+      ]
+    },
+    {
+      "page": 25,
+      "collections": [],
+      "reason": "Self-placement on visual dials; use earlier answers if helpful, but no image collection is requested here.",
+      "cues": [
+        "Instead of forcing yourself into a label, use these visual dials to describe your preferences.",
+        "PLACE YOURSELF"
+      ]
+    },
+    {
+      "page": 26,
+      "collections": [],
+      "reason": "Reflect on ideal everyday visual intensity; no particular collection is requested. Do not add both sets by default.",
+      "cues": [
+        "Think about your ideal everyday outfit."
+      ]
+    },
+    {
+      "page": 27,
+      "collections": [],
+      "reason": "Self-directed balance scales and reflection; no photo collection is requested.",
+      "cues": [
+        "Let's see where you naturally sit."
+      ]
+    },
+    {
+      "page": 28,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Actual worn-colour experience is primary. Recent Outfits can support recall; the liked-on-other-people prompt does not require auto-opening Inspiration.",
+      "cues": [
+        "Think about colours you've:",
+        "WORN OFTEN",
+        "ENJOYED WEARING",
+        "LIKED ON OTHER PEOPLE"
+      ]
+    },
+    {
+      "page": 29,
+      "collections": [],
+      "reason": "Record colour roles using earlier colour observations. No new gallery or second colour discovery is requested.",
+      "cues": [
+        "Your Six-Colour Formula gives each colour a role."
+      ]
+    },
+    {
+      "page": 30,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Optional supporting references for three things already owned; customer may identify items not pictured. Do not require new uploads, inventory or Inspiration.",
+      "cues": [
+        "«Can this colour work with at least three things I already own?»"
+      ]
+    },
+    {
+      "page": 31,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Direct Recent Outfits review, despite being in Part 2.",
+      "cues": [
+        "Think about your recent outfits.",
+        "LOOK FOR"
+      ]
+    },
+    {
+      "page": 32,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Continue p31 own recurring signatures; Recent Outfits are supporting evidence, not the Inspiration collection by default.",
+      "cues": [
+        "Things you repeatedly choose without consciously planning them.",
+        "If you could keep only three recurring style signatures, which would you choose?"
+      ]
+    },
+    {
+      "page": 33,
+      "collections": [],
+      "reason": "Consolidated Personality profile: reuse recorded discoveries instead of automatically opening either complete collection.",
+      "cues": [
+        "Use this page to collect the discoveries—not to decide on a permanent aesthetic label."
+      ]
+    },
+    {
+      "page": 34,
+      "collections": [
+        "inspiration"
+      ],
+      "reason": "Explicitly revisit the Inspiration set along with recorded visual, colour and signature answers. Signature answers need not trigger another whole Recent gallery.",
+      "cues": [
+        "Look back at your Inspiration Set, your visual-dial choices, your colour notes, and your style-signature observations."
+      ]
+    },
+    {
+      "page": 35,
+      "collections": [],
+      "reason": "Real-life reflection, not a photo-set task.",
+      "cues": [
+        "For this section, think about your real life, not your ideal life."
+      ]
+    },
+    {
+      "page": 36,
+      "collections": [],
+      "reason": "Dressing-context frequency answers; no collection is requested.",
+      "cues": [
+        "Look at a typical month."
+      ]
+    },
+    {
+      "page": 37,
+      "collections": [],
+      "reason": "100-point allocation across real activities; no collection is requested.",
+      "cues": [
+        "Divide the 100 points across the activities that actually make up your life."
+      ]
+    },
+    {
+      "page": 38,
+      "collections": [],
+      "reason": "Read the saved time map, not outfit galleries.",
+      "cues": [
+        "Which categories take up the largest share of your life?"
+      ]
+    },
+    {
+      "page": 39,
+      "collections": [],
+      "reason": "Review saved dressing situations, tasks and needs; no image set is requested.",
+      "cues": [
+        "LOOK AT YOUR THREE MOST COMMON SITUATIONS"
+      ]
+    },
+    {
+      "page": 40,
+      "collections": [],
+      "reason": "Environmental conditions and daily demands; no image set is requested.",
+      "cues": [
+        "Think about what genuinely affects your daily dressing."
+      ]
+    },
+    {
+      "page": 41,
+      "collections": [],
+      "reason": "Personal practicality sorting and trade-offs; no wardrobe audit or photo collection is required.",
+      "cues": [
+        "The point is to understand your own priorities—not to audit what you own."
+      ]
+    },
+    {
+      "page": 42,
+      "collections": [
+        "recent",
+        "inspiration"
+      ],
+      "reason": "Optional actual-versus-imagined context: own clothes OR repeatedly saved/wished-for clothes. Let the customer choose relevant references; keep sets separate if both are opened. Do not automatically add both or introduce an inventory.",
+      "cues": [
+        "Look at the clothes you own — or the clothes you repeatedly save, shop for, or wish you could wear.",
+        "MY ACTUAL LIFE",
+        "MY IMAGINED LIFE"
+      ]
+    },
+    {
+      "page": 43,
+      "collections": [],
+      "reason": "Consolidated Lifestyle profile uses recorded context/practicality/mismatch answers, not an image set.",
+      "cues": [
+        "The practical qualities I value most are…"
+      ]
+    },
+    {
+      "page": 44,
+      "collections": [],
+      "reason": "Review the lifestyle responses already recorded; no gallery is requested.",
+      "cues": [
+        "Look back at everything you've recorded."
+      ]
+    },
+    {
+      "page": 45,
+      "collections": [],
+      "reason": "Connect the three saved profiles. Do not automatically show both photo sets merely because all three dimensions are discussed.",
+      "cues": [
+        "So far, you've looked at three different things.",
+        "How clothes work on you",
+        "What you want your style to look and feel like",
+        "How your clothes need to work in your actual life"
+      ]
+    },
+    {
+      "page": 46,
+      "collections": [],
+      "reason": "Review recorded Parts 1–3 notes for recurring qualities; photo references may be opened from a cited answer, not auto-loaded as both entire collections.",
+      "cues": [
+        "Review your notes from:",
+        "Look for qualities that appear in at least two places."
+      ]
+    },
+    {
+      "page": 47,
+      "collections": [],
+      "reason": "Pattern/Evidence/Meaning records use earlier discoveries; no mandatory photo-set request or machine-generated interpretation.",
+      "cues": [
+        "The wording is yours. These are examples of how related observations can point to a larger idea, not conclusions you have to adopt."
+      ]
+    },
+    {
+      "page": 48,
+      "collections": [],
+      "reason": "Customer articulates preference tensions using earlier answers; no photo set is requested.",
+      "cues": [
+        "Think about two preferences that don't always fit together easily."
+      ]
+    },
+    {
+      "page": 49,
+      "collections": [],
+      "reason": "Assign the customer's chosen qualities to core/supporting/accent; no image set is requested.",
+      "cues": [
+        "Think of your style as having three levels."
+      ]
+    },
+    {
+      "page": 50,
+      "collections": [],
+      "reason": "Translate the customer's words into personal clothing meanings. Earlier cited evidence may be reopened, but no whole gallery is required.",
+      "cues": [
+        "Translate your own words into clothing choices; this is about creating your own style language, not following a prescribed aesthetic."
+      ]
+    },
+    {
+      "page": 51,
+      "collections": [],
+      "reason": "Personal dictionary definitions, not a new image exercise.",
+      "cues": [
+        "You're creating a vocabulary that helps you make decisions for yourself."
+      ]
+    },
+    {
+      "page": 52,
+      "collections": [
+        "inspiration",
+        "recent"
+      ],
+      "reason": "Explicit EITHER/OR: choose ONE outfit from Inspiration OR own wardrobe. Collection eligibility is not permission to auto-show both full sets; ask for the relevant collection/item and allow a written own-outfit reference.",
+      "cues": [
+        "LOOK AT AN OUTFIT YOU LOVE",
+        "Choose one outfit from your inspiration set or your own wardrobe."
+      ]
+    },
+    {
+      "page": 53,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Own lived outfit examples, including remembered/written references; no automatic Inspiration set is requested.",
+      "cues": [
+        "THINK ABOUT YOUR OWN EXAMPLES",
+        "An outfit that looked good on me but didn't feel like me:",
+        "An outfit that may not fit a traditional style rule but felt very much like me:"
+      ]
+    },
+    {
+      "page": 54,
+      "collections": [],
+      "reason": "Confirmed style synthesis uses saved answers and customer wording, not a new gallery.",
+      "cues": [
+        "Instead, describe the combination of qualities."
+      ]
+    },
+    {
+      "page": 55,
+      "collections": [],
+      "reason": "Refine the existing Style Brief wording; no image set is requested.",
+      "cues": [
+        "Read your Style Brief again."
+      ]
+    },
+    {
+      "page": 56,
+      "collections": [],
+      "reason": "Final synthesis of recorded Body/Personality/Lifestyle answers; no new collection is requested.",
+      "cues": [
+        "This is your final synthesis before we build your Blueprint."
+      ]
+    },
+    {
+      "page": 57,
+      "collections": [],
+      "reason": "Write the clearest brief from prior discovery; no new visual evidence exercise.",
+      "cues": [
+        "You've done the discovery work."
+      ]
+    },
+    {
+      "page": 58,
+      "collections": [],
+      "reason": "Blueprint section introduction; no gallery task.",
+      "cues": [
+        "PART 5A — BUILD YOUR BLUEPRINT"
+      ]
+    },
+    {
+      "page": 59,
+      "collections": [],
+      "reason": "Record/refine identity and personal definitions from confirmed synthesis; no image set is requested.",
+      "cues": [
+        "Start with the big picture."
+      ]
+    },
+    {
+      "page": 60,
+      "collections": [],
+      "reason": "Carry forward recorded style language. Do not restart discovery or automatically add photo sets.",
+      "cues": [
+        "Transfer what you've discovered in Parts 1, 2, and 4. Do not start the discovery process again."
+      ]
+    },
+    {
+      "page": 61,
+      "collections": [],
+      "reason": "Reuse the completed Part 2 formula. A new-colour check can optionally revisit own-item references under p30, without another gallery by default.",
+      "cues": [
+        "Bring your final Six-Colour Formula from Part 2 here. You are not starting over."
+      ]
+    },
+    {
+      "page": 62,
+      "collections": [
+        "recent"
+      ],
+      "reason": "Recorded signatures are primary; Recent Outfits are optional support if reviewing own recurring details from p31. Do not use Inspiration simply because this reuses Part 2.",
+      "cues": [
+        "Review your discoveries from Part 2 and record the signatures you want to carry forward.",
+        "Think about your recent outfits."
+      ]
+    },
+    {
+      "page": 63,
+      "collections": [],
+      "reason": "Customer creates three outfit directions from existing discoveries; no automatic gallery or new outfit generator is requested.",
+      "cues": [
+        "Your own directions should come from your discoveries."
+      ]
+    },
+    {
+      "page": 64,
+      "collections": [],
+      "reason": "Customer formalises personal rules from discoveries; no whole gallery is requested.",
+      "cues": [
+        "Use your discoveries to create a short list of statements that help you make decisions."
+      ]
+    },
+    {
+      "page": 65,
+      "collections": [],
+      "reason": "Customer-authored permission statements; no image set is requested.",
+      "cues": [
+        "COMPLETE"
+      ]
+    },
+    {
+      "page": 66,
+      "collections": [],
+      "reason": "Evaluate a specific contemplated item against saved Blueprint criteria. No existing Recent/Inspiration collection is prescribed, and no mandatory item upload is added.",
+      "cues": [
+        "Before buying something you like, pause and check it against your actual style."
+      ]
+    },
+    {
+      "page": 67,
+      "collections": [],
+      "reason": "Completed-information Master reference, not another gallery or discovery section.",
+      "cues": [
+        "This is your master reference. Fill it in using the pages you've already completed."
+      ]
+    },
+    {
+      "page": 68,
+      "collections": [],
+      "reason": "One-glance reference and use guidance, not a new image exercise.",
+      "cues": [
+        "This is the page to save, screenshot, print, or keep on your phone."
+      ]
+    }
+  ]
+}
