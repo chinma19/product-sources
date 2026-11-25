@@ -47,4 +47,15 @@ In the private preview, open the independent Style Compass, select one decision,
 
 Target: https://inherfashion-integration-review.fabulousloon.chatgpt.site
 
-Only the existing integration Site `appgprj_6b057ae4ed348191af2e0da0149f781d` is authorized for this update. The original version 4 Site must remain unchanged. Publication result and preservation checks will be recorded after the native deployment completes.
+Native publication succeeded for the existing integration Site `appgprj_6b057ae4ed348191af2e0da0149f781d`, now **version 2**.
+
+- Application source commit: `0f7676455d1f5583deda920ff4fd1c4378557bb9`.
+- Published deployment-source commit: `3b92ceb441f9856c92595a9c2fd4f96149b0974d`.
+- Deployment: `appgdep_6b06a5fff45c8191ba65956f83058372`, status `succeeded`.
+- Worker SHA-256: `5d1d94e12e338ac3d2b5bbbb598254d7ab0c7a588295352edb47a80e6f391d61`.
+- The deployed application JS/CSS and runtime sources match the tested application. The Worker bundle differs only in dependency source-path labels from the separate source checkout. The deployment archive's Worker, integration identity and unchanged migrations were verified against that checkout.
+- Original Site remains **version 4**. Both sites retain access-policy revision **1**, one allowed owner account and zero external visitors; their policies matched the pre-publication reads exactly.
+- Read-only before/after comparisons found the integration preview's complete progress and evidence rows unchanged. No customer answer or photograph was created, restored, edited or removed during publication.
+- An unauthenticated request to the updated preview returned **401**.
+
+There are no failing automated tests. The native-browser Compass check above remains manual acceptance work. No final rollout to the original version 4 Site has been authorized or performed.
