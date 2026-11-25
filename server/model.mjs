@@ -91,14 +91,14 @@ export function compassResult(value){
  const total=vals.reduce((a,b)=>a+Number(b),0);
  return {total,band:total>=21?'STRONG YES':total>=17?'LIKELY YES':total>=13?'PAUSE & THINK':total>=5?'PROBABLY NOT WORTH BUYING':'DEFINITELY NOT FOR THIS WARDROBE'};
 }
-export function validateValue(c,v){
+export function validateValue(c,v,{allowLegacySelections=false}={}){
  const str=x=>typeof x==='string'&&x.length<=8000;
  if(['evidence','image-sort','assembly'].includes(c.type))return false;
  if(c.type==='single')return v===''||c.options.includes(v);
  if(c.type==='dictionary')return Array.isArray(v)&&v.length<=20&&v.every(x=>x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).every(k=>['quality','meaning','clothing'].includes(k))&&['quality','meaning','clothing'].every(k=>str(x[k]||'')));
  if(c.type==='candidates')return Array.isArray(v)&&v.length<=100&&v.every(x=>x&&typeof x.term==='string'&&x.term.length<=100&&['accepted','rejected'].includes(x.decision)&&Object.keys(x).every(k=>['term','decision'].includes(k)));
  if(c.type==='text')return str(v);
- if(c.type==='checks')return Array.isArray(v)&&v.length<=c.options.length&&v.every(x=>c.options.includes(x));
+ if(c.type==='checks')return Array.isArray(v)&&v.length<=c.options.length&&v.every(x=>c.options.includes(x))&&(allowLegacySelections||(new Set(v).size===v.length&&(c.selectionMode!=='single'||v.length<=1)));
  if(c.type==='scale')return v===''||(Number.isInteger(v)&&v>=c.min&&v<=c.max);
  if(c.type==='list')return Array.isArray(v)&&v.length===c.count&&v.every(str);
  if(!v||typeof v!=='object'||Array.isArray(v))return false;
@@ -108,6 +108,14 @@ export function validateValue(c,v){
  if(c.type==='table')return Object.entries(v).every(([k,x])=>{const [r,col]=k.split('::');return c.rows.includes(r)&&c.columns.includes(col)&&str(x)});
  if(c.type==='patterns'||c.type==='outfits')return Object.entries(v).every(([k,x])=>{const [n,field]=k.split('::');return Number(n)>=1&&Number(n)<=c.count&&(c.type==='patterns'?['Pattern','Evidence','Meaning']:['BASE','SHAPE','BALANCE','FINISH','Why this feels like me']).includes(field)&&str(x)});
  return false;
+}
+// Restoration is explicit: keep older valid arrays intact until the customer chooses a replacement.
+// This marker belongs to a patch, never the saved answer schema or the resolved customer response.
+const legacySelectionConflict=(c,value)=>c?.type==='checks'&&validateValue(c,value,{allowLegacySelections:true})&&!validateValue(c,value);
+export function selectionRestorePatch(patch){
+ const next={...patch},ids=Object.entries(patch.answers||{}).filter(([id,value])=>legacySelectionConflict(controls.get(id),value)).map(([id])=>id);
+ if(ids.length)next.restoreSelectionConflicts=ids;else delete next.restoreSelectionConflicts;
+ return next;
 }
 function boundedJSON(value,depth=0){
  if(depth>7)return false;if(value===null||typeof value==='boolean')return true;if(typeof value==='number')return Number.isFinite(value);if(typeof value==='string')return value.length<=8000;
@@ -134,7 +142,9 @@ export function validateBindingState(bindings,answers){
 }
 export function validatePatch(body){
  if(!body||!Number.isInteger(body.baseRevision)||body.baseRevision<0)throw new Error('A valid saved revision is required.');
- if(body.answers){if(typeof body.answers!=='object'||Array.isArray(body.answers))throw new Error('Answers must be an object.');for(const [k,v]of Object.entries(body.answers)){if(!controls.has(k)||!validateValue(controls.get(k),v))throw new Error('Invalid response for '+k);}}
+ const restored=body.restoreSelectionConflicts===undefined?[]:body.restoreSelectionConflicts;
+ if(body.restoreSelectionConflicts!==undefined&&(!Array.isArray(restored)||restored.length>controls.size||new Set(restored).size!==restored.length||!restored.every(id=>typeof id==='string'&&Object.hasOwn(body.answers||{},id)&&legacySelectionConflict(controls.get(id),body.answers[id]))))throw new Error('Invalid restored selection conflicts.');
+ if(body.answers){if(typeof body.answers!=='object'||Array.isArray(body.answers))throw new Error('Answers must be an object.');for(const [k,v]of Object.entries(body.answers)){if(!controls.has(k)||!validateValue(controls.get(k),v,{allowLegacySelections:restored.includes(k)}))throw new Error('Invalid response for '+k);}}
  if(body.linkFields!==undefined&&(!Array.isArray(body.linkFields)||body.linkFields.length>200||!body.linkFields.every(id=>controls.has(id)&&getSourceIds(id).length&&id!=='style.brief')))throw new Error('Choose a valid earlier-answer link.');
  if(body.resetCells!==undefined){if(!body.resetCells||typeof body.resetCells!=='object'||Array.isArray(body.resetCells))throw new Error('Invalid cell links.');for(const [id,cells]of Object.entries(body.resetCells)){const valid=tableCells(controls.get(id));if(!valid.length||!getSourceIds(id).length||!Array.isArray(cells)||cells.length>valid.length||!cells.every(cell=>valid.includes(cell)))throw new Error('Invalid linked cell for '+id);}}
  if(body.confirmFields!==undefined&&(!Array.isArray(body.confirmFields)||body.confirmFields.length>30||!body.confirmFields.every(x=>x&&controls.has(x.id)&&Array.isArray(x.sourceIds)&&x.sourceIds.length<=100&&new Set(x.sourceIds).size===x.sourceIds.length&&x.sourceIds.every(id=>controls.has(id)&&id!==x.id)&&Object.keys(x).every(k=>['id','sourceIds','sourceSnapshot','confirmedAt'].includes(k))&&(x.sourceSnapshot===undefined||validSnapshot(x.sourceSnapshot,x.id,x.sourceIds))&&(x.confirmedAt===undefined||validConfirmedAt(x.confirmedAt)))))throw new Error('Invalid confirmation sources.');

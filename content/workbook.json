@@ -1798,7 +1798,8 @@
             "3",
             "4",
             "It changes depending on the occasion"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "p26.choices2",
@@ -2784,7 +2785,8 @@
             "Yes",
             "Mostly",
             "Not really"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "life.map.1",
@@ -3434,7 +3436,8 @@
             "Mostly yes",
             "Somewhat",
             "Not really"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "dots.body",
@@ -3753,7 +3756,8 @@
             "Yes",
             "No",
             "Sometimes"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "qualities.core",
@@ -3957,7 +3961,8 @@
             "Yes",
             "Somewhat",
             "No"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "p52.choices2",
@@ -3966,7 +3971,8 @@
           "options": [
             "Sometimes",
             "Not really"
-          ]
+          ],
+          "selectionMode": "single"
         },
         {
           "id": "like.me.1",

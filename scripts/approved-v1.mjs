@@ -34,5 +34,14 @@ const legacyDecision=page(66).controls.filter(c=>c.type==='checks');w.legacyCont
 w.legacyControls=[...new Map(w.legacyControls.map(c=>[c.id,c])).values()];
 if(!w.legacyControls.some(c=>c.id==='brief.pending'))w.legacyControls.push({id:'brief.pending',type:'text',label:'Unconfirmed draft',legacy:true,internal:true});
 w.optionalPolicy='v1-only additions are optional. No extra wardrobe audit, AI identity, or compulsory new journaling.';
+// Owner-approved selection cardinality: preserve IDs, wording, options and array storage.
+// The six contextual review groups intentionally remain multi-select.
+const singleSelectionIds=new Set(['p26.choices1','p38.choices1','p45.choices1','p49.choices1','p52.choices1','p52.choices2']);
+let singleSelectionCount=0;
+for(const p of w.pages)for(const c of p.controls)if(singleSelectionIds.has(c.id)){
+ if(c.type!=='checks')throw Error('Approved selection metadata no longer matches '+c.id);
+ c.selectionMode='single';singleSelectionCount++;
+}
+if(singleSelectionCount!==singleSelectionIds.size)throw Error('Approved single-selection controls are missing or duplicated.');
 await writeFile(path,JSON.stringify(w,null,2)+'\n');
 console.log('Applied approved R1–R10 amendments; original source extraction retained.');

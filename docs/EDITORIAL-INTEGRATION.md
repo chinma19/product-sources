@@ -1,5 +1,7 @@
 # Editorial integration — acceptance report
 
+This report describes the initial editorial integration. The later owner-approved selection corrections are recorded in [SELECTION-CONTROL-CORRECTIONS.md](SELECTION-CONTROL-CORRECTIONS.md).
+
 Branch: `codex/editorial-integration`, based on version 4 and the approved editorial prototype at `4fc6a0b`. This branch is for owner-private acceptance testing. The current version 4 Site is not replaced or updated.
 
 ## Implementation
