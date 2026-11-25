@@ -1,0 +1,4644 @@
+{
+  "version": 1,
+  "status": "READ-ONLY AUDIT; corrections proposed, not implemented or approved",
+  "authority": [
+    "Draft3 manuscript source text",
+    "approved R1–R10 resolutions",
+    "current content/workbook.json control inventory"
+  ],
+  "scope": "All 68 manuscript steps and all 372 page-local control placements. Source/configuration audit; no customer responses are included in this inventory.",
+  "fingerprints": {
+    "workbookSHA256": "9884c28d991c2e53c6698309e7d12e69462f527829758262b04e875f3e197229",
+    "manuscriptExtractionSHA256": "d6e0ce3d28d09cfa567bc5ee9db25760938f517ec02b134a00defb35f5bae342"
+  },
+  "totals": {
+    "pages": 68,
+    "pageLocalControls": 372,
+    "uniqueControlIds": 342,
+    "pageLocalControlTypes": {
+      "assembly": 1,
+      "candidates": 1,
+      "checks": 38,
+      "colours": 4,
+      "compass": 1,
+      "dictionary": 1,
+      "evidence": 2,
+      "image-sort": 1,
+      "list": 27,
+      "matrix": 10,
+      "outfits": 2,
+      "patterns": 2,
+      "scale": 12,
+      "single": 1,
+      "table": 6,
+      "text": 262,
+      "time": 1
+    },
+    "uniqueControlTypes": {
+      "assembly": 1,
+      "candidates": 1,
+      "checks": 38,
+      "colours": 1,
+      "compass": 1,
+      "dictionary": 1,
+      "evidence": 1,
+      "image-sort": 1,
+      "list": 17,
+      "matrix": 10,
+      "outfits": 1,
+      "patterns": 2,
+      "scale": 12,
+      "single": 1,
+      "table": 5,
+      "text": 248,
+      "time": 1
+    },
+    "strictCategoricalControlTypes": [
+      "checks",
+      "matrix",
+      "scale",
+      "single"
+    ],
+    "strictCategoricalControlsIncludingRetired": 61,
+    "strictCategoricalControlsActive": 60,
+    "categoricalFamiliesIncludingImageSort": 62,
+    "checkboxGroups": 38,
+    "checkboxClassification": {
+      "legitimate-multi": 25,
+      "owner-review-recommend-preserve-multi": 6,
+      "retired-parser-artifact": 1,
+      "proposed-single-answer-correction": 6
+    },
+    "matrixControls": 10,
+    "matrixRowAnswerUnits": 90,
+    "scaleAxes": 12,
+    "singleControls": 1,
+    "staticCategoricalUIAnswerUnitsIncludingRetired": 141,
+    "staticCategoricalUIAnswerUnitsActive": 140,
+    "categoricalFamiliesIncludingImageSortActive": 61
+  },
+  "countDefinitions": [
+    "Categorical control means one control record of type checks/matrix/scale/single; this is61, not83.",
+    "Per-row UI answer units count every matrix row independently:38+90+12+1=141, or140 after removing the retired active question.",
+    "The one image-sort family adds a variable number of independent per-image category decisions; it is not one decision for the entire customer.",
+    "Compass adds five numeric 0–5 score fields; time maps, free-text lists, six-colour roles and pattern/outfit structures are separate numeric/text/output controls, not categorical selection questions.",
+    "Counts exclude legacyControls/internal storage-only fields; p23.choices6 remains included because it is still in page.controls and has a retained legacy anchor.",
+    "No83-control metric is supported by the declared current control types. Do not report83 without defining a different population."
+  ],
+  "proposedSingleCorrections": [
+    "p26.choices1",
+    "p38.choices1",
+    "p45.choices1",
+    "p49.choices1",
+    "p52.choices1",
+    "p52.choices2"
+  ],
+  "ownerReviewRecommendedMulti": [
+    "colour.practical",
+    "colour.result",
+    "p19.choices2",
+    "p26.choices2",
+    "p40.choices3",
+    "p40.choices4"
+  ],
+  "retiredArtifacts": [
+    "p23.choices6"
+  ],
+  "categoricalInventory": [
+    {
+      "page": 6,
+      "title": "Before You Begin",
+      "id": "p6.choices1",
+      "type": "checks",
+      "question": "PREPARATION CHECKLIST",
+      "options": [
+        "Recent outfit photos ready",
+        "Inspiration set ready",
+        "Enough time to think without rushing",
+        "Willingness to answer honestly",
+        "No need to get every answer “right”"
+      ],
+      "literalSourceQuotes": [
+        "PREPARATION CHECKLIST",
+        "☐ Recent outfit photos ready",
+        "☐ Willingness to answer honestly"
+      ],
+      "sourceLocation": "Draft3 manuscript page 6",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 5,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 5,
+      "approvalRequired": false,
+      "reason": "Independent preparation/readiness items; checking one does not invalidate another. Do not turn readiness into an all-items gate."
+    },
+    {
+      "page": 8,
+      "title": "Fit",
+      "id": "fit.ratings",
+      "type": "matrix",
+      "question": "Now mark how you feel about each fit:",
+      "options": [
+        "Love it",
+        "Like it",
+        "Neutral",
+        "Don’t like it",
+        "Actively avoid it"
+      ],
+      "rows": [
+        "Very fitted",
+        "Body-skimming",
+        "Relaxed",
+        "Loose",
+        "Oversized"
+      ],
+      "literalSourceQuotes": [
+        "For each outfit, identify the dominant fit.",
+        "Now mark how you feel about each fit:"
+      ],
+      "sourceLocation": "Draft3 manuscript page 8",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 5
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 9,
+      "title": "Fit Observation",
+      "id": "p9.choices1",
+      "type": "checks",
+      "question": "I feel most comfortable when my clothes are:",
+      "options": [
+        "Close to my body",
+        "Gently following my body",
+        "Relaxed with some room",
+        "Loose and easy",
+        "Oversized",
+        "Different depending on the garment"
+      ],
+      "literalSourceQuotes": [
+        "I feel most comfortable when my clothes are:",
+        "☐ Different depending on the garment",
+        "Your goal is to understand the range of fit that feels natural to you.",
+        "I tend to dislike clothes that:"
+      ],
+      "sourceLocation": "Draft3 manuscript page 9",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "The source explicitly describes a range and differences by garment. Multiple fit preferences are legitimate; Different depending on the garment need not erase concrete preferences."
+    },
+    {
+      "page": 9,
+      "title": "Fit Observation",
+      "id": "p9.choices2",
+      "type": "checks",
+      "question": "I tend to dislike clothes that:",
+      "options": [
+        "Feel too tight",
+        "Feel too loose",
+        "Emphasise my body more than I want",
+        "Hide too much of my shape",
+        "Require constant adjusting",
+        "Feel restrictive",
+        "Make me feel swallowed by the fabric",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "I feel most comfortable when my clothes are:",
+        "☐ Different depending on the garment",
+        "Your goal is to understand the range of fit that feels natural to you.",
+        "I tend to dislike clothes that:"
+      ],
+      "sourceLocation": "Draft3 manuscript page 9",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 8,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 8,
+      "approvalRequired": false,
+      "reason": "Several discomforts can coexist, including too tight and too loose in different garments or areas.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 11,
+      "title": "Silhouette",
+      "id": "silhouette.ratings",
+      "type": "matrix",
+      "question": "For each silhouette, mark:",
+      "options": [
+        "Yes — I love this",
+        "Maybe — I like something about it",
+        "No — not for me"
+      ],
+      "rows": [
+        "Straight",
+        "Defined",
+        "Relaxed",
+        "Oversized",
+        "Fitted + relaxed",
+        "Cropped + long",
+        "Long + streamlined"
+      ],
+      "literalSourceQuotes": [
+        "For each silhouette, mark:",
+        "♥ YES — I love this",
+        "~ MAYBE — I like something about it",
+        "× NO — Not for me"
+      ],
+      "sourceLocation": "Draft3 manuscript page 11",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 7
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 12,
+      "title": "Silhouette Comparison",
+      "id": "p12.choices1",
+      "type": "checks",
+      "question": "Which descriptions appear most often?",
+      "options": [
+        "Defined",
+        "Relaxed",
+        "Oversized",
+        "Straight",
+        "Fitted + relaxed",
+        "Cropped + long",
+        "Long + streamlined",
+        "A mixture"
+      ],
+      "literalSourceQuotes": [
+        "Look at the silhouettes you marked YES.",
+        "Which descriptions appear most often?",
+        "☐ A mixture",
+        "Do you repeatedly prefer:",
+        "☐ A combination of fitted and relaxed"
+      ],
+      "sourceLocation": "Draft3 manuscript page 12",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 8,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 8,
+      "approvalRequired": false,
+      "reason": "Plural descriptions and A mixture expressly allow more than one recurring silhouette direction."
+    },
+    {
+      "page": 12,
+      "title": "Silhouette Comparison",
+      "id": "p12.choices2",
+      "type": "checks",
+      "question": "Do you repeatedly prefer:",
+      "options": [
+        "More structure",
+        "More softness",
+        "More room",
+        "More visible shape",
+        "A combination of fitted and relaxed",
+        "Shorter + longer contrasts",
+        "Clean, streamlined shapes",
+        "Something else: …"
+      ],
+      "literalSourceQuotes": [
+        "Look at the silhouettes you marked YES.",
+        "Which descriptions appear most often?",
+        "☐ A mixture",
+        "Do you repeatedly prefer:",
+        "☐ A combination of fitted and relaxed"
+      ],
+      "sourceLocation": "Draft3 manuscript page 12",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 8,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 8,
+      "approvalRequired": false,
+      "reason": "Recurring physical qualities can combine: structure and softness, room and shape, or different proportions. Source offers a combination option; no pick-one limit.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 13,
+      "title": "Lengths and Proportions",
+      "id": "proportion.ratings",
+      "type": "matrix",
+      "question": "For each combination, mark:",
+      "options": [
+        "Love it",
+        "Like it",
+        "Unsure",
+        "Don’t like it"
+      ],
+      "rows": [
+        "cropped top + high-rise trousers",
+        "hip-length top + trousers",
+        "long top + slimmer bottoms",
+        "oversized top + mini skirt",
+        "short jacket + long skirt",
+        "long cardigan + short dress"
+      ],
+      "literalSourceQuotes": [
+        "For each combination, mark:",
+        "Which combinations make your outfits feel most natural?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 13",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 6
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "id": "p14.choices1",
+      "type": "checks",
+      "question": "TOPS",
+      "options": [
+        "Cropped / waist",
+        "At the hip",
+        "Below the hip",
+        "Very long"
+      ],
+      "literalSourceQuotes": [
+        "Look through your recent outfits and identify the lengths you repeatedly choose.",
+        "You may notice that your preferences aren't consistent across every garment.",
+        "That's completely fine."
+      ],
+      "sourceLocation": "Draft3 manuscript page 14",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 4,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 4,
+      "approvalRequired": false,
+      "reason": "Repeated lengths are plural; source expressly allows inconsistent preferences across garments."
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "id": "p14.choices2",
+      "type": "checks",
+      "question": "BOTTOMS",
+      "options": [
+        "Mini",
+        "Above the knee",
+        "Knee",
+        "Midi",
+        "Ankle",
+        "Full length"
+      ],
+      "literalSourceQuotes": [
+        "Look through your recent outfits and identify the lengths you repeatedly choose.",
+        "You may notice that your preferences aren't consistent across every garment.",
+        "That's completely fine."
+      ],
+      "sourceLocation": "Draft3 manuscript page 14",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Repeated lengths are plural; a customer may enjoy mini, midi, full-length etc. in different garments/contexts."
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "id": "p14.choices3",
+      "type": "checks",
+      "question": "SLEEVES",
+      "options": [
+        "Sleeveless",
+        "Short",
+        "Elbow",
+        "Three-quarter",
+        "Long"
+      ],
+      "literalSourceQuotes": [
+        "Look through your recent outfits and identify the lengths you repeatedly choose.",
+        "You may notice that your preferences aren't consistent across every garment.",
+        "That's completely fine."
+      ],
+      "sourceLocation": "Draft3 manuscript page 14",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 5,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 5,
+      "approvalRequired": false,
+      "reason": "Sleeve lengths can vary across garments, weather and occasions; source expressly accepts varied garment preferences."
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "id": "p14.choices4",
+      "type": "checks",
+      "question": "DRESSES / SKIRTS",
+      "options": [
+        "Mini",
+        "Knee",
+        "Midi",
+        "Maxi"
+      ],
+      "literalSourceQuotes": [
+        "Look through your recent outfits and identify the lengths you repeatedly choose.",
+        "You may notice that your preferences aren't consistent across every garment.",
+        "That's completely fine."
+      ],
+      "sourceLocation": "Draft3 manuscript page 14",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 4,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 4,
+      "approvalRequired": false,
+      "reason": "Dress/skirt lengths can vary; the approved R2 amendment supplies all four choices without imposing a one-length identity.",
+      "contentCaution": "The Mini/Knee/Midi/Maxi expansion is the explicitly approved R2 amendment; original Draft3 lists only Maxi.",
+      "wordingNotes": [
+        "Original Draft3 p14 shows only Maxi under Dresses/Skirts. Current Mini/Knee/Midi/Maxi is the expressly approved R2 amendment, not an unauthorised change."
+      ]
+    },
+    {
+      "page": 15,
+      "title": "Necklines and Openings",
+      "id": "neckline.sort",
+      "type": "matrix",
+      "question": "Put each into one of four groups:",
+      "options": [
+        "I repeatedly choose this",
+        "I happily wear this",
+        "I admire this on other people",
+        "I generally avoid this"
+      ],
+      "rows": [
+        "Crew neck",
+        "High neck",
+        "Turtleneck",
+        "V-neck",
+        "Scoop",
+        "Sweetheart",
+        "Square",
+        "Boat",
+        "Halter",
+        "Off-shoulder",
+        "Strapless",
+        "Open button-down"
+      ],
+      "literalSourceQuotes": [
+        "Put each into one of four groups:"
+      ],
+      "sourceLocation": "Draft3 manuscript page 15",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 12
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 16,
+      "title": "Neckline Preferences",
+      "id": "p16.choices1",
+      "type": "checks",
+      "question": "Do you tend to prefer:",
+      "options": [
+        "More open necklines",
+        "Higher / more covered necklines",
+        "Showing shoulders",
+        "Framing the collarbone",
+        "Showing more chest",
+        "Minimal neckline detail",
+        "Structured/angular openings",
+        "Soft/curved openings",
+        "A mixture"
+      ],
+      "literalSourceQuotes": [
+        "Do you tend to prefer:",
+        "☐ More open necklines",
+        "☐ Higher / more covered necklines",
+        "☐ A mixture"
+      ],
+      "sourceLocation": "Draft3 manuscript page 16",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 9,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 9,
+      "approvalRequired": false,
+      "reason": "Source explicitly offers A mixture and discusses different neckline attributes. Opposite-sounding openness options need not be globally exclusive."
+    },
+    {
+      "page": 17,
+      "title": "Skin Exposure",
+      "id": "exposure.scale",
+      "type": "matrix",
+      "question": "Look at these areas",
+      "options": [
+        "Covered",
+        "Slightly visible",
+        "Moderate",
+        "Noticeable"
+      ],
+      "rows": [
+        "Arms",
+        "Shoulders",
+        "Legs",
+        "Cleavage",
+        "Back",
+        "Midriff",
+        "Thighs"
+      ],
+      "literalSourceQuotes": [
+        "The goal is to identify your own boundary.",
+        "Covered → Slightly visible → Moderate → Noticeable"
+      ],
+      "sourceLocation": "Draft3 manuscript page 17",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 7
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 18,
+      "title": "Skin Exposure: Choose",
+      "id": "exposure.preferences",
+      "type": "matrix",
+      "question": "For each area:",
+      "options": [
+        "I like showing it",
+        "I’m comfortable showing it",
+        "Sometimes",
+        "I generally keep it covered"
+      ],
+      "rows": [
+        "Arms",
+        "Shoulders",
+        "Legs",
+        "Cleavage",
+        "Back",
+        "Midriff",
+        "Thighs"
+      ],
+      "literalSourceQuotes": [
+        "For each area:",
+        "♥ I like showing it",
+        "✓ I'm comfortable showing it",
+        "~ Sometimes",
+        "× I generally keep it covered"
+      ],
+      "sourceLocation": "Draft3 manuscript page 18",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 7
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 19,
+      "title": "Comfort and Movement",
+      "id": "p19.choices1",
+      "type": "checks",
+      "question": "I dislike clothes that:",
+      "options": [
+        "Feel too tight",
+        "Feel too loose",
+        "Ride up",
+        "Fall down",
+        "Restrict my arms",
+        "Restrict my legs",
+        "Dig into my waist",
+        "Feel uncomfortable around my chest",
+        "Require constant adjusting",
+        "Scratch or irritate my skin",
+        "Feel too hot",
+        "Feel too heavy",
+        "Make sitting uncomfortable",
+        "Make walking uncomfortable",
+        "Make movement difficult",
+        "Make me worry about wardrobe malfunctions",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "CHECK ANY THAT APPLY",
+        "I dislike clothes that:",
+        "I prefer shoes that are:",
+        "☐ Depends on the occasion"
+      ],
+      "sourceLocation": "Draft3 manuscript page 19",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 17,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 17,
+      "approvalRequired": false,
+      "reason": "CHECK ANY THAT APPLY is explicit; multiple clothing problems can coexist.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 19,
+      "title": "Comfort and Movement",
+      "id": "p19.choices2",
+      "type": "checks",
+      "question": "I prefer shoes that are:",
+      "options": [
+        "Very comfortable",
+        "Comfortable enough for a few hours",
+        "Worth some discomfort for the right outfit",
+        "Mostly practical",
+        "Mostly aesthetic",
+        "Depends on the occasion"
+      ],
+      "literalSourceQuotes": [
+        "I prefer shoes that are:",
+        "☐ Depends on the occasion"
+      ],
+      "sourceLocation": "Draft3 manuscript page 19",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": true,
+      "reason": "Overlapping comfort, practical/aesthetic and occasion dimensions. Source offers Depends on the occasion; retain contextual multi-select unless owner explicitly chooses a different primary-answer interpretation."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices1",
+      "type": "checks",
+      "question": "SILHOUETTE",
+      "options": [
+        "Fitted",
+        "Relaxed",
+        "Oversized",
+        "Structured",
+        "Flowing",
+        "Simple"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Observes repeated features across 10–15 images; several shapes can coexist across the collection or within an outfit."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices2",
+      "type": "checks",
+      "question": "COLOUR",
+      "options": [
+        "Monochrome",
+        "Neutrals",
+        "Bright colour",
+        "Muted colour",
+        "Strong contrast",
+        "Unexpected colour combination"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Several colour behaviours can appear across inspiration. Monochrome, neutrals and contrast are not exclusive across all images."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices3",
+      "type": "checks",
+      "question": "TEXTURE",
+      "options": [
+        "Denim",
+        "Leather",
+        "Knit",
+        "Satin",
+        "Linen",
+        "Lace",
+        "Crisp cotton",
+        "Soft texture",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 9,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 9,
+      "approvalRequired": false,
+      "reason": "Several textures can appear in the collection or one outfit; no numerical selection cap is specified.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices4",
+      "type": "checks",
+      "question": "DETAILS",
+      "options": [
+        "Jewellery",
+        "Buttons",
+        "Belts",
+        "Shoes",
+        "Bags",
+        "Layering",
+        "Sleeves",
+        "Prints",
+        "Interesting neckline",
+        "Styling detail"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 10,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 10,
+      "approvalRequired": false,
+      "reason": "Several details can attract attention simultaneously; no numerical cap is specified."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices5",
+      "type": "checks",
+      "question": "OVERALL FEELING",
+      "options": [
+        "Feminine",
+        "Polished",
+        "Sexy",
+        "Playful",
+        "Sophisticated",
+        "Cool",
+        "Understated",
+        "Dramatic",
+        "Effortless",
+        "Edgy"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 10,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 10,
+      "approvalRequired": false,
+      "reason": "Visual feelings can combine. The source never requires a single aesthetic/personality result."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "p23.choices6",
+      "type": "checks",
+      "question": "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+      "options": [
+        "|",
+        "|",
+        ""
+      ],
+      "literalSourceQuotes": [
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "retired-parser-artifact",
+      "recommendation": "No active choice question. Keep stored ID/value/backup support and optional read-only legacy review; the semantic inspiration.want matrix already covers the source table.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 0,
+      "approvalRequired": false,
+      "reason": "The options are table separators/empty fragments, not style answers. Proper inspiration.want already represents the three meaningful preference columns. The active presentation already retires this artifact; keep old storage/backup values without reactivating it."
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "id": "inspiration.want",
+      "type": "matrix",
+      "question": "Which of these do I actually want in my own wardrobe?",
+      "options": [
+        "I want this often",
+        "I want this sometimes",
+        "I like seeing it, but not wearing it"
+      ],
+      "rows": [
+        "Visual quality 1",
+        "Visual quality 2",
+        "Visual quality 3",
+        "Visual quality 4",
+        "Visual quality 5"
+      ],
+      "literalSourceQuotes": [
+        "For each one, ask:",
+        "What made me stop?",
+        "Which five visual qualities appear repeatedly across your inspiration?",
+        "Which of these do I actually want in my own wardrobe?",
+        "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+        "__________| ☐| ☐| ☐"
+      ],
+      "sourceLocation": "Draft3 manuscript page 23",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 5
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.1",
+      "type": "scale",
+      "question": "Simple — Detailed",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Simple",
+        "Detailed"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.2",
+      "type": "scale",
+      "question": "Understated — Noticeable",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Understated",
+        "Noticeable"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.3",
+      "type": "scale",
+      "question": "Soft — Structured",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Soft",
+        "Structured"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.4",
+      "type": "scale",
+      "question": "Feminine — Androgynous",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Feminine",
+        "Androgynous"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.5",
+      "type": "scale",
+      "question": "Classic — Trend-forward",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Classic",
+        "Trend-forward"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.6",
+      "type": "scale",
+      "question": "Relaxed — Polished",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Relaxed",
+        "Polished"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.7",
+      "type": "scale",
+      "question": "Minimal — Expressive",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Minimal",
+        "Expressive"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.8",
+      "type": "scale",
+      "question": "Subtle — Dramatic",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Subtle",
+        "Dramatic"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "id": "dials.9",
+      "type": "scale",
+      "question": "Romantic — Edgy",
+      "options": [],
+      "literalSourceQuotes": [
+        "You don't have to choose an extreme.",
+        "Your answers are describing a range, not assigning you a type."
+      ],
+      "sourceLocation": "Draft3 manuscript page 25",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Romantic",
+        "Edgy"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 26,
+      "title": "Visual Intensity",
+      "id": "p26.choices1",
+      "type": "checks",
+      "question": "MY NATURAL LEVEL",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "It changes depending on the occasion"
+      ],
+      "literalSourceQuotes": [
+        "WHICH FEELS CLOSEST?",
+        "MY NATURAL LEVEL",
+        "☐ It changes depending on the occasion"
+      ],
+      "sourceLocation": "Draft3 manuscript page 26",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 5,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "WHICH FEELS CLOSEST? and MY NATURAL LEVEL describe one overall level (1–4), with a separate It changes depending on the occasion alternative. Current checkboxes permit contradictory simultaneous baseline answers."
+    },
+    {
+      "page": 26,
+      "title": "Visual Intensity",
+      "id": "p26.choices2",
+      "type": "checks",
+      "question": "What is usually the easiest way for you to add interest?",
+      "options": [
+        "Colour",
+        "Jewellery",
+        "Texture",
+        "Shoes",
+        "Bags",
+        "Layering",
+        "Prints",
+        "Silhouette",
+        "Skin exposure",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "What is usually the easiest way for you to add interest?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 26",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 10,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 10,
+      "approvalRequired": true,
+      "reason": "The wording usually the easiest way is singular, but the manuscript prints checkboxes and gives no choose-one instruction. Several methods can be equally easy or context-dependent. Owner should decide whether it means one primary route or all usual routes before cardinality changes.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 27,
+      "title": "Femininity, Polish, and Edge",
+      "id": "balance.femininity",
+      "type": "scale",
+      "question": "Femininity",
+      "options": [],
+      "literalSourceQuotes": [
+        "Your style can hold combinations that seem contradictory.",
+        "Let's see where you naturally sit."
+      ],
+      "sourceLocation": "Draft3 manuscript page 27",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Soft / Feminine",
+        "Strong / Structured"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 27,
+      "title": "Femininity, Polish, and Edge",
+      "id": "balance.polish",
+      "type": "scale",
+      "question": "Polish",
+      "options": [],
+      "literalSourceQuotes": [
+        "Your style can hold combinations that seem contradictory.",
+        "Let's see where you naturally sit."
+      ],
+      "sourceLocation": "Draft3 manuscript page 27",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Effortless / Relaxed",
+        "Highly Polished"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 27,
+      "title": "Femininity, Polish, and Edge",
+      "id": "balance.edge",
+      "type": "scale",
+      "question": "Edge",
+      "options": [],
+      "literalSourceQuotes": [
+        "Your style can hold combinations that seem contradictory.",
+        "Let's see where you naturally sit."
+      ],
+      "sourceLocation": "Draft3 manuscript page 27",
+      "classification": "single-position-per-axis-correct",
+      "recommendation": "Keep one position on each independent axis. No fixed style identity or percentage interpretation.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "axis"
+      },
+      "positions": [
+        0,
+        17,
+        33,
+        50,
+        67,
+        83,
+        100
+      ],
+      "endpoints": [
+        "Classic / Subtle",
+        "Strongly Edgy"
+      ],
+      "approvalRequired": false,
+      "wordingNotes": [
+        "Seven numbered UI positions and 0–100 storage are an approved technical adaptation; the Draft3 source shows continuous printed lines and named endpoints rather than a numeric style percentage."
+      ]
+    },
+    {
+      "page": 30,
+      "title": "Build Your Six-Colour Formula",
+      "id": "colour.practical",
+      "type": "checks",
+      "question": "Is this colour:",
+      "options": [
+        "Easy to integrate",
+        "Usable with some effort",
+        "Mostly an accent",
+        "Beautiful but unnecessary for my wardrobe"
+      ],
+      "literalSourceQuotes": [
+        "Is this colour:",
+        "☐ Easy to integrate",
+        "☐ Mostly an accent"
+      ],
+      "sourceLocation": "Draft3 manuscript page 30",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 4,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 4,
+      "approvalRequired": true,
+      "reason": "The candidate colour is singular, but the listed properties cross dimensions: a colour may be Easy to integrate and Mostly an accent. The manuscript uses checkboxes, not an explicit best-result instruction. Do not assume a single outcome or invent exclusivity groups without approval."
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "id": "p31.choices1",
+      "type": "checks",
+      "question": "JEWELLERY",
+      "options": [
+        "Earrings",
+        "Rings",
+        "Bracelet",
+        "Watch",
+        "Necklace",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Think about your recent outfits.",
+        "Which things appear again and again?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 31",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Recurring jewellery signatures can include several pieces and Other; no pick limit is stated here.",
+      "wordingNotes": [
+        "Printed free-entry underscores in Other/Something else are displayed as an ellipsis. The checkbox renderer currently offers no dedicated Other text input; nearby notes are not a structured paired response."
+      ]
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "id": "p31.choices2",
+      "type": "checks",
+      "question": "ACCESSORIES",
+      "options": [
+        "Belt",
+        "Bag",
+        "Sunglasses",
+        "Hair accessory"
+      ],
+      "literalSourceQuotes": [
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Think about your recent outfits.",
+        "Which things appear again and again?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 31",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 4,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 4,
+      "approvalRequired": false,
+      "reason": "Several accessories may recur; top-three prioritisation occurs later on page32."
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "id": "p31.choices3",
+      "type": "checks",
+      "question": "SHOES",
+      "options": [
+        "Sneakers",
+        "Flats",
+        "Boots",
+        "Heels",
+        "Sandals"
+      ],
+      "literalSourceQuotes": [
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Think about your recent outfits.",
+        "Which things appear again and again?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 31",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 5,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 5,
+      "approvalRequired": false,
+      "reason": "Several shoe types may recur in different outfits/contexts; no single-shoe identity is requested."
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "id": "p31.choices4",
+      "type": "checks",
+      "question": "STYLING DETAILS",
+      "options": [
+        "Rolled sleeves",
+        "Tucked tops",
+        "Exposed ankles",
+        "Layering",
+        "Open shirt",
+        "Sleeves pushed up"
+      ],
+      "literalSourceQuotes": [
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Think about your recent outfits.",
+        "Which things appear again and again?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 31",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Styling details can coexist in one outfit or recur across different outfits."
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "id": "p31.choices5",
+      "type": "checks",
+      "question": "CLOTHING DETAILS",
+      "options": [
+        "Particular necklines",
+        "Certain colours",
+        "Particular proportions",
+        "Certain fabrics",
+        "Prints",
+        "Short skirts/shorts",
+        "Long dresses"
+      ],
+      "literalSourceQuotes": [
+        "Style signatures are the small things that repeatedly appear in your outfits.",
+        "Think about your recent outfits.",
+        "Which things appear again and again?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 31",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 7,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 7,
+      "approvalRequired": false,
+      "reason": "Several recurring clothing details may be signatures. This is collection, before later prioritisation."
+    },
+    {
+      "page": 36,
+      "title": "Where Do You Actually Go?",
+      "id": "p36.choices1",
+      "type": "checks",
+      "question": "SELECT ALL THAT APPLY",
+      "options": [
+        "Home",
+        "Errands",
+        "Casual outings",
+        "Work",
+        "School",
+        "Business meetings",
+        "Social outings",
+        "Dates",
+        "Church / religious activities",
+        "Family gatherings",
+        "Dinners",
+        "Parties",
+        "Weddings / formal occasions",
+        "Travel",
+        "Exercise",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "Which of these situations do you actually dress for?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 36",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 16,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 16,
+      "approvalRequired": false,
+      "reason": "Draft 3 p36 explicitly says SELECT ALL THAT APPLY."
+    },
+    {
+      "page": 36,
+      "title": "Where Do You Actually Go?",
+      "id": "life.frequency",
+      "type": "matrix",
+      "question": "Now mark how often each one actually occurs.",
+      "options": [
+        "Very frequent",
+        "Frequent",
+        "Occasional",
+        "Rare",
+        "Almost never"
+      ],
+      "rows": [
+        "Home",
+        "Errands",
+        "Casual outings",
+        "Work",
+        "School",
+        "Business meetings",
+        "Social outings",
+        "Dates",
+        "Church / religious activities",
+        "Family gatherings",
+        "Dinners",
+        "Parties",
+        "Weddings / formal occasions",
+        "Travel",
+        "Exercise",
+        "Other"
+      ],
+      "literalSourceQuotes": [
+        "Now mark how often each one actually occurs."
+      ],
+      "sourceLocation": "Draft3 manuscript page 36",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 16
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 38,
+      "title": "Read Your Time Map",
+      "id": "p38.choices1",
+      "type": "checks",
+      "question": "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+      "options": [
+        "Yes",
+        "Mostly",
+        "Not really"
+      ],
+      "literalSourceQuotes": [
+        "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+        "☐ Yes",
+        "☐ Mostly",
+        "☐ Not really"
+      ],
+      "sourceLocation": "Draft3 manuscript page 38",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "One evaluative question with mutually exclusive Yes / Mostly / Not really outcomes (Draft 3 p38)."
+    },
+    {
+      "page": 39,
+      "title": "What Do You Actually Need to Get Dressed For?",
+      "id": "life.needs",
+      "type": "matrix",
+      "question": "Now sort your needs",
+      "options": [
+        "Must have",
+        "Nice to have",
+        "Doesn’t matter much"
+      ],
+      "rows": [
+        "Comfort",
+        "Easy movement",
+        "Looking appropriate",
+        "Easy transitions",
+        "Easy styling",
+        "Weather suitability",
+        "Looking polished",
+        "Feeling relaxed",
+        "Being able to sit/walk comfortably",
+        "Other"
+      ],
+      "literalSourceQuotes": [
+        "For each quality, decide whether it is:"
+      ],
+      "sourceLocation": "Draft3 manuscript page 39",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 10
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "id": "p40.choices1",
+      "type": "checks",
+      "question": "WEATHER",
+      "options": [
+        "Heat",
+        "Cold",
+        "Rain",
+        "Humidity",
+        "Changing temperatures",
+        "Strong sun",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "WEATHER"
+      ],
+      "sourceLocation": "Draft3 manuscript page 40",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 7,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 7,
+      "approvalRequired": false,
+      "reason": "Daily environmental factors may coexist across situations. No choose-one instruction. Heat/cold/changing temperatures or sitting/walking/transport modes can all occur within the same real life."
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "id": "p40.choices2",
+      "type": "checks",
+      "question": "MOVEMENT",
+      "options": [
+        "Mostly sitting",
+        "Walking",
+        "Standing",
+        "Frequent movement",
+        "Driving",
+        "Public transportation"
+      ],
+      "literalSourceQuotes": [
+        "MOVEMENT"
+      ],
+      "sourceLocation": "Draft3 manuscript page 40",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": false,
+      "reason": "Daily environmental factors may coexist across situations. No choose-one instruction. Heat/cold/changing temperatures or sitting/walking/transport modes can all occur within the same real life."
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "id": "p40.choices3",
+      "type": "checks",
+      "question": "ENVIRONMENT",
+      "options": [
+        "Mostly indoors",
+        "Mostly outdoors",
+        "Mixed indoor/outdoor",
+        "Air-conditioned spaces",
+        "Dust / messy environments",
+        "Formal environments",
+        "Casual environments"
+      ],
+      "literalSourceQuotes": [
+        "ENVIRONMENT",
+        "☐ Mixed indoor/outdoor",
+        "☐ Air-conditioned spaces"
+      ],
+      "sourceLocation": "Draft3 manuscript page 40",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 7,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 7,
+      "approvalRequired": true,
+      "reason": "Daily environmental factors may coexist across situations. No choose-one instruction. Mostly indoors / Mostly outdoors / Mixed indoor-outdoor are overlapping headline qualifiers alongside independent environmental factors."
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "id": "p40.choices4",
+      "type": "checks",
+      "question": "DRESS EXPECTATIONS",
+      "options": [
+        "Mostly casual",
+        "Smart casual",
+        "Professional",
+        "Modest / conservative",
+        "Highly variable",
+        "Formal"
+      ],
+      "literalSourceQuotes": [
+        "DRESS EXPECTATIONS",
+        "☐ Highly variable"
+      ],
+      "sourceLocation": "Draft3 manuscript page 40",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 6,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 6,
+      "approvalRequired": true,
+      "reason": "Daily environmental factors may coexist across situations. No choose-one instruction. Mostly casual / Smart casual / Professional / Highly variable etc. may describe different actual contexts; no exclusive instruction."
+    },
+    {
+      "page": 41,
+      "title": "What Does Practical Mean to You?",
+      "id": "practical.sort",
+      "type": "matrix",
+      "question": "Sort these qualities",
+      "options": [
+        "Non-negotiable",
+        "Important",
+        "Nice to have",
+        "I don’t really care"
+      ],
+      "rows": [
+        "Easy care",
+        "Comfortable",
+        "Versatile",
+        "Durable",
+        "Breathable",
+        "Weather-appropriate",
+        "Easy movement",
+        "Easy to style / match",
+        "Modest",
+        "Secure / doesn’t require constant adjusting",
+        "Affordable to replace",
+        "High quality",
+        "Low maintenance",
+        "Functional details",
+        "Other"
+      ],
+      "literalSourceQuotes": [
+        "Place each quality into one of four groups: NON-NEGOTIABLE / IMPORTANT / NICE TO HAVE / I DON'T REALLY CARE."
+      ],
+      "sourceLocation": "Draft3 manuscript page 41",
+      "classification": "single-per-row-correct",
+      "recommendation": "Keep one answer per row, independently; allow the same positive answer across many rows and preserve unanswered rows.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each row",
+        "rows": 15
+      },
+      "approvalRequired": false
+    },
+    {
+      "page": 42,
+      "title": "Fantasy Life vs Real Life",
+      "id": "p42.choices1",
+      "type": "checks",
+      "question": "Which of these feel familiar?",
+      "options": [
+        "Corporate / office wardrobe",
+        "Party wardrobe",
+        "Vacation wardrobe",
+        "Heels / dress shoes",
+        "Formal dresses",
+        "“Someday” clothes",
+        "Clothes for an imagined social life",
+        "Clothes for an imagined body",
+        "Clothes for an imagined version of myself",
+        "Trend pieces I imagined I'd wear",
+        "Other: …"
+      ],
+      "literalSourceQuotes": [
+        "Which of these feel familiar?"
+      ],
+      "sourceLocation": "Draft3 manuscript page 42",
+      "classification": "legitimate-multi",
+      "recommendation": "Keep multi-select, with no arbitrary smaller pick cap. Preserve context-dependent and mixed preferences.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 11,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 11,
+      "approvalRequired": false,
+      "reason": "Which of these feel familiar? Multiple fantasy categories can coexist. Source gives no choose-one or numerical cap."
+    },
+    {
+      "page": 45,
+      "title": "Connect the Dots",
+      "id": "p45.choices1",
+      "type": "checks",
+      "question": "Do these three things seem to agree?",
+      "options": [
+        "Mostly yes",
+        "Somewhat",
+        "Not really"
+      ],
+      "literalSourceQuotes": [
+        "Do these three things seem to agree?",
+        "☐ Mostly yes",
+        "☐ Somewhat",
+        "☐ Not really"
+      ],
+      "sourceLocation": "Draft3 manuscript page 45",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "NOW PAUSE / Do these three things seem to agree? Mostly yes / Somewhat / Not really."
+    },
+    {
+      "page": 49,
+      "title": "Style Balance",
+      "id": "p49.choices1",
+      "type": "checks",
+      "question": "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+      "options": [
+        "Yes",
+        "No",
+        "Sometimes"
+      ],
+      "literalSourceQuotes": [
+        "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+        "☐ Yes",
+        "☐ No",
+        "☐ Sometimes"
+      ],
+      "sourceLocation": "Draft3 manuscript page 49",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "REFLECT asks a single conditional Yes / No / Sometimes judgement."
+    },
+    {
+      "page": 52,
+      "title": "Looking Like Me",
+      "id": "p52.choices1",
+      "type": "checks",
+      "question": "Does it work with the physical qualities I discovered?",
+      "options": [
+        "Yes",
+        "Somewhat",
+        "No"
+      ],
+      "literalSourceQuotes": [
+        "Does it work with the physical qualities I discovered?",
+        "☐ Yes",
+        "☐ Somewhat",
+        "☐ No"
+      ],
+      "sourceLocation": "Draft3 manuscript page 52",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "BODY asks Does it work with the physical qualities I discovered? Yes / Somewhat / No for the one inspected outfit."
+    },
+    {
+      "page": 52,
+      "title": "Looking Like Me",
+      "id": "p52.choices2",
+      "type": "checks",
+      "question": "Would this make sense for my actual life?",
+      "options": [
+        "Sometimes",
+        "Not really"
+      ],
+      "literalSourceQuotes": [
+        "Would this make sense for my actual life?",
+        "☐ Sometimes",
+        "☐ Not really"
+      ],
+      "sourceLocation": "Draft3 manuscript page 52",
+      "classification": "proposed-single-answer-correction",
+      "recommendation": "One answer at a time from the existing options, with an unanswered/clear state. Preserve existing multiple values and require customer review; never silently collapse them.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 2,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 1,
+      "approvalRequired": true,
+      "reason": "LIFESTYLE asks Would this make sense for my actual life? Source prints Sometimes / Not really only.",
+      "contentCaution": "The source prints only Sometimes / Not really. Do not invent Yes or another positive option. Preserve the separate like.me.3 written reflection."
+    },
+    {
+      "page": 61,
+      "title": "My Six-Colour Formula",
+      "id": "colour.result",
+      "type": "checks",
+      "question": "Result",
+      "options": [
+        "This colour integrates easily.",
+        "It could work with some styling.",
+        "I love it, but it doesn’t need to become a major wardrobe colour."
+      ],
+      "literalSourceQuotes": [
+        "RESULT",
+        "☐ This colour integrates easily.",
+        "☐ I love it, but it doesn't need to become a major wardrobe colour."
+      ],
+      "sourceLocation": "Draft3 manuscript page 61",
+      "classification": "owner-review-recommend-preserve-multi",
+      "recommendation": "Recommended: preserve multi-select for contextual/overlapping statements. Obtain owner confirmation before any exclusivity or split-dimension rule; no additional options or groups are inferred.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 3,
+        "unit": "checkbox group"
+      },
+      "proposedMaximum": 3,
+      "approvalRequired": true,
+      "reason": "RESULT labels an evaluation, but the third statement (love the colour without needing it as a major wardrobe colour) can coexist with easy integration or some styling. Source does not say choose one."
+    },
+    {
+      "page": 66,
+      "title": "Personal Style Compass",
+      "id": "compass.decision",
+      "type": "single",
+      "question": "My decision",
+      "options": [
+        "Buy anyway — I love it enough.",
+        "Save for later.",
+        "Pass."
+      ],
+      "literalSourceQuotes": [
+        "MY DECISION"
+      ],
+      "sourceLocation": "Draft3 manuscript page 66",
+      "classification": "single-answer-correct",
+      "recommendation": "Keep one current decision per evaluated item, with clearing/unanswered supported.",
+      "currentCardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "current item"
+      },
+      "approvalRequired": false
+    }
+  ],
+  "pageInventory": [
+    {
+      "page": 1,
+      "title": "Cover",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 2,
+      "title": "Opening Note",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 3,
+      "title": "What This Blueprint Is",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 4,
+      "title": "How to Use It",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 5,
+      "title": "Your Evidence Sets",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "evidence",
+          "type": "evidence",
+          "question": "Your evidence sets"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "title": "Before You Begin",
+      "controlCount": 5,
+      "controls": [
+        {
+          "id": "p6.choices1",
+          "type": "checks",
+          "question": "PREPARATION CHECKLIST",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "baseline.1",
+          "type": "text",
+          "question": "What currently frustrates me about getting dressed?"
+        },
+        {
+          "id": "baseline.2",
+          "type": "text",
+          "question": "What feels unclear about my style?"
+        },
+        {
+          "id": "baseline.3",
+          "type": "text",
+          "question": "What do I hope becomes easier?"
+        },
+        {
+          "id": "baseline.4",
+          "type": "text",
+          "question": "What do I currently think my style is?"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "title": "Your Body",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 8,
+      "title": "Fit",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "fit.ratings",
+          "type": "matrix",
+          "question": "Now mark how you feel about each fit:",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "fit.notes.1",
+          "type": "text",
+          "question": "The fits I naturally gravitate towards:"
+        },
+        {
+          "id": "fit.notes.2",
+          "type": "text",
+          "question": "The fits I tend to avoid:"
+        },
+        {
+          "id": "fit.notes.3",
+          "type": "text",
+          "question": "Something I noticed:"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "title": "Fit Observation",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "p9.choices1",
+          "type": "checks",
+          "question": "I feel most comfortable when my clothes are:",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p9.choices2",
+          "type": "checks",
+          "question": "I tend to dislike clothes that:",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "fit.observe.1",
+          "type": "text",
+          "question": "I feel most like myself when my clothes ________."
+        },
+        {
+          "id": "fit.observe.2",
+          "type": "text",
+          "question": "I don’t enjoy clothes that ________."
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "title": "Fit Interpretation",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "fit.pattern",
+          "type": "text",
+          "question": "My Fit Pattern"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "title": "Silhouette",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "silhouette.ratings",
+          "type": "matrix",
+          "question": "For each silhouette, mark:",
+          "selectionClassification": "single-per-row-correct"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "title": "Silhouette Comparison",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "p12.choices1",
+          "type": "checks",
+          "question": "Which descriptions appear most often?",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p12.choices2",
+          "type": "checks",
+          "question": "Do you repeatedly prefer:",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "silhouette.notes.1",
+          "type": "text",
+          "question": "What makes you hesitate?"
+        },
+        {
+          "id": "silhouette.notes.2",
+          "type": "text",
+          "question": "What do your NOs have in common?"
+        },
+        {
+          "id": "silhouette.notes.3",
+          "type": "text",
+          "question": "The silhouette direction I naturally gravitate towards:"
+        },
+        {
+          "id": "silhouette.notes.4",
+          "type": "text",
+          "question": "A silhouette combination I repeatedly enjoy:"
+        },
+        {
+          "id": "silhouette.notes.5",
+          "type": "text",
+          "question": "A silhouette direction I tend to avoid:"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "title": "Lengths and Proportions",
+      "controlCount": 3,
+      "controls": [
+        {
+          "id": "proportion.ratings",
+          "type": "matrix",
+          "question": "For each combination, mark:",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "proportion.notes.1",
+          "type": "text",
+          "question": "Which combinations make your outfits feel most natural?"
+        },
+        {
+          "id": "proportion.notes.2",
+          "type": "text",
+          "question": "Which combinations consistently feel “off” to you?"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "title": "Lengths and Proportions: Choose",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "p14.choices1",
+          "type": "checks",
+          "question": "TOPS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p14.choices2",
+          "type": "checks",
+          "question": "BOTTOMS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p14.choices3",
+          "type": "checks",
+          "question": "SLEEVES",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p14.choices4",
+          "type": "checks",
+          "question": "DRESSES / SKIRTS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "length.notes.1",
+          "type": "text",
+          "question": "Lengths I naturally gravitate towards:"
+        },
+        {
+          "id": "length.notes.2",
+          "type": "text",
+          "question": "Lengths I rarely choose:"
+        },
+        {
+          "id": "length.notes.3",
+          "type": "text",
+          "question": "A length I thought I liked but rarely actually wear:"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "title": "Necklines and Openings",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "neckline.sort",
+          "type": "matrix",
+          "question": "Put each into one of four groups:",
+          "selectionClassification": "single-per-row-correct"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "title": "Neckline Preferences",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "p16.choices1",
+          "type": "checks",
+          "question": "Do you tend to prefer:",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "neckline.notes.1",
+          "type": "text",
+          "question": "Necklines I repeatedly enjoy:"
+        },
+        {
+          "id": "neckline.notes.2",
+          "type": "text",
+          "question": "Necklines I tend to avoid:"
+        },
+        {
+          "id": "neckline.notes.3",
+          "type": "text",
+          "question": "Something I noticed about how I like my upper body framed:"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "title": "Skin Exposure",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "exposure.scale",
+          "type": "matrix",
+          "question": "Look at these areas",
+          "selectionClassification": "single-per-row-correct"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "title": "Skin Exposure: Choose",
+      "controlCount": 2,
+      "controls": [
+        {
+          "id": "exposure.preferences",
+          "type": "matrix",
+          "question": "For each area:",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "exposure.notes",
+          "type": "text",
+          "question": "I feel most comfortable with clothing that shows ______ while keeping ______ relatively covered."
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "title": "Comfort and Movement",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "p19.choices1",
+          "type": "checks",
+          "question": "I dislike clothes that:",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p19.choices2",
+          "type": "checks",
+          "question": "I prefer shoes that are:",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "comfort.notes.1",
+          "type": "text",
+          "question": "My clothing comfort non-negotiables:"
+        },
+        {
+          "id": "comfort.notes.2",
+          "type": "text",
+          "question": "Something I’m willing to compromise on occasionally:"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "title": "Body Style Profile",
+      "controlCount": 11,
+      "controls": [
+        {
+          "id": "body.fit",
+          "type": "text",
+          "question": "MY FIT — I naturally prefer:"
+        },
+        {
+          "id": "body.silhouette",
+          "type": "text",
+          "question": "MY SILHOUETTE — The shapes I gravitate towards:"
+        },
+        {
+          "id": "body.proportion",
+          "type": "text",
+          "question": "MY PROPORTIONS — The combinations I especially enjoy:"
+        },
+        {
+          "id": "body.length",
+          "type": "text",
+          "question": "MY LENGTHS — The lengths I repeatedly choose:"
+        },
+        {
+          "id": "body.neckline",
+          "type": "text",
+          "question": "MY NECKLINES / OPENINGS — I feel best in:"
+        },
+        {
+          "id": "body.exposure",
+          "type": "text",
+          "question": "MY SKIN EXPOSURE — I am most comfortable showing:"
+        },
+        {
+          "id": "body.comfort",
+          "type": "text",
+          "question": "MY COMFORT NON-NEGOTIABLES — My clothes need to:"
+        },
+        {
+          "id": "body.synthesis.1",
+          "type": "text",
+          "question": "The physical qualities I repeatedly choose are:"
+        },
+        {
+          "id": "body.synthesis.2",
+          "type": "text",
+          "question": "The physical qualities I tend to avoid are:"
+        },
+        {
+          "id": "body.synthesis.3",
+          "type": "text",
+          "question": "My clothes work best for me physically when:"
+        },
+        {
+          "id": "body.synthesis.4",
+          "type": "text",
+          "question": "One thing I understand about myself and clothes now that I did not notice before is:"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "title": "Your Personality",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 22,
+      "title": "Inspiration Set",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "evidence",
+          "type": "evidence",
+          "question": "Your evidence sets"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "title": "What Caught Your Eye?",
+      "controlCount": 13,
+      "controls": [
+        {
+          "id": "p23.choices1",
+          "type": "checks",
+          "question": "SILHOUETTE",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p23.choices2",
+          "type": "checks",
+          "question": "COLOUR",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p23.choices3",
+          "type": "checks",
+          "question": "TEXTURE",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p23.choices4",
+          "type": "checks",
+          "question": "DETAILS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p23.choices5",
+          "type": "checks",
+          "question": "OVERALL FEELING",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p23.choices6",
+          "type": "checks",
+          "question": "Visual quality| I want this often| I want this sometimes| I like seeing it, but not wearing it",
+          "selectionClassification": "retired-parser-artifact"
+        },
+        {
+          "id": "inspiration.top",
+          "type": "list",
+          "question": "Which five visual qualities appear repeatedly across your inspiration?"
+        },
+        {
+          "id": "inspiration.want",
+          "type": "matrix",
+          "question": "Which of these do I actually want in my own wardrobe?",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "inspiration.notes.1",
+          "type": "text",
+          "question": "Are there any qualities that appear frequently in your inspiration but rarely appear in your actual clothes?"
+        },
+        {
+          "id": "inspiration.notes.2",
+          "type": "text",
+          "question": "Why do you think that might be?"
+        },
+        {
+          "id": "inspiration.notes.3",
+          "type": "text",
+          "question": "Are there qualities you already wear without consciously realizing they’re part of your style?"
+        },
+        {
+          "id": "inspiration.notes.4",
+          "type": "text",
+          "question": "The visual qualities I naturally want more of are:"
+        },
+        {
+          "id": "inspiration.notes.5",
+          "type": "text",
+          "question": "The visual qualities I enjoy admiring but don’t necessarily need to wear are:"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "title": "Admiration Is Not Personal Style",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "inspiration.sort",
+          "type": "image-sort",
+          "question": "Sort your inspiration"
+        },
+        {
+          "id": "admiration.1",
+          "type": "text",
+          "question": "What makes these outfits appealing even though you don’t want to wear them?"
+        },
+        {
+          "id": "admiration.2",
+          "type": "text",
+          "question": "What do you want to take from your BEAUTIFUL + ME group?"
+        },
+        {
+          "id": "admiration.3",
+          "type": "text",
+          "question": "Something I admire but don’t actually want for myself is:"
+        },
+        {
+          "id": "admiration.4",
+          "type": "text",
+          "question": "Something I repeatedly see and think “that’s me” is:"
+        },
+        {
+          "id": "admiration.5",
+          "type": "text",
+          "question": "A style direction I might have confused with my personal style is:"
+        }
+      ]
+    },
+    {
+      "page": 25,
+      "title": "Visual Dials",
+      "controlCount": 10,
+      "controls": [
+        {
+          "id": "dials.1",
+          "type": "scale",
+          "question": "Simple — Detailed",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.2",
+          "type": "scale",
+          "question": "Understated — Noticeable",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.3",
+          "type": "scale",
+          "question": "Soft — Structured",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.4",
+          "type": "scale",
+          "question": "Feminine — Androgynous",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.5",
+          "type": "scale",
+          "question": "Classic — Trend-forward",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.6",
+          "type": "scale",
+          "question": "Relaxed — Polished",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.7",
+          "type": "scale",
+          "question": "Minimal — Expressive",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.8",
+          "type": "scale",
+          "question": "Subtle — Dramatic",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "dials.9",
+          "type": "scale",
+          "question": "Romantic — Edgy",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "visual.strongestThree",
+          "type": "list",
+          "question": "My three strongest visual-dial characteristics"
+        }
+      ]
+    },
+    {
+      "page": 26,
+      "title": "Visual Intensity",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "p26.choices1",
+          "type": "checks",
+          "question": "MY NATURAL LEVEL",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "p26.choices2",
+          "type": "checks",
+          "question": "What is usually the easiest way for you to add interest?",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "intensity.1",
+          "type": "text",
+          "question": "How much visual interest feels like enough?"
+        },
+        {
+          "id": "intensity.2",
+          "type": "text",
+          "question": "When does an outfit start feeling too plain?"
+        },
+        {
+          "id": "intensity.3",
+          "type": "text",
+          "question": "When does an outfit start feeling like too much?"
+        },
+        {
+          "id": "intensity.4",
+          "type": "text",
+          "question": "My ideal amount of visual interest is:"
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "title": "Femininity, Polish, and Edge",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "balance.femininity",
+          "type": "scale",
+          "question": "Femininity",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "balance.polish",
+          "type": "scale",
+          "question": "Polish",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "balance.edge",
+          "type": "scale",
+          "question": "Edge",
+          "selectionClassification": "single-position-per-axis-correct"
+        },
+        {
+          "id": "balance.notes.1",
+          "type": "text",
+          "question": "I like femininity when it feels ______ rather than ______."
+        },
+        {
+          "id": "balance.notes.2",
+          "type": "text",
+          "question": "I like looking polished, but I don’t want my style to feel ______."
+        },
+        {
+          "id": "balance.notes.3",
+          "type": "text",
+          "question": "I enjoy a little edge through ______."
+        },
+        {
+          "id": "balance.notes.4",
+          "type": "text",
+          "question": "My balance of femininity, polish and edge:"
+        }
+      ]
+    },
+    {
+      "page": 28,
+      "title": "Colour: Natural Direction",
+      "controlCount": 9,
+      "controls": [
+        {
+          "id": "colour.observe.1",
+          "type": "text",
+          "question": "WORN OFTEN"
+        },
+        {
+          "id": "colour.observe.2",
+          "type": "text",
+          "question": "ENJOYED WEARING"
+        },
+        {
+          "id": "colour.observe.3",
+          "type": "text",
+          "question": "RECEIVED COMPLIMENTS IN"
+        },
+        {
+          "id": "colour.observe.4",
+          "type": "text",
+          "question": "OWNED BUT RARELY WORN"
+        },
+        {
+          "id": "colour.observe.5",
+          "type": "text",
+          "question": "LIKED ON OTHER PEOPLE"
+        },
+        {
+          "id": "colour.observe.6",
+          "type": "text",
+          "question": "ACTIVELY DISLIKED"
+        },
+        {
+          "id": "colour.observe.7",
+          "type": "text",
+          "question": "What colours do you naturally repeat?"
+        },
+        {
+          "id": "colour.observe.8",
+          "type": "text",
+          "question": "Are there colours you love in theory but don’t enjoy wearing?"
+        },
+        {
+          "id": "colour.observe.9",
+          "type": "text",
+          "question": "Are there colours you wear because they’re easy rather than because they feel like you?"
+        }
+      ]
+    },
+    {
+      "page": 29,
+      "title": "Six-Colour Formula",
+      "controlCount": 2,
+      "controls": [
+        {
+          "id": "colours",
+          "type": "colours",
+          "question": "My Six-Colour Formula"
+        },
+        {
+          "id": "colour.reason",
+          "type": "text",
+          "question": "Why these colours work for me:"
+        }
+      ]
+    },
+    {
+      "page": 30,
+      "title": "Build Your Six-Colour Formula",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "colours",
+          "type": "colours",
+          "question": "My Six-Colour Formula"
+        },
+        {
+          "id": "colour.new",
+          "type": "text",
+          "question": "The colour:"
+        },
+        {
+          "id": "colour.three",
+          "type": "list",
+          "question": "It works with:"
+        },
+        {
+          "id": "colour.practical",
+          "type": "checks",
+          "question": "Is this colour:",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "colour.direction.1",
+          "type": "text",
+          "question": "The overall colour direction I want my wardrobe to have is:"
+        },
+        {
+          "id": "colour.direction.2",
+          "type": "text",
+          "question": "A colour I love but don’t necessarily need is:"
+        },
+        {
+          "id": "colour.behaviour",
+          "type": "text",
+          "question": "How I want colour to behave"
+        },
+        {
+          "id": "colour.easy",
+          "type": "text",
+          "question": "The easiest way I add colour"
+        }
+      ]
+    },
+    {
+      "page": 31,
+      "title": "Style Signatures",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "p31.choices1",
+          "type": "checks",
+          "question": "JEWELLERY",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p31.choices2",
+          "type": "checks",
+          "question": "ACCESSORIES",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p31.choices3",
+          "type": "checks",
+          "question": "SHOES",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p31.choices4",
+          "type": "checks",
+          "question": "STYLING DETAILS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p31.choices5",
+          "type": "checks",
+          "question": "CLOTHING DETAILS",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "signatures.notes.1",
+          "type": "text",
+          "question": "Which things appear again and again?"
+        },
+        {
+          "id": "signatures.notes.2",
+          "type": "text",
+          "question": "Which are so automatic that you barely think about them?"
+        },
+        {
+          "id": "signatures.notes.3",
+          "type": "text",
+          "question": "Which ones make an outfit feel more like you?"
+        }
+      ]
+    },
+    {
+      "page": 32,
+      "title": "Automatic and Deliberate Signatures",
+      "controlCount": 5,
+      "controls": [
+        {
+          "id": "signatures.automatic",
+          "type": "list",
+          "question": "I DO THIS AUTOMATICALLY"
+        },
+        {
+          "id": "signatures.deliberate",
+          "type": "list",
+          "question": "I DO THIS DELIBERATELY"
+        },
+        {
+          "id": "signatures.top",
+          "type": "list",
+          "question": "Your top three"
+        },
+        {
+          "id": "signatures.finish",
+          "type": "text",
+          "question": "My outfits often feel more like me when I add ______."
+        },
+        {
+          "id": "signatures.counterfactual",
+          "type": "text",
+          "question": "If I removed this detail, would the outfit feel less like me?"
+        }
+      ]
+    },
+    {
+      "page": 33,
+      "title": "Personality Style Profile",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "personality.1",
+          "type": "text",
+          "question": "WHAT I’M DRAWN TO:"
+        },
+        {
+          "id": "personality.2",
+          "type": "text",
+          "question": "WHAT I ACTUALLY WANT TO WEAR:"
+        },
+        {
+          "id": "personality.3",
+          "type": "text",
+          "question": "MY VISUAL DIRECTION:"
+        },
+        {
+          "id": "personality.4",
+          "type": "text",
+          "question": "MY IDEAL VISUAL INTENSITY:"
+        },
+        {
+          "id": "personality.5",
+          "type": "text",
+          "question": "MY FEMININITY / POLISH / EDGE BALANCE:"
+        },
+        {
+          "id": "personality.6",
+          "type": "text",
+          "question": "MY COLOUR DIRECTION:"
+        },
+        {
+          "id": "personality.7",
+          "type": "text",
+          "question": "MY STYLE SIGNATURES:"
+        },
+        {
+          "id": "personality.sentence",
+          "type": "text",
+          "question": "I want my clothes to feel ______ while looking ______."
+        }
+      ]
+    },
+    {
+      "page": 34,
+      "title": "What Keeps Showing Up?",
+      "controlCount": 10,
+      "controls": [
+        {
+          "id": "repeats.1",
+          "type": "text",
+          "question": "I naturally notice ______ in clothes."
+        },
+        {
+          "id": "repeats.2",
+          "type": "text",
+          "question": "I feel most visually satisfied when an outfit has ______."
+        },
+        {
+          "id": "repeats.3",
+          "type": "text",
+          "question": "My style becomes more recognisably mine when I add ______."
+        },
+        {
+          "id": "repeats.4",
+          "type": "text",
+          "question": "I admire ______, but I do not necessarily want to wear it."
+        },
+        {
+          "id": "repeats.5",
+          "type": "text",
+          "question": "Related preferences that may be pointing to the same thing:"
+        },
+        {
+          "id": "visual.pattern",
+          "type": "patterns",
+          "question": "Pattern I notice / Evidence behind it / What I think this means"
+        },
+        {
+          "id": "visual.qualities",
+          "type": "list",
+          "question": "My core visual qualities"
+        },
+        {
+          "id": "visual.combination",
+          "type": "text",
+          "question": "The combination of qualities that feels most like me is ______."
+        },
+        {
+          "id": "visual.direction.1",
+          "type": "text",
+          "question": "The visual direction I seem to be building is ______."
+        },
+        {
+          "id": "visual.direction.2",
+          "type": "text",
+          "question": "A repeated detail or idea I want to remember is ______."
+        }
+      ]
+    },
+    {
+      "page": 35,
+      "title": "Your Lifestyle",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 36,
+      "title": "Where Do You Actually Go?",
+      "controlCount": 5,
+      "controls": [
+        {
+          "id": "p36.choices1",
+          "type": "checks",
+          "question": "SELECT ALL THAT APPLY",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "life.frequency",
+          "type": "matrix",
+          "question": "Now mark how often each one actually occurs.",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "life.top",
+          "type": "list",
+          "question": "My three most common dressing situations are:"
+        },
+        {
+          "id": "life.less.1",
+          "type": "text",
+          "question": "A situation I dress for much less often than I thought:"
+        },
+        {
+          "id": "life.less.2",
+          "type": "text",
+          "question": "A situation I may own too many clothes for:"
+        }
+      ]
+    },
+    {
+      "page": 37,
+      "title": "Real-Life Time Map",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "life.time",
+          "type": "time",
+          "question": "My 100-point time map"
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "title": "Read Your Time Map",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "p38.choices1",
+          "type": "checks",
+          "question": "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "life.map.1",
+          "type": "text",
+          "question": "Which categories take up the largest share of your life?"
+        },
+        {
+          "id": "life.map.2",
+          "type": "text",
+          "question": "Which categories take up very little of your life?"
+        },
+        {
+          "id": "life.map.3",
+          "type": "text",
+          "question": "Why?"
+        },
+        {
+          "id": "life.map.4",
+          "type": "text",
+          "question": "My three biggest real-life dressing contexts are:"
+        },
+        {
+          "id": "life.map.5",
+          "type": "text",
+          "question": "The biggest mismatch I noticed is:"
+        }
+      ]
+    },
+    {
+      "page": 39,
+      "title": "What Do You Actually Need to Get Dressed For?",
+      "controlCount": 3,
+      "controls": [
+        {
+          "id": "life.situations",
+          "type": "table",
+          "question": "Look at your three most common situations"
+        },
+        {
+          "id": "life.needs",
+          "type": "matrix",
+          "question": "Now sort your needs",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "life.help",
+          "type": "list",
+          "question": "The three things my clothes most need to help me do are:"
+        }
+      ]
+    },
+    {
+      "page": 40,
+      "title": "Environment",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "p40.choices1",
+          "type": "checks",
+          "question": "WEATHER",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p40.choices2",
+          "type": "checks",
+          "question": "MOVEMENT",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "p40.choices3",
+          "type": "checks",
+          "question": "ENVIRONMENT",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "p40.choices4",
+          "type": "checks",
+          "question": "DRESS EXPECTATIONS",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "environment.1",
+          "type": "text",
+          "question": "Which environmental factors strongly affect what you can realistically wear?"
+        },
+        {
+          "id": "environment.2",
+          "type": "text",
+          "question": "Which affect you somewhat?"
+        },
+        {
+          "id": "environment.3",
+          "type": "text",
+          "question": "Which ones barely matter?"
+        }
+      ]
+    },
+    {
+      "page": 41,
+      "title": "What Does Practical Mean to You?",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "practical.sort",
+          "type": "matrix",
+          "question": "Sort these qualities",
+          "selectionClassification": "single-per-row-correct"
+        },
+        {
+          "id": "practical.notes.1",
+          "type": "text",
+          "question": "Which qualities did you place under NON-NEGOTIABLE?"
+        },
+        {
+          "id": "practical.notes.2",
+          "type": "text",
+          "question": "Which qualities are nice to have but not worth compromising your style for?"
+        },
+        {
+          "id": "practical.notes.3",
+          "type": "text",
+          "question": "To me, practical clothing means ______."
+        },
+        {
+          "id": "practical.notes.4",
+          "type": "text",
+          "question": "I’m willing to sacrifice ______ in order to have more ______."
+        },
+        {
+          "id": "practical.notes.5",
+          "type": "text",
+          "question": "I don’t mind ______ if it means I get ______."
+        },
+        {
+          "id": "practical.notes.6",
+          "type": "text",
+          "question": "I am not willing to compromise on ______."
+        }
+      ]
+    },
+    {
+      "page": 42,
+      "title": "Fantasy Life vs Real Life",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "p42.choices1",
+          "type": "checks",
+          "question": "Which of these feel familiar?",
+          "selectionClassification": "legitimate-multi"
+        },
+        {
+          "id": "fantasy.1",
+          "type": "text",
+          "question": "The biggest “fantasy life” category in my wardrobe is:"
+        },
+        {
+          "id": "fantasy.2",
+          "type": "text",
+          "question": "Why do I think I bought or wanted these clothes?"
+        },
+        {
+          "id": "fantasy.3",
+          "type": "text",
+          "question": "How often does this situation actually occur?"
+        },
+        {
+          "id": "life.compare",
+          "type": "table",
+          "question": "My actual life / My imagined life"
+        },
+        {
+          "id": "life.mismatch.1",
+          "type": "text",
+          "question": "My wardrobe seems prepared for ______, but my actual life requires more ______."
+        },
+        {
+          "id": "life.mismatch.2",
+          "type": "text",
+          "question": "The biggest lifestyle mismatch I notice is…"
+        },
+        {
+          "id": "life.mismatch.3",
+          "type": "text",
+          "question": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______."
+        }
+      ]
+    },
+    {
+      "page": 43,
+      "title": "Lifestyle Wardrobe Profile",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "lifestyle.time",
+          "type": "text",
+          "question": "Most of my life is spent…"
+        },
+        {
+          "id": "lifestyle.contexts",
+          "type": "text",
+          "question": "The situations I need my wardrobe to support most are…"
+        },
+        {
+          "id": "lifestyle.help",
+          "type": "text",
+          "question": "My clothes need to help me…"
+        },
+        {
+          "id": "lifestyle.practical",
+          "type": "text",
+          "question": "The practical qualities I value most are…"
+        },
+        {
+          "id": "lifestyle.mismatch",
+          "type": "text",
+          "question": "The biggest lifestyle mismatch I notice is…"
+        },
+        {
+          "id": "lifestyle.priority",
+          "type": "text",
+          "question": "If my wardrobe were designed around the life I actually live, it would prioritize ______ over ______."
+        }
+      ]
+    },
+    {
+      "page": 44,
+      "title": "What Does My Life Actually Ask of My Style?",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "life.implications.1",
+          "type": "text",
+          "question": "Most days, I need clothes that are ______."
+        },
+        {
+          "id": "life.implications.2",
+          "type": "text",
+          "question": "I spend more time ______ than ______."
+        },
+        {
+          "id": "life.implications.3",
+          "type": "text",
+          "question": "My wardrobe needs to support ______ most often."
+        },
+        {
+          "id": "life.implications.4",
+          "type": "text",
+          "question": "For me, practicality means ______."
+        },
+        {
+          "id": "life.implications.5",
+          "type": "text",
+          "question": "I don’t need my wardrobe to be dominated by ______."
+        },
+        {
+          "id": "life.implications.6",
+          "type": "text",
+          "question": "I would benefit from having more clothes that ______."
+        },
+        {
+          "id": "life.implications.7",
+          "type": "text",
+          "question": "Something I learned about my lifestyle and the way I dress is:"
+        }
+      ]
+    },
+    {
+      "page": 45,
+      "title": "Connect the Dots",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "p45.choices1",
+          "type": "checks",
+          "question": "Do these three things seem to agree?",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "dots.body",
+          "type": "text",
+          "question": "Your Body"
+        },
+        {
+          "id": "dots.personality",
+          "type": "text",
+          "question": "Your Personality"
+        },
+        {
+          "id": "dots.life",
+          "type": "text",
+          "question": "Your Lifestyle"
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "title": "Repeated Yeses",
+      "controlCount": 3,
+      "controls": [
+        {
+          "id": "repeated.qualities",
+          "type": "list",
+          "question": "Highlight or write down 5–8 qualities that appear repeatedly."
+        },
+        {
+          "id": "repeated.top",
+          "type": "list",
+          "question": "Which three feel strongest?"
+        },
+        {
+          "id": "synthesis.decisions",
+          "type": "candidates",
+          "question": "Possible repeated patterns — your decision"
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "title": "Strongest Patterns",
+      "controlCount": 2,
+      "controls": [
+        {
+          "id": "patterns",
+          "type": "patterns",
+          "question": "Your strongest patterns"
+        },
+        {
+          "id": "patterns.connection",
+          "type": "text",
+          "question": "Across my body, personality, and lifestyle discoveries, a possible connecting pattern is:"
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "title": "Style Tensions",
+      "controlCount": 9,
+      "controls": [
+        {
+          "id": "tensions.1",
+          "type": "text",
+          "question": "I like:"
+        },
+        {
+          "id": "tensions.2",
+          "type": "text",
+          "question": "But I don’t want too much:"
+        },
+        {
+          "id": "tensions.3",
+          "type": "text",
+          "question": "I want my clothes to feel:"
+        },
+        {
+          "id": "tensions.4",
+          "type": "text",
+          "question": "without becoming:"
+        },
+        {
+          "id": "tensions.5",
+          "type": "text",
+          "question": "I enjoy:"
+        },
+        {
+          "id": "tensions.6",
+          "type": "text",
+          "question": "but I still need:"
+        },
+        {
+          "id": "tensions.7",
+          "type": "text",
+          "question": "I want to look:"
+        },
+        {
+          "id": "tensions.8",
+          "type": "text",
+          "question": "while feeling:"
+        },
+        {
+          "id": "tensions.9",
+          "type": "text",
+          "question": "I want ______ without becoming ______."
+        }
+      ]
+    },
+    {
+      "page": 49,
+      "title": "Style Balance",
+      "controlCount": 5,
+      "controls": [
+        {
+          "id": "p49.choices1",
+          "type": "checks",
+          "question": "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "qualities.core",
+          "type": "list",
+          "question": "My core qualities"
+        },
+        {
+          "id": "qualities.supporting",
+          "type": "list",
+          "question": "My supporting qualities"
+        },
+        {
+          "id": "qualities.accent",
+          "type": "list",
+          "question": "My accent qualities"
+        },
+        {
+          "id": "balance.why",
+          "type": "text",
+          "question": "Why?"
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "title": "Translate Style Into Clothing",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "translation",
+          "type": "table",
+          "question": "My style translation"
+        }
+      ]
+    },
+    {
+      "page": 51,
+      "title": "Style Language Dictionary",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "dictionary.1",
+          "type": "text",
+          "question": "When I say “feminine,” I mean…"
+        },
+        {
+          "id": "dictionary.2",
+          "type": "text",
+          "question": "When I say “polished,” I mean…"
+        },
+        {
+          "id": "dictionary.3",
+          "type": "text",
+          "question": "When I say “casual,” I mean…"
+        },
+        {
+          "id": "dictionary.4",
+          "type": "text",
+          "question": "When I say “sexy,” I mean…"
+        },
+        {
+          "id": "dictionary.5",
+          "type": "text",
+          "question": "When I say “simple,” I mean…"
+        },
+        {
+          "id": "dictionary.6",
+          "type": "text",
+          "question": "When I say “stylish,” I mean…"
+        },
+        {
+          "id": "dictionary.7",
+          "type": "text",
+          "question": "When I say “__________,” I mean…"
+        },
+        {
+          "id": "dictionary.entries",
+          "type": "dictionary",
+          "question": "My own Style Language Dictionary"
+        }
+      ]
+    },
+    {
+      "page": 52,
+      "title": "Looking Like Me",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "p52.choices1",
+          "type": "checks",
+          "question": "Does it work with the physical qualities I discovered?",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "p52.choices2",
+          "type": "checks",
+          "question": "Would this make sense for my actual life?",
+          "selectionClassification": "proposed-single-answer-correction"
+        },
+        {
+          "id": "like.me.1",
+          "type": "text",
+          "question": "What works or doesn’t?"
+        },
+        {
+          "id": "like.me.2",
+          "type": "text",
+          "question": "Does it reflect the visual qualities I actually want?"
+        },
+        {
+          "id": "like.me.3",
+          "type": "text",
+          "question": "Would this make sense for my actual life?"
+        },
+        {
+          "id": "like.me.4",
+          "type": "text",
+          "question": "One physical quality:"
+        },
+        {
+          "id": "like.me.5",
+          "type": "text",
+          "question": "One visual/personality quality:"
+        },
+        {
+          "id": "like.me.6",
+          "type": "text",
+          "question": "One lifestyle quality:"
+        }
+      ]
+    },
+    {
+      "page": 53,
+      "title": "Good on Me Is Not the Same as My Style",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "good.on.me.1",
+          "type": "text",
+          "question": "Something can look good on me and still not be my style when…"
+        },
+        {
+          "id": "good.on.me.2",
+          "type": "text",
+          "question": "I can admire an outfit without wanting to wear it because…"
+        },
+        {
+          "id": "good.on.me.3",
+          "type": "text",
+          "question": "A flattering outfit isn’t automatically a good outfit for me because…"
+        },
+        {
+          "id": "good.on.me.4",
+          "type": "text",
+          "question": "An outfit that looked good on me but didn’t feel like me:"
+        },
+        {
+          "id": "good.on.me.5",
+          "type": "text",
+          "question": "Why?"
+        },
+        {
+          "id": "good.on.me.6",
+          "type": "text",
+          "question": "An outfit that may not fit a traditional style rule but felt very much like me:"
+        }
+      ]
+    },
+    {
+      "page": 54,
+      "title": "My Style Direction",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "direction.1",
+          "type": "text",
+          "question": "I want my clothes to feel:"
+        },
+        {
+          "id": "direction.2",
+          "type": "text",
+          "question": "I want them to look:"
+        },
+        {
+          "id": "direction.3",
+          "type": "text",
+          "question": "I prefer:"
+        },
+        {
+          "id": "direction.4",
+          "type": "text",
+          "question": "I don’t want my style to feel:"
+        },
+        {
+          "id": "direction.5",
+          "type": "text",
+          "question": "My clothes need to work for:"
+        },
+        {
+          "id": "direction.6",
+          "type": "text",
+          "question": "I want to balance:"
+        },
+        {
+          "id": "style.brief",
+          "type": "text",
+          "question": "My version: I want to dress in a way that feels [CORE QUALITIES], combining [QUALITY] with [QUALITY], while keeping my clothes practical for [LIFESTYLE]."
+        },
+        {
+          "id": "brief.assembly",
+          "type": "assembly",
+          "question": "Assemble a draft from my own words"
+        }
+      ]
+    },
+    {
+      "page": 55,
+      "title": "Make It More Specific",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "specific.1",
+          "type": "text",
+          "question": "I want my style to feel…"
+        },
+        {
+          "id": "specific.2",
+          "type": "text",
+          "question": "I want people to see…"
+        },
+        {
+          "id": "specific.3",
+          "type": "text",
+          "question": "I want to feel… when I get dressed."
+        },
+        {
+          "id": "specific.4",
+          "type": "text",
+          "question": "I don’t want my style to become…"
+        },
+        {
+          "id": "specific.5",
+          "type": "text",
+          "question": "The combination that feels most like me is…"
+        },
+        {
+          "id": "specific.6",
+          "type": "text",
+          "question": "I like clothes that…"
+        },
+        {
+          "id": "specific.7",
+          "type": "text",
+          "question": "I usually feel best when…"
+        },
+        {
+          "id": "specific.8",
+          "type": "text",
+          "question": "I don’t really enjoy…"
+        }
+      ]
+    },
+    {
+      "page": 56,
+      "title": "Style Synthesis",
+      "controlCount": 13,
+      "controls": [
+        {
+          "id": "synthesis.body",
+          "type": "text",
+          "question": "The physical qualities I repeatedly prefer are:"
+        },
+        {
+          "id": "synthesis.personality",
+          "type": "text",
+          "question": "The visual qualities I repeatedly want are:"
+        },
+        {
+          "id": "synthesis.lifestyle",
+          "type": "text",
+          "question": "The practical qualities my life requires are:"
+        },
+        {
+          "id": "synthesis.tension",
+          "type": "text",
+          "question": "I want ______ without becoming ______."
+        },
+        {
+          "id": "qualities.core",
+          "type": "list",
+          "question": "My core style qualities"
+        },
+        {
+          "id": "qualities.supporting",
+          "type": "list",
+          "question": "My supporting style qualities"
+        },
+        {
+          "id": "qualities.accent",
+          "type": "list",
+          "question": "My accent style qualities"
+        },
+        {
+          "id": "synthesis.language.1",
+          "type": "text",
+          "question": "Silhouettes:"
+        },
+        {
+          "id": "synthesis.language.2",
+          "type": "text",
+          "question": "Fit:"
+        },
+        {
+          "id": "synthesis.language.3",
+          "type": "text",
+          "question": "Proportions:"
+        },
+        {
+          "id": "synthesis.language.4",
+          "type": "text",
+          "question": "Details:"
+        },
+        {
+          "id": "synthesis.language.5",
+          "type": "text",
+          "question": "Textures:"
+        },
+        {
+          "id": "synthesis.language.6",
+          "type": "text",
+          "question": "Accessories:"
+        }
+      ]
+    },
+    {
+      "page": 57,
+      "title": "My Style Brief",
+      "controlCount": 13,
+      "controls": [
+        {
+          "id": "brief.1",
+          "type": "text",
+          "question": "I want my clothes to feel:"
+        },
+        {
+          "id": "brief.2",
+          "type": "text",
+          "question": "I want them to look:"
+        },
+        {
+          "id": "brief.3",
+          "type": "text",
+          "question": "The qualities I want most are:"
+        },
+        {
+          "id": "brief.4",
+          "type": "text",
+          "question": "I prefer:"
+        },
+        {
+          "id": "brief.5",
+          "type": "text",
+          "question": "I don’t want my style to become:"
+        },
+        {
+          "id": "brief.6",
+          "type": "text",
+          "question": "My clothes need to work for:"
+        },
+        {
+          "id": "brief.7",
+          "type": "text",
+          "question": "The balance I want to create is:"
+        },
+        {
+          "id": "style.statement",
+          "type": "text",
+          "question": "I want to dress in a way that ______."
+        },
+        {
+          "id": "brief.complete.1",
+          "type": "text",
+          "question": "My style works best when my clothes respect my body by…"
+        },
+        {
+          "id": "brief.complete.2",
+          "type": "text",
+          "question": "My style feels like me when my clothes express…"
+        },
+        {
+          "id": "brief.complete.3",
+          "type": "text",
+          "question": "My wardrobe works for my life when it supports…"
+        },
+        {
+          "id": "brief.complete.4",
+          "type": "text",
+          "question": "The balance I am trying to create is…"
+        },
+        {
+          "id": "qualities.final",
+          "type": "list",
+          "question": "The three qualities I want to carry into my Blueprint are…"
+        }
+      ]
+    },
+    {
+      "page": 58,
+      "title": "Your Personal Style Blueprint",
+      "controlCount": 0,
+      "controls": []
+    },
+    {
+      "page": 59,
+      "title": "My Style Identity",
+      "controlCount": 7,
+      "controls": [
+        {
+          "id": "identity",
+          "type": "text",
+          "question": "My one-sentence style identity"
+        },
+        {
+          "id": "identity.notes.1",
+          "type": "text",
+          "question": "I want my clothes to make me feel ______."
+        },
+        {
+          "id": "identity.notes.2",
+          "type": "text",
+          "question": "I want my appearance to communicate ______."
+        },
+        {
+          "id": "identity.notes.3",
+          "type": "text",
+          "question": "I feel most like myself when my clothes ______."
+        },
+        {
+          "id": "identity.notes.4",
+          "type": "text",
+          "question": "For me, this means:"
+        },
+        {
+          "id": "identity.notes.5",
+          "type": "text",
+          "question": "I can see it in clothing through:"
+        },
+        {
+          "id": "qualities.final",
+          "type": "list",
+          "question": "My core qualities"
+        }
+      ]
+    },
+    {
+      "page": 60,
+      "title": "My Style Language and Style Translation",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "style.language",
+          "type": "table",
+          "question": "My style language"
+        },
+        {
+          "id": "language.notes.1",
+          "type": "text",
+          "question": "I usually reach for:"
+        },
+        {
+          "id": "language.notes.2",
+          "type": "text",
+          "question": "I want my outfits to communicate:"
+        },
+        {
+          "id": "language.notes.3",
+          "type": "text",
+          "question": "The visual qualities I want to repeat are:"
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "title": "My Six-Colour Formula",
+      "controlCount": 8,
+      "controls": [
+        {
+          "id": "colours",
+          "type": "colours",
+          "question": "My Six-Colour Formula"
+        },
+        {
+          "id": "colour.reason",
+          "type": "text",
+          "question": "Why it works for me:"
+        },
+        {
+          "id": "colour.final",
+          "type": "text",
+          "question": "When I look at my colours together, I want my wardrobe to feel:"
+        },
+        {
+          "id": "colour.new",
+          "type": "text",
+          "question": "New colour / item:"
+        },
+        {
+          "id": "colour.three",
+          "type": "list",
+          "question": "My three-item check"
+        },
+        {
+          "id": "colour.result",
+          "type": "checks",
+          "question": "Result",
+          "selectionClassification": "owner-review-recommend-preserve-multi"
+        },
+        {
+          "id": "colour.behaviour",
+          "type": "text",
+          "question": "How I want colour to behave"
+        },
+        {
+          "id": "colour.easy",
+          "type": "text",
+          "question": "The easiest way I add colour"
+        }
+      ]
+    },
+    {
+      "page": 62,
+      "title": "My Style Signatures",
+      "controlCount": 10,
+      "controls": [
+        {
+          "id": "signatures.repeated.1",
+          "type": "text",
+          "question": "Jewellery:"
+        },
+        {
+          "id": "signatures.repeated.2",
+          "type": "text",
+          "question": "Accessories:"
+        },
+        {
+          "id": "signatures.repeated.3",
+          "type": "text",
+          "question": "Shoes:"
+        },
+        {
+          "id": "signatures.repeated.4",
+          "type": "text",
+          "question": "Styling details:"
+        },
+        {
+          "id": "signatures.repeated.5",
+          "type": "text",
+          "question": "Clothing details:"
+        },
+        {
+          "id": "signatures.repeated.6",
+          "type": "text",
+          "question": "Other:"
+        },
+        {
+          "id": "signatures.top",
+          "type": "list",
+          "question": "My top three style signatures"
+        },
+        {
+          "id": "signatures.one",
+          "type": "text",
+          "question": "If I could keep only one:"
+        },
+        {
+          "id": "signatures.auto",
+          "type": "text",
+          "question": "One of my signatures that happens automatically is:"
+        },
+        {
+          "id": "signatures.intent",
+          "type": "text",
+          "question": "One I want to make more deliberate is:"
+        }
+      ]
+    },
+    {
+      "page": 63,
+      "title": "My Personal Outfit Directions",
+      "controlCount": 1,
+      "controls": [
+        {
+          "id": "outfits",
+          "type": "outfits",
+          "question": "My personal outfit directions"
+        }
+      ]
+    },
+    {
+      "page": 64,
+      "title": "My Personal Style Rules",
+      "controlCount": 9,
+      "controls": [
+        {
+          "id": "rules.1",
+          "type": "text",
+          "question": "I prefer ______ over ______."
+        },
+        {
+          "id": "rules.2",
+          "type": "text",
+          "question": "I feel most comfortable when ______."
+        },
+        {
+          "id": "rules.3",
+          "type": "text",
+          "question": "I don’t enjoy clothes that ______."
+        },
+        {
+          "id": "rules.4",
+          "type": "text",
+          "question": "I like outfits to ______."
+        },
+        {
+          "id": "rules.5",
+          "type": "text",
+          "question": "I don’t want my style to become ______."
+        },
+        {
+          "id": "rules.6",
+          "type": "text",
+          "question": "When choosing between two things I like, I usually choose the one that ______."
+        },
+        {
+          "id": "rules.more",
+          "type": "list",
+          "question": "My “more of this” list"
+        },
+        {
+          "id": "rules.less",
+          "type": "list",
+          "question": "My “less of this” list"
+        },
+        {
+          "id": "rules.consider",
+          "type": "text",
+          "question": "Before deciding whether something works for me, I want to consider:"
+        }
+      ]
+    },
+    {
+      "page": 65,
+      "title": "What I Don't Need to Become",
+      "controlCount": 6,
+      "controls": [
+        {
+          "id": "permission.1",
+          "type": "text",
+          "question": "I don’t need to dress like ______ to be stylish."
+        },
+        {
+          "id": "permission.2",
+          "type": "text",
+          "question": "I don’t need to own ______ just because it’s considered a wardrobe essential."
+        },
+        {
+          "id": "permission.3",
+          "type": "text",
+          "question": "I don’t need my style to look ______."
+        },
+        {
+          "id": "permission.4",
+          "type": "text",
+          "question": "I don’t need to follow the fashion rule that says ______."
+        },
+        {
+          "id": "permission.5",
+          "type": "text",
+          "question": "I don’t need to force myself to like ______."
+        },
+        {
+          "id": "permission.6",
+          "type": "text",
+          "question": "I give myself permission to dress in a way that ______."
+        }
+      ]
+    },
+    {
+      "page": 66,
+      "title": "Personal Style Compass",
+      "controlCount": 4,
+      "controls": [
+        {
+          "id": "compass.scores",
+          "type": "compass",
+          "question": "Score each criterion from 0–5"
+        },
+        {
+          "id": "compass.notes",
+          "type": "text",
+          "question": "What influenced my decision?"
+        },
+        {
+          "id": "compass.item",
+          "type": "text",
+          "question": "The item I am considering:"
+        },
+        {
+          "id": "compass.decision",
+          "type": "single",
+          "question": "My decision",
+          "selectionClassification": "single-answer-correct"
+        }
+      ]
+    },
+    {
+      "page": 67,
+      "title": "Final Style Statement and Master Blueprint",
+      "controlCount": 26,
+      "controls": [
+        {
+          "id": "identity",
+          "type": "text",
+          "question": "My style sentence"
+        },
+        {
+          "id": "qualities.final",
+          "type": "list",
+          "question": "My core qualities"
+        },
+        {
+          "id": "style.language",
+          "type": "table",
+          "question": "My style language"
+        },
+        {
+          "id": "colours",
+          "type": "colours",
+          "question": "My six-colour formula"
+        },
+        {
+          "id": "signatures.top",
+          "type": "list",
+          "question": "My style signatures"
+        },
+        {
+          "id": "outfits",
+          "type": "outfits",
+          "question": "My personal outfit directions"
+        },
+        {
+          "id": "rules.summary",
+          "type": "text",
+          "question": "My personal style rules"
+        },
+        {
+          "id": "lifestyle.priority",
+          "type": "text",
+          "question": "My lifestyle priorities"
+        },
+        {
+          "id": "compass.reminder",
+          "type": "text",
+          "question": "Before buying, I want to remember:"
+        },
+        {
+          "id": "style.statement",
+          "type": "text",
+          "question": "Final style statement"
+        },
+        {
+          "id": "lifestyle.contexts",
+          "type": "text",
+          "question": "The situations I dress for most:"
+        },
+        {
+          "id": "lifestyle.help",
+          "type": "text",
+          "question": "My life requires clothes that:"
+        },
+        {
+          "id": "lifestyle.practical",
+          "type": "text",
+          "question": "The practical qualities I value most:"
+        },
+        {
+          "id": "master.environment",
+          "type": "text",
+          "question": "My environmental needs:"
+        },
+        {
+          "id": "rules.more",
+          "type": "list",
+          "question": "I want more of:"
+        },
+        {
+          "id": "rules.less",
+          "type": "list",
+          "question": "I want less of:"
+        },
+        {
+          "id": "rules.consider",
+          "type": "text",
+          "question": "I always consider:"
+        },
+        {
+          "id": "rules.5",
+          "type": "text",
+          "question": "I don’t want my style to become:"
+        },
+        {
+          "id": "signatures.auto",
+          "type": "text",
+          "question": "Automatic signatures:"
+        },
+        {
+          "id": "signatures.intent",
+          "type": "text",
+          "question": "Deliberate signatures:"
+        },
+        {
+          "id": "shopping.filter",
+          "type": "table",
+          "question": "My personal shopping filter"
+        },
+        {
+          "id": "closing.1",
+          "type": "text",
+          "question": "I dress for…"
+        },
+        {
+          "id": "closing.2",
+          "type": "text",
+          "question": "I feel most like myself in…"
+        },
+        {
+          "id": "closing.3",
+          "type": "text",
+          "question": "My style is a combination of…"
+        },
+        {
+          "id": "closing.4",
+          "type": "text",
+          "question": "I don’t need my clothes to…"
+        },
+        {
+          "id": "closing.5",
+          "type": "text",
+          "question": "I want my wardrobe to help me…"
+        }
+      ]
+    },
+    {
+      "page": 68,
+      "title": "One-Glance Blueprint and How to Use Your Blueprint",
+      "controlCount": 10,
+      "controls": [
+        {
+          "id": "glance.style",
+          "type": "text",
+          "question": "STYLE:"
+        },
+        {
+          "id": "glance.qualities",
+          "type": "text",
+          "question": "CORE QUALITIES:"
+        },
+        {
+          "id": "glance.language",
+          "type": "text",
+          "question": "STYLE LANGUAGE:"
+        },
+        {
+          "id": "glance.colours",
+          "type": "text",
+          "question": "COLOUR FORMULA:"
+        },
+        {
+          "id": "glance.signatures",
+          "type": "text",
+          "question": "SIGNATURES:"
+        },
+        {
+          "id": "glance.outfits",
+          "type": "text",
+          "question": "OUTFIT DIRECTIONS:"
+        },
+        {
+          "id": "glance.life",
+          "type": "text",
+          "question": "LIFESTYLE PRIORITIES:"
+        },
+        {
+          "id": "glance.permission",
+          "type": "text",
+          "question": "MY “DON’T NEED TO BECOME” REMINDER:"
+        },
+        {
+          "id": "glance.rules",
+          "type": "text",
+          "question": "PERSONAL STYLE RULES:"
+        },
+        {
+          "id": "glance.filter",
+          "type": "text",
+          "question": "SHOPPING FILTER:"
+        }
+      ]
+    }
+  ],
+  "preservationPolicy": [
+    "No code, schema, question, option, scoring, source, private Site or customer response was changed.",
+    "Existing arrays with multiple answers must be retained for explicit customer review if an exclusive rule is later approved.",
+    "Contextual groups remain multi-select by recommendation; no invented mutual-exclusion subgroups.",
+    "Original page52 positive-option omission is a content question, not permission to add a new option.",
+    "Existing p23 artifact remains retired; no storage key is deleted."
+  ],
+  "otherSelectionControls": [
+    {
+      "page": 24,
+      "id": "inspiration.sort",
+      "type": "image-sort",
+      "question": "Sort your inspiration",
+      "options": [
+        "Beautiful + Me",
+        "Beautiful + Not Me",
+        "Interesting + Maybe Me",
+        "Not For Me"
+      ],
+      "classification": "one-group-per-image-correct",
+      "cardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each inspiration item"
+      },
+      "reason": "Not one category for the whole collection or a style identity for the customer."
+    },
+    {
+      "page": 66,
+      "id": "compass.scores",
+      "type": "compass",
+      "question": "Score each criterion from 0–5",
+      "rows": [
+        "01 — LIFESTYLE MATCH: Does this make sense for the life I actually live?",
+        "02 — STYLE PERSONALITY MATCH: Does this reflect the visual qualities I actually want?",
+        "03 — COLOUR MATCH: Does this colour integrate well with my colour direction, or am I choosing it intentionally as an exception?",
+        "04 — PHYSICAL MATCH: Does the fit, shape, proportion, neckline, length, or comfort work for me?",
+        "05 — STYLING POTENTIAL: Can I imagine styling this in ways that feel like me?"
+      ],
+      "classification": "numeric-rating-not-added-to-categorical-family-total",
+      "cardinality": {
+        "minimum": 0,
+        "maximum": 1,
+        "unit": "each of five criteria for the current item",
+        "allowedValues": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "reason": "Preserve original numeric /25 scoring and intentional colour exception; this does not create five additional style-category questions."
+    }
+  ],
+  "baseline": "c52b3845d85777d87a2b2e265341e67e3bf564ca",
+  "report": "SELECTION-CONTROL-AUDIT.md"
+}

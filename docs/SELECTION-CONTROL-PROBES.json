@@ -1,0 +1,345 @@
+{
+  "scope": "Synthetic DOM integration with current real client, actual Worker, isolated in-memory Miniflare D1/R2. Test identity headers only. No live Site/API calls, no production edits, no correction.",
+  "expectedExclusiveFailures": [
+    {
+      "page": 26,
+      "id": "p26.choices1",
+      "question": "MY NATURAL LEVEL",
+      "optionA": "1",
+      "optionB": "2",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "1",
+        "2"
+      ],
+      "savedValue": [
+        "1",
+        "2"
+      ],
+      "reopenedSelected": [
+        "1",
+        "2"
+      ],
+      "reference": {
+        "applicable": true,
+        "page": 27,
+        "entryPresent": true,
+        "recordedText": "1\n2"
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    },
+    {
+      "page": 38,
+      "id": "p38.choices1",
+      "question": "If you looked at your wardrobe without knowing anything about you, would it reflect this time map?",
+      "optionA": "Yes",
+      "optionB": "Mostly",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "Yes",
+        "Mostly"
+      ],
+      "savedValue": [
+        "Yes",
+        "Mostly"
+      ],
+      "reopenedSelected": [
+        "Yes",
+        "Mostly"
+      ],
+      "reference": {
+        "applicable": true,
+        "page": 39,
+        "entryPresent": true,
+        "recordedText": "Yes\nMostly"
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    },
+    {
+      "page": 45,
+      "id": "p45.choices1",
+      "question": "Do these three things seem to agree?",
+      "optionA": "Mostly yes",
+      "optionB": "Somewhat",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "Mostly yes",
+        "Somewhat"
+      ],
+      "savedValue": [
+        "Mostly yes",
+        "Somewhat"
+      ],
+      "reopenedSelected": [
+        "Mostly yes",
+        "Somewhat"
+      ],
+      "reference": {
+        "applicable": false,
+        "reason": "No later contextual reference panel directly includes this field."
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    },
+    {
+      "page": 49,
+      "id": "p49.choices1",
+      "question": "If an outfit contains your core qualities, but none of your accents, can it still feel like you?",
+      "optionA": "Yes",
+      "optionB": "No",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "Yes",
+        "No"
+      ],
+      "savedValue": [
+        "Yes",
+        "No"
+      ],
+      "reopenedSelected": [
+        "Yes",
+        "No"
+      ],
+      "reference": {
+        "applicable": true,
+        "page": 50,
+        "entryPresent": true,
+        "recordedText": "Yes\nNo"
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    },
+    {
+      "page": 52,
+      "id": "p52.choices1",
+      "question": "Does it work with the physical qualities I discovered?",
+      "optionA": "Yes",
+      "optionB": "Somewhat",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "Yes",
+        "Somewhat"
+      ],
+      "savedValue": [
+        "Yes",
+        "Somewhat"
+      ],
+      "reopenedSelected": [
+        "Yes",
+        "Somewhat"
+      ],
+      "reference": {
+        "applicable": true,
+        "page": 53,
+        "entryPresent": true,
+        "recordedText": "Yes\nSomewhat"
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    },
+    {
+      "page": 52,
+      "id": "p52.choices2",
+      "question": "Would this make sense for my actual life?",
+      "optionA": "Sometimes",
+      "optionB": "Not really",
+      "renderedInputType": "checkbox",
+      "selectedAfterClicks": [
+        "Sometimes",
+        "Not really"
+      ],
+      "savedValue": [
+        "Sometimes",
+        "Not really"
+      ],
+      "reopenedSelected": [
+        "Sometimes",
+        "Not really"
+      ],
+      "reference": {
+        "applicable": true,
+        "page": 53,
+        "entryPresent": true,
+        "recordedText": "Sometimes\nNot really"
+      },
+      "requestedExclusiveBehavior": "Selecting B replaces A; one answer at most.",
+      "requestedBehaviorSatisfied": false,
+      "defectReproduced": true,
+      "status": "EXPECTED FAILURE OBSERVED — not corrected"
+    }
+  ],
+  "contrasts": [
+    {
+      "page": 36,
+      "id": "p36.choices1",
+      "kind": "legitimate_multi",
+      "optionA": "Home",
+      "optionB": "Errands",
+      "savedValue": [
+        "Home",
+        "Errands"
+      ],
+      "reopened": [
+        "Home",
+        "Errands"
+      ],
+      "expected": "A and B coexist",
+      "observedAsExpected": true
+    },
+    {
+      "page": 36,
+      "id": "life.frequency",
+      "kind": "matrix_one_category_per_row",
+      "optionA": "Very frequent",
+      "optionB": "Frequent",
+      "row": "Home",
+      "savedValue": {
+        "Home": "Frequent"
+      },
+      "reopened": [
+        "Frequent"
+      ],
+      "expected": "Only B remains for this row/field",
+      "observedAsExpected": true
+    },
+    {
+      "page": 25,
+      "id": "dials.1",
+      "kind": "scale_one_position",
+      "optionA": 0,
+      "optionB": 17,
+      "savedValue": 17,
+      "reopened": [
+        "17"
+      ],
+      "expected": "Only B remains for this row/field",
+      "observedAsExpected": true
+    },
+    {
+      "page": 66,
+      "id": "compass.decision",
+      "kind": "already_exclusive_decision",
+      "optionA": "Buy anyway — I love it enough.",
+      "optionB": "Save for later.",
+      "savedValue": "Save for later.",
+      "reopened": "Buy anyway — I love it enough.",
+      "expected": "Only B remains for this row/field",
+      "observedAsExpected": null,
+      "status": "HARNESS LIMITATION / NOT A CONFIRMED PRODUCT DEFECT",
+      "diagnostic": {
+        "html": "<select id=\"f-compass-decision\" data-id=\"compass.decision\"><option value=\"\">Not decided yet</option><option>Buy anyway — I love it enough.</option><option selected=\"\">Save for later.</option><option>Pass.</option></select>",
+        "value": "Buy anyway — I love it enough.",
+        "selectedIndex": 1,
+        "options": [
+          {
+            "text": "Not decided yet",
+            "value": "",
+            "selected": false,
+            "selectedAttribute": null
+          },
+          {
+            "text": "Buy anyway — I love it enough.",
+            "value": "Buy anyway — I love it enough.",
+            "selected": true,
+            "selectedAttribute": null
+          },
+          {
+            "text": "Save for later.",
+            "value": "Save for later.",
+            "selected": false,
+            "selectedAttribute": ""
+          },
+          {
+            "text": "Pass.",
+            "value": "Pass.",
+            "selected": false,
+            "selectedAttribute": null
+          }
+        ],
+        "savedResponse": "Save for later.",
+        "postReopenResponse": "Save for later."
+      },
+      "isolatedStaticHappyDom": {
+        "value": "Buy anyway — I love it enough.",
+        "selectedIndex": 1,
+        "options": [
+          {
+            "text": "Not decided yet",
+            "value": "",
+            "selected": false,
+            "selectedAttribute": null
+          },
+          {
+            "text": "Buy anyway — I love it enough.",
+            "value": "Buy anyway — I love it enough.",
+            "selected": true,
+            "selectedAttribute": null
+          },
+          {
+            "text": "Save for later.",
+            "value": "Save for later.",
+            "selected": false,
+            "selectedAttribute": ""
+          },
+          {
+            "text": "Pass.",
+            "value": "Pass.",
+            "selected": false,
+            "selectedAttribute": null
+          }
+        ]
+      },
+      "applicationDefectEstablished": false,
+      "nativeChromiumMarkupVerification": {
+        "attempted": true,
+        "result": "Unavailable: isolated file-only --dump-dom returned no DOM before 12-second bounded timeout. This does not establish browser behavior.",
+        "url": "file:///workspace/work/selection-audit/compass-selected-markup.html",
+        "liveSiteOrApiAccess": false
+      },
+      "rawHappyDomExpectationMatched": false,
+      "confirmedObservations": [
+        "The actual Worker saves only option B: Save for later.",
+        "After reopen, /api/progress still contains only B.",
+        "The actual client emits selected attribute only on B.",
+        "HappyDOM reports value A despite B selected markup; a static isolated select with no app code reproduces this."
+      ],
+      "remainingVerification": "Reopen Compass decision once in a native browser; no native browser pass is claimed."
+    }
+  ],
+  "alerts": [],
+  "errors": [],
+  "summary": {
+    "exclusiveDefectsReproduced": 6,
+    "exclusiveCases": 6,
+    "contrastChecksObservedAsExpected": 3,
+    "contrastCases": 4,
+    "contrastChecksLimitedByDomHarness": 1
+  },
+  "watchedProductFilesUnchanged": true,
+  "noLiveSiteOrApiCalls": true,
+  "limitations": [
+    "HappyDOM integration exercises actual client events and actual isolated Worker persistence; it does not verify native browser geometry, real authentication, mobile controls, or live customer data.",
+    "One correct-single contrast has an isolated HappyDOM selected-option parser inconsistency: API and emitted markup preserve B, but HappyDOM returns A. The same inconsistency occurs in static select markup without application code.",
+    "Native Chromium exact-markup check attempted offline using a synthetic local file; --dump-dom returned no output before bounded timeout, so no native browser pass is claimed."
+  ],
+  "applicationBaseline": "c52b3845d85777d87a2b2e265341e67e3bf564ca",
+  "baselineRegression": {
+    "command": "npm test",
+    "passed": 115,
+    "failed": 0,
+    "skipped": 0,
+    "note": "Existing suite passes; six exclusive-choice behaviours independently fail as documented. No corrections implemented."
+  }
+}
