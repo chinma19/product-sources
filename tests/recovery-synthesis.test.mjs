@@ -22,7 +22,7 @@ test('assembled draft is deterministic, exposes missing slots, and never writes 
 test('recovery ciphertext is account-isolated, tamper-resistant, and handles large drafts',async()=>{
  const storage=new MemoryStorage(),a=new RecoveryVault(storage,descriptor,webcrypto),b=new RecoveryVault(storage,other,webcrypto);const draft={v:2,baseRevision:4,patch:{answers:{'fit.pattern':'PRIVATE RESPONSE '+'x'.repeat(160000)}}};
  await a.save(draft);const serialized=[...storage.data.values()].join('');assert.ok(!serialized.includes('PRIVATE RESPONSE'));assert.ok(!serialized.includes(descriptor.secret));assert.deepEqual(await a.read(),draft);assert.equal(await b.read(),null);
- const corrupt=JSON.parse(storage.getItem(a.name));corrupt.data=corrupt.data.slice(0,-5)+'AAAAA';storage.setItem(a.name,JSON.stringify(corrupt));assert.equal(await a.read(),null);assert.equal(storage.getItem(a.name),null);
+ const corrupt=JSON.parse(storage.getItem(a.name));corrupt.data=corrupt.data.slice(0,-5)+'AAAAA';storage.setItem(a.name,JSON.stringify(corrupt));const ciphertext=storage.getItem(a.name);await assert.rejects(()=>a.read());assert.equal(storage.getItem(a.name),ciphertext,'Unreadable recovery data is preserved for retry or explicit recovery');
 });
 test('failed save survives closing/reopening the store and clears recovery after a successful retry',async()=>{
  const storage=new MemoryStorage();const savedFetch=globalThis.fetch;try{

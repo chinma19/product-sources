@@ -28,7 +28,7 @@ const multiIds=['p6.choices1','p9.choices1','p9.choices2','p12.choices1','p12.ch
 const ambiguousIds=['colour.practical','colour.result','p19.choices2','p26.choices2','p40.choices3','p40.choices4'];
 const pageFor=id=>workbook.pages.find(page=>page.controls.some(control=>control.id===id)).page;
 const legacySelections=()=>Object.fromEntries(exclusive.map(({id})=>[id,controls.get(id).options.slice(0,2)]));
-async function api(owner,path,method='GET',body){return mf.dispatchFetch(origin+path,{method,headers:{'oai-authenticated-user-id':owner,...(body===undefined?{}:{Origin:origin,'Content-Type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)})});}
+async function api(owner,path,method='GET',body){return mf.dispatchFetch(origin+path,{method,headers:{'oai-authenticated-user-id':owner,'X-IHF-Selection-Protocol':'2',...(body===undefined?{}:{Origin:origin,'Content-Type':'application/json'})},...(body===undefined?{}:{body:JSON.stringify(body)})});}
 async function progress(owner){const response=await api(owner,'/api/progress');assert.equal(response.status,200);return response.json();}
 async function patch(owner,body){const response=await api(owner,'/api/progress','PATCH',body);assert.equal(response.status,200,await response.clone().text());return response.json();}
 async function wait(check,label='selection interaction'){for(let i=0;i<700;i++){if(await check())return;await new Promise(resolve=>setTimeout(resolve,10));}throw Error('Timed out: '+label);}

@@ -1,10 +1,11 @@
-import {workbook,controls,emptyState,migrateState,applyPatch,blueprintFor} from './model.mjs';
+import {workbook,controls,emptyState,migrateState,applyPatch,blueprintFor,validatePatch,selectionRestorePatch} from './model.mjs';
 import {candidatePatterns,validateAnnotations,evidenceSummary} from './synthesis.mjs';
 import {generateBlueprintPDF} from './pdf.mjs';
 import {blueprintSections,profileObjects} from './blueprint.mjs';
 import {imageData,evidenceOrder} from './evidence.mjs';
 import {assets} from './assets.generated.mjs';
-export const securityHeaders={ 'X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Cache-Control':'private, no-store','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' blob: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https://*.chatgpt.com https://chatgpt.com",'Permissions-Policy':'camera=(), microphone=(), geolocation=()'};
+import {buildInfo,selectionProtocol} from '../shared/release.mjs';
+export const securityHeaders={ 'X-IHF-Release':buildInfo.releaseId, 'X-Content-Type-Options':'nosniff','Referrer-Policy':'same-origin','Cache-Control':'private, no-store','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' blob: data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https://*.chatgpt.com https://chatgpt.com",'Permissions-Policy':'camera=(), microphone=(), geolocation=()'};
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{...securityHeaders,'Content-Type':'application/json'}});
 class HttpError extends Error{constructor(status,message){super(message);this.status=status}}
 async function boundedRequest(req,max){const length=Number(req.headers.get('Content-Length'));if(length>max)throw new HttpError(413,'This request is too large.');if(!req.body)return req;const reader=req.body.getReader(),chunks=[];let size=0;while(true){const {done,value}=await reader.read();if(done)break;size+=value.byteLength;if(size>max){await reader.cancel();throw new HttpError(413,'This request is too large.')}chunks.push(value)}const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length}return new Request(req,{body:bytes})}
@@ -40,12 +41,22 @@ async function api(req,env,path){
  }
  if(path==='/api/progress'&&req.method==='GET')return json(await load(env,owner));
  if(path==='/api/progress'&&req.method==='PATCH'){
-  const body=await bodyJson(req),current=await load(env,owner);
+  const protocol=req.headers.get('X-IHF-Selection-Protocol')||'';
+  if(protocol&&protocol!==String(selectionProtocol))throw new HttpError(426,'This workbook version needs an update. Your changes are still in this tab; keep it open and try saving again after the update is available.');
+  let body=await bodyJson(req);const current=await load(env,owner);
   if(body.baseRevision!==current.revision)return json({error:'Another session saved newer answers. Review the latest version before keeping your edits.',current},409);
+  if(!protocol){
+   // An already-open older workbook cannot label its historical arrays. Preserve its whole atomic
+   // save, including unrelated entries, while the updated interface offers conflicting choices for review.
+   try{
+    if(body.restoreSelectionConflicts!==undefined){const ids=body.restoreSelectionConflicts,answers=Array.isArray(ids)?Object.fromEntries(ids.filter(id=>Object.hasOwn(body.answers||{},id)).map(id=>[id,body.answers[id]])):{};validatePatch({baseRevision:body.baseRevision,answers,restoreSelectionConflicts:ids});}
+    body=selectionRestorePatch(body);
+   }catch(e){throw new HttpError(400,e.message)}
+  }
   if(body.answers?.['synthesis.decisions']){const {results}=await env.DB.prepare('SELECT * FROM evidence WHERE owner_id = ?').bind(owner).all();const candidates=candidatePatterns({...current.answers,...body.answers},results.map(safeAsset));const valid=new Set(candidates.map(c=>c.term));if(body.answers['synthesis.decisions'].some(d=>!valid.has(d.term)))throw new HttpError(400,'Your evidence has changed. Refresh the suggested patterns before confirming them.');}
   const next=await saveState(env,owner,current,body);
   if(!next)return json({error:'Another session saved first. Review the latest answers.',current:await load(env,owner)},409);
-  return json(next);
+  const response=json(next);response.headers.set('X-IHF-Selection-Protocol',String(selectionProtocol));return response;
  }
  if(path==='/api/blueprint.pdf'&&req.method==='GET'){
   const state=await load(env,owner);const bytes=p=>Uint8Array.from(atob(assets[p].data),c=>c.charCodeAt(0));let pdf;try{pdf=await generateBlueprintPDF(state.answers,{body:bytes('/assets/DM-Sans.ttf'),display:bytes('/assets/Cormorant-Garamond.ttf')},{glance:new URL(req.url).searchParams.get('view')==='glance',bindingState:state.bindingState})}catch(e){throw new HttpError(e.status||500,e.message)}
@@ -117,8 +128,20 @@ async function api(req,env,path){
 export default {async fetch(req,env){
  try{
   const path=new URL(req.url).pathname;
+  if(path==='/api/version'&&['GET','HEAD'].includes(req.method))return req.method==='HEAD'?new Response(null,{headers:{...securityHeaders,'Content-Type':'application/json','X-IHF-Release':buildInfo.releaseId}}):json(buildInfo);
   if(path.startsWith('/api/')){if(['POST','PATCH','PUT'].includes(req.method))req=await boundedRequest(req,path==='/api/evidence'||path.endsWith('/image')?8500000:500000);return await api(req,env,path);}
-  const file=assets[path==='/'?'/index.html':path];if(!file)return new Response('Not found',{status:404,headers:securityHeaders});
-  const bytes=Uint8Array.from(atob(file.data),c=>c.charCodeAt(0));return new Response(req.method==='HEAD'?null:bytes,{headers:{...securityHeaders,'Content-Type':file.type,...(path.startsWith('/assets/')?{'Cache-Control':'public, max-age=86400'}:{})}});
+  const file=assets[path==='/'?'/index.html':path];
+  if(!file){
+   // A document fetched just before publication can request its old asset afterward.
+   // Redirect without caching the old URL; never label new bytes with an old hash.
+   const previous=/^\/assets\/app-[A-Za-z0-9_-]+\.(js|css)$/.exec(path);
+   const current=previous?buildInfo.assets?.[previous[1]==='js'?'script':'stylesheet']?.path:null;
+   if(current&&current!==path)return new Response(null,{status:307,headers:{...securityHeaders,Location:current}});
+   return new Response('Not found',{status:404,headers:securityHeaders});
+  }
+  const versioned=Object.values(buildInfo.assets||{}).some(asset=>asset?.path===path);
+  const legacyApp=path==='/assets/app.js'||path==='/assets/app.css';
+  const cache=versioned?'private, max-age=31536000, immutable':legacyApp?'private, no-store':path.startsWith('/assets/')?'public, max-age=86400':'private, no-store';
+  const bytes=Uint8Array.from(atob(file.data),c=>c.charCodeAt(0));return new Response(req.method==='HEAD'?null:bytes,{headers:{...securityHeaders,'Content-Type':file.type,'Cache-Control':cache,'X-IHF-Release':buildInfo.releaseId}});
  }catch(e){if(e instanceof HttpError)return json({error:e.message},e.status);console.error('Blueprint request failed',e.name);return json({error:'We could not complete that request. Your saved progress is safe. Please try again.'},500)}
 }};

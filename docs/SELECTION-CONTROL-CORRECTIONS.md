@@ -1,5 +1,7 @@
 # Approved selection-control corrections
 
+This report records the initial selection correction. The subsequent real-browser upgrade failure and its correction are documented in [SELECTION-UPGRADE-INCIDENT.md](SELECTION-UPGRADE-INCIDENT.md).
+
 25 November 2026 · `codex/editorial-integration`
 
 This release implements the owner's approval of the [selection audit](SELECTION-CONTROL-AUDIT.md). It is for the separate owner-private integration preview, before the final controlled rollout.
