@@ -37,7 +37,16 @@ Upgrade coverage includes an already-open pre-fix client saving the entire Step 
 
 Target: https://inherfashion-integration-review.fabulousloon.chatgpt.site
 
-Publication and post-publication HTTP results will be recorded after deployment. Actual hosted HTML, version metadata, JavaScript, CSS, checksums and cache headers must agree before this is reported as delivered. The downloaded published JavaScript will also run through the upgrade suite with isolated synthetic writes.
+The corrected **owner-private integration version 3** was published successfully on 26 November 2026. Post-publication HTTP inspection verified the actual HTML, `/api/version`, client-embedded release ID, hashed JavaScript/CSS, legacy aliases and previous-hash redirects. All identity, SHA-256 and cache-policy checks passed. The [sanitized hosted verification](SELECTION-UPGRADE-HOSTED-VERIFICATION.json) records the exact responses.
+
+- Application source: `d355d67bf50e8c27e8182cb88d80c5c1ca847573`.
+- Published source: `dd244e72e400d07a6b3b40d497318291cc1aea96`.
+- Deployment: `appgdep_6b0883222150819186f6768de1fd8fdd`, `succeeded`.
+- Release ID: `ad043d165225e6857f1d9698cd9fbc1135b83c41c7bcfb073f96a7561cc8cfb0`.
+- Published client SHA-256: `1f4de14cd171657491bc25146187cd07b8decfb63215c68f36422352f1f6a393`.
+- All seven upgrade scenarios passed again using both the actual previously hosted client and the actual newly published JavaScript. This includes all six controls through immediate replacement/save/reopen, mixed Step 38/Compass saves and recovery across three releases. Authenticated write tests remained in local isolated storage.
+- Both sites retain access-policy revision 1, one allowed owner account and zero external visitors. The original Site remains version 4.
+- Read-only pre/post-publication projections and record revisions were unchanged. The preview's large progress document was truncated by the database tool, so this is not a complete answer-by-answer comparison. There was no customer-record write, reset, restore or migration performed by this work, and no photograph operation.
 
 The supported service credential is used only for read-only static/version requests to this Site. It does not provide a visitor identity; no identity header is fabricated to access or modify a customer's hosted workbook. Database checks use the supported read-only Sites tools. All write tests use temporary local D1/R2 and synthetic accounts.
 
